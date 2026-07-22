@@ -1,0 +1,13 @@
+{% comment %}
+  JSON-LD structured data for landing pages.
+  Renders CollectionPage schema.
+{% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }}
+}
+</script>

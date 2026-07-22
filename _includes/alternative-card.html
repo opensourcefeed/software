@@ -1,0 +1,55 @@
+{% comment %}
+  Reusable alternatives card.
+  Usage: {% include alternative-card.html alternative=alternative %}
+  Expects: alternative (a collection item from site.alternatives)
+  Looks up proprietary software and alternative names from site.softwares.
+{% endcomment %}
+{% assign proprietary = site.softwares | where: "slug", include.alternative.proprietary_slug | first %}
+{% assign alt_count = include.alternative.alternatives | size %}
+
+<article class="card">
+  <div class="card__header">
+    {% if proprietary.logo %}
+      <img src="{{ proprietary.logo | relative_url }}"
+           alt="{{ proprietary.title }} logo"
+           class="card__logo"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="card__logo card__logo--placeholder" style="display:none">
+        {{ proprietary.title | slice: 0 }}
+      </div>
+    {% else %}
+      <div class="card__logo card__logo--placeholder">
+        {{ proprietary.title | slice: 0 }}
+      </div>
+    {% endif %}
+    <div>
+      <h3 class="card__title">
+        <a href="{{ include.alternative.url | relative_url }}">{{ include.alternative.title }}</a>
+      </h3>
+      {% if proprietary %}
+        <p class="card__tagline">Alternative to {{ proprietary.title }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <p class="card__description">{{ include.alternative.description }}</p>
+
+  <div class="card__meta">
+    <span class="badge badge--open-source">
+      {{ alt_count }} {% if alt_count == 1 %}alternative{% else %}alternatives{% endif %}
+    </span>
+  </div>
+
+  {% if include.alternative.alternatives %}
+    <div class="card__footer">
+      <ul class="tag-list">
+        {% for alt_slug in include.alternative.alternatives %}
+          {% assign alt = site.softwares | where: "slug", alt_slug | first %}
+          {% if alt %}
+            <li class="tag">{{ alt.title }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+</article>

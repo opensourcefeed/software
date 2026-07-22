@@ -1,0 +1,79 @@
+// ============================================
+// Pages: Software & alternatives page-specific styles
+// ============================================
+
+// --- Software page ---
+.software-page {
+  .software-description {
+    max-width: 800px;
+
+    h2 {
+      margin-top: $spacing-xl;
+      margin-bottom: $spacing-md;
+    }
+
+    h3 {
+      margin-top: $spacing-lg;
+      margin-bottom: $spacing-sm;
+    }
+
+    ul, ol {
+      margin-bottom: $spacing-lg;
+    }
+  }
+}
+
+// --- Alternatives page ---
+.alternatives-page {
+  .proprietary-summary {
+    background-color: $color-bg-alt;
+    border-left: 4px solid $color-primary;
+    padding: $spacing-lg;
+    margin-bottom: $spacing-xl;
+    border-radius: 0 $radius-md $radius-md 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .why-switch {
+    max-width: 800px;
+    margin-bottom: $spacing-xl;
+  }
+
+  .alternatives-section {
+    margin-bottom: $spacing-2xl;
+  }
+}
+
+// --- Landing pages ---
+.landing-page {
+  .hero {
+    text-align: center;
+    padding-block: $spacing-2xl;
+    margin-bottom: $spacing-xl;
+
+    h1 {
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      font-size: $font-size-lg;
+      color: $color-text-light;
+      max-width: 600px;
+      margin-inline: auto;
+    }
+  }
+}
+
+// --- Category group (software directory) ---
+.category-group {
+  margin-bottom: $spacing-2xl;
+
+  &__title {
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-lg;
+    color: $color-text;
+  }
+}

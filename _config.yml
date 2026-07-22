@@ -1,0 +1,79 @@
+# Site settings
+title: OpenSourceFeed
+description: >-
+  Open source software directory and alternatives guide.
+  Find free and open source software for Linux, Windows, and macOS.
+url: "https://opensourcefeed.org"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude theme gem (we use custom layouts)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - README.md
+  - docs
+
+# SASS configuration
+sass:
+  style: compressed
+  load_paths:
+    - _sass
+
+# Collections
+collections:
+  softwares:
+    output: true
+    permalink: /software/:slug/
+  alternatives:
+    output: true
+    permalink: /software/alternative-to/:slug/
+
+# Defaults — auto-assign layouts based on path
+defaults:
+  - scope:
+      path: ""      # all files
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""      # all files in softwares collection
+      type: "softwares"
+    values:
+      layout: "software"
+  - scope:
+      path: ""      # all files in alternatives collection
+      type: "alternatives"
+    values:
+      layout: "alternative-to"
+
+# AdSense configuration
+adsense:
+  enabled: false
+  client_id: ""  # e.g. ca-pub-XXXXXXXXXXXXXXXX
+
+# Category display names (used in software/index.html)
+category_names:
+  image-editing: "Image Editing"
+  communication: "Communication"
+  media-player: "Media Players"
+  video-conferencing: "Video Conferencing"
+  office-suite: "Office Suites"
+  development: "Development Tools"
+
+# SEO
+author: "Niyas C"
+lang: "en"
+
+# GitHub Pages settings
+github: [metadata]

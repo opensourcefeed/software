@@ -1,0 +1,34 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  {% elsif page.tagline %}
+  <meta name="description" content="{{ page.tagline }}">
+  {% endif %}
+
+  {% if page.last_modified_at %}
+  <meta name="dateModified" content="{{ page.last_modified_at | date: '%Y-%m-%d' }}">
+  {% endif %}
+
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+  {% if site.adsense.enabled and site.adsense.client_id %}
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense.client_id }}" crossorigin="anonymous"></script>
+  {% endif %}
+
+  {% feed_meta %}
+
+  {% if page.layout == "software" %}
+    {% include json-ld-software.html %}
+  {% elsif page.layout == "alternative-to" %}
+    {% include json-ld-alternatives.html %}
+  {% elsif page.json_ld == "collection" %}
+    {% include json-ld-collection.html %}
+  {% endif %}
+</head>

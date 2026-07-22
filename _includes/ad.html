@@ -1,0 +1,25 @@
+{% comment %}
+  AdSense ad unit include.
+  Usage: {% include ad.html slot="header" %}
+  When site.adsense.enabled is true and client_id is set, renders real AdSense block.
+  Otherwise, renders a labeled placeholder so ad positions are visible during dev.
+{% endcomment %}
+<div class="ad-container">
+  {% if site.adsense.enabled and site.adsense.client_id %}
+    <p class="ad-label">Advertisement</p>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="{{ site.adsense.client_id }}"
+         data-ad-slot="{{ include.slot }}"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  {% else %}
+    <div class="ad-placeholder">
+      <span class="ad-placeholder__label">Advertisement</span>
+      <span class="ad-placeholder__slot">Ad slot: {{ include.slot }}</span>
+    </div>
+  {% endif %}
+</div>

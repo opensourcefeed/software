@@ -1,0 +1,57 @@
+{% comment %}
+  JSON-LD structured data for software pages.
+  Renders SoftwareApplication schema.
+  Maps license and category to schema.org URLs/types.
+{% endcomment %}
+{% assign license_url = "" %}
+{% case page.license %}
+  {% when "GPL-3.0" %}
+    {% assign license_url = "https://www.gnu.org/licenses/gpl-3.0.html" %}
+  {% when "GPL-2.0" %}
+    {% assign license_url = "https://www.gnu.org/licenses/gpl-2.0.html" %}
+  {% when "MIT" %}
+    {% assign license_url = "https://opensource.org/licenses/MIT" %}
+  {% when "Apache-2.0" %}
+    {% assign license_url = "https://www.apache.org/licenses/LICENSE-2.0" %}
+  {% when "BSD-2-Clause" %}
+    {% assign license_url = "https://opensource.org/licenses/BSD-2-Clause" %}
+  {% when "BSD-3-Clause" %}
+    {% assign license_url = "https://opensource.org/licenses/BSD-3-Clause" %}
+  {% when "MPL-2.0" %}
+    {% assign license_url = "https://www.mozilla.org/en-US/MPL/2.0/" %}
+  {% when "AGPL-3.0" %}
+    {% assign license_url = "https://www.gnu.org/licenses/agpl-3.0.html" %}
+  {% when "LGPL-3.0" %}
+    {% assign license_url = "https://www.gnu.org/licenses/lgpl-3.0.html" %}
+{% endcase %}
+
+{% assign app_category = "SoftwareApplication" %}
+{% case page.category %}
+  {% when "image-editing" %}
+    {% assign app_category = "GraphicsApplication" %}
+  {% when "communication" %}
+    {% assign app_category = "CommunicationApplication" %}
+  {% when "media-player" %}
+    {% assign app_category = "MultimediaApplication" %}
+  {% when "video-conferencing" %}
+    {% assign app_category = "CommunicationApplication" %}
+  {% when "office-suite" %}
+    {% assign app_category = "BusinessApplication" %}
+  {% when "development" %}
+    {% assign app_category = "DeveloperApplication" %}
+{% endcase %}
+
+{% assign platforms_str = page.platforms | join: ", " %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": {{ page.title | jsonify }},
+  "operatingSystem": {{ platforms_str | jsonify }},
+  "applicationCategory": {{ app_category | jsonify }},
+  {% if license_url != "" %}"license": {{ license_url | jsonify }},
+  {% endif %}"url": {{ page.website | jsonify }},
+  "description": {{ page.description | jsonify }}
+}
+</script>

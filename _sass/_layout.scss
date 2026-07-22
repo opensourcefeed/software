@@ -1,0 +1,155 @@
+// ============================================
+// Layout: Container, site header/footer, main content
+// ============================================
+
+// --- Site container ---
+.site-container {
+  @include container;
+  padding-block: $spacing-lg;
+  min-height: 60vh;
+}
+
+// --- Site header ---
+.site-header {
+  background-color: $color-bg;
+  border-bottom: 1px solid $color-border;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: $shadow-sm;
+}
+
+.site-header__inner {
+  @include container;
+  @include flex-row($gap: $spacing-lg);
+  align-items: center;
+  padding-block: $spacing-md;
+}
+
+.site-header__logo {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-text;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-primary;
+  }
+}
+
+.site-header__nav {
+  margin-left: auto;
+
+  ul {
+    @include flex-row($gap: $spacing-lg);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    color: $color-text;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-sm;
+
+    &:hover {
+      color: $color-primary;
+      text-decoration: none;
+    }
+  }
+}
+
+// Mobile: stack nav below logo
+@include respond-to(tablet) {
+  .site-header__inner {
+    flex-wrap: nowrap;
+  }
+}
+
+// --- Site footer ---
+.site-footer {
+  background-color: $color-bg-dark;
+  color: $color-bg-alt;
+  padding-block: $spacing-xl;
+  margin-top: $spacing-2xl;
+
+  a {
+    color: $color-bg-alt;
+
+    &:hover {
+      color: $color-bg;
+      text-decoration: underline;
+    }
+  }
+}
+
+.site-footer__inner {
+  @include container;
+  @include flex-row($gap: $spacing-lg);
+  flex-direction: column;
+  text-align: center;
+
+  @include respond-to(tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.site-footer__nav {
+  ul {
+    @include flex-row($gap: $spacing-lg);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+}
+
+// --- Main content area ---
+.main-content {
+  @include container;
+  padding-block: $spacing-xl;
+}
+
+// --- Page header (title area) ---
+.page-header {
+  margin-bottom: $spacing-xl;
+
+  h1 {
+    margin-bottom: $spacing-sm;
+  }
+
+  p {
+    color: $color-text-light;
+    font-size: $font-size-lg;
+    margin-bottom: 0;
+  }
+}
+
+// --- Section spacing ---
+.section {
+  margin-bottom: $spacing-2xl;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section__title {
+  font-size: $font-size-2xl;
+  margin-bottom: $spacing-lg;
+  padding-bottom: $spacing-sm;
+  border-bottom: 2px solid $color-border;
+}
+
+// --- Table scroll wrapper (responsive tables) ---
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  table {
+    min-width: 600px;
+  }
+}

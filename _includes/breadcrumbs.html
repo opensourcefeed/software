@@ -1,0 +1,10 @@
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ul>
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    <li><a href="{{ '/software/' | relative_url }}">Software</a></li>
+    {% if page.layout == "alternative-to" or page.url contains "/alternative-to/" %}
+      <li><a href="{{ '/software/alternative-to/' | relative_url }}">Alternative To</a></li>
+    {% endif %}
+    <li aria-current="page">{{ page.title }}</li>
+  </ul>
+</nav>

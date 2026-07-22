@@ -1,0 +1,99 @@
+# Cline Rules: opensourcefeed.org /software/ Section
+
+## Project Context
+
+This is a Jekyll static site for opensourcefeed.org's `/software/` section. It covers individual software pages and open source alternatives. Built with Jekyll collections, Liquid templating, and mobile-first SASS.
+
+## Tech Stack
+
+- Jekyll 4.x (GitHub Pages compatible)
+- Liquid templating
+- SASS (via jekyll-sass-converter)
+- No JavaScript frameworks
+- No CSS frameworks (custom SASS only)
+
+## Code Style Rules
+
+### SASS
+- Mobile-first: base styles target mobile, use `@include respond-to($breakpoint)` for larger screens
+- Use variables from `_sass/_variables.scss` for colors, spacing, typography
+- Use mixins from `_sass/_mixins.scss` for responsive patterns
+- Never hardcode breakpoint values — use the `respond-to` mixin
+- Keep partials focused: one concern per file
+- Compressed output in production (set in `_config.yml`)
+
+### Liquid
+- Use `site.softwares | where: "slug", X | first` pattern for cross-referencing collections
+- Never hardcode software descriptions in layouts — always pull from source `_softwares/` file
+- Use `assign` tags to store looked-up objects before rendering
+- 2-space indentation in Liquid templates
+
+### HTML
+- Semantic HTML5 elements (`article`, `section`, `nav`, `header`, `footer`)
+- All images must have descriptive `alt` text
+- All pages must have breadcrumbs
+- All pages must have canonical URL in `<head>`
+
+## Content Policy (Critical)
+
+**Non-overlap is enforced structurally via layouts.** Never bypass this by adding content to the wrong page type:
+
+- Software pages: feature breakdowns, use cases, platform support ONLY
+- Alternatives pages: "why switch" content (2-3 sentences) ONLY
+- Landing pages: auto-generated from front matter ONLY (no body content)
+
+See `docs/CONTENT-POLICY.md` for the full matrix.
+
+## File Conventions
+
+- Collection files: `_softwares/[slug].md`, `_alternatives/[slug].md`
+- Filenames must match `slug` front matter field
+- Layouts: `_layouts/[name].html`
+- Includes: `_includes/[name].html`
+- SASS partials: `_sass/_[name].scss` (prefixed with underscore)
+- Main stylesheet: `assets/css/main.scss` (imports all partials)
+
+## Front Matter Requirements
+
+Every collection file must have:
+- `layout` — matches the layout file name
+- `title` — page title (quoted)
+- `slug` — matches filename
+- `description` — 1-2 sentences for meta tags and cards
+- `last_modified_at` — ISO date (YYYY-MM-DD)
+
+Software pages additionally need: `type`, `license`, `website`, `platforms`, `category`, `tagline`
+
+## SEO Requirements
+
+- Unique `<title>` and `<meta description>` on every page
+- JSON-LD structured data on every page (type depends on page type)
+- `dateModified` meta tag from `last_modified_at`
+- Canonical URLs on every page
+- Image alt text on all logos
+
+## AdSense
+
+- Use `{% include ad.html slot="position-name" %}` for ad placements
+- Ads are config-driven (`site.adsense.enabled` and `site.adsense.client_id`)
+- When disabled, placeholder divs show — do not remove these
+- Ad positions: below header, mid-content (on content pages); below title, between sections (on landing pages)
+
+## Testing Before Completion
+
+Always run before marking task complete:
+1. `bundle exec jekyll build` — must succeed with no errors
+2. `bundle exec jekyll serve` — verify pages render
+3. Check internal links work (no 404s)
+4. Verify responsive at 320px, 768px, 1200px
+5. Verify content non-overlap policy is maintained
+
+## Do Not
+
+- Do not add JavaScript frameworks (React, Vue, etc.)
+- Do not add CSS frameworks (Bootstrap, Tailwind, etc.)
+- Do not hardcode software data in layout files
+- Do not duplicate content across page types
+- Do not use marketing language — keep tone neutral and factual
+- Do not remove ad placeholder slots
+- Do not change permalink structures without updating all internal links

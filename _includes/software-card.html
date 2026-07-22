@@ -1,0 +1,44 @@
+{% comment %}
+  Reusable software card.
+  Usage: {% include software-card.html software=software %}
+  Expects: software (a collection item from site.softwares)
+{% endcomment %}
+<article class="card">
+  <div class="card__header">
+    {% if include.software.logo %}
+      <img src="{{ include.software.logo | relative_url }}"
+           alt="{{ include.software.title }} logo"
+           class="card__logo"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+      <div class="card__logo card__logo--placeholder" style="display:none">
+        {{ include.software.title | slice: 0 }}
+      </div>
+    {% else %}
+      <div class="card__logo card__logo--placeholder">
+        {{ include.software.title | slice: 0 }}
+      </div>
+    {% endif %}
+    <div>
+      <h3 class="card__title">
+        <a href="{{ include.software.url | relative_url }}">{{ include.software.title }}</a>
+      </h3>
+      {% if include.software.tagline %}
+        <p class="card__tagline">{{ include.software.tagline }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <p class="card__description">{{ include.software.description }}</p>
+
+  <div class="card__meta">
+    {% if include.software.type == "open-source" %}
+      <span class="badge badge--open-source">Open Source</span>
+    {% elsif include.software.type == "proprietary" %}
+      <span class="badge badge--proprietary">Proprietary</span>
+    {% endif %}
+
+    {% if include.software.license %}
+      <span class="badge badge--license">{{ include.software.license }}</span>
+    {% endif %}
+  </div>
+</article>

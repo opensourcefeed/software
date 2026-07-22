@@ -1,0 +1,23 @@
+{% comment %}
+  JSON-LD structured data for alternatives pages.
+  Renders ItemList schema listing each alternative with position, name, and URL.
+{% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "itemListElement": [
+    {% for alt_slug in page.alternatives %}
+      {% assign alt = site.softwares | where: "slug", alt_slug | first %}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index }},
+        "name": {{ alt.title | jsonify }},
+        "url": {{ alt.url | absolute_url | jsonify }}
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>

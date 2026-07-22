@@ -1,0 +1,43 @@
+---
+layout: default
+title: "Open Source Alternatives"
+description: "Browse open source alternatives to popular proprietary software. Free and open source replacements for commercial tools."
+json_ld: collection
+permalink: /software/alternative-to/
+---
+<div class="landing-page">
+  <div class="hero">
+    <h1>Open Source Alternatives</h1>
+    <p>Find free and open source alternatives to popular proprietary software.</p>
+  </div>
+
+  <!-- Ad slot: below page title -->
+  {% include ad.html slot="alt-landing-below-title" %}
+
+  <!-- 1. Browse Alternatives -->
+  {% if site.alternatives.size > 0 %}
+    <section class="section">
+      <h2 class="section__title">Browse Alternatives</h2>
+      <div class="card-grid">
+        {% for alternative in site.alternatives %}
+          {% include alternative-card.html alternative=alternative %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- Ad slot: between sections -->
+  {% include ad.html slot="alt-landing-between-sections" %}
+
+  <!-- 2. All Open Source Software -->
+  <section class="section">
+    <h2 class="section__title">All Open Source Software</h2>
+    {% assign oss = site.softwares | where: "type", "open-source" %}
+    <div class="card-grid">
+      {% for software in oss %}
+        {% include software-card.html software=software %}
+      {% endfor %}
+    </div>
+  </section>
+
+</div>

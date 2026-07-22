@@ -1,0 +1,76 @@
+// ============================================
+// Ads: AdSense container styling (responsive)
+// ============================================
+
+.ad-container {
+  width: 100%;
+  margin-block: $spacing-xl;
+  text-align: center;
+  overflow: hidden;
+
+  // Responsive ad block
+  .adsbygoogle {
+    display: block;
+    width: 100%;
+    min-height: 90px;
+  }
+}
+
+// --- Ad placeholder (shown when AdSense disabled) ---
+.ad-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+  width: 100%;
+  background-color: $color-bg-alt;
+  border: 1px dashed $color-border-dark;
+  border-radius: $radius-md;
+  color: $color-text-muted;
+  font-size: $font-size-sm;
+  padding: $spacing-md;
+
+  &__label {
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: $font-size-xs;
+    margin-bottom: $spacing-xs;
+  }
+
+  &__slot {
+    color: $color-text-light;
+  }
+}
+
+// --- Ad label (above real ads) ---
+.ad-label {
+  font-size: $font-size-xs;
+  color: $color-text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: $spacing-xs;
+  text-align: center;
+}
+
+// --- Responsive ad heights ---
+@include respond-to(tablet) {
+  .ad-container .adsbygoogle {
+    min-height: 120px;
+  }
+
+  .ad-placeholder {
+    min-height: 120px;
+  }
+}
+
+@include respond-to(desktop) {
+  .ad-container .adsbygoogle {
+    min-height: 160px;
+  }
+
+  .ad-placeholder {
+    min-height: 160px;
+  }
+}

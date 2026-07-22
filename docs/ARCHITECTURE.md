@@ -1,0 +1,251 @@
+# Architecture: `/software/` Section
+
+## Overview
+
+The `/software/` section is built on Jekyll collections, Liquid templating, and a mobile-first SASS architecture. This document covers the technical design decisions and patterns used.
+
+## Jekyll Collections Design
+
+### Two Collections
+
+| Collection | Directory | Permalink | Purpose |
+|---|---|---|---|
+| `softwares` | `_softwares/` | `/software/:slug/` | Individual software pages (open-source & proprietary) |
+| `alternatives` | `_alternatives/` | `/software/alternative-to/:slug/` | Open source alternatives to a specific proprietary tool |
+
+### Why Collections (not posts or pages)
+
+- **Collections** give us custom permalinks, front matter schemas, and `site.softwares` / `site.alternatives` Liquid arrays for cross-referencing.
+- **Posts** are date-based and don't fit evergreen software content.
+- **Pages** lack the collection-level Liquid querying needed for the directory listings.
+
+### Permalink Note
+
+Jekyll collection permalinks support `:slug`, which falls back to the filename slug. All seed files are named to match their `slug` front matter, ensuring URLs are correct.
+
+## Liquid Cross-Reference Patterns
+
+### Pattern 1: Alternatives page → proprietary software lookup
+
+```liquid
+{% assign proprietary = site.softwares | where: "slug", page.proprietary_slug | first %}
+{{ proprietary.description }}
+<a href="{{ proprietary.url }}">Full details →</a>
+```
+
+### Pattern 2: Alternatives page → each alternative's software page
+
+```liquid
+{% for alt_slug in page.alternatives %}
+  {% assign alt = site.softwares | where: "slug", alt_slug | first %}
+  {{ alt.title }} — {{ alt.description }}
+{% endfor %}
+```
+
+### Pattern 3: Landing page → group by category
+
+```liquid
+{% assign grouped = site.softwares | group_by: "category" %}
+{% for group in grouped %}
+  <h2>{{ group.name }}</h2>
+  {% for software in group.items %}
+    {{ software.title }}
+  {% endfor %}
+{% endfor %}
+```
+
+### Pattern 4: Filter open-source only
+
+```liquid
+{% assign oss = site.softwares | where: "type", "open-source" %}
+```
+
+**Rule:** Never hardcode software descriptions in layouts. Always pull from the source `_softwares/` file via these patterns.
+
+## SASS Architecture
+
+### File Structure
+
+```
+_sass/
+  _variables.scss       → Colors, breakpoints, spacing, typography scale
+  _mixins.scss          → Responsive mixins (media queries, grid, flex)
+  _base.scss            → CSS reset, base typography, links, images
+  _layout.scss          → Container, responsive grid, flexbox utilities
+  _components.scss      → Cards, badges, breadcrumbs, banners, tables
+  _pages.scss           → Software/alternatives page-specific styles
+  _ads.scss             → AdSense container styling
+
+assets/css/
+  main.scss             → @import all partials (Jekyll processes this)
+```
+
+### Mobile-First Approach
+
+Base styles target mobile. Media queries progressively enhance for larger screens.
+
+```scss
+// _mixins.scss
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (min-width: 640px) { @content; }
+  } @else if $breakpoint == desktop {
+    @media (min-width: 1024px) { @content; }
+  } @else if $breakpoint == wide {
+    @media (min-width: 1280px) { @content; }
+  }
+}
+```
+
+### Responsive Grid
+
+```scss
+@mixin auto-grid($min-width: 280px) {
+  display: grid;
+  grid-template-columns: 1fr;  // mobile: single column
+  gap: $spacing-md;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(auto-fill, minmax($min-width, 1fr));
+  }
+}
+```
+
+### Breakpoints
+
+| Name | Min-width | Target |
+|---|---|---|
+| `mobile` | 0 (default) | Phones |
+| `tablet` | 640px | Large phones, tablets |
+| `desktop` | 1024px | Desktops |
+| `wide` | 1280px | Wide screens |
+
+## AdSense Integration
+
+### Config-Driven
+
+```yaml
+# _config.yml
+adsense:
+  enabled: false
+  client_id: ""  # e.g. ca-pub-XXXXXXXXXXXXXXXX
+```
+
+### Include Pattern
+
+```liquid
+{% include ad.html slot="header" %}
+```
+
+- When `site.adsense.enabled` is `true` and `client_id` is set: renders real `<ins class="adsbygoogle">` block + AdSense loader script (once, in `<head>`).
+- When disabled (local dev): renders a labeled placeholder div so ad positions are visible.
+
+### Ad Positions
+
+| Page | Positions |
+|---|---|
+| Software page | Below header, mid-content (after description) |
+| Alternatives page | Below header, mid-content (after why-switch) |
+| Landing pages | Below page title, between major sections |
+
+## JSON-LD Structured Data
+
+### Software Pages → `SoftwareApplication`
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "GIMP",
+  "operatingSystem": "Linux, Windows, macOS",
+  "applicationCategory": "GraphicsApplication",
+  "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+  "url": "https://gimp.org"
+}
+```
+
+**License → URL mapping** (Liquid `case` in `json-ld-software.html`):
+- `GPL-3.0` → `https://www.gnu.org/licenses/gpl-3.0.html`
+- `GPL-2.0` → `https://www.gnu.org/licenses/gpl-2.0.html`
+- `MIT` → `https://opensource.org/licenses/MIT`
+- `Apache-2.0` → `https://www.apache.org/licenses/LICENSE-2.0`
+- `BSD-2-Clause` → `https://opensource.org/licenses/BSD-2-Clause`
+- `BSD-3-Clause` → `https://opensource.org/licenses/BSD-3-Clause`
+- `MPL-2.0` → `https://www.mozilla.org/en-US/MPL/2.0/`
+- `AGPL-3.0` → `https://www.gnu.org/licenses/agpl-3.0.html`
+- `LGPL-3.0` → `https://www.gnu.org/licenses/lgpl-3.0.html`
+- `Proprietary` / `Freeware` → omitted (no URL)
+
+**Category → schema.org mapping**:
+- `image-editing` → `GraphicsApplication`
+- `communication` → `CommunicationApplication`
+- `media-player` → `MultimediaApplication`
+- `video-conferencing` → `CommunicationApplication`
+- `office-suite` → `BusinessApplication`
+- `development` → `DeveloperApplication`
+
+### Alternatives Pages → `ItemList`
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Open Source Alternatives to Adobe Photoshop",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "GIMP", "url": "https://opensourcefeed.org/software/gimp/" }
+  ]
+}
+```
+
+### Landing Pages → `CollectionPage`
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Software Directory",
+  "url": "https://opensourcefeed.org/software/"
+}
+```
+
+## SEO Implementation
+
+### Head Meta Tags (`_includes/head.html`)
+
+- `<title>`: `{{ page.title }} | {{ site.title }}` (or just `{{ page.title }}` for landing pages)
+- `<meta name="description">`: from `page.description`
+- `<link rel="canonical">`: `{{ page.url | absolute_url }}`
+- `<meta name="dateModified">`: from `page.last_modified_at` in ISO format
+- `<meta name="viewport">`: responsive viewport tag
+
+### Image Alt Text
+
+All logos use `alt="{{ software.title }} logo"` — enforced in `software-card.html` and layout templates.
+
+## Non-Overlap Enforcement
+
+The non-overlap policy (see `docs/CONTENT-POLICY.md`) is enforced structurally:
+
+- **Software layout** only renders: header, description (body), CTA, footer. No comparison tables, no "why switch" content.
+- **Alternatives layout** only renders: header, proprietary summary (pulled from software page), why-switch (body), alternatives cards, comparison table, footer. No full feature breakdowns.
+- **Landing pages** only render: card grids with one-liner descriptions from front matter. No body content.
+
+This means a contributor cannot accidentally duplicate content by putting it in the wrong place — the layout simply doesn't render it.
+
+## Deployment
+
+### GitHub Pages
+
+The site is designed for GitHub Pages deployment:
+
+- `Gemfile` uses `github-pages` gem for version parity
+- Only GitHub Pages-whitelisted plugins (`jekyll-feed`, `jekyll-sitemap`)
+- `url: https://opensourcefeed.org` in `_config.yml` for correct canonical URLs
+
+### Local Development
+
+```bash
+bundle install
+bundle exec jekyll serve
+# Site at http://localhost:4000
+```

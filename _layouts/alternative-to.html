@@ -1,0 +1,126 @@
+---
+layout: default
+---
+{% assign proprietary = site.softwares | where: "slug", page.proprietary_slug | first %}
+
+<article class="alternatives-page">
+  <!-- 1. Header -->
+  <header class="page-header">
+    <h1>{{ page.title }}</h1>
+  </header>
+
+  <!-- 2. Ad slot: below header -->
+  {% include ad.html slot="alternatives-below-header" %}
+
+  <!-- 3. Brief proprietary summary (pulled from software page, no feature breakdown) -->
+  {% if proprietary %}
+    <div class="proprietary-summary">
+      <p>
+        {{ proprietary.description }}
+        <a href="{{ proprietary.url | relative_url }}">Full details &rarr;</a>
+      </p>
+    </div>
+  {% endif %}
+
+  <!-- 4. Why switch (body content — only place this lives) -->
+  <div class="why-switch">
+    {{ content }}
+  </div>
+
+  <!-- 5. Ad slot: mid-content -->
+  {% include ad.html slot="alternatives-mid-content" %}
+
+  <!-- 6. Alternatives list (cards linking to software pages) -->
+  <section class="alternatives-section">
+    <h2 class="section__title">Open Source Alternatives</h2>
+    <div class="alternatives-list">
+      {% for alt_slug in page.alternatives %}
+        {% assign alt = site.softwares | where: "slug", alt_slug | first %}
+        {% if alt %}
+          <article class="card">
+            <div class="card__header">
+              {% if alt.logo %}
+                <img src="{{ alt.logo | relative_url }}"
+                     alt="{{ alt.title }} logo"
+                     class="card__logo"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="card__logo card__logo--placeholder" style="display:none">
+                  {{ alt.title | slice: 0 }}
+                </div>
+              {% else %}
+                <div class="card__logo card__logo--placeholder">
+                  {{ alt.title | slice: 0 }}
+                </div>
+              {% endif %}
+              <div>
+                <h3 class="card__title">
+                  <a href="{{ alt.url | relative_url }}">{{ alt.title }}</a>
+                </h3>
+                {% if alt.tagline %}
+                  <p class="card__tagline">{{ alt.tagline }}</p>
+                {% endif %}
+              </div>
+            </div>
+
+            <p class="card__description">{{ alt.description }}</p>
+
+            <div class="card__meta">
+              {% if alt.license %}
+                <span class="badge badge--license">{{ alt.license }}</span>
+              {% endif %}
+
+              {% if alt.platforms %}
+                <ul class="tag-list">
+                  {% for platform in alt.platforms %}
+                    <li class="tag">{{ platform }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+
+            <div class="card__footer">
+              <a href="{{ alt.url | relative_url }}">See full details &rarr;</a>
+            </div>
+          </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- 7. Comparison table (optional — renders only if page.comparison exists) -->
+  {% if page.comparison %}
+    <section class="section">
+      <h2 class="section__title">Feature Comparison</h2>
+      <div class="table-scroll">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              {% for col in page.comparison.columns %}
+                <th>{{ col }}</th>
+              {% endfor %}
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in page.comparison.rows %}
+              <tr>
+                <td>{{ row.feature }}</td>
+                {% for val in row.values %}
+                  <td>{{ val }}</td>
+                {% endfor %}
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- 8. Footer -->
+  <footer>
+    {% if page.last_modified_at %}
+      <p class="last-modified">Last updated: {{ page.last_modified_at | date: '%B %d, %Y' }}</p>
+    {% endif %}
+    <a href="{{ '/software/alternative-to/' | relative_url }}" class="back-link">&larr; Back to Alternatives</a>
+  </footer>
+</article>
