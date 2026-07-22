@@ -66,7 +66,7 @@ layout: default
   <!-- 5. Conditional CTA block -->
   {% if page.type == "proprietary" and page.has_alternatives %}
     <div class="cta-banner">
-      <p>Looking for free alternatives? &rarr; <a href="{{ '/software/alternative-to/' | append: page.slug | append: '/' | relative_url }}">Open source alternatives to {{ page.title }}</a></p>
+      <p>Looking for free alternatives? &rarr; <a href="{{ '/alternative-to/' | append: page.slug | append: '/' | relative_url }}">Open source alternatives to {{ page.title }}</a></p>
     </div>
   {% elsif page.type == "open-source" and page.alternative_to.size > 0 %}
     <div class="cta-banner cta-banner--alternative">
@@ -74,7 +74,7 @@ layout: default
         {% for proprietary_slug in page.alternative_to %}
           {% assign proprietary = site.softwares | where: "slug", proprietary_slug | first %}
           {% if proprietary %}
-            <a href="{{ '/software/alternative-to/' | append: proprietary_slug | append: '/' | relative_url }}">{{ proprietary.title }}</a>{% unless forloop.last %}, {% endunless %}
+            <a href="{{ '/alternative-to/' | append: proprietary_slug | append: '/' | relative_url }}">{{ proprietary.title }}</a>{% unless forloop.last %}, {% endunless %}
           {% endif %}
         {% endfor %}
       </p>
@@ -86,6 +86,6 @@ layout: default
     {% if page.last_modified_at %}
       <p class="last-modified">Last updated: {{ page.last_modified_at | date: '%B %d, %Y' }}</p>
     {% endif %}
-    <a href="{{ '/software/' | relative_url }}" class="back-link">&larr; Back to Software Directory</a>
+    <a href="{{ '/' | relative_url }}" class="back-link">&larr; Back to Software Directory</a>
   </footer>
 </article>

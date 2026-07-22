@@ -3,8 +3,9 @@ title: OpenSourceFeed
 description: >-
   Open source software directory and alternatives guide.
   Find free and open source software for Linux, Windows, and macOS.
-url: "https://opensourcefeed.org"
-baseurl: ""
+url: "https://www.opensourcefeed.org"
+baseurl: "/software"
+main_site_url: "https://www.opensourcefeed.org"
 
 # Build settings
 markdown: kramdown
@@ -34,10 +35,10 @@ sass:
 collections:
   softwares:
     output: true
-    permalink: /software/:slug/
+    permalink: /:slug/
   alternatives:
     output: true
-    permalink: /software/alternative-to/:slug/
+    permalink: /alternative-to/:slug/
 
 # Defaults — auto-assign layouts based on path
 defaults:

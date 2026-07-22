@@ -1,20 +1,54 @@
 ---
 layout: default
-title: "OpenSourceFeed — Open Source Software Directory"
-description: "Discover open source software and free alternatives to popular proprietary tools. Browse by category for Linux, Windows, and macOS."
+title: "Software Directory"
+description: "Browse open source and proprietary software. Find free alternatives to popular commercial tools for Linux, Windows, and macOS."
+json_ld: collection
+permalink: /
 ---
 <div class="landing-page">
   <div class="hero">
-    <h1>OpenSourceFeed</h1>
-    <p>Discover open source software and free alternatives to popular proprietary tools.</p>
+    <h1>Software Directory</h1>
+    <p>Browse open source and proprietary software. Find free alternatives to popular commercial tools.</p>
   </div>
 
-  <div class="section">
-    <p style="text-align: center; margin-bottom: 1.5rem;">
-      <a href="{{ '/software/' | relative_url }}" class="back-link" style="font-size: 1rem;">Browse Software Directory &rarr;</a>
-    </p>
-    <p style="text-align: center;">
-      <a href="{{ '/software/alternative-to/' | relative_url }}" class="back-link" style="font-size: 1rem;">Browse Open Source Alternatives &rarr;</a>
-    </p>
-  </div>
+  <!-- Ad slot: below page title -->
+  {% include ad.html slot="directory-below-title" %}
+
+  <!-- 1. Open Source Alternatives -->
+  {% if site.alternatives.size > 0 %}
+    <section class="section">
+      <h2 class="section__title">Open Source Alternatives</h2>
+      <div class="card-grid">
+        {% for alternative in site.alternatives %}
+          {% include alternative-card.html alternative=alternative %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- Ad slot: between sections -->
+  {% include ad.html slot="directory-between-sections" %}
+
+  <!-- 2. Software Directory (grouped by category) -->
+  <section class="section">
+    <h2 class="section__title">Software Directory</h2>
+    {% assign grouped = site.softwares | group_by: "category" %}
+    {% for group in grouped %}
+      <div class="category-group">
+        <h3 class="category-group__title">
+          {% if site.category_names[group.name] %}
+            {{ site.category_names[group.name] }}
+          {% else %}
+            {{ group.name | capitalize }}
+          {% endif %}
+        </h3>
+        <div class="card-grid">
+          {% for software in group.items %}
+            {% include software-card.html software=software %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </section>
+
 </div>

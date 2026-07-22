@@ -8,10 +8,12 @@
     @media (min-width: $breakpoint-tablet) { @content; }
   } @else if $breakpoint == desktop {
     @media (min-width: $breakpoint-desktop) { @content; }
+  } @else if $breakpoint == xl {
+    @media (min-width: $breakpoint-xl) { @content; }
   } @else if $breakpoint == wide {
     @media (min-width: $breakpoint-wide) { @content; }
   } @else {
-    @error "Unknown breakpoint '#{$breakpoint}'. Use: tablet, desktop, or wide.";
+    @error "Unknown breakpoint '#{$breakpoint}'. Use: tablet, desktop, xl, or wide.";
   }
 }
 

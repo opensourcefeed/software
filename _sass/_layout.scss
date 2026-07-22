@@ -9,101 +9,324 @@
   min-height: 60vh;
 }
 
-// --- Site header ---
+// --- Site header (dark navbar, matches opensourcefeed.org) ---
 .site-header {
-  background-color: $color-bg;
-  border-bottom: 1px solid $color-border;
+  background-color: $color-bg-dark;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: $shadow-sm;
+  box-shadow: $shadow-md;
 }
 
 .site-header__inner {
-  @include container;
-  @include flex-row($gap: $spacing-lg);
+  @include flex-row($gap: $spacing-md);
   align-items: center;
-  padding-block: $spacing-md;
-}
+  padding-block: $spacing-sm;
+  padding-inline: $container-padding;
+  flex-wrap: nowrap;
 
-.site-header__logo {
-  font-size: $font-size-xl;
-  font-weight: $font-weight-bold;
-  color: $color-text;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: none;
-    color: $color-primary;
+  @include respond-to(tablet) {
+    padding-inline: $spacing-lg;
   }
 }
 
-.site-header__nav {
-  margin-left: auto;
+.site-header__logo {
+  @include flex-row($gap: $spacing-sm);
+  align-items: center;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-bg;
+  text-decoration: none;
+  white-space: nowrap;
 
-  ul {
-    @include flex-row($gap: $spacing-lg);
-    list-style: none;
-    padding: 0;
+  img {
+    display: block;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $color-bg;
+  }
+}
+
+// Mobile toggle (CSS-only checkbox — no JS)
+.site-header__nav-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.site-header__nav-label {
+  @include flex-center;
+  margin-left: auto;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: 1px solid rgba($color-bg, 0.3);
+  border-radius: $radius-sm;
+  background: transparent;
+
+  &:focus-within {
+    outline: 2px solid $color-bg;
+    outline-offset: 2px;
+  }
+}
+
+.site-header__toggle-icon,
+.site-header__toggle-icon::before,
+.site-header__toggle-icon::after {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: $color-bg;
+  transition: transform $transition-base;
+}
+
+.site-header__toggle-icon {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+
+  &::before {
+    top: -6px;
+  }
+
+  &::after {
+    top: 6px;
+  }
+}
+
+// Open state: turn into X
+.site-header__nav-checkbox:checked + .site-header__nav-label .site-header__toggle-icon {
+  background: transparent;
+
+  &::before {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  &::after {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+}
+
+// Collapsible content (mobile: hidden by default, dropdown when checked)
+.site-header__collapse {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: $color-bg-dark;
+  padding: $spacing-md $container-padding;
+  border-top: 1px solid rgba($color-bg, 0.1);
+  box-shadow: $shadow-lg;
+}
+
+// Show when checkbox is checked (mobile)
+.site-header__nav-checkbox:checked ~ .site-header__collapse {
+  display: block;
+}
+
+.site-header__nav {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 $spacing-md 0;
+
+  li {
     margin: 0;
   }
 
   a {
-    color: $color-text;
+    display: block;
+    padding: $spacing-sm $spacing-md;
+    color: rgba($color-bg, 0.85);
     font-weight: $font-weight-medium;
     font-size: $font-size-sm;
+    text-decoration: none;
+    border-radius: $radius-sm;
 
-    &:hover {
-      color: $color-primary;
+    &:hover,
+    &:focus {
+      color: $color-bg;
+      background-color: rgba($color-bg, 0.1);
       text-decoration: none;
     }
   }
 }
 
-// Mobile: stack nav below logo
-@include respond-to(tablet) {
-  .site-header__inner {
-    flex-wrap: nowrap;
+// Divider between main site and project links
+.site-header__divider {
+  height: 1px;
+  background-color: rgba($color-bg, 0.2);
+  margin: $spacing-sm 0;
+}
+
+// Dropdown menus (mobile: inline; desktop: hover/focus)
+.site-header__dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  a {
+    padding-left: $spacing-lg;
+    font-size: $font-size-xs;
+    color: rgba($color-bg, 0.7);
   }
 }
 
-// --- Site footer ---
+// Social icons
+.site-header__social {
+  @include flex-row($gap: $spacing-sm);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    display: inline-flex;
+    padding: $spacing-xs;
+    border-radius: $radius-sm;
+
+    &:hover {
+      background-color: rgba($color-bg, 0.1);
+    }
+  }
+
+  img {
+    display: block;
+  }
+}
+
+// Desktop: inline nav with hover dropdowns (matches Bootstrap xl breakpoint)
+@include respond-to(xl) {
+  .site-header__nav-label {
+    display: none;
+  }
+
+  // Always show nav on desktop
+  .site-header__collapse {
+    display: block;
+    position: static;
+    background: transparent;
+    padding: 0;
+    border-top: 0;
+    box-shadow: none;
+  }
+
+  .site-header__nav {
+    @include flex-row($gap: $spacing-md);
+    align-items: center;
+    margin: 0;
+
+    a {
+      padding: $spacing-sm $spacing-md;
+    }
+  }
+
+  .site-header__divider {
+    width: 1px;
+    height: 20px;
+    margin: 0 $spacing-sm;
+  }
+
+  // CSS-only dropdown on hover/focus
+  .site-header__dropdown {
+    position: relative;
+  }
+
+  .site-header__dropdown-toggle {
+    cursor: pointer;
+  }
+
+  .site-header__dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background-color: $color-bg-dark;
+    border: 1px solid rgba($color-bg, 0.15);
+    border-radius: $radius-sm;
+    box-shadow: $shadow-lg;
+    padding: $spacing-xs 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px);
+    transition: opacity $transition-base, transform $transition-base, visibility $transition-base;
+
+    a {
+      padding: $spacing-sm $spacing-md;
+      color: rgba($color-bg, 0.85);
+
+      &:hover {
+        background-color: rgba($color-bg, 0.1);
+        color: $color-bg;
+      }
+    }
+  }
+
+  .site-header__dropdown:hover .site-header__dropdown-menu,
+  .site-header__dropdown:focus-within .site-header__dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .site-header__social {
+    margin-left: auto;
+  }
+}
+
+// --- Site footer (dark, centered — matches opensourcefeed.org) ---
 .site-footer {
   background-color: $color-bg-dark;
-  color: $color-bg-alt;
-  padding-block: $spacing-xl;
+  color: rgba($color-bg, 0.9);
+  text-align: center;
+  padding-block: $spacing-sm;
   margin-top: $spacing-2xl;
 
   a {
-    color: $color-bg-alt;
+    color: #69a9df;
+    text-decoration: underline;
 
     &:hover {
-      color: $color-bg;
-      text-decoration: underline;
+      color: lighten(#69a9df, 10%);
     }
   }
 }
 
 .site-footer__inner {
   @include container;
-  @include flex-row($gap: $spacing-lg);
-  flex-direction: column;
-  text-align: center;
+  padding-block: $spacing-xs;
+}
 
-  @include respond-to(tablet) {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-  }
+.site-footer__copyright {
+  margin: 0;
+  font-size: $font-size-sm;
 }
 
 .site-footer__nav {
   ul {
-    @include flex-row($gap: $spacing-lg);
+    @include flex-row($gap: $spacing-md);
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: $spacing-xs 0 0 0;
     justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  a {
+    font-size: $font-size-sm;
   }
 }
 

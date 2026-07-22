@@ -1,12 +1,82 @@
 <header class="site-header">
   <div class="site-header__inner">
-    <a href="{{ '/' | relative_url }}" class="site-header__logo">OpenSourceFeed</a>
-    <nav class="site-header__nav" aria-label="Main navigation">
-      <ul>
-        <li><a href="{{ '/' | relative_url }}">Home</a></li>
-        <li><a href="{{ '/software/' | relative_url }}">Software</a></li>
-        <li><a href="{{ '/software/alternative-to/' | relative_url }}">Alternatives</a></li>
+    <a href="{{ site.main_site_url }}" class="site-header__logo">
+      <img src="{{ site.main_site_url }}/assets/images/meta/icon.png" width="24" alt="OpenSourceFeed logo" />
+      <span>OpenSourceFeed</span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="site-header__nav-checkbox" />
+    <label for="nav-toggle" class="site-header__nav-label" aria-label="Toggle navigation">
+      <span class="site-header__toggle-icon"></span>
+    </label>
+    <div class="site-header__collapse">
+      <ul class="site-header__nav">
+        <li><a href="{{ site.main_site_url }}/distribution/">Operating System</a></li>
+        <li><a href="{{ site.main_site_url }}/desktop/">Desktop Environment</a></li>
+        <li><a href="{{ site.main_site_url }}/screenshots/">Screenshots</a></li>
+        <li class="site-header__dropdown">
+          <a href="{{ site.main_site_url }}/blog/" class="site-header__dropdown-toggle">Blog</a>
+          <ul class="site-header__dropdown-menu">
+            <li><a href="{{ site.main_site_url }}/blog/">Open Source</a></li>
+            <li><a href="{{ site.main_site_url }}/beyond-opensource/">Analysis</a></li>
+            <li><a href="{{ site.main_site_url }}/insights/">Insights</a></li>
+          </ul>
+        </li>
+        <li><a href="{{ site.main_site_url }}/page-hit-rank/">Page Hit Rank</a></li>
+        <li class="site-header__dropdown">
+          <a href="{{ site.main_site_url }}/about/" class="site-header__dropdown-toggle">About</a>
+          <ul class="site-header__dropdown-menu">
+            <li><a href="{{ site.main_site_url }}/guest-post-guidelines/">Guest Post Guidelines</a></li>
+            <li><a href="{{ site.main_site_url }}/privacy-policy/">Privacy Policy</a></li>
+          </ul>
+        </li>
+        <li class="site-header__divider" aria-hidden="true"></li>
+        <li><a href="{{ '/' | relative_url }}">Software</a></li>
+        <li><a href="{{ '/alternative-to/' | relative_url }}">Alternatives</a></li>
       </ul>
-    </nav>
+
+      <ul class="site-header__social">
+        <li>
+          <a rel="nofollow" title="Follow us on Mastodon" target="_blank" href="https://floss.social/@opensourcefeed">
+            <img height="25" alt="Mastodon Link" src="{{ site.main_site_url }}/assets/images/meta/mastodon.png" />
+          </a>
+        </li>
+        <li>
+          <a rel="nofollow" title="Send us Email" target="_blank" href="mailto:contact.opensourcefeed@gmail.com">
+            <img height="25" alt="Email ID" src="{{ site.main_site_url }}/assets/images/meta/email.png" />
+          </a>
+        </li>
+        <li>
+          <a rel="nofollow" title="Like us on facebook" target="_blank" href="https://www.facebook.com/opensourcefeed/">
+            <img height="25" alt="FB Link" src="{{ site.main_site_url }}/assets/images/meta/facebook.png" />
+          </a>
+        </li>
+        <li>
+          <a rel="nofollow" title="Follow us on Twitter" target="_blank" href="https://twitter.com/opensourcefeed">
+            <img height="25" alt="Twitter Link" src="{{ site.main_site_url }}/assets/images/meta/twitter.png" />
+          </a>
+        </li>
+        <li>
+          <a rel="nofollow" title="Subscribe our YouTube channel" target="_blank" href="https://www.youtube.com/c/DistroScreens">
+            <img height="25" alt="YouTube Channel" src="{{ site.main_site_url }}/assets/images/meta/youtube.png" />
+          </a>
+        </li>
+        <li>
+          <a title="Subscribe for our RSS" target="_blank" href="{{ site.main_site_url }}/feed.xml">
+            <img height="25" alt="RSS Link" src="{{ site.main_site_url }}/assets/images/meta/rss.png" />
+          </a>
+        </li>
+        <li>
+          <a rel="nofollow" title="Subscribe us on Telegram" target="_blank" href="https://t.me/opensourcefeedOrg">
+            <img height="25" alt="Telegram Link" src="{{ site.main_site_url }}/assets/images/meta/telegram.png" />
+          </a>
+        </li>
+        <li>
+          <a rel="nofollow" title="Follow us on Instagram" target="_blank" href="https://www.instagram.com/opensourcefeed/">
+            <img height="25" alt="Instagram Link" src="{{ site.main_site_url }}/assets/images/meta/instagram.png" />
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </header>
