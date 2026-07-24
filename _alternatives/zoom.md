@@ -5,8 +5,10 @@ slug: zoom
 proprietary_slug: zoom
 alternatives:
   - jitsi
-description: "Best open source alternatives to Zoom for video conferencing. Free, self-hostable meeting platforms with end-to-end encryption and no participant limits."
-last_modified_at: 2025-01-15
+description: "Looking for a Zoom alternative? Compare free, open source video conferencing tools you can self-host for full data control and no subscription costs."
+last_modified_at: 2026-07-23
 ---
 
-Switching from Zoom to an open source alternative eliminates subscription costs, removes participant limits, and gives you full control over your meeting data. Open source video conferencing tools can be self-hosted, ensuring your conversations never pass through third-party servers. They also support end-to-end encryption and require no account to join, making them accessible and privacy-respecting for all participants.
+Zoom is a capable video conferencing platform, but its subscription model, data routing through Zoom's servers, and account requirements are reasons many teams look for alternatives. Open source video conferencing tools address these concerns directly — they can be self-hosted, require no accounts to join, and give you full control over where your meeting data lives.
+
+The tradeoff is worth understanding: self-hosting requires a Linux server and some technical setup. For teams comfortable with that, the result is a conferencing setup with no per-seat costs, no time limits, and no third-party access to your conversations.

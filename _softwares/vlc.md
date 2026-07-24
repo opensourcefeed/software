@@ -11,7 +11,7 @@ category: media-player
 logo: /assets/images/software/vlc.png
 alternative_to: []
 description: "VLC is a free and open source media player that plays virtually any audio and video format. Cross-platform with streaming and conversion capabilities."
-last_modified_at: 2025-01-15
+last_modified_at: 2026-07-23
 ---
 
 ## Overview

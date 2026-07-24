@@ -2,7 +2,7 @@
 layout: software
 title: "Jitsi Meet"
 slug: jitsi
-tagline: "Free, open source video conferencing"
+tagline: "Free, open source video conferencing for secure online meetings"
 type: open-source
 license: Apache-2.0
 website: https://jitsi.org
@@ -11,34 +11,37 @@ category: video-conferencing
 logo: /assets/images/software/jitsi.png
 alternative_to:
   - zoom
-description: "Jitsi Meet is a free and open source video conferencing application for secure online meetings. Self-hostable with end-to-end encryption support."
-last_modified_at: 2025-01-15
+description: "Jitsi Meet is a free and open source video conferencing tool. No account needed, no time limits, and fully self-hostable for complete data control."
+last_modified_at: 2026-07-23
 ---
 
 ## Overview
 
-Jitsi Meet is a free and open source video conferencing application developed by the Jitsi team (now part of 8x8). It provides secure video meetings, screen sharing, and can be self-hosted. Jitsi is built on WebRTC and supports end-to-end encryption.
+Jitsi Meet is a free and open source video conferencing application built on WebRTC. Originally developed by the Jitsi team and now maintained under 8x8, it remains a fully open source, community-driven project. Jitsi Meet works entirely in the browser with no software installation required, and can be self-hosted on your own infrastructure for complete control over meeting data.
+
+The hosted public instance at meet.jit.si is free to use with no account, though it enforces a 5-minute time limit for meetings with more than 5 participants. Self-hosted deployments have no such restrictions.
 
 ## Key Features
 
-- **Video meetings** — HD video and audio with no participant limit (self-hosted)
-- **Screen sharing** — Share entire screen or specific application window
-- **End-to-end encryption** — E2EE for enhanced privacy
-- **Self-hosting** — Deploy on your own server for full control
-- **Live streaming** — Stream meetings to YouTube
-- **Recording** — Record meetings to Dropbox or local storage (self-hosted)
-- **Integrations** — Embed in websites and integrate with Slack, Microsoft Teams
-- **No account required** — Join meetings without registration
+- **No account required** — Start or join meetings instantly via browser without registration
+- **Self-hosting** — Deploy on your own Linux server using the official Debian/Ubuntu packages or Docker image
+- **End-to-end encryption** — E2EE available for meetings with up to 35 participants (requires Chromium-based browser)
+- **Video meetings** — HD video and audio; participant limits depend on server capacity when self-hosted
+- **Screen sharing** — Share entire screen or a specific application window
+- **Live streaming** — Stream meetings directly to YouTube Live
+- **Recording** — Record meetings locally or to Dropbox (self-hosted deployments with Jibri)
+- **Embeddable** — Integrate into websites and apps via the Jitsi Meet API and IFrame API
+- **Lobby and moderation** — Waiting room, mute controls, participant kick, and password-protected rooms
 
 ## Use Cases
 
-- **Privacy-conscious teams** — Self-hosted, encrypted video meetings
-- **Open source communities** — Community meetings without proprietary tools
-- **Education** — Online classes without student data collection
-- **Webinars** — Public meetings with live streaming to YouTube
+- **Privacy-conscious teams** — Self-hosted deployments keep all meeting data on infrastructure you control, with no third-party data sharing
+- **Open source communities** — Free community calls with no time limits or per-seat costs
+- **Education** — Online classes with no student account requirements and no advertising
+- **NGOs and nonprofits** — Secure coordination without subscription costs
 
 ## Who It's For
 
-Jitsi Meet is for anyone who needs video conferencing without subscription costs or vendor lock-in. It is particularly suited for privacy-conscious users, open source communities, and organizations that want to self-host their communication infrastructure.
+Jitsi Meet suits individuals, teams, and organizations that need video conferencing without subscription fees, vendor lock-in, or data sovereignty concerns. It is particularly strong for technically capable teams willing to self-host, and for communities that need occasional calls on the public instance at no cost.
 
-<!-- TODO: expand with self-hosting guide and E2EE setup details -->
+For organizations that need guaranteed uptime and support, 8x8 offers a managed Jitsi-as-a-Service product. For casual or infrequent use, the public instance at meet.jit.si works immediately with no setup.

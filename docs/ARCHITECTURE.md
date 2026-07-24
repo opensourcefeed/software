@@ -219,7 +219,7 @@ Defined once, referenced everywhere via `@id`:
   "description": "...",
   "image": "https://www.opensourcefeed.org/software/assets/images/software/gimp.png",
   "mainEntityOfPage": { "@type": "WebPage", "@id": "..." },
-  "dateModified": "2025-01-15",
+  "dateModified": "2026-07-23",
   "author": { "@id": ".../#organization" },
   "publisher": { "@id": ".../#organization" },
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
@@ -262,7 +262,7 @@ Defined once, referenced everywhere via `@id`:
   "name": "Open Source Alternatives to Adobe Photoshop",
   "description": "...",
   "url": "...",
-  "dateModified": "2025-01-15",
+  "dateModified": "2026-07-23",
   "author": { "@id": ".../#organization" },
   "publisher": { "@id": ".../#organization" },
   "mainEntity": {
@@ -298,7 +298,7 @@ Defined once, referenced everywhere via `@id`:
   "description": "...",
   "url": "...",
   "isPartOf": { "@id": ".../#website" },
-  "dateModified": "2025-01-15",
+  "dateModified": "2026-07-23",
   "author": { "@id": ".../#organization" },
   "publisher": { "@id": ".../#organization" },
   "hasPart": [

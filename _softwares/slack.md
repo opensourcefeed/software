@@ -12,7 +12,7 @@ logo: /assets/images/software/slack.png
 alternative_to: []
 has_alternatives: true
 description: "Slack is a proprietary team collaboration platform offering channels, direct messaging, file sharing, and integrations. Widely used in corporate environments."
-last_modified_at: 2025-01-15
+last_modified_at: 2026-07-23
 ---
 
 ## Overview

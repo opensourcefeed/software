@@ -12,7 +12,7 @@ logo: /assets/images/software/photoshop.png
 alternative_to: []
 has_alternatives: true
 description: "Adobe Photoshop is a professional raster graphics editor for photo editing, digital painting, and compositing. Widely used in photography, design, and digital art."
-last_modified_at: 2025-01-15
+last_modified_at: 2026-07-23
 ---
 
 ## Overview
@@ -26,7 +26,6 @@ Adobe Photoshop is a raster graphics editor developed by Adobe Inc. It is the in
 - **Selection tools** — Advanced selection tools including subject selection and object selection
 - **Filters and effects** — Extensive library of filters including neural filters powered by Adobe Sensei
 - **RAW editing** — Built-in Camera Raw plugin for processing RAW photos
-- **3D tools** — 3D modeling and texturing capabilities
 - **Generative AI** — Generative Fill and Generative Expand using Adobe Firefly
 
 ## Use Cases
