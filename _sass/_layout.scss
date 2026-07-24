@@ -127,6 +127,10 @@
   padding: $spacing-md $container-padding;
   border-top: 1px solid rgba($color-bg, 0.1);
   box-shadow: $shadow-lg;
+  // Scrollable when menu exceeds viewport height (mobile only)
+  max-height: 100dvh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 // Show when checkbox is checked (mobile)
@@ -161,24 +165,87 @@
   }
 }
 
-// Divider between main site and project links
-.site-header__divider {
+// Submenu checkbox (visually hidden — same technique as main nav toggle)
+.site-header__submenu-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
   height: 1px;
-  background-color: rgba($color-bg, 0.2);
-  margin: $spacing-sm 0;
+  pointer-events: none;
 }
 
-// Dropdown menus (mobile: inline; desktop: hover/focus)
+// Dropdown toggle (label row: text + arrow)
+.site-header__dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-sm;
+  padding: $spacing-sm $spacing-md;
+  color: rgba($color-bg, 0.85);
+  font-weight: $font-weight-medium;
+  font-size: $font-size-sm;
+  cursor: pointer;
+  border-radius: $radius-sm;
+
+  // Reset inner link padding so the label is the single padded row
+  a {
+    padding: 0;
+    color: inherit;
+    text-decoration: none;
+    flex: 1;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+      background-color: transparent;
+      text-decoration: none;
+    }
+  }
+
+  &:hover {
+    color: $color-bg;
+    background-color: rgba($color-bg, 0.1);
+  }
+}
+
+// Plain (non-link) dropdown label, e.g. "Software"
+.site-header__dropdown-label {
+  flex: 1;
+}
+
+// Arrow indicator (CSS chevron — down by default, up when open)
+.site-header__arrow {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform $transition-base;
+  flex-shrink: 0;
+}
+
+// Flip arrow up when submenu is expanded
+.site-header__submenu-checkbox:checked ~ .site-header__dropdown-toggle .site-header__arrow {
+  transform: rotate(225deg);
+}
+
+// Dropdown menus (mobile: hidden by default, expand when checkbox checked)
 .site-header__dropdown-menu {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: none;
 
   a {
     padding-left: $spacing-lg;
     font-size: $font-size-xs;
     color: rgba($color-bg, 0.7);
   }
+}
+
+.site-header__submenu-checkbox:checked ~ .site-header__dropdown-menu {
+  display: block;
 }
 
 // Social icons
@@ -191,6 +258,8 @@
 
   li {
     margin: 0;
+    display: flex;
+    align-items: center;
   }
 
   a {
@@ -208,8 +277,18 @@
   }
 }
 
-// Desktop: inline nav with hover dropdowns (matches Bootstrap xl breakpoint)
+// Social icons image sizing
+.social-icons img {
+  height: 25px;
+}
+
+// Desktop (compact): inline nav with hover dropdowns — reduced spacing to fit
+// 1200px–1439px viewports on a single line. Full spacing restored at 2xl.
 @include respond-to(xl) {
+  .site-header__inner {
+    gap: $spacing-sm;
+  }
+
   .site-header__nav-label {
     display: none;
   }
@@ -222,22 +301,22 @@
     padding: 0;
     border-top: 0;
     box-shadow: none;
+    display: flex;
+    // Reset mobile scroll constraints on desktop
+    max-height: none;
+    overflow: visible;
+    flex-grow: 1;
   }
 
   .site-header__nav {
-    @include flex-row($gap: $spacing-md);
+    @include flex-row($gap: $spacing-xs, $wrap: false);
     align-items: center;
     margin: 0;
 
     a {
-      padding: $spacing-sm $spacing-md;
+      padding: $spacing-xs $spacing-sm;
+      font-size: $font-size-xs;
     }
-  }
-
-  .site-header__divider {
-    width: 1px;
-    height: 20px;
-    margin: 0 $spacing-sm;
   }
 
   // CSS-only dropdown on hover/focus
@@ -247,9 +326,21 @@
 
   .site-header__dropdown-toggle {
     cursor: pointer;
+    padding: $spacing-xs $spacing-sm;
+    font-size: $font-size-xs;
+
+    a {
+      padding: 0;
+    }
+  }
+
+  // Hover-based dropdowns on desktop — hide the mobile arrow
+  .site-header__arrow {
+    display: none;
   }
 
   .site-header__dropdown-menu {
+    display: block;
     position: absolute;
     top: 100%;
     left: 0;
@@ -284,6 +375,50 @@
 
   .site-header__social {
     margin-left: auto;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: $spacing-xs;
+
+    a {
+      padding: 0;
+    }
+  }
+
+  .social-icons img {
+    height: 20px;
+  }
+}
+
+// Desktop (full): restore standard spacing at 1440px+
+@include respond-to(2xl) {
+  .site-header__inner {
+    gap: 0.25rem;
+  }
+
+  .site-header__nav {
+    gap: 0.25rem;
+
+    a {
+      padding: $spacing-sm $spacing-md;
+      font-size: $font-size-sm;
+    }
+  }
+
+  .site-header__dropdown-toggle {
+    padding: $spacing-sm $spacing-md;
+    font-size: $font-size-sm;
+  }
+
+  .site-header__social {
+    gap: $spacing-sm;
+
+    a {
+      padding: $spacing-xs;
+    }
+  }
+
+  .social-icons img {
+    height: 25px;
   }
 }
 

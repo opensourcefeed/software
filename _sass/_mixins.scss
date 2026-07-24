@@ -12,8 +12,10 @@
     @media (min-width: $breakpoint-xl) { @content; }
   } @else if $breakpoint == wide {
     @media (min-width: $breakpoint-wide) { @content; }
+  } @else if $breakpoint == 2xl {
+    @media (min-width: $breakpoint-2xl) { @content; }
   } @else {
-    @error "Unknown breakpoint '#{$breakpoint}'. Use: tablet, desktop, xl, or wide.";
+    @error "Unknown breakpoint '#{$breakpoint}'. Use: tablet, desktop, xl, wide, or 2xl.";
   }
 }
 

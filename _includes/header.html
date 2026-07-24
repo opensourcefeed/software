@@ -15,7 +15,11 @@
         <li><a href="{{ site.main_site_url }}/desktop/">Desktop Environment</a></li>
         <li><a href="{{ site.main_site_url }}/screenshots/">Screenshots</a></li>
         <li class="site-header__dropdown">
-          <a href="{{ site.main_site_url }}/blog/" class="site-header__dropdown-toggle">Blog</a>
+          <input type="checkbox" id="nav-blog-toggle" class="site-header__submenu-checkbox" />
+          <label for="nav-blog-toggle" class="site-header__dropdown-toggle">
+            <a href="{{ site.main_site_url }}/blog/">Blog</a>
+            <span class="site-header__arrow" aria-hidden="true"></span>
+          </label>
           <ul class="site-header__dropdown-menu">
             <li><a href="{{ site.main_site_url }}/blog/">Open Source</a></li>
             <li><a href="{{ site.main_site_url }}/beyond-opensource/">Analysis</a></li>
@@ -24,18 +28,30 @@
         </li>
         <li><a href="{{ site.main_site_url }}/page-hit-rank/">Page Hit Rank</a></li>
         <li class="site-header__dropdown">
-          <a href="{{ site.main_site_url }}/about/" class="site-header__dropdown-toggle">About</a>
+          <input type="checkbox" id="nav-software-toggle" class="site-header__submenu-checkbox" />
+          <label for="nav-software-toggle" class="site-header__dropdown-toggle">
+            <span class="site-header__dropdown-label">Software</span>
+            <span class="site-header__arrow" aria-hidden="true"></span>
+          </label>
+          <ul class="site-header__dropdown-menu">
+            <li><a href="{{ '/' | relative_url }}">Software Directory</a></li>
+            <li><a href="{{ '/alternative-to/' | relative_url }}">Alternatives</a></li>
+          </ul>
+        </li>
+        <li class="site-header__dropdown">
+          <input type="checkbox" id="nav-about-toggle" class="site-header__submenu-checkbox" />
+          <label for="nav-about-toggle" class="site-header__dropdown-toggle">
+            <a href="{{ site.main_site_url }}/about/">About</a>
+            <span class="site-header__arrow" aria-hidden="true"></span>
+          </label>
           <ul class="site-header__dropdown-menu">
             <li><a href="{{ site.main_site_url }}/guest-post-guidelines/">Guest Post Guidelines</a></li>
             <li><a href="{{ site.main_site_url }}/privacy-policy/">Privacy Policy</a></li>
           </ul>
         </li>
-        <li class="site-header__divider" aria-hidden="true"></li>
-        <li><a href="{{ '/' | relative_url }}">Software</a></li>
-        <li><a href="{{ '/alternative-to/' | relative_url }}">Alternatives</a></li>
       </ul>
 
-      <ul class="site-header__social">
+      <ul class="site-header__social social-icons">
         <li>
           <a rel="nofollow" title="Follow us on Mastodon" target="_blank" href="https://floss.social/@opensourcefeed">
             <img height="25" alt="Mastodon Link" src="{{ site.main_site_url }}/assets/images/meta/mastodon.png" />
