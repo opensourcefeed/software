@@ -73,6 +73,15 @@ adsense:
     directory-below-title: "3888848509"       # Landing pages (directory + alt landing)
     alt-landing-below-title: "3888848509"     # Reuses landing slot
 
+# Analytics configuration
+google_analytics:
+  enabled: true
+  measurement_id: "G-KD5NJYRYD3"
+
+ahrefs_analytics:
+  enabled: true
+  api_key: "CtE+TXWgN05s3ROalk1xUg"
+
 # Category display names (used in software/index.html)
 category_names:
   image-editing: "Image Editing"
