@@ -59,9 +59,19 @@ defaults:
       layout: "alternative-to"
 
 # AdSense configuration
+# Slot IDs map descriptive position keys (used in {% include ad.html slot="..." %})
+# to numeric AdSense ad unit IDs. Same slot ID may be reused across different
+# page types, but must NOT appear more than once on the same page.
 adsense:
   enabled: true
-  client_id: "ca-pub-6380671811722843"  # e.g. ca-pub-XXXXXXXXXXXXXXXX
+  client_id: "ca-pub-6380671811722843"
+  slots:
+    software-below-header: "2834641343"       # Article: top (software + alternatives pages)
+    software-mid-content: "5417552591"        # Article: mid (software + alternatives pages)
+    alternatives-below-header: "2834641343"   # Reuses top-of-article slot
+    alternatives-mid-content: "5417552591"    # Reuses mid-article slot
+    directory-below-title: "3888848509"       # Landing pages (directory + alt landing)
+    alt-landing-below-title: "3888848509"     # Reuses landing slot
 
 # Category display names (used in software/index.html)
 category_names:

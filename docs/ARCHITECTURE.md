@@ -127,26 +127,60 @@ Base styles target mobile. Media queries progressively enhance for larger screen
 ```yaml
 # _config.yml
 adsense:
-  enabled: false
-  client_id: ""  # e.g. ca-pub-XXXXXXXXXXXXXXXX
+  enabled: true
+  client_id: "ca-pub-XXXXXXXXXXXXXXXX"
+  slots:
+    software-below-header: "2834641343"       # Article: top
+    software-mid-content: "5417552591"        # Article: mid
+    alternatives-below-header: "2834641343"   # Reuses top-of-article slot
+    alternatives-mid-content: "5417552591"    # Reuses mid-article slot
+    directory-below-title: "3888848509"       # Landing pages
+    alt-landing-below-title: "3888848509"     # Reuses landing slot
 ```
 
 ### Include Pattern
 
 ```liquid
-{% include ad.html slot="header" %}
+{% include ad.html slot="software-below-header" %}
 ```
 
-- When `site.adsense.enabled` is `true` and `client_id` is set: renders real `<ins class="adsbygoogle">` block + AdSense loader script (once, in `<head>`).
-- When disabled (local dev): renders a labeled placeholder div so ad positions are visible.
+The `slot` parameter is a **descriptive position key**, not a numeric ID. The
+`ad.html` include looks up the corresponding numeric AdSense ad unit ID from
+`site.adsense.slots[include.slot]`.
 
-### Ad Positions
+- When `site.adsense.enabled` is `true`, `client_id` is set, **and** a numeric
+  slot ID exists for the key: renders real `<ins class="adsbygoogle">` block +
+  AdSense loader script (once, in `<head>`).
+- When disabled or slot ID is missing: renders a labeled placeholder div so ad
+  positions stay visible (graceful degradation).
 
-| Page | Positions |
-|---|---|
-| Software page | Below header, mid-content (after description) |
-| Alternatives page | Below header, mid-content (after why-switch) |
-| Landing pages | Below page title, between major sections |
+### Ad Positions & Slot Mapping
+
+| Page | Position Key | Slot ID | Notes |
+|---|---|---|---|
+| Software page | `software-below-header` | `2834641343` | Top of article |
+| Software page | `software-mid-content` | `5417552591` | After description |
+| Alternatives page | `alternatives-below-header` | `2834641343` | Top of article |
+| Alternatives page | `alternatives-mid-content` | `5417552591` | After why-switch |
+| Software directory (`/`) | `directory-below-title` | `3888848509` | Below hero |
+| Alternatives landing (`/alternative-to/`) | `alt-landing-below-title` | `3888848509` | Below hero |
+
+**Duplicate-slot rule:** A numeric slot ID must never appear more than once on
+the same page. The mapping above reuses IDs only across *different* page types
+(software vs. alternatives share article slots; both landing pages share the
+landing slot) — never within a single page.
+
+### `ads.txt` Requirement (Domain Root)
+
+AdSense requires an `ads.txt` file at the **site domain root**, i.e.
+`https://www.opensourcefeed.org/ads.txt` — **not** inside this `/software/`
+subdirectory. It must be added to the main OpenSourceFeed site repository with:
+
+```
+google.com, pub-6380671811722843, DIRECT, f08c47fec0942fa0
+```
+
+Without this file, AdSense cannot verify the publisher and ads will not serve.
 
 ## JSON-LD Structured Data
 
