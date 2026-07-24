@@ -14,22 +14,7 @@ permalink: /
   <!-- Ad slot: below page title -->
   {% include ad.html slot="directory-below-title" %}
 
-  <!-- 1. Open Source Alternatives -->
-  {% if site.alternatives.size > 0 %}
-    <section class="section">
-      <h2 class="section__title">Open Source Alternatives</h2>
-      <div class="card-grid">
-        {% for alternative in site.alternatives %}
-          {% include alternative-card.html alternative=alternative %}
-        {% endfor %}
-      </div>
-    </section>
-  {% endif %}
-
-  <!-- Ad slot: between sections -->
-  {% include ad.html slot="directory-between-sections" %}
-
-  <!-- 2. Software Directory (grouped by category) -->
+  <!-- Software Directory (grouped by category) -->
   <section class="section">
     <h2 class="section__title">Software Directory</h2>
     {% assign grouped = site.softwares | group_by: "category" %}

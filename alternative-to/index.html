@@ -26,18 +26,4 @@ permalink: /alternative-to/
     </section>
   {% endif %}
 
-  <!-- Ad slot: between sections -->
-  {% include ad.html slot="alt-landing-between-sections" %}
-
-  <!-- 2. All Open Source Software -->
-  <section class="section">
-    <h2 class="section__title">All Open Source Software</h2>
-    {% assign oss = site.softwares | where: "type", "open-source" %}
-    <div class="card-grid">
-      {% for software in oss %}
-        {% include software-card.html software=software %}
-      {% endfor %}
-    </div>
-  </section>
-
 </div>
