@@ -1,7 +1,10 @@
 {% comment %}
   JSON-LD structured data for software pages.
-  Renders SoftwareApplication schema.
+  Renders SoftwareApplication schema with @id references to site-level
+  Organization and WebSite entities defined in json-ld-website.html.
   Maps license and category to schema.org URLs/types.
+  Adds offers (free) for open-source software, image, dateModified,
+  author, publisher, and mainEntityOfPage for richer SEO.
 {% endcomment %}
 {% assign license_url = "" %}
 {% case page.license %}
@@ -42,6 +45,8 @@
 {% endcase %}
 
 {% assign platforms_str = page.platforms | join: ", " %}
+{% assign org_id = site.url | append: site.baseurl | append: "/#organization" %}
+{% assign page_url = page.url | absolute_url %}
 
 <script type="application/ld+json">
 {
@@ -52,6 +57,25 @@
   "applicationCategory": {{ app_category | jsonify }},
   {% if license_url != "" %}"license": {{ license_url | jsonify }},
   {% endif %}"url": {{ page.website | jsonify }},
-  "description": {{ page.description | jsonify }}
+  "description": {{ page.description | jsonify }},
+  {% if page.logo %}"image": {{ page.logo | absolute_url | jsonify }},
+  {% endif %}"mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ page_url | jsonify }}
+  },
+  {% if page.last_modified_at %}"dateModified": {{ page.last_modified_at | date: '%Y-%m-%d' | jsonify }},
+  {% endif %}"author": {
+    "@id": {{ org_id | jsonify }}
+  },
+  "publisher": {
+    "@id": {{ org_id | jsonify }}
+  }
+  {% if page.type == "open-source" %}
+  ,"offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+  {% endif %}
 }
 </script>

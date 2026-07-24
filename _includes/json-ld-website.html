@@ -1,0 +1,41 @@
+{% comment %}
+  JSON-LD structured data for site-level entities.
+  Renders WebSite and Organization schemas with @id anchors so other
+  JSON-LD blocks on the same page can reference them without duplication.
+  Included on all pages via head.html.
+{% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": {{ site.url | append: site.baseurl | append: "/#website" | jsonify }},
+  "name": {{ site.title | jsonify }},
+  "description": {{ site.description | jsonify }},
+  "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
+  "inLanguage": {{ site.lang | jsonify }},
+  "publisher": {
+    "@id": {{ site.url | append: site.baseurl | append: "/#organization" | jsonify }}
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": {{ site.url | append: site.baseurl | append: "/#organization" | jsonify }},
+  "name": {{ site.title | jsonify }},
+  "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
+  "logo": {
+    "@type": "ImageObject",
+    "url": {{ site.main_site_url | append: "/assets/images/meta/icon.png" | jsonify }}
+  },
+  "sameAs": [
+    "https://floss.social/@opensourcefeed",
+    "https://www.facebook.com/opensourcefeed/",
+    "https://twitter.com/opensourcefeed",
+    "https://www.youtube.com/c/DistroScreens",
+    "https://www.instagram.com/opensourcefeed/",
+    "https://t.me/opensourcefeedOrg"
+  ]
+}
+</script>

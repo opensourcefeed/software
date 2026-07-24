@@ -150,7 +150,28 @@ adsense:
 
 ## JSON-LD Structured Data
 
-### Software Pages → `SoftwareApplication`
+All pages render multiple JSON-LD `<script>` blocks — this is valid per Google's guidelines. Site-level entities (`WebSite`, `Organization`) are defined once with `@id` anchors and referenced by all other schemas to avoid duplication.
+
+### All Pages → `WebSite` + `Organization` (`json-ld-website.html`)
+
+Defined once, referenced everywhere via `@id`:
+
+- `WebSite` (`/#website`): `name`, `url`, `description`, `inLanguage`, `publisher`
+- `Organization` (`/#organization`): `name`, `url`, `logo`, `sameAs` (social media profiles)
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.opensourcefeed.org/software/#website",
+  "name": "OpenSourceFeed",
+  "url": "https://www.opensourcefeed.org/software/",
+  "inLanguage": "en",
+  "publisher": { "@id": ".../#organization" }
+}
+```
+
+### Software Pages → `SoftwareApplication` (`json-ld-software.html`)
 
 ```json
 {
@@ -160,9 +181,23 @@ adsense:
   "operatingSystem": "Linux, Windows, macOS",
   "applicationCategory": "GraphicsApplication",
   "license": "https://www.gnu.org/licenses/gpl-3.0.html",
-  "url": "https://gimp.org"
+  "url": "https://gimp.org",
+  "description": "...",
+  "image": "https://www.opensourcefeed.org/software/assets/images/software/gimp.png",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "..." },
+  "dateModified": "2025-01-15",
+  "author": { "@id": ".../#organization" },
+  "publisher": { "@id": ".../#organization" },
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
 }
 ```
+
+**Fields:**
+- `offers` — rendered only for `type: open-source` (signals "Free" rich result)
+- `image` — from `page.logo` (absolute URL)
+- `dateModified` — from `page.last_modified_at`
+- `author` / `publisher` — `@id` reference to Organization
+- `mainEntityOfPage` — canonical page URL
 
 **License → URL mapping** (Liquid `case` in `json-ld-software.html`):
 - `GPL-3.0` → `https://www.gnu.org/licenses/gpl-3.0.html`
@@ -184,29 +219,70 @@ adsense:
 - `office-suite` → `BusinessApplication`
 - `development` → `DeveloperApplication`
 
-### Alternatives Pages → `ItemList`
+### Alternatives Pages → `ItemList` (`json-ld-alternatives.html`)
 
 ```json
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": "Open Source Alternatives to Adobe Photoshop",
+  "description": "...",
+  "url": "...",
+  "dateModified": "2025-01-15",
+  "author": { "@id": ".../#organization" },
+  "publisher": { "@id": ".../#organization" },
+  "mainEntity": {
+    "@type": "SoftwareApplication",
+    "name": "Adobe Photoshop",
+    "url": "...",
+    "description": "..."
+  },
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "GIMP", "url": "https://opensourcefeed.org/software/gimp/" }
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "GIMP",
+      "url": "...",
+      "description": "...",
+      "image": "..."
+    }
   ]
 }
 ```
 
-### Landing Pages → `CollectionPage`
+**Fields:**
+- `mainEntity` — minimal reference to the proprietary software (not a full duplicate)
+- Each `ListItem` includes `description` and `image` (from alternative's software front matter)
+
+### Landing Pages → `CollectionPage` (`json-ld-collection.html`)
 
 ```json
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "Software Directory",
-  "url": "https://opensourcefeed.org/software/"
+  "description": "...",
+  "url": "...",
+  "isPartOf": { "@id": ".../#website" },
+  "dateModified": "2025-01-15",
+  "author": { "@id": ".../#organization" },
+  "publisher": { "@id": ".../#organization" },
+  "hasPart": [
+    { "@type": "SoftwareApplication", "name": "GIMP", "url": "..." }
+  ]
 }
 ```
+
+**Fields:**
+- `isPartOf` — `@id` reference to `WebSite`
+- `hasPart` — references (name + url only) to collection items:
+  - Software directory (`/`): all `site.softwares` as `SoftwareApplication` references
+  - Alternatives landing (`/alternative-to/`): all `site.alternatives` as `ItemList` references
+  - Detection via `page.url contains "/alternative-to/"`
+
+### All Pages → `BreadcrumbList` (`breadcrumbs.html`)
+
+Rendered in the breadcrumbs include. Uses `jsonify` filter for all string values to ensure valid JSON output regardless of special characters in titles.
 
 ## SEO Implementation
 

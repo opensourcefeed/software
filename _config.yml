@@ -60,8 +60,8 @@ defaults:
 
 # AdSense configuration
 adsense:
-  enabled: false
-  client_id: ""  # e.g. ca-pub-XXXXXXXXXXXXXXXX
+  enabled: true
+  client_id: "ca-pub-6380671811722843"  # e.g. ca-pub-XXXXXXXXXXXXXXXX
 
 # Category display names (used in software/index.html)
 category_names:

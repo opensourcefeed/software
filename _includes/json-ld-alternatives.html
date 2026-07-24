@@ -1,21 +1,47 @@
 {% comment %}
   JSON-LD structured data for alternatives pages.
-  Renders ItemList schema listing each alternative with position, name, and URL.
+  Renders ItemList schema listing each alternative with position, name,
+  url, description, and image. References the proprietary software via
+  mainEntity (minimal pointer, not a full duplicate). Uses @id references
+  to site-level Organization and WebSite entities.
 {% endcomment %}
+{% assign org_id = site.url | append: site.baseurl | append: "/#organization" %}
+{% assign page_url = page.url | absolute_url %}
+{% assign proprietary = site.softwares | where: "slug", page.proprietary_slug | first %}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": {{ page.title | jsonify }},
   "description": {{ page.description | jsonify }},
-  "itemListElement": [
+  "url": {{ page_url | jsonify }},
+  {% if page.last_modified_at %}"dateModified": {{ page.last_modified_at | date: '%Y-%m-%d' | jsonify }},
+  {% endif %}"author": {
+    "@id": {{ org_id | jsonify }}
+  },
+  "publisher": {
+    "@id": {{ org_id | jsonify }}
+  },
+  {% if proprietary %}
+  "mainEntity": {
+    "@type": "SoftwareApplication",
+    "name": {{ proprietary.title | jsonify }},
+    "url": {{ proprietary.url | absolute_url | jsonify }},
+    "description": {{ proprietary.description | jsonify }}
+  },
+  {% endif %}"itemListElement": [
     {% for alt_slug in page.alternatives %}
       {% assign alt = site.softwares | where: "slug", alt_slug | first %}
       {
         "@type": "ListItem",
         "position": {{ forloop.index }},
         "name": {{ alt.title | jsonify }},
-        "url": {{ alt.url | absolute_url | jsonify }}
+        "url": {{ alt.url | absolute_url | jsonify }},
+        "description": {{ alt.description | jsonify }}
+        {% if alt.logo %},
+        "image": {{ alt.logo | absolute_url | jsonify }}
+        {% endif %}
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]

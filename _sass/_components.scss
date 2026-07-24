@@ -4,29 +4,28 @@
 
 // --- Breadcrumbs ---
 .breadcrumbs {
-  @include flex-row($gap: $spacing-sm);
-  list-style: none;
-  padding: 0;
   margin-bottom: $spacing-lg;
   font-size: $font-size-sm;
-  flex-wrap: wrap;
+
+  ul {
+    @include flex-row($gap: $spacing-sm);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
   li {
-    @include flex-row($gap: $spacing-sm);
     margin: 0;
     color: $color-text-muted;
-
-    &:not(:last-child)::after {
-      content: "/";
-      color: $color-text-muted;
-    }
   }
 
   a {
     color: $color-text-light;
+    transition: color $transition-fast;
 
     &:hover {
       color: $color-primary;
+      text-decoration: none;
     }
   }
 

@@ -24,6 +24,8 @@
 
   {% feed_meta %}
 
+  {% include json-ld-website.html %}
+
   {% if page.layout == "software" %}
     {% include json-ld-software.html %}
   {% elsif page.layout == "alternative-to" %}
