@@ -12,12 +12,12 @@ logo: /assets/images/software/element.png
 alternative_to:
   - slack
 description: "Element is a free and open source messaging app built on the Matrix protocol. Offers end-to-end encryption, decentralized hosting, and team collaboration features."
-last_modified_at: 2026-07-23
+last_modified_at: 2026-07-25
 ---
 
 ## Overview
 
-Element is a free and open source messaging client built on the Matrix protocol. It provides end-to-end encrypted communication, decentralized hosting, and team collaboration features. Element is developed by Element (formerly New Vector), the company behind the Matrix protocol.
+Element is a free and open source messaging client built on the Matrix protocol. It provides end-to-end encrypted communication, decentralized hosting, and team collaboration features. Element is developed by Element (formerly New Vector), the primary company contributing to the Matrix protocol, which is governed by the non-profit Matrix.org Foundation.
 
 ## Key Features
 

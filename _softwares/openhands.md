@@ -11,8 +11,8 @@ category: development
 logo: /assets/images/software/openhands.png
 alternative_to:
   - claude-code
-description: "OpenHands is an open source autonomous AI software engineer that can write code, run commands, browse the web, and complete complex development tasks with minimal human input. Runs in the browser or self-hosted."
-last_modified_at: 2026-07-24
+description: "OpenHands is an open source autonomous AI software engineer that can write code, run commands, browse the web, and complete complex development tasks with minimal human input. Runs via browser UI when self-hosted using Docker."
+last_modified_at: 2026-07-25
 ---
 
 ## Overview

@@ -6,13 +6,13 @@ tagline: "Free digital painting application"
 type: open-source
 license: GPL-3.0
 website: https://krita.org
-platforms: [Linux, Windows, macOS]
+platforms: [Linux, Windows, macOS, Android]
 category: image-editing
 logo: /assets/images/software/krita.png
 alternative_to:
   - photoshop
 description: "Krita is a free and open source digital painting application for illustrators, concept artists, and comic creators. Features a powerful brush engine and animation tools."
-last_modified_at: 2026-07-23
+last_modified_at: 2026-07-25
 ---
 
 ## Overview
