@@ -5,7 +5,7 @@ slug: windows-media-player
 tagline: "Default media player for Microsoft Windows"
 type: proprietary
 license: Proprietary
-website: https://support.microsoft.com/en-us/windows/get-windows-media-player
+website: https://apps.microsoft.com/detail/9wzdncrfj3pt?hl=en-US&gl=IN
 platforms: [Windows]
 category: media-player
 logo: /assets/images/software/windows-media-player.png
