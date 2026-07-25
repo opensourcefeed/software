@@ -93,7 +93,7 @@
   @include card-hover;
 
   &__header {
-    @include flex-row($gap: $spacing-md);
+    @include flex-row($gap: $spacing-md, $wrap: false);
     align-items: flex-start;
     margin-bottom: $spacing-md;
   }
