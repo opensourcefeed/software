@@ -3,7 +3,12 @@
   Usage: {% include software-card.html software=software %}
   Expects: software (a collection item from site.softwares)
 {% endcomment %}
-<article class="card">
+<article class="card"
+  data-software-card
+  data-title="{{ include.software.title | downcase }}"
+  data-tagline="{{ include.software.tagline | downcase }}"
+  data-type="{{ include.software.type }}"
+  data-category="{{ include.software.category }}">
   <div class="card__header">
     {% if include.software.logo %}
       <img src="{{ include.software.logo | relative_url }}"

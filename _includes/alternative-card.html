@@ -7,7 +7,10 @@
 {% assign proprietary = site.softwares | where: "slug", include.alternative.proprietary_slug | first %}
 {% assign alt_count = include.alternative.alternatives | size %}
 
-<article class="card">
+<article class="card"
+  data-software-card
+  data-title="{{ include.alternative.title | downcase }} {{ proprietary.title | downcase }}"
+  data-tagline="alternative to {{ proprietary.title | downcase }}">
   <div class="card__header">
     {% if proprietary.logo %}
       <img src="{{ proprietary.logo | relative_url }}"
