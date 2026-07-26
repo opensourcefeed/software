@@ -52,6 +52,12 @@
     {% assign app_category = "SecurityApplication" %}
   {% when "cloud-storage" %}
     {% assign app_category = "UtilitiesApplication" %}
+  {% when "video-editing" %}
+    {% assign app_category = "MultimediaApplication" %}
+  {% when "containerization" %}
+    {% assign app_category = "DeveloperApplication" %}
+  {% when "note-taking" %}
+    {% assign app_category = "ProductivityApplication" %}
   {% when "design" %}
     {% assign app_category = "DesignApplication" %}
 {% endcase %}
