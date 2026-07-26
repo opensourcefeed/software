@@ -46,6 +46,12 @@
     {% assign app_category = "BusinessApplication" %}
   {% when "development" %}
     {% assign app_category = "DeveloperApplication" %}
+  {% when "password-manager" %}
+    {% assign app_category = "SecurityApplication" %}
+  {% when "cloud-storage" %}
+    {% assign app_category = "UtilitiesApplication" %}
+  {% when "design" %}
+    {% assign app_category = "DesignApplication" %}
 {% endcase %}
 
 {% assign platforms_str = page.platforms | join: ", " %}
