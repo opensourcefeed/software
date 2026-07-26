@@ -69,6 +69,40 @@ check(failures, "homepage ad slot is not the first element after the hero") do
   raise "ad-container immediately follows .hero" if first_sibling_classes.include?("ad-container")
 end
 
+# --- Open Graph / Twitter Card metadata ---
+def check_social_meta(failures, doc, page_label, expect_image_substring: nil)
+  %w[og:type og:site_name og:title og:description og:url og:image].each do |prop|
+    check(failures, "#{page_label} has #{prop} meta tag") do
+      tag = doc.at_css("meta[property='#{prop}']")
+      raise "missing meta[property='#{prop}']" unless tag
+      raise "#{prop} content is empty" if tag["content"].to_s.strip.empty?
+    end
+  end
+
+  %w[twitter:card twitter:title twitter:description twitter:image].each do |name|
+    check(failures, "#{page_label} has #{name} meta tag") do
+      tag = doc.at_css("meta[name='#{name}']")
+      raise "missing meta[name='#{name}']" unless tag
+      raise "#{name} content is empty" if tag["content"].to_s.strip.empty?
+    end
+  end
+
+  if expect_image_substring
+    check(failures, "#{page_label} og:image points at its own logo") do
+      image = doc.at_css("meta[property='og:image']")["content"]
+      raise "expected og:image to include '#{expect_image_substring}', got #{image}" unless image.include?(expect_image_substring)
+    end
+  end
+end
+
+check_social_meta(failures, index_doc, "homepage")
+
+jitsi_path = "#{SITE_DIR}/jitsi/index.html"
+if File.exist?(jitsi_path)
+  jitsi_doc = Nokogiri::HTML(File.read(jitsi_path))
+  check_social_meta(failures, jitsi_doc, "a software page (jitsi)", expect_image_substring: "jitsi")
+end
+
 # --- Alternatives page (/alternative-to/) ---
 alt_doc = Nokogiri::HTML(File.read("#{SITE_DIR}/alternative-to/index.html"))
 

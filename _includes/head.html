@@ -16,6 +16,33 @@
 
   <link rel="canonical" href="{{ page.url | absolute_url }}">
 
+  {% comment %}
+    Open Graph / Twitter Card metadata.
+    og_title/og_description fall back through page-specific fields to the
+    site defaults; og_image prefers a page's own logo (software pages) over
+    the site-wide icon so shared links show the right artwork.
+  {% endcomment %}
+  {% assign og_title = page.title | default: site.title %}
+  {% assign og_description = page.description | default: page.tagline | default: site.description %}
+  {% if page.logo %}
+    {% assign og_image = page.logo | absolute_url %}
+  {% else %}
+    {% assign og_image = site.main_site_url | append: "/assets/images/meta/icon.png" %}
+  {% endif %}
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ og_title }}">
+  <meta property="og:description" content="{{ og_description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ og_image }}">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@opensourcefeed">
+  <meta name="twitter:title" content="{{ og_title }}">
+  <meta name="twitter:description" content="{{ og_description }}">
+  <meta name="twitter:image" content="{{ og_image }}">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap">
