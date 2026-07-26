@@ -8,7 +8,7 @@ license: GPL-3.0
 website: https://bitwarden.com
 platforms: [Linux, Windows, macOS, Android, iOS]
 category: password-manager
-logo: /assets/images/software/bitwarden.png
+logo: /assets/images/software/bitwarden.svg
 alternative_to:
   - 1password
 description: "Bitwarden is an open source password manager with end-to-end encryption, cross-platform apps, and a self-hosting option, offered as an alternative to 1Password."

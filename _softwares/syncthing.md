@@ -8,7 +8,7 @@ license: MPL-2.0
 website: https://syncthing.net
 platforms: [Linux, Windows, macOS]
 category: cloud-storage
-logo: /assets/images/software/syncthing.png
+logo: /assets/images/software/syncthing.svg
 alternative_to:
   - dropbox
 description: "Syncthing is an open source tool that syncs files directly between devices over encrypted peer-to-peer connections, with no central server or cloud storage."

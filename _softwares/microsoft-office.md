@@ -8,7 +8,7 @@ license: Proprietary
 website: https://www.microsoft.com/en-us/microsoft-365
 platforms: [Windows, macOS, Linux via web, Android, iOS]
 category: office-suite
-logo: /assets/images/software/microsoft-office.png
+logo: /assets/images/software/microsoft-office.svg
 alternative_to: []
 has_alternatives: true
 description: "Microsoft Office is a proprietary productivity suite including Word, Excel, and PowerPoint, available via Microsoft 365 subscriptions or one-time purchase."

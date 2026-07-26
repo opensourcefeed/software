@@ -8,7 +8,7 @@ license: MPL-2.0
 website: https://penpot.app
 platforms: [Linux, Windows, macOS]
 category: design
-logo: /assets/images/software/penpot.png
+logo: /assets/images/software/penpot.svg
 alternative_to:
   - figma
 description: "Penpot is a free, open source, browser-based design and prototyping platform built on open web standards, offering a self-hostable alternative to Figma."

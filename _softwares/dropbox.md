@@ -8,7 +8,7 @@ license: Proprietary
 website: https://www.dropbox.com
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: cloud-storage
-logo: /assets/images/software/dropbox.png
+logo: /assets/images/software/dropbox.svg
 alternative_to: []
 has_alternatives: true
 description: "Dropbox is a cloud storage and file sync service that lets users store, share, and access files across devices, with tools for team collaboration."

@@ -8,7 +8,7 @@ license: AGPL-3.0
 website: https://www.onlyoffice.com
 platforms: [Linux, Windows, macOS]
 category: office-suite
-logo: /assets/images/software/onlyoffice.png
+logo: /assets/images/software/onlyoffice.svg
 alternative_to:
   - microsoft-office
 description: "ONLYOFFICE is an open source office suite with Word, Excel, PowerPoint-compatible editors, real-time co-editing, and a JS plugin system."

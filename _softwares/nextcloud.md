@@ -8,7 +8,7 @@ license: AGPL-3.0-or-later
 website: https://nextcloud.com
 platforms: [Linux, Windows, macOS]
 category: cloud-storage
-logo: /assets/images/software/nextcloud.png
+logo: /assets/images/software/nextcloud.svg
 alternative_to:
   - dropbox
 description: "Nextcloud is a self-hosted file sync, share, and collaboration platform offering an open source alternative to Dropbox and Microsoft 365."

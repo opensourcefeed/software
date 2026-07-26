@@ -8,7 +8,7 @@ license: GPL-3.0
 website: https://keepassxc.org
 platforms: [Linux, Windows, macOS]
 category: password-manager
-logo: /assets/images/software/keepassxc.png
+logo: /assets/images/software/keepassxc.svg
 alternative_to:
   - 1password
 description: "KeePassXC is a free, open source password manager that stores credentials in an offline encrypted database, with no cloud dependency and browser integration."

@@ -8,7 +8,7 @@ license: Proprietary
 website: https://www.figma.com
 platforms: [Windows, macOS, Linux via web]
 category: design
-logo: /assets/images/software/figma.png
+logo: /assets/images/software/figma.svg
 alternative_to: []
 has_alternatives: true
 description: "Figma is a browser-based interface design and prototyping tool with real-time multiplayer collaboration, used widely for UI/UX design and whiteboarding."

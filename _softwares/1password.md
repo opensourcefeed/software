@@ -8,7 +8,7 @@ license: Proprietary
 website: https://1password.com
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: password-manager
-logo: /assets/images/software/1password.png
+logo: /assets/images/software/1password.svg
 alternative_to: []
 has_alternatives: true
 description: "1Password is a subscription-based password manager storing credentials and passkeys in encrypted vaults, with apps for desktop, mobile, and browsers."
