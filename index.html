@@ -10,10 +10,23 @@ permalink: /
   <div class="hero">
     <h1>Software Directory</h1>
     <p>Browse open source and proprietary software. Find free alternatives to popular commercial tools.</p>
-  </div>
 
-  <!-- Ad slot: below page title -->
-  {% include ad.html slot="directory-below-title" %}
+    {% assign category_count = site.softwares | map: "category" | uniq | size %}
+    <div class="hero__stats">
+      <div class="hero__stat">
+        <span class="hero__stat-value">{{ site.softwares.size }}+</span>
+        <span class="hero__stat-label">Tools listed</span>
+      </div>
+      <div class="hero__stat">
+        <span class="hero__stat-value">{{ category_count }}</span>
+        <span class="hero__stat-label">Categories</span>
+      </div>
+      <div class="hero__stat">
+        <span class="hero__stat-value">Free</span>
+        <span class="hero__stat-label">Always</span>
+      </div>
+    </div>
+  </div>
 
   <!-- Software Directory (grouped by category) -->
   <section class="section">
@@ -34,6 +47,11 @@ permalink: /
           {% endfor %}
         </div>
       </div>
+
+      <!-- Ad slot: after the first category group, out of the above-the-fold hero -->
+      {% if forloop.first %}
+        {% include ad.html slot="directory-below-title" %}
+      {% endif %}
     {% endfor %}
   </section>
 

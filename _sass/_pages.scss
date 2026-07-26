@@ -26,7 +26,7 @@
 // --- Alternatives page ---
 .alternatives-page {
   .proprietary-summary {
-    background-color: $color-bg-alt;
+    background-color: var(--color-bg-alt);
     border-left: 4px solid $color-primary;
     padding: $spacing-lg;
     margin-bottom: $spacing-xl;
@@ -50,9 +50,16 @@
 // --- Landing pages ---
 .landing-page {
   .hero {
+    position: relative;
     text-align: center;
-    padding-block: $spacing-2xl;
+    padding-block: $spacing-3xl $spacing-2xl;
     margin-bottom: $spacing-xl;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 15% 20%, rgba($color-primary, 0.14), transparent 45%),
+      radial-gradient(circle at 85% 10%, rgba($color-secondary, 0.12), transparent 40%),
+      var(--color-bg-alt);
 
     h1 {
       margin-bottom: $spacing-md;
@@ -60,9 +67,33 @@
 
     p {
       font-size: $font-size-lg;
-      color: $color-text-light;
+      color: var(--color-text-light);
       max-width: 600px;
       margin-inline: auto;
+    }
+  }
+
+  .hero__stats {
+    @include flex-row($gap: $spacing-2xl);
+    justify-content: center;
+    margin-top: $spacing-xl;
+    position: relative;
+  }
+
+  .hero__stat {
+    text-align: center;
+
+    &-value {
+      display: block;
+      font-family: $font-family-heading;
+      font-size: $font-size-2xl;
+      font-weight: $font-weight-bold;
+      color: var(--color-primary);
+    }
+
+    &-label {
+      font-size: $font-size-sm;
+      color: var(--color-text-light);
     }
   }
 }
@@ -74,6 +105,6 @@
   &__title {
     font-size: $font-size-xl;
     margin-bottom: $spacing-lg;
-    color: $color-text;
+    color: var(--color-text);
   }
 }

@@ -82,10 +82,11 @@
 
 // --- Card hover effect ---
 @mixin card-hover {
-  transition: transform $transition-base, box-shadow $transition-base;
+  transition: transform $transition-base, box-shadow $transition-base, border-color $transition-base;
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: $shadow-lg;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--color-primary);
   }
 }

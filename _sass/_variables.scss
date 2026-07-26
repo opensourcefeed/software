@@ -10,9 +10,9 @@ $breakpoint-wide: 1280px;
 $breakpoint-2xl: 1440px;
 
 // --- Colors ---
-$color-primary: #2563eb;
-$color-primary-dark: #1d4ed8;
-$color-primary-light: #dbeafe;
+$color-primary: #4f46e5;
+$color-primary-dark: #4338ca;
+$color-primary-light: #e0e7ff;
 
 $color-secondary: #059669;
 $color-secondary-dark: #047857;
@@ -32,6 +32,15 @@ $color-bg-dark: #111827;
 $color-border: #e5e7eb;
 $color-border-dark: #d1d5db;
 
+// --- Dark mode (used to seed CSS custom properties in _base.scss) ---
+$color-bg-dark-mode: #0b0f1a;
+$color-bg-alt-dark-mode: #131a2b;
+$color-card-bg-dark-mode: #161d30;
+$color-text-dark-mode: #e5e7eb;
+$color-text-light-dark-mode: #9ca3af;
+$color-border-dark-mode: #232b3d;
+$color-primary-dark-mode: #818cf8;
+
 // Type badges
 $color-open-source: $color-secondary;
 $color-open-source-bg: $color-secondary-light;
@@ -49,6 +58,7 @@ $spacing-3xl: 4rem;
 
 // --- Typography ---
 $font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+$font-family-heading: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 $font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, monospace;
 
 $font-size-xs: 0.75rem;
@@ -83,6 +93,8 @@ $radius-full: 9999px;
 $shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 $shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-card: 0 1px 3px rgba(17, 24, 39, 0.06), 0 1px 2px rgba(17, 24, 39, 0.04);
+$shadow-card-hover: 0 12px 24px -8px rgba(79, 70, 229, 0.18), 0 4px 8px -4px rgba(17, 24, 39, 0.08);
 
 // --- Transitions ---
 $transition-fast: 150ms ease-in-out;

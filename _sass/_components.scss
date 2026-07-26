@@ -16,11 +16,11 @@
 
   li {
     margin: 0;
-    color: $color-text-muted;
+    color: var(--color-text-light);
   }
 
   a {
-    color: $color-text-light;
+    color: var(--color-text-light);
     transition: color $transition-fast;
 
     &:hover {
@@ -30,47 +30,52 @@
   }
 
   [aria-current] {
-    color: $color-text;
+    color: var(--color-text);
     font-weight: $font-weight-medium;
   }
 }
 
-// --- Badges ---
+// --- Badges (monochrome outline — color communicates via border + text, not a solid fill) ---
 .badge {
-  display: inline-block;
-  padding: $spacing-xs $spacing-md;
-  border-radius: $radius-full;
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-xs;
+  padding: $spacing-xs $spacing-sm;
+  border-radius: $radius-sm;
+  border: 1px solid transparent;
+  background-color: transparent;
   font-size: $font-size-xs;
   font-weight: $font-weight-semibold;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
 }
 
 .badge--open-source {
-  background-color: $color-open-source-bg;
   color: $color-open-source;
+  border-color: rgba($color-open-source, 0.3);
+  background-color: rgba($color-open-source, 0.08);
 }
 
 .badge--proprietary {
-  background-color: $color-proprietary-bg;
   color: $color-proprietary;
+  border-color: rgba($color-proprietary, 0.3);
+  background-color: rgba($color-proprietary, 0.08);
 }
 
 .badge--license {
-  background-color: $color-bg-alt;
-  color: $color-text-light;
-  border: 1px solid $color-border;
+  background-color: transparent;
+  color: var(--color-text-light);
+  border: 1px solid var(--color-border);
 }
 
 // --- Tags (platform tags) ---
 .tag {
   display: inline-block;
   padding: $spacing-xs $spacing-sm;
-  background-color: $color-bg-alt;
-  border: 1px solid $color-border;
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
   border-radius: $radius-sm;
   font-size: $font-size-xs;
-  color: $color-text-light;
+  color: var(--color-text-light);
 }
 
 .tag-list {
@@ -86,10 +91,11 @@
 }
 
 .card {
-  background-color: $color-bg;
-  border: 1px solid $color-border;
-  border-radius: $radius-md;
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: $radius-lg;
   padding: $spacing-lg;
+  box-shadow: var(--shadow-card);
   @include card-hover;
 
   &__header {
@@ -104,7 +110,7 @@
     border-radius: $radius-sm;
     object-fit: contain;
     flex-shrink: 0;
-    background-color: $color-bg-alt;
+    background-color: var(--color-bg-alt);
 
     &--placeholder {
       @include flex-center;
@@ -116,28 +122,29 @@
   }
 
   &__title {
+    font-family: $font-family-heading;
     font-size: $font-size-lg;
     font-weight: $font-weight-semibold;
     margin: 0;
 
     a {
-      color: $color-text;
+      color: var(--color-text);
 
       &:hover {
-        color: $color-primary;
+        color: var(--color-primary);
         text-decoration: none;
       }
     }
   }
 
   &__tagline {
-    color: $color-text-light;
+    color: var(--color-text-light);
     font-size: $font-size-sm;
     margin: 0;
   }
 
   &__description {
-    color: $color-text-light;
+    color: var(--color-text-light);
     font-size: $font-size-sm;
     line-height: $line-height-relaxed;
     margin-bottom: $spacing-md;
@@ -152,9 +159,9 @@
   &__footer {
     margin-top: $spacing-md;
     padding-top: $spacing-md;
-    border-top: 1px solid $color-border;
+    border-top: 1px solid var(--color-border);
     font-size: $font-size-sm;
-    color: $color-text-light;
+    color: var(--color-text-light);
   }
 }
 
@@ -188,7 +195,7 @@
   flex-wrap: wrap;
   margin-bottom: $spacing-xl;
   padding-bottom: $spacing-xl;
-  border-bottom: 1px solid $color-border;
+  border-bottom: 1px solid var(--color-border);
 
   &__logo {
     width: 80px;
@@ -196,7 +203,7 @@
     border-radius: $radius-md;
     object-fit: contain;
     flex-shrink: 0;
-    background-color: $color-bg-alt;
+    background-color: var(--color-bg-alt);
 
     &--placeholder {
       @include flex-center;
@@ -218,7 +225,7 @@
   }
 
   &__tagline {
-    color: $color-text-light;
+    color: var(--color-text-light);
     font-size: $font-size-lg;
     margin: 0 0 $spacing-md 0;
   }
@@ -251,7 +258,7 @@
   display: inline-block;
   margin-top: $spacing-xl;
   font-size: $font-size-sm;
-  color: $color-text-light;
+  color: var(--color-text-light);
 
   &:hover {
     color: $color-primary;
@@ -261,8 +268,8 @@
 // --- Last modified ---
 .last-modified {
   font-size: $font-size-sm;
-  color: $color-text-muted;
+  color: var(--color-text-light);
   margin-top: $spacing-xl;
   padding-top: $spacing-md;
-  border-top: 1px solid $color-border;
+  border-top: 1px solid var(--color-border);
 }
