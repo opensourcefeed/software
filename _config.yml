@@ -92,6 +92,7 @@ category_names:
   development: "Development Tools"
   web-browser: "Web Browsers"
   project-management: "Project Management"
+  vpn: "VPN"
 
 # SEO
 author: "Niyas C"
