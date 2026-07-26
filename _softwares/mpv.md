@@ -4,14 +4,14 @@ title: "mpv"
 slug: mpv
 tagline: "A free and open source media player based on MPlayer and mplayer2"
 type: open-source
-license: GPL-2.0
+license: GPL-2.0-or-later
 website: https://mpv.io/
 platforms: [Windows, macOS, Linux, BSD]
 category: media-player
 logo: /assets/images/software/mpv.png
 alternative_to: []
 description: "mpv is a free, open source, cross-platform media player with excellent GPU-accelerated video playback, a minimalist on-screen controller, and powerful scripting support."
-last_modified_at: 2026-07-25
+last_modified_at: 2026-07-26
 ---
 
 ## Overview

@@ -11,15 +11,15 @@ category: media-player
 logo: /assets/images/software/quicktime.png
 alternative_to: []
 has_alternatives: true
-description: "QuickTime Player is Apple's default video and audio player for macOS. It handles MOV, MP4, and common formats with screen recording, basic trimming, and export tools built in."
-last_modified_at: 2026-07-25
+description: "QuickTime Player is Apple's default video and audio player for macOS. Supports MOV and MP4 with built-in screen recording, trimming, and export tools."
+last_modified_at: 2026-07-26
 ---
 
 ## Overview
 
 QuickTime Player is the default multimedia player included with macOS. Originally released in 1991 as part of the QuickTime media framework, the standalone player continues to ship with every Mac. It provides clean, minimal playback for video and audio files, along with built-in screen recording, basic video trimming, and export to common formats.
 
-QuickTime for Windows was discontinued by Apple in 2016, leaving the player exclusively on macOS. Its format support is limited compared to cross-platform alternatives — it handles MOV, MP4, M4V, and a handful of audio formats but lacks codec support for MKV, FLAC, and many other common container and codec combinations.
+Apple ended support for QuickTime on Windows in early 2016; shortly after, newly discovered unpatched vulnerabilities led the U.S. government's US-CERT to advise Windows users to uninstall it entirely, leaving the player exclusively on macOS since. Its format support is limited compared to cross-platform alternatives — it handles MOV, MP4, M4V, and a handful of audio formats but lacks codec support for MKV, FLAC, and many other common container and codec combinations.
 
 ## Key Features
 

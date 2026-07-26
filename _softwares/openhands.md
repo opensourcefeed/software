@@ -11,13 +11,15 @@ category: development
 logo: /assets/images/software/openhands.png
 alternative_to:
   - claude-code
-description: "OpenHands is an open source autonomous AI software engineer that can write code, run commands, browse the web, and complete complex development tasks with minimal human input. Runs via browser UI when self-hosted using Docker."
-last_modified_at: 2026-07-25
+description: "OpenHands is an open source AI coding agent (formerly OpenDevin) that writes code and runs sandboxed commands. Self-hostable via Docker with a browser-based UI."
+last_modified_at: 2026-07-26
 ---
 
 ## Overview
 
-OpenHands is an AI-driven development assistant that operates as an autonomous software engineer. It can write and edit code, execute shell commands, browse the web for documentation, and manage files — completing entire development tasks from a natural language prompt. OpenHands runs in a browser-based interface with a built-in sandbox, or can be self-hosted on your own infrastructure for full control over your development environment.
+OpenHands began in early 2024 as OpenDevin, a community project created in response to Cognition's closed-source Devin agent. Later that year, core contributors Robert Brennan, Xingyao Wang, and Graham Neubig (a Carnegie Mellon professor) founded All Hands AI to continue the work, and the project was renamed OpenHands. It remains open source under the MIT license (a separate commercial license applies only to the `enterprise/` directory in the repository) and is developed on GitHub under the All-Hands-AI organization.
+
+Technically, OpenHands is built around a Python SDK and an agent server that can run its own CodeActAgent or delegate to other coding agents such as Claude Code, Codex, and Gemini through the Agent-Client Protocol. Agents execute inside a Docker sandbox scoped to a project directory, giving isolation from the host machine while still allowing shell commands, file edits, and web access for tasks like reading documentation. The project ships a browser-based interface (referred to in current docs as "Agent Canvas") that can be started locally with a single command, self-hosted on a VM, or connected to the hosted OpenHands Cloud offering.
 
 ## Key Features
 
@@ -28,7 +30,7 @@ OpenHands is an AI-driven development assistant that operates as an autonomous s
 - **Shell access** — Runs terminal commands, installs packages, and manages dependencies
 - **Browser-based UI** — Interactive chat interface accessible from any device
 - **Self-hostable** — Deploy on your own servers for data privacy and customization
-- **Plugin system** — Extend with custom skills and integrations for specialized workflows
+- **Microagents** — Repository-specific instructions and custom skills that extend agent behavior for specialized workflows
 
 ## Use Cases
 

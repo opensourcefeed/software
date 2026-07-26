@@ -11,13 +11,15 @@ category: development
 logo: /assets/images/software/claude-code.png
 alternative_to: []
 has_alternatives: true
-description: "Claude Code is Anthropic's agentic coding tool that runs in your terminal, understands your codebase, and helps you code faster through natural language commands. Handles routine tasks, complex code explanations, and git workflows."
-last_modified_at: 2026-07-24
+description: "Claude Code is Anthropic's agentic coding tool. It runs in your terminal, IDE, or browser, reads your codebase, edits files, runs commands, and manages git."
+last_modified_at: 2026-07-26
 ---
 
 ## Overview
 
-Claude Code is a proprietary agentic coding tool developed by Anthropic, the company behind the Claude AI models. It operates directly in your terminal, understanding your full codebase context to assist with coding tasks. Unlike traditional code assistants that only provide suggestions, Claude Code can autonomously execute tasks, explain complex code, and manage git workflows — all through natural language commands.
+Claude Code is a proprietary agentic coding tool developed by Anthropic, the company behind the Claude AI models. It launched as a terminal-based CLI and has since expanded to additional surfaces: extensions for VS Code and JetBrains IDEs, a standalone desktop app, and a browser-based version at claude.ai/code. All surfaces share the same underlying engine, so configuration files, memory, and MCP server connections carry over between them. Unlike code assistants that only provide inline suggestions, Claude Code reads a project's files, runs shell commands, and edits across multiple files in a single session.
+
+Access requires a paid Claude plan (Pro, Max, Team, or Enterprise) or an Anthropic Console account billed through the API; the free Claude.ai plan does not include Claude Code access. It can also be used through third-party model providers, including Amazon Bedrock, Google Cloud, and Microsoft Foundry. Claude Code supports extensibility through the Model Context Protocol (MCP), letting it connect to external tools and data sources such as issue trackers or document stores, and through project-level `CLAUDE.md` files that store persistent instructions read at the start of each session.
 
 ## Key Features
 
@@ -40,4 +42,4 @@ Claude Code is a proprietary agentic coding tool developed by Anthropic, the com
 
 ## Who It's For
 
-Claude Code is designed for professional developers and teams who want to accelerate their development workflow. It is particularly suited for full-stack engineers, DevOps practitioners, and teams working on large, complex codebases. Requires a Claude subscription or API access. Available for macOS, Linux, and Windows via WSL.
+Claude Code is designed for professional developers and teams who want to accelerate their development workflow. It is particularly suited for full-stack engineers, DevOps practitioners, and teams working on large, complex codebases. Requires a paid Claude plan (Pro, Max, Team, or Enterprise) or an Anthropic Console/API account; the free Claude.ai plan does not include access. Available natively for macOS, Linux, and Windows, as well as via WSL on Windows.

@@ -11,24 +11,26 @@ category: development
 logo: /assets/images/software/cline.png
 alternative_to:
   - claude-code
-description: "Cline is an open source autonomous coding agent available as an SDK, VS Code extension, or CLI assistant. Supports Claude, GPT, Gemini, and local models for flexible AI-powered development."
-last_modified_at: 2026-07-24
+description: "Cline is an open source autonomous coding agent available as a VS Code or JetBrains extension, CLI tool, or SDK. Supports Claude, GPT, Gemini, and local models."
+last_modified_at: 2026-07-26
 ---
 
 ## Overview
 
-Cline is an autonomous coding agent that helps developers build software faster through AI. It is available in three forms — an SDK for building custom AI-powered tools, a VS Code extension for in-editor assistance, and a CLI for terminal-based workflows. Cline supports multiple AI models including Claude, GPT, Gemini, and local models via Ollama, giving developers full control over their AI infrastructure.
+Cline began in June 2024 as "Claude Dev," a VS Code extension built by developer Saoud Rizwan shortly after Anthropic released Claude 3.5 Sonnet, to test how far an agentic coding assistant could go with a model capable of multi-step, multi-file reasoning. The project was renamed Cline later that year as it added support for OpenAI, Google Gemini, and other providers beyond Anthropic's models. It is released under the Apache-2.0 license, has surpassed 65,000 stars on GitHub with over 250 contributors, and has been installed more than 8 million times across supported platforms.
+
+Cline is available as a VS Code extension, a JetBrains plugin (early access), a standalone CLI installable via npm, and an embeddable SDK for building custom agent integrations; it also runs inside Cursor and Windsurf. Unlike tools that only autocomplete or answer questions in a chat sidebar, Cline is built around an approval loop: it proposes file edits and terminal commands, shows a diff or command preview, and waits for the user to approve, reject, or edit each step before proceeding, rather than executing changes automatically. It supports Anthropic Claude, OpenAI, Google Gemini, AWS Bedrock, Azure and GCP Vertex, Ollama, DeepSeek, xAI, Mistral, and any OpenAI-compatible endpoint, so users are not locked into a single model provider.
 
 ## Key Features
 
-- **Multi-interface** — Available as SDK, VS Code extension, or CLI assistant
+- **Multi-interface** — Available as a VS Code extension, JetBrains plugin (early access), CLI tool, or SDK
 - **Multi-model support** — Works with Claude, GPT, Gemini, and local models via Ollama
 - **Autonomous coding** — Writes, edits, and refactors code across files with full project context
 - **Terminal access** — Runs shell commands, installs dependencies, and manages environments
 - **Browser integration** — Can browse documentation, test web apps, and gather information
 - **Custom tool integration** — Extend with custom tools via the SDK for specialized workflows
 - **Context management** — Intelligent handling of large codebases with automatic context prioritization
-- **Permission-based execution** — Requires approval for sensitive operations like network access and file deletion
+- **Permission-based execution** — Every file edit and terminal command requires explicit user approval before it runs
 
 ## Use Cases
 

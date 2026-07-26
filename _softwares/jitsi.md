@@ -12,20 +12,20 @@ logo: /assets/images/software/jitsi.png
 alternative_to:
   - zoom
 description: "Jitsi Meet is a free and open source video conferencing tool. No account needed, no time limits, and fully self-hostable for complete data control."
-last_modified_at: 2026-07-23
+last_modified_at: 2026-07-26
 ---
 
 ## Overview
 
 Jitsi Meet is a free and open source video conferencing application built on WebRTC. Originally developed by the Jitsi team and now maintained under 8x8, it remains a fully open source, community-driven project. Jitsi Meet works entirely in the browser with no software installation required, and can be self-hosted on your own infrastructure for complete control over meeting data.
 
-The hosted public instance at meet.jit.si is free to use with no account, though it enforces a 5-minute time limit for meetings with more than 5 participants. Self-hosted deployments have no such restrictions.
+The hosted public instance at meet.jit.si is free to use with no account and has no meeting time limit. Self-hosted deployments give organizations full control over server capacity and data.
 
 ## Key Features
 
 - **No account required** — Start or join meetings instantly via browser without registration
 - **Self-hosting** — Deploy on your own Linux server using the official Debian/Ubuntu packages or Docker image
-- **End-to-end encryption** — E2EE available for meetings with up to 35 participants (requires Chromium-based browser)
+- **End-to-end encryption** — E2EE available for meetings with up to 20 participants (requires Chromium-based browser)
 - **Video meetings** — HD video and audio; participant limits depend on server capacity when self-hosted
 - **Screen sharing** — Share entire screen or a specific application window
 - **Live streaming** — Stream meetings directly to YouTube Live

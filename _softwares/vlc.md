@@ -4,7 +4,7 @@ title: "VLC Media Player"
 slug: vlc
 tagline: "Free and open source cross-platform multimedia player"
 type: open-source
-license: GPL-2.0
+license: GPL-2.0-or-later
 website: https://www.videolan.org/vlc/
 platforms: [Windows, macOS, Linux, Android, iOS, ChromeOS]
 category: media-player
@@ -13,14 +13,14 @@ alternative_to:
   - windows-media-player
   - quicktime
 description: "VLC Media Player is a free, open source multimedia player by VideoLAN that plays almost every video and audio format on all major platforms."
-last_modified_at: 2026-07-25
+last_modified_at: 2026-07-26
 ---
 
 ## Overview
 
-VLC Media Player is a free and open source cross-platform multimedia player developed by the VideoLAN project. Originally created as a student project at École Centrale Paris in 1996, VLC has grown into one of the most widely used media players in the world, with over 3 billion downloads across all platforms.
+VLC Media Player is a free and open source cross-platform multimedia player developed by the VideoLAN project. Originally created as a student project at École Centrale Paris in 1996, VLC has grown into one of the most widely used media players in the world, with over 6 billion downloads across all platforms.
 
-VLC is maintained by VideoLAN, a non-profit organization, and released under the GNU General Public License version 2. It requires no proprietary codecs or additional plugins — its built-in codec library handles virtually every audio and video format in use today, including formats that commercial players struggle with.
+VLC is maintained by VideoLAN, a non-profit organization, and released under the GNU General Public License version 2 or later. It requires no proprietary codecs or additional plugins — its built-in codec library handles virtually every audio and video format in use today, including formats that commercial players struggle with.
 
 ## Key Features
 

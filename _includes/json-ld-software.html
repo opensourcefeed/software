@@ -10,8 +10,12 @@
 {% case page.license %}
   {% when "GPL-3.0" %}
     {% assign license_url = "https://www.gnu.org/licenses/gpl-3.0.html" %}
+  {% when "GPL-3.0-or-later" %}
+    {% assign license_url = "https://www.gnu.org/licenses/gpl-3.0.html" %}
   {% when "GPL-2.0" %}
     {% assign license_url = "https://www.gnu.org/licenses/gpl-2.0.html" %}
+  {% when "GPL-2.0-or-later" %}
+    {% assign license_url = "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html" %}
   {% when "MIT" %}
     {% assign license_url = "https://opensource.org/licenses/MIT" %}
   {% when "Apache-2.0" %}

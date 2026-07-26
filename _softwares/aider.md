@@ -11,13 +11,15 @@ category: development
 logo: /assets/images/software/aider.png
 alternative_to:
   - claude-code
-description: "Aider is a free and open source AI pair programming tool for your terminal. Works with Claude, GPT-4o, Gemini, Llama, and other LLMs to edit code in your local git repositories with full context awareness."
-last_modified_at: 2026-07-24
+description: "Aider is a free, open source AI pair programming tool for the terminal. It works with Claude, GPT, Gemini, DeepSeek, and local LLMs to edit code in git repos."
+last_modified_at: 2026-07-26
 ---
 
 ## Overview
 
-Aider is a free and open source AI pair programming tool that runs in your terminal. It connects to a wide range of large language models — including Claude, GPT-4o, Gemini, and local models like Llama — and edits code directly in your local git repositories. Aider understands your project's file structure, git history, and codebase context to provide intelligent, multi-file edits through natural language.
+Aider is a free and open source AI pair programming tool that runs in the terminal, developed by Aider AI LLC and released on GitHub under the Apache-2.0 license. It is written in Python and connects to a wide range of large language models, including Anthropic Claude, OpenAI's GPT and o-series models, Google Gemini, DeepSeek, and local models served through Ollama or LM Studio, as well as most other providers via OpenAI-compatible APIs. Unlike IDE-integrated AI assistants that live inside an editor plugin, Aider operates as a standalone command-line program that sits alongside any editor or IDE and interacts directly with a project's git repository.
+
+A core part of Aider's design is its repository map, a condensed summary of a codebase's classes, functions, and call signatures that is built using a graph-ranking algorithm — each source file is treated as a node and edges represent dependencies between files, letting Aider select the most relevant context within a limited token budget instead of feeding an entire codebase to the LLM. Aider also integrates tightly with git: every change it makes is committed automatically with a generated commit message, so edits can be reviewed, diffed, or reverted using standard git tooling. The project supports most popular programming languages, including Python, JavaScript, TypeScript, Rust, Go, C++, PHP, HTML, and CSS.
 
 ## Key Features
 

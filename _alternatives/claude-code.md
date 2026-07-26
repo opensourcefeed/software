@@ -9,7 +9,7 @@ alternatives:
   - cline
   - continue
 description: "Best open source alternatives to Claude Code for AI-assisted development. Free, self-hostable coding agents with multi-model support including local LLMs."
-last_modified_at: 2026-07-24
+last_modified_at: 2026-07-26
 ---
 
-Switching from Claude Code to an open source alternative gives you model freedom, data privacy, and freedom from vendor lock-in. Open source AI coding agents let you choose any LLM provider — including running models locally via Ollama — and can be self-hosted on your own infrastructure. They also offer flexible interfaces (terminal, IDE, or browser) and are configurable to your team's specific workflows without being tied to a single vendor's ecosystem.
+Switching from Claude Code to an open source alternative gives you model freedom, data privacy, and freedom from vendor lock-in. Open source AI coding agents let you choose any LLM provider — including running models locally via Ollama — and can be self-hosted on your own infrastructure. They also offer flexible interfaces (terminal, IDE, or browser) and are configurable to your team's specific workflows without being tied to a single vendor's ecosystem. Of the options below, Continue is no longer actively maintained (its team was acquired by Cursor in June 2026); it still works, but Aider, OpenHands, and Cline receive ongoing development.

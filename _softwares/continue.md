@@ -11,13 +11,17 @@ category: development
 logo: /assets/images/software/continue.png
 alternative_to:
   - claude-code
-description: "Continue is an open source AI coding agent that integrates with VS Code and JetBrains IDEs. Provides autocomplete, chat, and agentic editing with support for Claude, GPT, Gemini, and local models."
-last_modified_at: 2026-07-24
+description: "Continue is an open source AI coding agent for VS Code and JetBrains with autocomplete, chat, and agentic editing. No longer actively maintained since mid-2026."
+last_modified_at: 2026-07-26
 ---
+
+**Note:** Continue is no longer actively maintained. Continue Dev's team was acquired by Cursor in June 2026 and the project was discontinued; the existing extensions and CLI still work, but there are no ongoing updates, bug fixes, or security patches.
 
 ## Overview
 
-Continue is an open source AI coding agent designed to integrate directly into your IDE. It works with VS Code and JetBrains editors, providing inline autocomplete, conversational chat, and agentic code editing capabilities. Continue supports a wide range of AI models — including Claude, GPT, Gemini, and local models — letting you choose the provider that best fits your needs, privacy requirements, and budget.
+Continue is an open source AI coding agent that integrates directly into VS Code and JetBrains IDEs, as well as a standalone CLI. It provides inline autocomplete, conversational chat, and agentic code editing, and is model-agnostic — it can be configured to use Claude, GPT, Gemini, DeepSeek, Llama, and other models through a JSON configuration file, including local models served via Ollama or LM Studio. The project was originally built by Continue Dev, Inc., and its extension is distributed on both the VS Code Marketplace and the OpenVSX Registry, making it usable in VS Code-compatible editors that don't use Microsoft's marketplace.
+
+In June 2026, Continue Dev's team was acquired by Cursor, and the standalone Continue product was discontinued as part of the deal. The `continuedev/continue` GitHub repository was set to read-only following a final v2.0.0 release, which removed anonymous telemetry and authentication requirements before the archive. The codebase remains licensed under Apache-2.0 and continues to function — the VS Code extension, JetBrains plugin, and CLI are still installable and usable — but the project is no longer actively developed or supported by its original maintainers.
 
 ## Key Features
 
@@ -41,4 +45,4 @@ Continue is an open source AI coding agent designed to integrate directly into y
 
 ## Who It's For
 
-Continue is for developers who want AI assistance deeply integrated into their existing IDE workflow. It suits teams that use VS Code or JetBrains editors and want a configurable, model-agnostic tool that can be standardized across the organization. With support for local models, it is also a strong choice for developers working with sensitive code that cannot leave their machine.
+Continue is for developers who want AI assistance deeply integrated into their existing IDE workflow. It suits teams that use VS Code or JetBrains editors and want a configurable, model-agnostic tool that can be standardized across the organization. With support for local models, it is also a strong choice for developers working with sensitive code that cannot leave their machine. Since the project is no longer actively maintained, teams should weigh that against tools receiving ongoing development before adopting it for long-term use.
