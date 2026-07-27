@@ -6,6 +6,7 @@ tagline: "Privacy-first VPN with no account or email required"
 type: open-source
 license: GPL-3.0 (client apps)
 website: https://mullvad.net
+logo: /assets/images/software/mullvad.svg
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: vpn
 alternative_to:

@@ -6,6 +6,7 @@ tagline: "Widely-used web browser built on Chromium"
 type: proprietary
 license: Proprietary (built on open source Chromium)
 website: https://www.google.com/chrome/
+logo: /assets/images/software/chrome.svg
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: web-browser
 alternative_to: []

@@ -6,6 +6,7 @@ tagline: "Commercial VPN service with a large server network"
 type: proprietary
 license: Proprietary
 website: https://nordvpn.com
+logo: /assets/images/software/nordvpn.svg
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: vpn
 alternative_to: []

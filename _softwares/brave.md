@@ -6,6 +6,7 @@ tagline: "Privacy-focused browser with built-in ad and tracker blocking"
 type: open-source
 license: MPL-2.0
 website: https://brave.com
+logo: /assets/images/software/brave.svg
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: web-browser
 alternative_to:

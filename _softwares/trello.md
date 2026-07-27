@@ -6,6 +6,7 @@ tagline: "Kanban-style project and task management tool"
 type: proprietary
 license: Proprietary
 website: https://trello.com
+logo: /assets/images/software/trello.svg
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: project-management
 alternative_to: []

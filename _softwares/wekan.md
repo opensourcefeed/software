@@ -6,6 +6,7 @@ tagline: "Self-hosted, open source kanban board"
 type: open-source
 license: MIT
 website: https://wekan.github.io
+logo: /assets/images/software/wekan.svg
 platforms: [Linux, Windows, macOS]
 category: project-management
 alternative_to:

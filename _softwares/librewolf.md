@@ -6,6 +6,7 @@ tagline: "Privacy-hardened fork of Firefox"
 type: open-source
 license: MPL-2.0
 website: https://librewolf.net
+logo: /assets/images/software/librewolf.svg
 platforms: [Windows, macOS, Linux]
 category: web-browser
 alternative_to:

@@ -6,6 +6,7 @@ tagline: "VPN service with fully open source client apps"
 type: open-source
 license: GPL-3.0 (client apps)
 website: https://protonvpn.com
+logo: /assets/images/software/protonvpn.svg
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: vpn
 alternative_to:
