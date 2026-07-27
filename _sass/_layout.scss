@@ -74,6 +74,67 @@
   }
 }
 
+// Light/dark theme toggle button
+.theme-toggle {
+  @include flex-center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid rgba($color-bg, 0.3);
+  border-radius: $radius-sm;
+  background: transparent;
+  color: $color-bg;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  &:hover {
+    background-color: rgba($color-bg, 0.1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-bg;
+    outline-offset: 2px;
+  }
+}
+
+.theme-toggle__icon {
+  display: none;
+}
+
+// Default (no saved preference, following system): show sun/moon per
+// prefers-color-scheme, same as the rest of the page's colors.
+.theme-toggle__icon--sun {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  .theme-toggle__icon--sun {
+    display: none;
+  }
+
+  .theme-toggle__icon--moon {
+    display: block;
+  }
+}
+
+// Explicit preference (data-theme set by the toggle) always wins over the
+// system default above.
+:root[data-theme="light"] .theme-toggle__icon--sun {
+  display: block;
+}
+
+:root[data-theme="light"] .theme-toggle__icon--moon {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle__icon--sun {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle__icon--moon {
+  display: block;
+}
+
 .site-header__toggle-icon,
 .site-header__toggle-icon::before,
 .site-header__toggle-icon::after {

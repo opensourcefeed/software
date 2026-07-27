@@ -42,6 +42,36 @@
   }
 }
 
+// --- Explicit theme overrides (win over prefers-color-scheme via the
+//     [data-theme] attribute set by the toggle button / stored preference) ---
+:root[data-theme="light"] {
+  --color-bg: #{$color-bg};
+  --color-bg-alt: #{$color-bg-alt};
+  --color-card-bg: #{$color-bg};
+  --color-text: #{$color-text};
+  --color-text-light: #{$color-text-light};
+  --color-border: #{$color-border};
+  --color-primary: #{$color-primary};
+  --color-primary-light: #{$color-primary-light};
+  --color-secondary-light: #{$color-secondary-light};
+  --shadow-card: #{$shadow-card};
+  --shadow-card-hover: #{$shadow-card-hover};
+}
+
+:root[data-theme="dark"] {
+  --color-bg: #{$color-bg-dark-mode};
+  --color-bg-alt: #{$color-bg-alt-dark-mode};
+  --color-card-bg: #{$color-card-bg-dark-mode};
+  --color-text: #{$color-text-dark-mode};
+  --color-text-light: #{$color-text-light-dark-mode};
+  --color-border: #{$color-border-dark-mode};
+  --color-primary: #{$color-primary-dark-mode};
+  --color-primary-light: rgba(#{red($color-primary-dark-mode)}, #{green($color-primary-dark-mode)}, #{blue($color-primary-dark-mode)}, 0.15);
+  --color-secondary-light: rgba(#{red($color-secondary)}, #{green($color-secondary)}, #{blue($color-secondary)}, 0.15);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 12px 24px -8px rgba(0, 0, 0, 0.55);
+}
+
 html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;

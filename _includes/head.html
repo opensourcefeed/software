@@ -2,6 +2,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <script>
+    // Apply any saved theme before first paint to avoid a flash of the wrong
+    // theme. Shared "osf-theme" key so the preference carries across
+    // opensourcefeed.org and this /software subsite.
+    (function () {
+      try {
+        var saved = localStorage.getItem('osf-theme');
+        if (saved === 'light' || saved === 'dark') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 
   {% if page.description %}
