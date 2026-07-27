@@ -11,8 +11,9 @@ category: communication
 logo: /assets/images/software/element.png
 alternative_to:
   - slack
+  - discord
 description: "Element is a free, open source messaging app built on the Matrix protocol, offering end-to-end encryption, decentralized hosting, and team collaboration."
-last_modified_at: 2026-07-26
+last_modified_at: 2026-07-27
 ---
 
 ## Overview

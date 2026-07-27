@@ -93,6 +93,8 @@ category_names:
   web-browser: "Web Browsers"
   project-management: "Project Management"
   vpn: "VPN"
+  note-taking: "Note Taking"
+  music-streaming: "Music Streaming"
 
 # SEO
 author: "Niyas C"
