@@ -10,7 +10,7 @@ platforms: [Windows, macOS, Linux, BSD]
 category: media-player
 logo: /assets/images/software/mpv.png
 alternative_to: []
-description: "mpv is a free, open source, cross-platform media player with excellent GPU-accelerated video playback, a minimalist on-screen controller, and powerful scripting support."
+description: "mpv is a free, open source, cross-platform media player with GPU-accelerated video playback, a minimalist on-screen controller, and scripting support."
 last_modified_at: 2026-07-26
 ---
 

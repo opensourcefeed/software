@@ -11,7 +11,7 @@ category: office-suite
 logo: /assets/images/software/libreoffice.svg
 alternative_to:
   - microsoft-office
-description: "LibreOffice is a free, open source office suite with word processing, spreadsheet, presentation, and database tools, a popular alternative to Microsoft Office."
+description: "LibreOffice is a free, open source office suite with word processing, spreadsheet, presentation, and database tools — an alternative to MS Office."
 last_modified_at: 2026-07-26
 ---
 

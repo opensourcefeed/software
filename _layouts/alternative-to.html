@@ -43,6 +43,7 @@ layout: default
                 <img src="{{ alt.logo | relative_url }}"
                      alt="{{ alt.title }} logo"
                      class="card__logo"
+                     width="48" height="48"
                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                 <div class="card__logo card__logo--placeholder" style="display:none">
                   {{ alt.title | slice: 0 }}

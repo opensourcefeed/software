@@ -11,7 +11,7 @@ category: video-editing
 logo: /assets/images/software/premiere-pro.svg
 alternative_to: []
 has_alternatives: true
-description: "Adobe Premiere Pro is a professional non-linear video editing application for film, television, and online video, featuring timeline editing and color grading."
+description: "Adobe Premiere Pro is a professional non-linear video editor for film, television, and online video, featuring timeline editing and color grading."
 last_modified_at: 2026-07-26
 ---
 

@@ -11,7 +11,7 @@ category: video-editing
 logo: /assets/images/software/kdenlive.svg
 alternative_to:
   - premiere-pro
-description: "Kdenlive is a free, open source non-linear video editor built on the MLT Framework and KDE Frameworks, offering multi-track editing and a wide range of effects."
+description: "Kdenlive is a free, open source non-linear video editor built on MLT and KDE Frameworks, offering multi-track editing and many effects."
 last_modified_at: 2026-07-26
 ---
 

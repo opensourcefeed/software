@@ -11,7 +11,7 @@ platforms: [Windows, macOS, Linux, Android, iOS]
 category: vpn
 alternative_to: []
 has_alternatives: true
-description: "NordVPN is a proprietary, subscription-based VPN service with a large global server network. Client apps are closed source, and pricing relies heavily on multi-year subscription discounts."
+description: "NordVPN is a proprietary, subscription-based VPN with a large global server network. Client apps are closed source, pricing favors multi-year plans."
 last_modified_at: 2026-07-26
 ---
 

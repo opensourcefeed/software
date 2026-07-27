@@ -8,6 +8,7 @@ layout: default
       <img src="{{ page.logo | relative_url }}"
            alt="{{ page.title }} logo"
            class="software-header__logo"
+           width="80" height="80"
            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       <div class="software-header__logo software-header__logo--placeholder" style="display:none">
         {{ page.title | slice: 0 }}

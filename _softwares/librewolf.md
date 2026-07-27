@@ -11,7 +11,7 @@ platforms: [Windows, macOS, Linux]
 category: web-browser
 alternative_to:
   - chrome
-description: "LibreWolf is a free, open source fork of Firefox that strips out telemetry and Mozilla's default data-sharing partnerships, applying privacy-hardened settings and uBlock Origin out of the box."
+description: "LibreWolf is a free, open source Firefox fork that strips telemetry and data-sharing partnerships, applying privacy-hardened defaults and uBlock Origin."
 last_modified_at: 2026-07-26
 ---
 

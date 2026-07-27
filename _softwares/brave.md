@@ -11,7 +11,7 @@ platforms: [Windows, macOS, Linux, Android, iOS]
 category: web-browser
 alternative_to:
   - chrome
-description: "Brave is a free, open source browser built on Chromium that blocks ads and trackers by default, offering Chrome-level site compatibility with a much stronger privacy baseline."
+description: "Brave is a free, open source browser built on Chromium that blocks ads and trackers by default, offering Chrome-level compatibility with stronger privacy."
 last_modified_at: 2026-07-26
 ---
 

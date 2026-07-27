@@ -11,7 +11,7 @@ category: media-player
 logo: /assets/images/software/windows-media-player.png
 alternative_to: []
 has_alternatives: true
-description: "Windows Media Player is Microsoft's default audio and video player for Windows. It handles common media formats and includes CD ripping, playlist management, and media library features."
+description: "Windows Media Player is Microsoft's default audio and video player for Windows, with CD ripping, playlist management, and media library features."
 last_modified_at: 2026-07-26
 ---
 

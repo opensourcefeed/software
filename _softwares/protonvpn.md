@@ -11,7 +11,7 @@ platforms: [Windows, macOS, Linux, Android, iOS]
 category: vpn
 alternative_to:
   - nordvpn
-description: "Proton VPN is a VPN service from Proton AG (makers of Proton Mail) with fully open source, independently audited client apps under GPL-3.0, plus a genuinely usable free tier."
+description: "Proton VPN is a VPN from Proton AG (makers of Proton Mail) with open source, independently audited GPL-3.0 apps, plus a genuinely usable free tier."
 last_modified_at: 2026-07-26
 ---
 

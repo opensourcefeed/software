@@ -11,7 +11,7 @@ category: development
 logo: /assets/images/software/cline.png
 alternative_to:
   - claude-code
-description: "Cline is an open source autonomous coding agent available as a VS Code or JetBrains extension, CLI tool, or SDK. Supports Claude, GPT, Gemini, and local models."
+description: "Cline is an open source autonomous coding agent for VS Code, JetBrains, CLI, or SDK use. Supports Claude, GPT, Gemini, and local models."
 last_modified_at: 2026-07-26
 ---
 

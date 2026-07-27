@@ -11,7 +11,7 @@ category: development
 logo: /assets/images/software/continue.png
 alternative_to:
   - claude-code
-description: "Continue is an open source AI coding agent for VS Code and JetBrains with autocomplete, chat, and agentic editing. No longer actively maintained since mid-2026."
+description: "Continue is an open source AI coding agent for VS Code and JetBrains with autocomplete, chat, and agentic editing. Unmaintained since mid-2026."
 last_modified_at: 2026-07-26
 ---
 

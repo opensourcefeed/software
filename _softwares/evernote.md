@@ -11,7 +11,7 @@ category: note-taking
 logo: /assets/images/software/evernote.svg
 alternative_to: []
 has_alternatives: true
-description: "Evernote is a proprietary note-taking application for capturing, organizing, and syncing notes, web clippings, and documents across devices, owned by Bending Spoons."
+description: "Evernote is a proprietary note-taking app for capturing, organizing, and syncing notes, web clippings, and documents across devices, owned by Bending Spoons."
 last_modified_at: 2026-07-26
 ---
 

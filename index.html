@@ -63,7 +63,7 @@ permalink: /
 
   <!-- Software Directory (grouped by category) -->
   <section class="section" data-directory-list>
-    <h2 class="section__title">Software Directory</h2>
+    <h2 class="section__title">Directory</h2>
     {% for group in grouped %}
       <div class="category-group" data-category-group="{{ group.name }}">
         <h3 class="category-group__title">
@@ -82,7 +82,9 @@ permalink: /
 
       <!-- Ad slot: after the first category group, out of the above-the-fold hero -->
       {% if forloop.first %}
-        {% include ad.html slot="directory-below-title" %}
+        <div data-directory-ad>
+          {% include ad.html slot="directory-below-title" %}
+        </div>
       {% endif %}
     {% endfor %}
   </section>

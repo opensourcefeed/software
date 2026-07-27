@@ -11,7 +11,7 @@ platforms: [Windows, macOS, Linux, Android, iOS]
 category: web-browser
 alternative_to: []
 has_alternatives: true
-description: "Google Chrome is a proprietary web browser built on the open source Chromium project, bundling closed-source components, Google account sync, and telemetry that many privacy-conscious users prefer to avoid."
+description: "Google Chrome is a proprietary web browser built on open source Chromium, bundling closed-source components, account sync, and telemetry many users avoid."
 last_modified_at: 2026-07-26
 ---
 

@@ -7,6 +7,7 @@
   var categorySelect = controls.querySelector('[data-filter-category-select]');
   var countEl = controls.querySelector('[data-directory-count]');
   var emptyEl = document.querySelector('[data-directory-empty]');
+  var adEl = document.querySelector('[data-directory-ad]');
   var groups = document.querySelectorAll('[data-category-group]');
   var cards = document.querySelectorAll('[data-software-card]');
 
@@ -45,6 +46,10 @@
     }
     if (emptyEl) {
       emptyEl.hidden = visibleCount !== 0;
+    }
+    if (adEl) {
+      var isFiltered = !!query || state.type !== 'all' || state.category !== 'all';
+      adEl.hidden = isFiltered;
     }
   }
 

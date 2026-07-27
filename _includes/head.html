@@ -16,6 +16,9 @@
 
   <link rel="canonical" href="{{ page.url | absolute_url }}">
 
+  <link rel="icon" href="{{ site.main_site_url }}/assets/images/meta/icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="{{ site.main_site_url }}/assets/images/meta/icon.png">
+
   {% comment %}
     Open Graph / Twitter Card metadata.
     og_title/og_description fall back through page-specific fields to the
@@ -37,7 +40,7 @@
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:image" content="{{ og_image }}">
 
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@opensourcefeed">
   <meta name="twitter:title" content="{{ og_title }}">
   <meta name="twitter:description" content="{{ og_description }}">

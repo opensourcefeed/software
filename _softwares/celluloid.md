@@ -10,7 +10,7 @@ platforms: [Linux]
 category: media-player
 logo: /assets/images/software/celluloid.png
 alternative_to: []
-description: "Celluloid (formerly GNOME MPV) is a simple GTK4-based graphical frontend for mpv. It provides a clean, GNOME-style interface while leveraging mpv's powerful playback engine."
+description: "Celluloid (formerly GNOME MPV) is a simple GTK4 frontend for mpv, providing a clean GNOME-style interface over mpv's powerful playback engine."
 last_modified_at: 2026-07-26
 ---
 
