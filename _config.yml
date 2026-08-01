@@ -95,6 +95,15 @@ category_names:
   vpn: "VPN"
   note-taking: "Note Taking"
   music-streaming: "Music Streaming"
+  cloud-storage: "Cloud Storage"
+  containerization: "Containerization"
+  design: "Design"
+  email-client: "Email Clients"
+  game-development: "Game Development"
+  password-manager: "Password Managers"
+  video-editing: "Video Editing"
+  3d-modeling: "3D Modeling"
+  cad: "CAD"
 
 # SEO
 author: "Niyas C"
