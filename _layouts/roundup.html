@@ -1,0 +1,40 @@
+---
+layout: default
+---
+{% assign entries = site.softwares | where: "category", page.category | where: "type", "open-source" %}
+
+<article class="alternatives-page">
+  <!-- 1. Header -->
+  <header class="page-header">
+    <h1>{{ page.title }}</h1>
+  </header>
+
+  <!-- 2. Ad slot: below header -->
+  {% include ad.html slot="roundup-below-header" %}
+
+  <!-- 3. Intro (body content — only place this lives) -->
+  <div class="why-switch">
+    {{ content }}
+  </div>
+
+  <!-- 4. Ad slot: mid-content -->
+  {% include ad.html slot="roundup-mid-content" %}
+
+  <!-- 5. Software list -->
+  <section class="alternatives-section">
+    <h2 class="section__title">{{ page.title }}</h2>
+    <div class="alternatives-list">
+      {% for software in entries %}
+        {% include software-card.html software=software %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- 6. Footer -->
+  <footer>
+    {% if page.last_modified_at %}
+      <p class="last-modified">Last updated: {{ page.last_modified_at | date: '%B %d, %Y' }}</p>
+    {% endif %}
+    <a href="{{ '/' | relative_url }}" class="back-link">&larr; Back to Software Directory</a>
+  </footer>
+</article>

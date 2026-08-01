@@ -94,6 +94,8 @@
     {% include json-ld-software.html %}
   {% elsif page.layout == "alternative-to" %}
     {% include json-ld-alternatives.html %}
+  {% elsif page.layout == "roundup" %}
+    {% include json-ld-roundup.html %}
   {% elsif page.json_ld == "collection" %}
     {% include json-ld-collection.html %}
   {% endif %}

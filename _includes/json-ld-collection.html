@@ -35,6 +35,14 @@
           "url": {{ alternative.url | absolute_url | jsonify }}
         }{% unless forloop.last %},{% endunless %}
       {% endfor %}
+    {% elsif page.url contains "/best-open-source-software/" %}
+      {% for roundup in site.roundups %}
+        {
+          "@type": "ItemList",
+          "name": {{ roundup.title | jsonify }},
+          "url": {{ roundup.url | absolute_url | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
     {% else %}
       {% for software in site.softwares %}
         {

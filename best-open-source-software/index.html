@@ -1,0 +1,27 @@
+---
+layout: default
+title: "Popular Open Source Software, by Category"
+description: "Our picks for the best open source software in each category — image editors, media players, web browsers, AI coding assistants, communication apps, and more."
+json_ld: collection
+last_modified_at: 2026-08-01
+permalink: /best-open-source-software/
+---
+<div class="landing-page">
+  <div class="hero">
+    <h1>Popular Open Source Software, by Category</h1>
+    <p>Curated picks for the best open source tools in categories where the open source options are strong enough to stand on their own — not just "alternatives," but genuinely popular choices in their own right.</p>
+  </div>
+
+  {% if site.roundups.size > 0 %}
+  <section class="section">
+    <h2 class="section__title">Browse by Category</h2>
+    <div class="card-grid">
+      {% for roundup in site.roundups %}
+        {% include roundup-card.html roundup=roundup %}
+      {% endfor %}
+    </div>
+  </section>
+
+  {% include ad.html slot="roundup-landing-below-title" %}
+  {% endif %}
+</div>

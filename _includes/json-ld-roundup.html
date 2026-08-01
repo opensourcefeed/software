@@ -1,0 +1,39 @@
+{% comment %}
+  JSON-LD structured data for roundup pages ("Popular open source X").
+  Renders ItemList schema listing each open-source software in the page's
+  category, filtered the same way the layout filters the visible list.
+{% endcomment %}
+{% assign org_id = site.url | append: site.baseurl | append: "/#organization" %}
+{% assign page_url = page.url | absolute_url %}
+{% assign entries = site.softwares | where: "category", page.category | where: "type", "open-source" %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "url": {{ page_url | jsonify }},
+  {% if page.last_modified_at %}"dateModified": {{ page.last_modified_at | date: '%Y-%m-%d' | jsonify }},
+  {% endif %}"author": {
+    "@id": {{ org_id | jsonify }}
+  },
+  "publisher": {
+    "@id": {{ org_id | jsonify }}
+  },
+  "itemListElement": [
+    {% for software in entries %}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index }},
+        "name": {{ software.title | jsonify }},
+        "url": {{ software.url | absolute_url | jsonify }},
+        "description": {{ software.description | jsonify }}
+        {% if software.logo %},
+        "image": {{ software.logo | absolute_url | jsonify }}
+        {% endif %}
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>

@@ -2,6 +2,11 @@
 layout: default
 ---
 {% assign proprietary = site.softwares | where: "slug", page.proprietary_slug | first %}
+{% assign roundup_slug = site.roundup_pages[proprietary.category] %}
+{% assign roundup_page = nil %}
+{% if roundup_slug %}
+  {% assign roundup_page = site.roundups | where: "slug", roundup_slug | first %}
+{% endif %}
 
 <article class="alternatives-page">
   <!-- 1. Header -->
@@ -121,6 +126,9 @@ layout: default
   <footer>
     {% if page.last_modified_at %}
       <p class="last-modified">Last updated: {{ page.last_modified_at | date: '%B %d, %Y' }}</p>
+    {% endif %}
+    {% if roundup_page %}
+      <p class="roundup-crosslink"><a href="{{ roundup_page.url | relative_url }}">Explore {{ roundup_page.title }} &rarr;</a></p>
     {% endif %}
     <a href="{{ '/alternative-to/' | relative_url }}" class="back-link">&larr; Back to Alternatives</a>
   </footer>

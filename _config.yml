@@ -39,6 +39,9 @@ collections:
   alternatives:
     output: true
     permalink: /alternative-to/:slug/
+  roundups:
+    output: true
+    permalink: /best-open-source-:slug/
 
 # Defaults — auto-assign layouts based on path
 defaults:
@@ -57,6 +60,11 @@ defaults:
       type: "alternatives"
     values:
       layout: "alternative-to"
+  - scope:
+      path: ""      # all files in roundups collection
+      type: "roundups"
+    values:
+      layout: "roundup"
 
 # AdSense configuration
 # Slot IDs map descriptive position keys (used in {% include ad.html slot="..." %})
@@ -72,6 +80,9 @@ adsense:
     alternatives-mid-content: "5417552591"    # Reuses mid-article slot
     directory-below-title: "3888848509"       # Landing pages (directory + alt landing)
     alt-landing-below-title: "3888848509"     # Reuses landing slot
+    roundup-below-header: "2834641343"        # Reuses top-of-article slot
+    roundup-mid-content: "5417552591"         # Reuses mid-article slot
+    roundup-landing-below-title: "3888848509" # Reuses landing slot
 
 # Analytics configuration
 google_analytics:
@@ -104,6 +115,14 @@ category_names:
   video-editing: "Video Editing"
   3d-modeling: "3D Modeling"
   cad: "CAD"
+
+# Category -> roundup page slug (only categories with a "Popular Open Source X" page)
+roundup_pages:
+  image-editing: image-editors
+  media-player: media-players
+  web-browser: web-browsers
+  development: ai-coding-assistants
+  communication: communication-apps
 
 # SEO
 author: "Niyas C"

@@ -1,0 +1,30 @@
+{% comment %}
+  Reusable roundup card.
+  Usage: {% include roundup-card.html roundup=roundup %}
+  Expects: roundup (a collection item from site.roundups)
+{% endcomment %}
+{% assign entry_count = site.softwares | where: "category", include.roundup.category | where: "type", "open-source" | size %}
+
+<article class="card"
+  data-software-card
+  data-title="{{ include.roundup.title | downcase }}"
+  data-tagline="{{ include.roundup.tagline | downcase }}">
+  <div class="card__header">
+    <div>
+      <h3 class="card__title">
+        <a href="{{ include.roundup.url | relative_url }}">{{ include.roundup.title }}</a>
+      </h3>
+      {% if include.roundup.tagline %}
+        <p class="card__tagline">{{ include.roundup.tagline }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <p class="card__description">{{ include.roundup.description }}</p>
+
+  <div class="card__meta">
+    <span class="badge badge--open-source">
+      {{ entry_count }} open source {% if entry_count == 1 %}pick{% else %}picks{% endif %}
+    </span>
+  </div>
+</article>

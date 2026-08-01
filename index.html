@@ -72,6 +72,9 @@ permalink: /
           {% else %}
             {{ group.name | capitalize }}
           {% endif %}
+          {% if site.roundup_pages[group.name] %}
+            <a class="category-group__roundup-link" href="{{ '/best-open-source-' | append: site.roundup_pages[group.name] | append: '/' | relative_url }}">Our picks &rarr;</a>
+          {% endif %}
         </h3>
         <div class="card-grid">
           {% for software in group.items %}

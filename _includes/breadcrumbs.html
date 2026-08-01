@@ -5,6 +5,11 @@
   {% unless is_alt_landing %}{% assign is_alt_subpage = true %}{% endunless %}
 {% endif %}
 
+{% assign is_roundup_landing = false %}
+{% if page.url == "/best-open-source-software/" %}{% assign is_roundup_landing = true %}{% endif %}
+{% assign is_roundup_subpage = false %}
+{% if page.layout == "roundup" %}{% assign is_roundup_subpage = true %}{% endif %}
+
 <nav class="breadcrumbs" aria-label="Breadcrumb">
   <ul>
     <li><a href="{{ site.main_site_url }}">Home</a></li>
@@ -14,9 +19,15 @@
       <li aria-hidden="true">›</li>
       <li><a href="{{ '/alternative-to/' | relative_url }}">Open Source Alternatives</a></li>
     {% endif %}
+    {% if is_roundup_subpage %}
+      <li aria-hidden="true">›</li>
+      <li><a href="{{ '/best-open-source-software/' | relative_url }}">Popular Open Source Software</a></li>
+    {% endif %}
     <li aria-hidden="true">›</li>
     {% if is_alt_landing %}
       <li aria-current="page">Open Source Alternatives</li>
+    {% elsif is_roundup_landing %}
+      <li aria-current="page">Popular Open Source Software</li>
     {% else %}
       <li aria-current="page">{{ page.title }}</li>
     {% endif %}
@@ -53,11 +64,31 @@
       "name": {{ page.title | jsonify }},
       "item": {{ page.url | absolute_url | jsonify }}
     }
+    {% elsif is_roundup_subpage %}
+    ,{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Popular Open Source Software",
+      "item": {{ '/best-open-source-software/' | absolute_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": {{ page.title | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
     {% elsif is_alt_landing %}
     ,{
       "@type": "ListItem",
       "position": 3,
       "name": "Open Source Alternatives",
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+    {% elsif is_roundup_landing %}
+    ,{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Popular Open Source Software",
       "item": {{ page.url | absolute_url | jsonify }}
     }
     {% else %}
