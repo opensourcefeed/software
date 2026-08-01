@@ -11,6 +11,7 @@ platforms: [Windows, macOS, Linux, Android, iOS]
 category: vpn
 alternative_to:
   - nordvpn
+  - expressvpn
 description: "Mullvad is a Swedish VPN with open source, GPL-3.0 client apps that require no email or personal information to sign up — accounts are just a random number."
 last_modified_at: 2026-07-26
 ---

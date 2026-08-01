@@ -61,6 +61,12 @@
   background-color: rgba($color-proprietary, 0.08);
 }
 
+.badge--source-available {
+  color: $color-accent;
+  border-color: rgba($color-accent, 0.3);
+  background-color: rgba($color-accent, 0.08);
+}
+
 .badge--license {
   background-color: transparent;
   color: var(--color-text-light);

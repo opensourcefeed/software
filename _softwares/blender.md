@@ -13,6 +13,7 @@ alternative_to:
   - maya
   - 3ds-max
   - zbrush
+  - cinema-4d
 description: "Blender is a free, open source 3D creation suite covering modeling, rigging, animation, simulation, rendering, and video editing, funded and maintained by the Blender Foundation."
 last_modified_at: 2026-08-01
 ---

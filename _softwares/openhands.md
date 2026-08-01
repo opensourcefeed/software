@@ -11,6 +11,8 @@ category: development
 logo: /assets/images/software/openhands.png
 alternative_to:
   - claude-code
+  - github-copilot
+  - cursor
 description: "OpenHands is an open source AI coding agent (formerly OpenDevin) that writes code and runs sandboxed commands, self-hostable via Docker with a browser UI."
 last_modified_at: 2026-07-26
 ---

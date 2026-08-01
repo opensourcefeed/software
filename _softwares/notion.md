@@ -28,7 +28,7 @@ Notion is closed source and cloud-hosted; there is no self-hosted or on-premises
 - **Wikis** — Nested pages for team knowledge bases and documentation
 - **Templates** — A large library of community and official templates for common workflows
 - **Collaboration** — Real-time multi-user editing and commenting
-- **AI features** — Built-in writing and summarization assistant (paid add-on)
+- **AI features** — Full AI suite (agent, workspace search, meeting notes) bundled into the Business plan; Free and Plus get a limited trial, and Custom Agents bill separately via credits
 
 ## Use Cases
 

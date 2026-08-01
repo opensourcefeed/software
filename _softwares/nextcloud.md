@@ -11,7 +11,9 @@ category: cloud-storage
 logo: /assets/images/software/nextcloud.svg
 alternative_to:
   - dropbox
-description: "Nextcloud is a self-hosted file sync, share, and collaboration platform offering an open source alternative to Dropbox and Microsoft 365."
+  - google-drive
+  - onedrive
+description: "Nextcloud is a self-hosted file sync, share, and collaboration platform offering an open source alternative to Dropbox, Google Drive, OneDrive, and Microsoft 365."
 last_modified_at: 2026-07-26
 ---
 

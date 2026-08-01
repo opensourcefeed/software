@@ -11,7 +11,8 @@ category: note-taking
 logo: /assets/images/software/logseq.svg
 alternative_to:
   - notion
-description: "Logseq is a free, open source outliner that stores notes as local plain-text Markdown or Org files, offering bi-directional linking and a knowledge graph as a privacy-respecting alternative to Notion."
+  - obsidian
+description: "Logseq is a free, open source outliner that stores notes as local plain-text Markdown or Org files, offering bi-directional linking and a knowledge graph as a privacy-respecting alternative to Notion and Obsidian."
 last_modified_at: 2026-07-27
 ---
 

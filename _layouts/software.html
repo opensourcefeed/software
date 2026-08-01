@@ -28,6 +28,8 @@ layout: default
       <div class="software-header__meta">
         {% if page.type == "open-source" %}
           <span class="badge badge--open-source">Open Source</span>
+        {% elsif page.type == "source-available" %}
+          <span class="badge badge--source-available">Source Available</span>
         {% elsif page.type == "proprietary" %}
           <span class="badge badge--proprietary">Proprietary</span>
         {% endif %}
@@ -69,7 +71,7 @@ layout: default
     <div class="cta-banner">
       <p>Looking for free alternatives? &rarr; <a href="{{ '/alternative-to/' | append: page.slug | append: '/' | relative_url }}">Open source alternatives to {{ page.title }}</a></p>
     </div>
-  {% elsif page.type == "open-source" and page.alternative_to.size > 0 %}
+  {% elsif page.type == "open-source" and page.alternative_to.size > 0 or page.type == "source-available" and page.alternative_to.size > 0 %}
     <div class="cta-banner cta-banner--alternative">
       <p>This is a free alternative to:
         {% for proprietary_slug in page.alternative_to %}

@@ -10,6 +10,8 @@ platforms: [Linux, Windows, macOS, Docker]
 category: music-streaming
 alternative_to:
   - spotify
+  - apple-music
+  - youtube-music
 description: "Navidrome is a free, open source, self-hosted music server that streams your own audio library through a modern web player and Subsonic-compatible mobile apps, as an alternative to licensed streaming services."
 last_modified_at: 2026-07-27
 ---

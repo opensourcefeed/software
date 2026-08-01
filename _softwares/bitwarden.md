@@ -11,7 +11,8 @@ category: password-manager
 logo: /assets/images/software/bitwarden.svg
 alternative_to:
   - 1password
-description: "Bitwarden is an open source password manager with end-to-end encryption, cross-platform apps, and self-hosting, offered as an alternative to 1Password."
+  - lastpass
+description: "Bitwarden is an open source password manager with end-to-end encryption, cross-platform apps, and self-hosting, offered as an alternative to 1Password and LastPass."
 last_modified_at: 2026-07-26
 ---
 

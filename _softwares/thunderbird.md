@@ -11,6 +11,8 @@ category: email-client
 logo: /assets/images/software/thunderbird.svg
 alternative_to:
   - outlook
+  - gmail
+  - apple-mail
 description: "Thunderbird is a free, open source email client from the Mozilla Foundation supporting email, calendaring, contacts, and chat through standard protocols like IMAP and CalDAV."
 last_modified_at: 2026-08-01
 ---

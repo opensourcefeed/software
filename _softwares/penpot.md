@@ -11,7 +11,9 @@ category: design
 logo: /assets/images/software/penpot.svg
 alternative_to:
   - figma
-description: "Penpot is a free, open source, browser-based design and prototyping platform built on open web standards, offering a self-hostable alternative to Figma."
+  - sketch
+  - adobe-xd
+description: "Penpot is a free, open source, browser-based design and prototyping platform built on open web standards, offering a self-hostable alternative to Figma, Sketch, and Adobe XD."
 last_modified_at: 2026-07-26
 ---
 

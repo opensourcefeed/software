@@ -11,6 +11,8 @@ category: cloud-storage
 logo: /assets/images/software/syncthing.svg
 alternative_to:
   - dropbox
+  - google-drive
+  - onedrive
 description: "Syncthing is an open source tool that syncs files directly between devices over encrypted peer-to-peer connections, with no central server or cloud storage."
 last_modified_at: 2026-07-26
 ---

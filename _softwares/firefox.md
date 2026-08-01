@@ -11,6 +11,8 @@ category: web-browser
 logo: /assets/images/software/firefox.svg
 alternative_to:
   - chrome
+  - edge
+  - safari
 description: "Firefox is a free, open source web browser developed by the Mozilla Foundation, built on its own Gecko engine and offering strong privacy controls as an alternative to Chromium-based browsers."
 last_modified_at: 2026-07-27
 ---

@@ -11,6 +11,8 @@ category: development
 logo: /assets/images/software/aider.png
 alternative_to:
   - claude-code
+  - github-copilot
+  - cursor
 description: "Aider is a free, open source AI pair programming tool for the terminal. It works with Claude, GPT, Gemini, DeepSeek, and local LLMs to edit code in git repos."
 last_modified_at: 2026-07-26
 ---

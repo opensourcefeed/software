@@ -19,7 +19,7 @@ last_modified_at: 2026-07-26
 
 Google Chrome launched in September 2008, built on the open source WebKit engine before Google forked its own rendering engine, Blink, in 2013. Chrome itself is closed source, but it's built on top of Chromium, the open source project Google publishes and maintains as the engine's reference implementation. The distinction matters: Chromium ships without Google's proprietary additions — account sync, licensed codecs, the built-in PDF viewer, and telemetry reporting — all of which are layered on top in Chrome itself.
 
-Chrome's dominance has made it the default target for web compatibility testing, but that same market share has drawn sustained scrutiny over data collection, Google's advertising integrations (including the Privacy Sandbox and Topics API), and the deprecation of Manifest V2 extensions, which weakened several ad-blocking and privacy tools. Because Chromium is open source, a number of browsers — including two below — build on the same rendering engine while stripping out Google's proprietary services entirely.
+Chrome's dominance has made it the default target for web compatibility testing, but that same market share has drawn sustained scrutiny over data collection, Google's advertising integrations (including the Privacy Sandbox and Topics API), and Chrome's phase-out of Manifest V2 extensions, now complete, which eliminated most ad-blocking and privacy extensions that hadn't migrated to Manifest V3. Because Chromium is open source, a number of browsers — including two below — build on the same rendering engine while stripping out Google's proprietary services entirely.
 
 ## Key Features
 

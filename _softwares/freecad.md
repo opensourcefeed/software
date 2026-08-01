@@ -11,6 +11,7 @@ category: cad
 logo: /assets/images/software/freecad.svg
 alternative_to:
   - autocad
+  - fusion-360
 description: "FreeCAD is a free, open source parametric 3D CAD application for mechanical engineering and product design, with a modular architecture and Python scripting support."
 last_modified_at: 2026-08-01
 ---

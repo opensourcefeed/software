@@ -17,7 +17,7 @@ last_modified_at: 2026-07-26
 
 ## Overview
 
-NordVPN launched in 2012, operated by Nord Security (formerly Tefincom), a company headquartered in Panama, chosen in part for its lack of mandatory data retention laws. It has grown into one of the most heavily marketed consumer VPN services, built around a large server network spanning dozens of countries, and features like split tunneling, a kill switch, and its own "NordLynx" protocol, a proprietary implementation built around the open source WireGuard protocol.
+NordVPN launched in 2012, operated by Tefincom S.A., a Panama-incorporated entity under parent company Nord Security — Panama was chosen in part for its lack of mandatory data retention laws, though Nord Security's actual operations are centered in Vilnius, Lithuania. It has grown into one of the most heavily marketed consumer VPN services, built around a large server network spanning dozens of countries, and features like split tunneling, a kill switch, and its own "NordLynx" protocol, a proprietary implementation built around the open source WireGuard protocol.
 
 NordVPN's marketing has drawn criticism for its aggressive pricing structure, which pushes customers toward multi-year plans through steep discounts on longer commitments, and for a 2018 breach disclosed in 2019 affecting one server. Independent audits of its no-logs policy have been conducted, but as with any proprietary VPN service, users must ultimately trust the provider's claims rather than verify client behavior directly, since the app code itself isn't published.
 

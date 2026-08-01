@@ -11,6 +11,8 @@ category: video-conferencing
 logo: /assets/images/software/jitsi.png
 alternative_to:
   - zoom
+  - microsoft-teams
+  - google-meet
 description: "Jitsi Meet is a free and open source video conferencing tool. No account needed, no time limits, and fully self-hostable for complete data control."
 last_modified_at: 2026-07-26
 ---

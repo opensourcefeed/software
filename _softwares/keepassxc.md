@@ -11,6 +11,7 @@ category: password-manager
 logo: /assets/images/software/keepassxc.svg
 alternative_to:
   - 1password
+  - lastpass
 description: "KeePassXC is a free, open source password manager that stores credentials in an offline encrypted database, with no cloud dependency and browser integration."
 last_modified_at: 2026-07-26
 ---

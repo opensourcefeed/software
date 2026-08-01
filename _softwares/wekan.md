@@ -11,6 +11,8 @@ platforms: [Linux, Windows, macOS]
 category: project-management
 alternative_to:
   - trello
+  - asana
+  - jira
 description: "Wekan is a free, open source kanban board application that closely mirrors Trello's board/list/card model, fully self-hostable via Docker or Snap."
 last_modified_at: 2026-07-26
 ---
