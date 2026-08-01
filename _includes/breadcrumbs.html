@@ -1,14 +1,25 @@
+{% assign is_alt_landing = false %}
+{% if page.url == "/alternative-to/" %}{% assign is_alt_landing = true %}{% endif %}
+{% assign is_alt_subpage = false %}
+{% if page.layout == "alternative-to" or page.url contains "/alternative-to/" %}
+  {% unless is_alt_landing %}{% assign is_alt_subpage = true %}{% endunless %}
+{% endif %}
+
 <nav class="breadcrumbs" aria-label="Breadcrumb">
   <ul>
     <li><a href="{{ site.main_site_url }}">Home</a></li>
     <li aria-hidden="true">›</li>
     <li><a href="{{ '/' | relative_url }}">Software</a></li>
-    {% if page.layout == "alternative-to" or page.url contains "/alternative-to/" %}
+    {% if is_alt_subpage %}
       <li aria-hidden="true">›</li>
-      <li><a href="{{ '/alternative-to/' | relative_url }}">Alternative To</a></li>
+      <li><a href="{{ '/alternative-to/' | relative_url }}">Open Source Alternatives</a></li>
     {% endif %}
     <li aria-hidden="true">›</li>
-    <li aria-current="page">{{ page.title }}</li>
+    {% if is_alt_landing %}
+      <li aria-current="page">Open Source Alternatives</li>
+    {% else %}
+      <li aria-current="page">{{ page.title }}</li>
+    {% endif %}
   </ul>
 </nav>
 
@@ -29,17 +40,24 @@
       "name": "Software",
       "item": {{ '/' | absolute_url | jsonify }}
     }
-    {% if page.layout == "alternative-to" or page.url contains "/alternative-to/" %}
+    {% if is_alt_subpage %}
     ,{
       "@type": "ListItem",
       "position": 3,
-      "name": "Alternative To",
+      "name": "Open Source Alternatives",
       "item": {{ '/alternative-to/' | absolute_url | jsonify }}
     },
     {
       "@type": "ListItem",
       "position": 4,
       "name": {{ page.title | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+    {% elsif is_alt_landing %}
+    ,{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Open Source Alternatives",
       "item": {{ page.url | absolute_url | jsonify }}
     }
     {% else %}
