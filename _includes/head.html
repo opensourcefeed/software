@@ -24,10 +24,6 @@
   <meta name="description" content="{{ page.tagline }}">
   {% endif %}
 
-  {% if page.last_modified_at %}
-  <meta name="dateModified" content="{{ page.last_modified_at | date: '%Y-%m-%d' }}">
-  {% endif %}
-
   <link rel="canonical" href="{{ page.url | absolute_url }}">
 
   <link rel="icon" href="{{ site.main_site_url }}/assets/images/meta/icon.png" type="image/png">
