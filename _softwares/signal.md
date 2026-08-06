@@ -13,7 +13,7 @@ alternative_to:
   - whatsapp
   - telegram
 description: "Signal is a free, open source messaging app with end-to-end encryption enabled by default for all chats, calls, and groups, run by a non-profit foundation instead of a for-profit company."
-last_modified_at: 2026-08-01
+last_modified_at: 2026-08-06
 ---
 
 ## Overview
@@ -23,6 +23,10 @@ Signal traces back to 2013, when Moxie Marlinspike and Open Whisper Systems buil
 Both Signal's client apps and its server code are open source, and the Signal Protocol it pioneered — a double-ratchet end-to-end encryption scheme — has since been licensed and adopted by WhatsApp, Google Messages (RCS), and others, making Signal's cryptography arguably the most independently vetted in the industry. Unlike Telegram, encryption is on for every chat, call, and group by default, with no separate "secret chat" mode to opt into. Signal also minimizes metadata collection more aggressively than most competitors, including sealed sender technology that hides who is messaging whom even from Signal's own servers.
 
 The tradeoff is dependence on a phone number for registration (like WhatsApp) and a smaller feature set — no built-in large public channels or bot platform comparable to Telegram, and a smaller user base than either WhatsApp or Telegram, which can make it harder to get contacts to switch.
+
+## Is Signal Open Source?
+
+Yes, on both sides of the connection: the client apps and the server code are both published under AGPL-3.0 on [GitHub](https://github.com/signalapp). That's a stronger openness position than Telegram (open clients, closed server) or most other mainstream messengers, and it's part of why the Signal Protocol has been independently reviewed and subsequently adopted by other encrypted messaging products.
 
 ## Key Features
 

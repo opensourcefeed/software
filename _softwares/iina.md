@@ -41,4 +41,4 @@ Where mpv is deliberately minimal and configuration-file-driven, aimed at users 
 
 ## Who It's For
 
-IINA is the natural pick for macOS users who want a free, modern, genuinely native video player rather than a ported interface — it looks and behaves like a Mac app because it is one, while still inheriting mpv's format and codec strength underneath. It's a better fit than mpv itself for anyone who wants a graphical, discoverable interface instead of editing config files and Lua scripts, though that same design means it's macOS-only and won't help Windows or Linux users the way mpv or VLC would.
+IINA is the natural pick for macOS users who want a free, modern, genuinely native video player rather than a ported interface — it looks and behaves like a Mac app because it is one, while still inheriting mpv's format and codec strength underneath. It's a better fit than mpv itself for anyone who wants a graphical, discoverable interface instead of editing config files and Lua scripts, though that same design means it's macOS-only and won't help Windows or Linux users the way [mpv](/software/mpv/) or [VLC](/software/vlc/) would.

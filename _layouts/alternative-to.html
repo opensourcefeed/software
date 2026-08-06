@@ -122,6 +122,10 @@ layout: default
     </section>
   {% endif %}
 
+  {% if page.faq %}
+    {% include faq-section.html %}
+  {% endif %}
+
   <!-- 8. Footer -->
   <footer>
     {% if page.last_modified_at %}

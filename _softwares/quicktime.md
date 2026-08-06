@@ -38,4 +38,4 @@ Apple ended support for QuickTime on Windows in early 2016; shortly after, newly
 
 ## Who It's For
 
-QuickTime Player is for macOS users who need a built-in, no-installation media player for common formats and quick screen recording. It is proprietary, macOS-only, and limited in format support. Users who need broader codec support, cross-platform playback, or open source licensing should consider alternatives like VLC, mpv, or IINA.
+QuickTime Player is for macOS users who need a built-in, no-installation media player for common formats and quick screen recording. It is proprietary, macOS-only, and limited in format support. Users who need broader codec support, cross-platform playback, or open source licensing should consider alternatives like [VLC](/software/vlc/), [mpv](/software/mpv/), or [IINA](/software/iina/).

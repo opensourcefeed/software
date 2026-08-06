@@ -43,6 +43,13 @@
   {% assign og_description = page.description | default: page.tagline | default: site.description %}
   {% if page.logo %}
     {% assign og_image = page.logo | absolute_url %}
+  {% elsif page.layout == "alternative-to" and page.proprietary_slug %}
+    {% assign og_proprietary = site.softwares | where: "slug", page.proprietary_slug | first %}
+    {% if og_proprietary.logo %}
+      {% assign og_image = og_proprietary.logo | absolute_url %}
+    {% else %}
+      {% assign og_image = site.main_site_url | append: "/assets/images/meta/icon.png" %}
+    {% endif %}
   {% else %}
     {% assign og_image = site.main_site_url | append: "/assets/images/meta/icon.png" %}
   {% endif %}
@@ -98,5 +105,9 @@
     {% include json-ld-roundup.html %}
   {% elsif page.json_ld == "collection" %}
     {% include json-ld-collection.html %}
+  {% endif %}
+
+  {% if page.faq %}
+    {% include json-ld-faq.html %}
   {% endif %}
 </head>

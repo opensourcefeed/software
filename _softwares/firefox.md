@@ -14,7 +14,7 @@ alternative_to:
   - edge
   - safari
 description: "Firefox is a free, open source web browser developed by the Mozilla Foundation, built on its own Gecko engine and offering strong privacy controls as an alternative to Chromium-based browsers."
-last_modified_at: 2026-07-27
+last_modified_at: 2026-08-06
 ---
 
 ## Overview
@@ -22,6 +22,10 @@ last_modified_at: 2026-07-27
 Firefox was released by the Mozilla Foundation in 2004, growing out of the Mozilla project that Netscape open-sourced in 1998 after losing the first browser war to Internet Explorer. It quickly became the leading alternative browser of its era, credited with popularizing tabbed browsing and a plugin/extension ecosystem before Chrome's 2008 launch reshaped the market. Unlike Chrome, Safari, and most other major browsers, Firefox does not use the Chromium/Blink or WebKit engines — it runs on Gecko, Mozilla's own independently developed rendering engine, making it one of the last browsers with a fully separate technical lineage.
 
 Firefox's source code is released under the Mozilla Public License 2.0, and development is coordinated publicly on Mozilla's own infrastructure. Mozilla is funded primarily through search engine placement deals (notably with Google) rather than by directly selling the browser, which has let Firefox remain free while funding continued engine development. Because it doesn't share Chromium's rendering engine, Firefox is also a hedge against browser engine monoculture — a concern raised repeatedly by web standards advocates as Chromium's market share has grown.
+
+## Is Firefox Open Source?
+
+Yes — the entire browser, including the Gecko rendering engine, is released under the Mozilla Public License 2.0 and developed in the open on Mozilla's own infrastructure (mirrored to [GitHub](https://github.com/mozilla-firefox/firefox)). MPL-2.0 is a "weak copyleft" license: modified files must stay open, but Firefox's source can be combined with proprietary code elsewhere in a larger product without forcing that code open too — looser than the GPL, stricter than MIT.
 
 ## Key Features
 

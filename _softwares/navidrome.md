@@ -20,7 +20,7 @@ last_modified_at: 2026-07-27
 
 Navidrome is an open source music server designed to stream a user's own audio file collection rather than a licensed catalog. It implements the long-standing Subsonic API, which means it works with the large existing ecosystem of Subsonic-compatible mobile and desktop clients, while also shipping its own modern web-based player out of the box. The project is written in Go and distributed as a lightweight single binary or Docker container, making it straightforward to run on a home server, NAS, or small VPS.
 
-Because Navidrome only streams files the user already owns or has legally acquired, it sidesteps the licensing restrictions, regional catalog gaps, and removal risk inherent to services like Spotify. The trade-off is that it has no built-in catalog or discovery engine — users are responsible for building and maintaining their own music library, typically ripped CDs, purchased downloads, or other files organized with proper tags and metadata.
+Because Navidrome only streams files the user already owns or has legally acquired, it sidesteps the licensing restrictions, regional catalog gaps, and removal risk inherent to services like [Spotify](/software/spotify/). The trade-off is that it has no built-in catalog or discovery engine — users are responsible for building and maintaining their own music library, typically ripped CDs, purchased downloads, or other files organized with proper tags and metadata.
 
 ## Key Features
 

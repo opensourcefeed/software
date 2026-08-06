@@ -12,7 +12,7 @@ logo: /assets/images/software/unreal-engine.svg
 alternative_to: []
 has_alternatives: true
 description: "Unreal Engine is Epic Games' proprietary, source-available game engine known for high-fidelity 3D rendering, distributed free of upfront cost but with a royalty on commercial revenue above a threshold."
-last_modified_at: 2026-08-01
+last_modified_at: 2026-08-06
 ---
 
 ## Overview
@@ -20,6 +20,10 @@ last_modified_at: 2026-08-01
 Unreal Engine was first developed by Tim Sweeney and Epic Games for the 1998 first-person shooter Unreal, and has since gone through multiple major versions, with Unreal Engine 5 (released in 2022) introducing headline rendering technologies Nanite (virtualized micropolygon geometry) and Lumen (dynamic global illumination) that pushed real-time visual fidelity closer to pre-rendered film quality. It has become one of the two dominant general-purpose game engines alongside Unity, and is also widely used outside games in film/TV virtual production, architectural visualization, and automotive design.
 
 Unreal Engine's licensing is source-available rather than fully open source: the complete C++ engine source is published on GitHub (behind an Epic Games account and end-user license agreement), and developers can modify and recompile it, but it remains proprietary software owned by Epic. There is no upfront license fee, and small creators pay nothing; Epic instead charges a 5% royalty on a game's gross revenue once it exceeds a set threshold (excluding revenue through the Epic Games Store, where the royalty is waived). This royalty-based model, combined with Epic's Unreal Engine Marketplace/Fab asset store, differs meaningfully from Unity's historical per-seat and per-install pricing debates.
+
+## Is Unreal Engine Open Source?
+
+No, not in the free/libre sense, even though the source code is public. Epic publishes the full C++ engine source on GitHub, but access requires an Epic Games account and acceptance of the Unreal Engine End User License Agreement, and the code carries no license to redistribute a competing engine or strip out Epic's royalty terms. This is what's usually called "source-available," a distinct category from open source licenses like the MIT or GPL that Unreal's competitor Godot uses — Unreal remains Epic's proprietary product even though you can read and modify its internals.
 
 ## Key Features
 

@@ -38,4 +38,4 @@ WMP was once the dominant desktop media player, but its market relevance has dec
 
 ## Who It's For
 
-Windows Media Player is for Windows users who want a built-in, no-additional-installation media player for everyday playback. It is proprietary, Windows-only, and tied to the Microsoft ecosystem. For users needing broader format support, cross-platform compatibility, or open source licensing, alternatives like VLC or mpv are available.
+Windows Media Player is for Windows users who want a built-in, no-additional-installation media player for everyday playback. It is proprietary, Windows-only, and tied to the Microsoft ecosystem. For users needing broader format support, cross-platform compatibility, or open source licensing, alternatives like [VLC](/software/vlc/) or [mpv](/software/mpv/) are available.

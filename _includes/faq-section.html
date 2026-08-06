@@ -1,0 +1,18 @@
+{% comment %}
+  Renders page.faq (list of {question, answer}) as a visible FAQ section.
+  Mirrors the structure used by the comparison table block in
+  _layouts/alternative-to.html so styling stays consistent site-wide.
+{% endcomment %}
+{% if page.faq %}
+  <section class="section faq-section">
+    <h2 class="section__title">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      {% for item in page.faq %}
+        <div class="faq-item">
+          <h3 class="faq-item__question">{{ item.question }}</h3>
+          <p class="faq-item__answer">{{ item.answer }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}
