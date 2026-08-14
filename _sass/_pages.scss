@@ -4,6 +4,16 @@
 
 // --- Software page ---
 .software-page {
+  .software-featured-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1200 / 630;
+    margin-bottom: $spacing-lg;
+    border-radius: $radius-md;
+  }
+
   .software-description {
     max-width: 800px;
 

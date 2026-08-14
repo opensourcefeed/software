@@ -76,7 +76,8 @@
   {% if license_url != "" %}"license": {{ license_url | jsonify }},
   {% endif %}"url": {{ page.website | jsonify }},
   "description": {{ page.description | jsonify }},
-  {% if page.logo %}"image": {{ page.logo | absolute_url | jsonify }},
+  {% if page.featured_image %}"image": {{ '/assets/images/software-featured/' | append: page.featured_image | absolute_url | jsonify }},
+  {% elsif page.logo %}"image": {{ page.logo | absolute_url | jsonify }},
   {% endif %}"mainEntityOfPage": {
     "@type": "WebPage",
     "@id": {{ page_url | jsonify }}

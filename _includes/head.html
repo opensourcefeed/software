@@ -32,12 +32,15 @@
   {% comment %}
     Open Graph / Twitter Card metadata.
     og_title/og_description fall back through page-specific fields to the
-    site defaults; og_image prefers a page's own logo (software pages) over
-    the site-wide icon so shared links show the right artwork.
+    site defaults; og_image prefers a page's own featured_image, then its
+    logo (software pages), over the site-wide icon so shared links show the
+    right artwork.
   {% endcomment %}
   {% assign og_title = page.title | default: site.title %}
   {% assign og_description = page.description | default: page.tagline | default: site.description %}
-  {% if page.logo %}
+  {% if page.featured_image %}
+    {% assign og_image = '/assets/images/software-featured/' | append: page.featured_image | absolute_url %}
+  {% elsif page.logo %}
     {% assign og_image = page.logo | absolute_url %}
   {% elsif page.layout == "alternative-to" and page.proprietary_slug %}
     {% assign og_proprietary = site.softwares | where: "slug", page.proprietary_slug | first %}

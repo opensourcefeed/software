@@ -13,6 +13,7 @@ alternative_to: []
 has_alternatives: true
 description: "Telegram is a cloud-based messaging app with open source client apps but a closed source server, offering large group chats and channels rather than end-to-end encryption by default."
 last_modified_at: 2026-08-06
+featured_image: telegram.webp
 ---
 
 ## Overview

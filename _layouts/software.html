@@ -55,6 +55,14 @@ layout: default
     </div>
   </header>
 
+  {% if page.featured_image %}
+    <img src="{{ '/assets/images/software-featured/' | append: page.featured_image | relative_url }}"
+         alt="{{ page.featured_image_alt | default: page.title }}"
+         class="software-featured-image"
+         width="1200" height="630"
+         fetchpriority="high">
+  {% endif %}
+
   <!-- 2. Ad slot: below header -->
   {% include ad.html slot="software-below-header" %}
 
