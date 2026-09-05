@@ -117,6 +117,7 @@ category_names:
   cad: "CAD"
   torrent-client: "Torrent Clients"
   audio-editing: "Audio Editing"
+  code-editor: "Code Editors"
 
 # Category -> roundup page slug (only categories with a "Popular Open Source X" page)
 roundup_pages:
@@ -127,6 +128,7 @@ roundup_pages:
   communication: communication-apps
   torrent-client: torrent-clients
   audio-editing: audio-editors
+  code-editor: code-editors
 
 # SEO
 author: "Niyas C"
