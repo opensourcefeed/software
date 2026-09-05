@@ -116,6 +116,7 @@ category_names:
   3d-modeling: "3D Modeling"
   cad: "CAD"
   torrent-client: "Torrent Clients"
+  audio-editing: "Audio Editing"
 
 # Category -> roundup page slug (only categories with a "Popular Open Source X" page)
 roundup_pages:
@@ -125,6 +126,7 @@ roundup_pages:
   development: ai-coding-assistants
   communication: communication-apps
   torrent-client: torrent-clients
+  audio-editing: audio-editors
 
 # SEO
 author: "Niyas C"
