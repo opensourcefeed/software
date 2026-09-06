@@ -23,7 +23,7 @@ Over time, later versions of the Windows build began bundling optional third-par
 
 ## Is uTorrent Open Source?
 
-No. uTorrent is closed-source software owned by BitTorrent, Inc., and its source code has never been publicly released. The free tier is ad-supported, and a paid uTorrent Pro subscription removes ads and adds features like built-in antivirus scanning and file conversion. If you want a BitTorrent client without ads, bundled offers, or a closed codebase, [qBittorrent](/qbittorrent/), [Transmission](/transmission/), and [Deluge](/deluge/) are fully open source alternatives.
+No. uTorrent is closed-source software owned by BitTorrent, Inc., and its source code has never been publicly released. The free tier is ad-supported, and a paid uTorrent Pro subscription removes ads and adds features like built-in antivirus scanning and file conversion. If you want a BitTorrent client without ads, bundled offers, or a closed codebase, [qBittorrent](/software/qbittorrent/), [Transmission](/software/transmission/), and [Deluge](/software/deluge/) are fully open source alternatives.
 
 ## Key Features
 

@@ -23,7 +23,7 @@ The Microsoft-branded VS Code binary that most people download, however, is not 
 
 ## Is VS Code Open Source?
 
-Not exactly. The underlying "Code - OSS" source code that Microsoft publishes on GitHub is MIT-licensed and genuinely open source, but the official Visual Studio Code product — the branded build most people install — ships under a separate, proprietary Microsoft license that adds telemetry and restricts marketplace access to Microsoft's own builds. If you want the same editor experience without Microsoft's telemetry, branding, or marketplace restrictions, [VSCodium](/vscodium/) builds the identical open source code without any of that. [Neovim](/neovim/), [Zed](/zed/), and [Pulsar](/pulsar/) are independent open source editors that offer different but comparable workflows.
+Not exactly. The underlying "Code - OSS" source code that Microsoft publishes on GitHub is MIT-licensed and genuinely open source, but the official Visual Studio Code product — the branded build most people install — ships under a separate, proprietary Microsoft license that adds telemetry and restricts marketplace access to Microsoft's own builds. If you want the same editor experience without Microsoft's telemetry, branding, or marketplace restrictions, [VSCodium](/software/vscodium/) builds the identical open source code without any of that. [Neovim](/software/neovim/), [Zed](/software/zed/), and [Pulsar](/software/pulsar/) are independent open source editors that offer different but comparable workflows.
 
 ## Key Features
 

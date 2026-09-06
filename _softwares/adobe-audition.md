@@ -23,7 +23,7 @@ Audition is available only as part of an Adobe Creative Cloud subscription — t
 
 ## Is Adobe Audition Open Source?
 
-No. Adobe Audition is closed-source, proprietary software, and it's only available through a paid Creative Cloud subscription — there's no free tier or one-time purchase option, and no source code is published. If you want an audio editor or DAW with a comparable feature set that's free to use and fully open source, [Audacity](/audacity/), [Ardour](/ardour/), [Tenacity](/tenacity/), and [Qtractor](/qtractor/) are all viable alternatives.
+No. Adobe Audition is closed-source, proprietary software, and it's only available through a paid Creative Cloud subscription — there's no free tier or one-time purchase option, and no source code is published. If you want an audio editor or DAW with a comparable feature set that's free to use and fully open source, [Audacity](/software/audacity/), [Ardour](/software/ardour/), [Tenacity](/software/tenacity/), and [Qtractor](/software/qtractor/) are all viable alternatives.
 
 ## Key Features
 
