@@ -12,7 +12,8 @@ logo: /assets/images/software/gimp.png
 alternative_to:
   - photoshop
 description: "GIMP is a free, open source raster graphics editor for photo retouching, image composition, and graphic design, and a popular alternative to Adobe Photoshop."
-last_modified_at: 2026-07-26
+last_modified_at: 2026-09-06
+featured_image: gimp.webp
 ---
 
 ## Overview
