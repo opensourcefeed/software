@@ -12,6 +12,7 @@ logo: /assets/images/software/audacity.svg
 alternative_to:
   - adobe-audition
 description: "Audacity is a free, open source audio editor and recorder for Linux, Windows, and macOS, offering multi-track editing, noise reduction, and a large library of effects and format support."
+featured_image: audacity.webp
 last_modified_at: 2026-09-05
 ---
 
