@@ -12,7 +12,10 @@ logo: /assets/images/software/unreal-engine.svg
 alternative_to: []
 has_alternatives: true
 description: "Unreal Engine is Epic Games' proprietary, source-available game engine known for high-fidelity 3D rendering, distributed free of upfront cost but with a royalty on commercial revenue above a threshold."
-last_modified_at: 2026-08-06
+last_modified_at: 2026-09-16
+faq:
+  - question: "Is Unreal Engine open source?"
+    answer: "No, not in the free/libre sense — see the Is Unreal Engine Open Source? section above. Epic publishes the full engine source on GitHub, but it's \"source-available\" under Epic's own license terms and royalty structure, not an open source license like the MIT or GPL that Godot uses."
 ---
 
 ## Overview

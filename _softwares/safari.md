@@ -12,7 +12,10 @@ logo: /assets/images/software/safari.svg
 alternative_to: []
 has_alternatives: true
 description: "Safari is Apple's proprietary default browser for macOS and iOS, built on the open source WebKit engine but closed source itself and unavailable outside Apple platforms."
-last_modified_at: 2026-08-01
+last_modified_at: 2026-09-16
+faq:
+  - question: "Is Safari open source?"
+    answer: "No. Safari's application layer — the UI, iCloud sync, and privacy tooling — is closed source and owned by Apple. It's built on WebKit, which is open source, but that engine is a separate project from Safari itself. Safari is also exclusive to macOS and iOS; there's no Windows or Linux build."
 ---
 
 ## Overview

@@ -12,7 +12,10 @@ logo: /assets/images/software/jira.svg
 alternative_to: []
 has_alternatives: true
 description: "Jira is a proprietary issue tracking and agile project management tool from Atlassian, built around Scrum and Kanban workflows for software development teams."
-last_modified_at: 2026-08-01
+faq:
+  - question: "Is Jira open source?"
+    answer: "No. Jira is closed source proprietary software owned by Atlassian. OpenProject and Wekan are open source alternatives for project and issue tracking."
+last_modified_at: 2026-09-16
 ---
 
 ## Overview

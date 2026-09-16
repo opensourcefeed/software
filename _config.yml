@@ -24,6 +24,7 @@ exclude:
   - gemfiles
   - README.md
   - docs
+  - CLAUDE.md
 
 # SASS configuration
 sass:

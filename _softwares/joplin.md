@@ -12,8 +12,9 @@ logo: /assets/images/software/joplin.svg
 alternative_to:
   - evernote
   - obsidian
+  - onenote
 description: "Joplin is a free, open source Markdown note-taking app with end-to-end encryption and multi-platform sync, built as a privacy-focused alternative to Evernote and Obsidian."
-last_modified_at: 2026-07-26
+last_modified_at: 2026-09-16
 ---
 
 ## Overview

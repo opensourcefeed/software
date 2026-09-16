@@ -12,7 +12,10 @@ logo: /assets/images/software/slack.png
 alternative_to: []
 has_alternatives: true
 description: "Slack is a proprietary team collaboration platform offering channels, direct messaging, file sharing, and integrations. Widely used in corporate environments."
-last_modified_at: 2026-07-26
+faq:
+  - question: "Is Slack open source?"
+    answer: "No. Slack is closed source proprietary software owned by Salesforce. Mattermost and Element are self-hostable open source alternatives for team chat."
+last_modified_at: 2026-09-16
 ---
 
 ## Overview

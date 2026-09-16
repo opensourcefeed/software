@@ -12,7 +12,10 @@ logo: /assets/images/software/autocad.svg
 alternative_to: []
 has_alternatives: true
 description: "AutoCAD is a proprietary computer-aided design application from Autodesk used for 2D drafting and 3D modeling across architecture, engineering, and construction industries."
-last_modified_at: 2026-08-01
+faq:
+  - question: "Is AutoCAD open source?"
+    answer: "No. AutoCAD is proprietary software owned by Autodesk and licensed by subscription; its source code has never been published. LibreCAD and FreeCAD are open source 2D/3D CAD alternatives."
+last_modified_at: 2026-09-16
 ---
 
 ## Overview

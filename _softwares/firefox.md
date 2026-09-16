@@ -14,7 +14,10 @@ alternative_to:
   - edge
   - safari
 description: "Firefox is a free, open source web browser developed by the Mozilla Foundation, built on its own Gecko engine and offering strong privacy controls as an alternative to Chromium-based browsers."
-last_modified_at: 2026-08-06
+faq:
+  - question: "Is Firefox open source?"
+    answer: "Yes — see the Is Firefox Open Source? section above. The entire browser, including the Gecko rendering engine, is released under the Mozilla Public License 2.0 and developed in the open."
+last_modified_at: 2026-09-16
 ---
 
 ## Overview

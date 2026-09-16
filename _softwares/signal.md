@@ -13,7 +13,10 @@ alternative_to:
   - whatsapp
   - telegram
 description: "Signal is a free, open source messaging app with end-to-end encryption enabled by default for all chats, calls, and groups, run by a non-profit foundation instead of a for-profit company."
-last_modified_at: 2026-08-06
+last_modified_at: 2026-09-16
+faq:
+  - question: "Is Signal open source?"
+    answer: "Yes — see the Is Signal Open Source? section above. Both the client apps and the server code are published under AGPL-3.0 on GitHub, a stronger openness position than most mainstream messengers, including Telegram."
 ---
 
 ## Overview
@@ -36,12 +39,13 @@ Yes, on both sides of the connection: the client apps and the server code are bo
 - **Voice and video calls** — Including group calls, all encrypted the same way as messages
 - **Cross-platform** — Android, iOS, Windows, macOS, and Linux, with a linked desktop client
 - **Usernames** — Optional usernames let contacts reach you without sharing your phone number
+- **Note to Self** — A built-in chat to yourself for notes, reminders, and files, end-to-end encrypted and synced across linked devices — the closest equivalent to Telegram's Saved Messages
 
 ## Use Cases
 
 - **Privacy-focused personal messaging** — Default end-to-end encryption without needing to configure anything
 - **Journalists and activists** — Minimal metadata retention and sealed sender for higher-risk communication
-- **Small teams wanting simple, secure chat** — A lighter-weight alternative to self-hosted platforms like Element for groups that don't need federation
+- **Small teams wanting simple, secure chat** — A lighter-weight alternative to self-hosted platforms like [Element](/software/element/) for groups that don't need federation (see [other self-hosted chat apps](/software/best-open-source-communication-apps/))
 
 ## Who It's For
 

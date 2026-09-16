@@ -12,7 +12,10 @@ logo: /assets/images/software/davinci-resolve.svg
 alternative_to: []
 has_alternatives: true
 description: "DaVinci Resolve is a proprietary video editing and color grading suite from Blackmagic Design, free for most features with a paid Studio tier unlocking advanced tools."
-last_modified_at: 2026-08-06
+last_modified_at: 2026-09-16
+faq:
+  - question: "Is DaVinci Resolve open source?"
+    answer: "No — see the Is DaVinci Resolve Open Source? section above for details. It's proprietary software from Blackmagic Design; the free edition is a no-cost licensing tier, not an open source release. Kdenlive is the closest fully open source equivalent."
 ---
 
 ## Overview
