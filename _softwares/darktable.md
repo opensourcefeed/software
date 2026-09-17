@@ -12,7 +12,8 @@ logo: /assets/images/software/darktable.svg
 alternative_to:
   - lightroom
 description: "darktable is a free, open source RAW photo editor with non-destructive editing and library management, built as a privacy-respecting alternative to Adobe Lightroom."
-last_modified_at: 2026-08-01
+featured_image: darktable.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

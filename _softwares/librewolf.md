@@ -14,7 +14,8 @@ alternative_to:
   - edge
   - safari
 description: "LibreWolf is a free, open source Firefox fork that strips telemetry and data-sharing partnerships, applying privacy-hardened defaults and uBlock Origin."
-last_modified_at: 2026-07-26
+featured_image: librewolf.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

@@ -13,7 +13,8 @@ alternative_to:
   - unity
   - unreal-engine
 description: "Godot Engine is a free, open source game engine for building 2D and 3D games, featuring a node-based scene system, its own GDScript language, and no royalties or revenue-share requirements."
-last_modified_at: 2026-08-01
+featured_image: godot.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

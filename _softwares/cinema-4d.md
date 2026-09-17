@@ -12,7 +12,8 @@ logo: /assets/images/software/cinema-4d.svg
 alternative_to: []
 has_alternatives: true
 description: "Cinema 4D is a proprietary 3D modeling and motion graphics application from Maxon, widely used in broadcast design and known for its comparatively approachable learning curve."
-last_modified_at: 2026-08-01
+featured_image: cinema-4d.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

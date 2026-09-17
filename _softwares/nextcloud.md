@@ -14,7 +14,8 @@ alternative_to:
   - google-drive
   - onedrive
 description: "Nextcloud is a self-hosted file sync, share, and collaboration platform offering an open source alternative to Dropbox, Google Drive, OneDrive, and Microsoft 365."
-last_modified_at: 2026-07-26
+featured_image: nextcloud.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

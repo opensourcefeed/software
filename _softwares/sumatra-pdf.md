@@ -12,7 +12,8 @@ logo: /assets/images/software/sumatra-pdf.svg
 alternative_to:
   - adobe-acrobat
 description: "Sumatra PDF is a free, open source PDF, ebook, and comic book reader for Windows built for minimal size and near-instant startup rather than editing or annotation features."
-last_modified_at: 2026-09-16
+featured_image: sumatra-pdf.webp
+last_modified_at: 2026-09-17
 faq:
   - question: "Is Sumatra PDF open source?"
     answer: "Yes. Sumatra PDF is released mostly under GPL-3.0, with some components under a BSD license, and its source is published on GitHub."

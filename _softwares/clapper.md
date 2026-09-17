@@ -11,7 +11,8 @@ category: media-player
 logo: /assets/images/software/clapper.png
 alternative_to: []
 description: "Clapper is a free and open source GTK4 media player for Linux built for GNOME, using GStreamer as its backend with hardware-accelerated playback support."
-last_modified_at: 2026-07-26
+featured_image: clapper.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

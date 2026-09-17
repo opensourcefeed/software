@@ -12,7 +12,8 @@ logo: /assets/images/software/iina.png
 alternative_to:
   - quicktime
 description: "IINA is a free, open source media player built natively for macOS on top of mpv, offering a modern Mac-native interface as an alternative to QuickTime Player."
-last_modified_at: 2026-08-01
+featured_image: iina.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

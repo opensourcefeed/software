@@ -12,7 +12,8 @@ logo: /assets/images/software/edge.svg
 alternative_to: []
 has_alternatives: true
 description: "Microsoft Edge is a proprietary web browser built on Chromium, bundled as the default browser on Windows and layered with Microsoft account sync and Copilot AI features."
-last_modified_at: 2026-08-01
+featured_image: edge.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

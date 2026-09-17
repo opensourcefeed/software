@@ -12,7 +12,8 @@ logo: /assets/images/software/xodo.svg
 alternative_to: []
 has_alternatives: true
 description: "Xodo is a free, closed source PDF reader and annotator owned by Apryse, offering cross-platform viewing, markup, and form-filling without publishing its source code."
-last_modified_at: 2026-09-16
+featured_image: xodo.webp
+last_modified_at: 2026-09-17
 faq:
   - question: "Is Xodo open source?"
     answer: "No, despite being free. Xodo is proprietary freeware owned by Apryse (formerly Kdan/PDFTron), and its source code isn't published. Okular and Xournal++ are open source alternatives with similar annotation features."

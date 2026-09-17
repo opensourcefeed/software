@@ -13,7 +13,8 @@ alternative_to:
   - unity
   - unreal-engine
 description: "Open 3D Engine (O3DE) is a free, Apache-2.0-licensed 3D engine for AAA-style games, cinema-quality rendering, and high-fidelity simulations, descended from Amazon's Lumberyard engine."
-last_modified_at: 2026-08-01
+featured_image: o3de.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

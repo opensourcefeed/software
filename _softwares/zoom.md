@@ -12,7 +12,8 @@ logo: /assets/images/software/zoom.png
 alternative_to: []
 has_alternatives: true
 description: "Zoom is a proprietary video conferencing platform for online meetings, webinars, and team chat, widely used by businesses, schools, and individuals worldwide."
-last_modified_at: 2026-07-26
+featured_image: zoom.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

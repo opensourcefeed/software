@@ -13,7 +13,8 @@ alternative_to:
   - adobe-acrobat
   - xodo
 description: "Xournal++ is a free, open source handwriting and note-taking app with PDF annotation support, built for pen/tablet input and precise markup on top of existing documents."
-last_modified_at: 2026-09-16
+featured_image: xournal-plus-plus.webp
+last_modified_at: 2026-09-17
 faq:
   - question: "Is Xournal++ open source?"
     answer: "Yes. Xournal++ is released under the GPL-2.0 license, with source published on GitHub."

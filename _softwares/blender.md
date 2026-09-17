@@ -15,7 +15,8 @@ alternative_to:
   - zbrush
   - cinema-4d
 description: "Blender is a free, open source 3D creation suite covering modeling, rigging, animation, simulation, rendering, and video editing, funded and maintained by the Blender Foundation."
-last_modified_at: 2026-08-01
+featured_image: blender.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

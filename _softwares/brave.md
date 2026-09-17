@@ -14,7 +14,8 @@ alternative_to:
   - edge
   - safari
 description: "Brave is a free, open source browser built on Chromium that blocks ads and trackers by default, offering Chrome-level compatibility with stronger privacy."
-last_modified_at: 2026-07-26
+featured_image: brave.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

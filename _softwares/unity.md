@@ -12,7 +12,8 @@ logo: /assets/images/software/unity.svg
 alternative_to: []
 has_alternatives: true
 description: "Unity is a proprietary cross-platform game engine used to build 2D and 3D games and interactive applications for desktop, mobile, console, and VR/AR platforms."
-last_modified_at: 2026-08-01
+featured_image: unity.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

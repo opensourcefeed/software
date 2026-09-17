@@ -14,7 +14,8 @@ alternative_to:
   - edge
   - safari
 description: "Tor Browser is a free, open source Firefox ESR fork maintained by The Tor Project that routes traffic through the Tor network for anonymous, censorship-resistant browsing."
-last_modified_at: 2026-08-01
+featured_image: tor-browser.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

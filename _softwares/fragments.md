@@ -12,7 +12,8 @@ logo: /assets/images/software/fragments.svg
 alternative_to:
   - utorrent
 description: "Fragments is a free, open source BitTorrent client built with GTK4 and libadwaita, designed to look and behave like a native part of the GNOME desktop rather than a cross-platform port."
-last_modified_at: 2026-08-11
+featured_image: fragments.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

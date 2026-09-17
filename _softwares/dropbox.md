@@ -12,7 +12,8 @@ logo: /assets/images/software/dropbox.svg
 alternative_to: []
 has_alternatives: true
 description: "Dropbox is a cloud storage and file sync service that lets users store, share, and access files across devices, with tools for team collaboration."
-last_modified_at: 2026-07-26
+featured_image: dropbox.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

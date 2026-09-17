@@ -12,7 +12,8 @@ logo: /assets/images/software/figma.svg
 alternative_to: []
 has_alternatives: true
 description: "Figma is a browser-based interface design and prototyping tool with real-time multiplayer collaboration, used widely for UI/UX design and whiteboarding."
-last_modified_at: 2026-07-26
+featured_image: figma.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

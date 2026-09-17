@@ -12,7 +12,8 @@ logo: /assets/images/software/1password.svg
 alternative_to: []
 has_alternatives: true
 description: "1Password is a subscription-based password manager storing credentials and passkeys in encrypted vaults, with apps for desktop, mobile, and browsers."
-last_modified_at: 2026-07-26
+featured_image: 1password.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

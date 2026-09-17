@@ -13,7 +13,8 @@ alternative_to:
   - spotify
   - apple-music
 description: "Jellyfin is a free, open source media server you self-host to stream your own movies, TV, and music library, forked from Emby in 2018 after Emby moved toward a closed, paid model."
-last_modified_at: 2026-08-06
+featured_image: jellyfin.webp
+last_modified_at: 2026-09-17
 faq:
   - question: "Is Jellyfin open source?"
     answer: "Yes. Jellyfin's server is licensed under GPL-2.0-or-later, with source on GitHub, and the project takes no telemetry and charges nothing — it's community-run rather than backed by a company."

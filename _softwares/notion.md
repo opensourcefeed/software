@@ -12,7 +12,8 @@ logo: /assets/images/software/notion.svg
 alternative_to: []
 has_alternatives: true
 description: "Notion is a proprietary all-in-one workspace combining notes, wikis, databases, and project tracking behind closed-source, cloud-hosted infrastructure."
-last_modified_at: 2026-07-27
+featured_image: notion.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

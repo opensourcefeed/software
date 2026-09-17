@@ -12,7 +12,8 @@ logo: /assets/images/software/rawtherapee.svg
 alternative_to:
   - lightroom
 description: "RawTherapee is a free, open source RAW photo processor with a 32-bit floating-point pipeline and extensive local editing tools, built as an alternative to Adobe Lightroom."
-last_modified_at: 2026-08-01
+featured_image: rawtherapee.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

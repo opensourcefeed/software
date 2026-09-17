@@ -13,7 +13,8 @@ alternative_to:
   - illustrator
   - canva
 description: "Inkscape is a free, open source vector graphics editor built around the SVG standard, offering professional drawing, illustration, and logo design tools as an alternative to Adobe Illustrator."
-last_modified_at: 2026-09-16
+featured_image: inkscape.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

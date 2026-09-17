@@ -14,7 +14,8 @@ alternative_to:
   - google-drive
   - onedrive
 description: "Seafile is a file sync and share platform focused on sync performance and file versioning, with an open source Community Edition (AGPL-3.0) and a separate proprietary Professional Edition."
-last_modified_at: 2026-08-01
+featured_image: seafile.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

@@ -11,7 +11,8 @@ category: 3d-modeling
 alternative_to: []
 has_alternatives: true
 description: "ZBrush is a proprietary digital sculpting application known for its pixol-based sculpting engine, widely used to create high-resolution organic models for film, games, and collectibles."
-last_modified_at: 2026-08-01
+featured_image: zbrush.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

@@ -12,7 +12,8 @@ logo: /assets/images/software/ardour.svg
 alternative_to:
   - adobe-audition
 description: "Ardour is an open source digital audio workstation for recording, editing, and mixing audio and MIDI, aimed at professional and semi-professional studio work."
-last_modified_at: 2026-09-05
+featured_image: ardour.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

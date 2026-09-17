@@ -12,7 +12,8 @@ logo: /assets/images/software/google-drive.svg
 alternative_to: []
 has_alternatives: true
 description: "Google Drive is a proprietary cloud storage service tightly integrated with Google Docs, Sheets, and Slides, hosting files exclusively on Google's servers."
-last_modified_at: 2026-08-01
+featured_image: google-drive.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

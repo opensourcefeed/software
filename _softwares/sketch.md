@@ -12,7 +12,8 @@ logo: /assets/images/software/sketch.svg
 alternative_to: []
 has_alternatives: true
 description: "Sketch is a proprietary, Mac-only vector interface design tool from Bohemian Coding, an early leader in UI/UX design software that predates Figma's browser-based collaboration model."
-last_modified_at: 2026-08-01
+featured_image: sketch.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

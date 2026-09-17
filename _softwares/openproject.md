@@ -13,7 +13,8 @@ alternative_to:
   - asana
   - jira
 description: "OpenProject is a self-hostable, open source project management tool with Gantt charts, agile boards, and issue tracking, offered as an alternative to Asana and Jira."
-last_modified_at: 2026-08-01
+featured_image: openproject.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

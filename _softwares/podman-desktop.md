@@ -12,7 +12,8 @@ logo: /assets/images/software/podman-desktop.svg
 alternative_to:
   - docker-desktop
 description: "Podman Desktop is a free, open source graphical tool for managing containers, pods, and Kubernetes clusters, built on Podman's rootless engine."
-last_modified_at: 2026-07-26
+featured_image: podman-desktop.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview

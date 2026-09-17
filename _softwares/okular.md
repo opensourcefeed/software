@@ -13,7 +13,8 @@ alternative_to:
   - adobe-acrobat
   - xodo
 description: "Okular is a free, open source universal document viewer from KDE that reads PDFs, ePub, comic books, and more, with full annotation and digital signature support."
-last_modified_at: 2026-09-16
+featured_image: okular.webp
+last_modified_at: 2026-09-17
 faq:
   - question: "Is Okular open source?"
     answer: "Yes. Okular is released under the GPL-2.0-or-later license, developed by the KDE community, with source published on GitHub."

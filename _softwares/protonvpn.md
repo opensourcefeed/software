@@ -13,7 +13,8 @@ alternative_to:
   - nordvpn
   - expressvpn
 description: "Proton VPN is a VPN from Proton AG (makers of Proton Mail) with open source, independently audited GPL-3.0 apps, plus a genuinely usable free tier."
-last_modified_at: 2026-07-26
+featured_image: protonvpn.webp
+last_modified_at: 2026-09-17
 ---
 
 ## Overview
