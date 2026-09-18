@@ -36,14 +36,18 @@
 
   <p class="card__description">{{ include.software.description }}</p>
 
+  {% assign type_label = "" %}
+  {% if include.software.type == "open-source" %}
+    {% assign type_label = "Open Source" %}
+  {% elsif include.software.type == "proprietary" %}
+    {% assign type_label = "Proprietary" %}
+  {% endif %}
   <div class="card__meta">
-    {% if include.software.type == "open-source" %}
-      <span class="badge badge--open-source">Open Source</span>
-    {% elsif include.software.type == "proprietary" %}
-      <span class="badge badge--proprietary">Proprietary</span>
+    {% if type_label != "" %}
+      <span class="badge badge--{{ include.software.type }}">{{ type_label }}</span>
     {% endif %}
 
-    {% if include.software.license %}
+    {% if include.software.license and include.software.license != "Proprietary" and include.software.license != "Open Source" %}
       <span class="badge badge--license">{{ include.software.license }}</span>
     {% endif %}
   </div>
