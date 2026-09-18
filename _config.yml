@@ -94,6 +94,38 @@ ahrefs_analytics:
   enabled: true
   api_key: "CtE+TXWgN05s3ROalk1xUg"
 
+# Curated display order for the /software/ directory (used in software/index.html).
+# Categories not listed here fall back to appearing after these, in their
+# existing (insertion) order — nothing disappears if this list drifts out of
+# sync with category_names.
+category_order:
+  - web-browser
+  - password-manager
+  - code-editor
+  - office-suite
+  - email-client
+  - communication
+  - vpn
+  - note-taking
+  - cloud-storage
+  - media-player
+  - image-editing
+  - video-editing
+  - audio-editing
+  - pdf-tools
+  - video-conferencing
+  - project-management
+  - torrent-client
+  - music-streaming
+  - development
+  - containerization
+  - design
+  - game-development
+  - virtualization
+  - remote-desktop
+  - 3d-modeling
+  - cad
+
 # Category display names (used in software/index.html)
 category_names:
   image-editing: "Image Editing"

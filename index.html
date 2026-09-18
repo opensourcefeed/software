@@ -49,7 +49,21 @@ permalink: /
       <select class="directory-controls__select" data-filter-category-select aria-label="Filter by category">
         <option value="all">All categories</option>
         {% assign grouped = site.softwares | group_by: "category" %}
+        {% assign empty_array = grouped | where_exp: "g", "false" %}
+        {% assign ordered_grouped = empty_array %}
+        {% for cat in site.category_order %}
+          {% assign matched = grouped | where: "name", cat %}
+          {% assign ordered_grouped = ordered_grouped | concat: matched %}
+        {% endfor %}
+        {% assign leftover = empty_array %}
         {% for group in grouped %}
+          {% unless site.category_order contains group.name %}
+            {% assign single = grouped | where: "name", group.name %}
+            {% assign leftover = leftover | concat: single %}
+          {% endunless %}
+        {% endfor %}
+        {% assign ordered_grouped = ordered_grouped | concat: leftover %}
+        {% for group in ordered_grouped %}
           <option value="{{ group.name }}">
             {% if site.category_names[group.name] %}{{ site.category_names[group.name] }}{% else %}{{ group.name | capitalize }}{% endif %}
           </option>
@@ -65,7 +79,7 @@ permalink: /
   <!-- Software Directory (grouped by category) -->
   <section class="section" data-directory-list>
     <h2 class="section__title">Directory</h2>
-    {% for group in grouped %}
+    {% for group in ordered_grouped %}
       <div class="category-group" data-category-group="{{ group.name }}">
         <h3 class="category-group__title">
           {% if site.category_names[group.name] %}
