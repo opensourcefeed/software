@@ -123,6 +123,7 @@ category_order:
   - game-development
   - virtualization
   - remote-desktop
+  - file-compression
   - 3d-modeling
   - cad
 
@@ -154,6 +155,7 @@ category_names:
   pdf-tools: "PDF Tools"
   virtualization: "Virtualization"
   remote-desktop: "Remote Desktop"
+  file-compression: "File Compression"
 
 # Category -> roundup page slug (only categories with a "Popular Open Source X" page)
 roundup_pages:
