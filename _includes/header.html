@@ -11,7 +11,17 @@
     </label>
     <div class="site-header__collapse">
       <ul class="site-header__nav">
-        <li><a href="{{ site.main_site_url }}/distribution/">Operating System</a></li>
+        <li class="site-header__dropdown">
+          <input type="checkbox" id="nav-os-toggle" class="site-header__submenu-checkbox" />
+          <label for="nav-os-toggle" class="site-header__dropdown-toggle">
+            <a href="{{ site.main_site_url }}/distribution/">Operating System</a>
+            <span class="site-header__arrow" aria-hidden="true"></span>
+          </label>
+          <ul class="site-header__dropdown-menu">
+            <li><a href="{{ site.main_site_url }}/distribution/">All Operating Systems</a></li>
+            <li><a href="{{ site.main_site_url }}/distro-chooser/">Distro Finder</a></li>
+          </ul>
+        </li>
         <li><a href="{{ site.main_site_url }}/desktop/">Desktop Environment</a></li>
         <li><a href="{{ site.main_site_url }}/screenshots/">Screenshots</a></li>
         <li class="site-header__dropdown">
