@@ -14,7 +14,7 @@ alternative_to:
   - discord
   - microsoft-teams
 description: "Element is a free, open source messaging app built on the Matrix protocol, offering end-to-end encryption, decentralized hosting, and team collaboration."
-last_modified_at: 2026-08-06
+last_modified_at: 2026-09-25
 faq:
   - question: "Is Element secure?"
     answer: "Yes — Element encrypts messages, files, and calls end-to-end by default in encrypted rooms, using the Matrix protocol's Olm/Megolm cryptographic ratchet, the same cryptographic approach used by Signal's protocol."
@@ -98,8 +98,8 @@ The key distinction: Element/Matrix is the only one of the three built as an ope
 
 - [Element Web](https://app.element.io) — runs in any modern browser, no install required
 - [Element Desktop](https://element.io/download) — Electron wrapper around Element Web for Windows, macOS, and Linux
-- [Element Android](https://play.google.com/store/apps/details?id=im.vector.app) — native Android client
-- [Element iOS](https://apps.apple.com/app/id1083446067) — native iOS client
+- [Element X for Android](https://play.google.com/store/apps/details?id=io.element.android.x) and [Element X for iOS](https://apps.apple.com/app/id1631335820) — Element's current mobile apps, rebuilt on the Rust Matrix SDK
+- [Element Classic for Android](https://play.google.com/store/apps/details?id=im.vector.app) and [iOS](https://apps.apple.com/app/id1083446067) — the previous-generation mobile apps, renamed in 2025; they receive critical security updates but no new features
 
 ## Who It's For
 

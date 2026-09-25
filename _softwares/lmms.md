@@ -9,10 +9,9 @@ website: https://lmms.io
 platforms: [Linux, Windows, macOS]
 category: audio-editing
 logo: /assets/images/software/lmms.svg
-alternative_to:
-  - adobe-audition
+alternative_to: []
 description: "LMMS is a free, open source digital audio workstation focused on beat-making, synthesis, and loop-based music production, with a built-in library of instruments and effects."
-last_modified_at: 2026-09-05
+last_modified_at: 2026-09-25
 ---
 
 ## Overview

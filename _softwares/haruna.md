@@ -9,10 +9,11 @@ website: https://haruna.kde.org/
 platforms: [Linux]
 category: media-player
 logo: /assets/images/software/haruna.png
-alternative_to: []
+alternative_to:
+  - vlc
 description: "Haruna is a free, open source Qt-based media player for Linux built on the mpv backend, with playlist management, YouTube support, and picture-in-picture."
 featured_image: haruna.webp
-last_modified_at: 2026-09-17
+last_modified_at: 2026-09-25
 ---
 
 ## Overview

@@ -9,10 +9,11 @@ website: https://celluloid-player.github.io/
 platforms: [Linux]
 category: media-player
 logo: /assets/images/software/celluloid.png
-alternative_to: []
+alternative_to:
+  - vlc
 description: "Celluloid (formerly GNOME MPV) is a simple GTK4 frontend for mpv, providing a clean GNOME-style interface over mpv's powerful playback engine."
 featured_image: celluloid.webp
-last_modified_at: 2026-09-17
+last_modified_at: 2026-09-25
 ---
 
 ## Overview

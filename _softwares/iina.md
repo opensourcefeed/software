@@ -11,16 +11,17 @@ category: media-player
 logo: /assets/images/software/iina.png
 alternative_to:
   - quicktime
+  - vlc
 description: "IINA is a free, open source media player built natively for macOS on top of mpv, offering a modern Mac-native interface as an alternative to QuickTime Player."
 featured_image: iina.webp
-last_modified_at: 2026-09-17
+last_modified_at: 2026-09-25
 ---
 
 ## Overview
 
 IINA was first released in January 2017 by developer Collider Li (lhc70000) as a from-scratch attempt to bring a genuinely native, modern interface to Mac video playback, at a time when most capable open source players on macOS were ports of Windows or Linux tools with non-native UI toolkits. Rather than writing its own decoding and rendering engine, IINA is built on top of libmpv, the library form of the mpv media player, giving it mpv's broad codec and container support (including formats like MKV, FLAC, and HDR video) while wrapping it in a Swift and native Cocoa/AppKit interface designed specifically to match macOS conventions — Touch Bar support, Force Touch, Picture-in-Picture, and full support for Apple silicon alongside Intel Macs. The project is released under the GPL-3.0-or-later license, with source and issue tracking hosted on GitHub under the iina organization.
 
-Where mpv is deliberately minimal and configuration-file-driven, aimed at users comfortable editing text config and Lua scripts to shape the player's behavior, IINA inverts that approach: it exposes mpv's underlying power through graphical preference panes, an on-screen control bar styled like a native macOS app, drag-and-drop subtitle and file handling, and a plugin system written in JavaScript rather than mpv's Lua scripting. Development has continued steadily through 2026, with releases (most recently 1.4.x) shipping regular bug fixes and macOS compatibility updates. It remains a community-maintained project rather than a commercial product, without corporate backing.
+Where mpv is deliberately minimal and configuration-file-driven, aimed at users comfortable editing text config and Lua scripts to shape the player's behavior, IINA inverts that approach: it exposes mpv's underlying power through graphical preference panes, an on-screen control bar styled like a native macOS app, drag-and-drop subtitle and file handling, and a plugin system written in JavaScript rather than mpv's Lua scripting. Development has continued steadily through 2026: the latest stable release is 1.4.4 (June 2026), and version 1.5.0 is in beta. It remains a community-maintained project rather than a commercial product, without corporate backing.
 
 ## Key Features
 

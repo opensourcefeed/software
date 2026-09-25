@@ -7,7 +7,7 @@ alternatives:
   - libreoffice
   - onlyoffice
 description: "Best open source alternatives to Microsoft Office for Linux, Windows, and macOS. Free word processing, spreadsheet, and presentation software."
-last_modified_at: 2026-07-26
+last_modified_at: 2026-09-25
 ---
 
-Switching from Microsoft Office to an open source alternative eliminates recurring subscription costs while keeping full compatibility with .docx, .xlsx, and .pptx files. Open source office suites run on Linux as well as Windows and macOS, store no telemetry by default, and can be self-hosted for organizations that need full control over their documents. For most word processing, spreadsheet, and presentation needs, these alternatives cover the same core workflows at zero licensing cost.
+Switching from Microsoft Office to an open source suite removes the recurring Microsoft 365 subscription and gives you native apps for Linux as well as Windows and macOS. Both LibreOffice and ONLYOFFICE open and save .docx, .xlsx, and .pptx files, but compatibility is not perfect: complex layouts, advanced Excel features, and VBA macros may not carry over exactly, so documents exchanged with Office users are worth checking before sending. ONLYOFFICE uses the Office Open XML formats natively and tends to preserve Office layouts more closely, while LibreOffice defaults to the OpenDocument format and offers the broader feature set. Organizations that want browser-based editing on their own servers can self-host ONLYOFFICE Docs; LibreOffice itself is a desktop suite.

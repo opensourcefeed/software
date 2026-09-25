@@ -12,8 +12,9 @@ logo: /assets/images/software/mpv.png
 alternative_to:
   - quicktime
   - windows-media-player
+  - vlc
 description: "mpv is a free, open source, cross-platform media player with GPU-accelerated video playback, a minimalist on-screen controller, and scripting support."
-last_modified_at: 2026-07-26
+last_modified_at: 2026-09-25
 ---
 
 ## Overview

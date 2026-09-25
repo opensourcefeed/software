@@ -9,10 +9,11 @@ website: https://rafostar.github.io/clapper/
 platforms: [Linux]
 category: media-player
 logo: /assets/images/software/clapper.png
-alternative_to: []
+alternative_to:
+  - vlc
 description: "Clapper is a free and open source GTK4 media player for Linux built for GNOME, using GStreamer as its backend with hardware-accelerated playback support."
 featured_image: clapper.webp
-last_modified_at: 2026-09-17
+last_modified_at: 2026-09-25
 ---
 
 ## Overview
