@@ -25,6 +25,7 @@ exclude:
   - README.md
   - docs
   - CLAUDE.md
+  - "*.xlsx"
 
 # SASS configuration
 sass:
