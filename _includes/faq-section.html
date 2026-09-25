@@ -10,7 +10,7 @@
       {% for item in page.faq %}
         <div class="faq-item">
           <h3 class="faq-item__question">{{ item.question }}</h3>
-          <p class="faq-item__answer">{{ item.answer }}</p>
+          <p class="faq-item__answer">{{ item.answer | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
         </div>
       {% endfor %}
     </div>
