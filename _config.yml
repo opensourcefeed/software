@@ -158,7 +158,7 @@ category_names:
   remote-desktop: "Remote Desktop"
   file-compression: "File Compression"
 
-# Category -> roundup page slug (only categories with a "Popular Open Source X" page)
+# Category -> roundup page slug (only categories with a "Best Open Source X" page)
 roundup_pages:
   image-editing: image-editors
   media-player: media-players

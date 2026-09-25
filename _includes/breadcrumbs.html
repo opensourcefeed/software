@@ -21,13 +21,13 @@
     {% endif %}
     {% if is_roundup_subpage %}
       <li aria-hidden="true">›</li>
-      <li><a href="{{ '/best-open-source-software/' | relative_url }}">Popular Open Source Software</a></li>
+      <li><a href="{{ '/best-open-source-software/' | relative_url }}">Best Open Source Software</a></li>
     {% endif %}
     <li aria-hidden="true">›</li>
     {% if is_alt_landing %}
       <li aria-current="page">Open Source Alternatives</li>
     {% elsif is_roundup_landing %}
-      <li aria-current="page">Popular Open Source Software</li>
+      <li aria-current="page">Best Open Source Software</li>
     {% else %}
       <li aria-current="page">{{ page.title }}</li>
     {% endif %}
@@ -68,7 +68,7 @@
     ,{
       "@type": "ListItem",
       "position": 3,
-      "name": "Popular Open Source Software",
+      "name": "Best Open Source Software",
       "item": {{ '/best-open-source-software/' | absolute_url | jsonify }}
     },
     {
@@ -88,7 +88,7 @@
     ,{
       "@type": "ListItem",
       "position": 3,
-      "name": "Popular Open Source Software",
+      "name": "Best Open Source Software",
       "item": {{ page.url | absolute_url | jsonify }}
     }
     {% else %}

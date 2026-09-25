@@ -8,7 +8,7 @@ Jekyll static site: an open-source software directory with per-tool pages, "open
 
 - `_softwares/` → `/:slug/` — one page per tool (open-source or proprietary)
 - `_alternatives/` → `/alternative-to/:slug/` — "alternatives to [proprietary]" pages, one per proprietary tool with `has_alternatives: true`
-- `_roundups/` → `/best-open-source-:slug/` — "Popular Open Source X" category roundups (only categories listed in `roundup_pages` below have one)
+- `_roundups/` → `/best-open-source-:slug/` — "Best Open Source X" category roundups (only categories listed in `roundup_pages` below have one)
 
 `baseurl: /software` applies to generated hrefs/permalinks only, not to `_site/` output paths — built files land at the repo-relative path (e.g. `_site/qbittorrent/index.html`), not under `_site/software/`.
 

@@ -68,6 +68,10 @@ Software pages additionally need: `type`, `license`, `website`, `platforms`, `ca
 
 Software pages may optionally set `featured_image` to a filename only (e.g. `featured_image: qbittorrent.jpg`) — unlike `logo`, which stores a full relative path, the folder is fixed and assembled in Liquid. Files live in `assets/images/software-featured/`, standardized at 1200×630 (OG/Twitter card size), ~200KB max. When set, it renders as a hero image above the body content and takes priority over `logo` for `og:image`/`twitter:image`/JSON-LD `image`. Optional `featured_image_alt` overrides the default alt text (`page.title`). Pages without `featured_image` are unaffected — behavior falls back to `logo`/site default exactly as before.
 
+### Optional: `seo_title`
+
+Any page may set `seo_title` to override the `<title>` and `og:title`/`twitter:title`; when set it is used verbatim (no ` | OpenSourceFeed` suffix), so keep it ≤60 characters. `title` still drives the H1, breadcrumbs, cards, and JSON-LD `name`. Use it only where Search Console shows a page ranking for question-style queries (e.g. "is X open source") that the page answers — and the page body must actually answer what the title promises.
+
 ## SEO Requirements
 
 - Unique `<title>` and `<meta description>` on every page

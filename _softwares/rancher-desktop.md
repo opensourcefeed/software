@@ -1,6 +1,7 @@
 ---
 layout: software
 title: "Rancher Desktop"
+seo_title: "Rancher Desktop: License & Free Commercial Use"
 slug: rancher-desktop
 tagline: "Open source Kubernetes and container management for desktop"
 type: open-source
@@ -13,7 +14,7 @@ alternative_to:
   - docker-desktop
 description: "Rancher Desktop is a free, Apache-2.0-licensed desktop application from SUSE that bundles a local Kubernetes cluster (k3s) and a container engine, offering an open source alternative to Docker Desktop with no licensing fees."
 featured_image: rancher-desktop.webp
-last_modified_at: 2026-09-17
+last_modified_at: 2026-09-25
 faq:
   - question: "Is Rancher Desktop free for commercial use?"
     answer: "Yes. Rancher Desktop is Apache-2.0 licensed and free for any use, commercial or otherwise, with no seat limits, employee-count thresholds, or paid tiers — unlike Docker Desktop, which requires a paid subscription for larger companies."

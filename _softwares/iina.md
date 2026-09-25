@@ -1,6 +1,7 @@
 ---
 layout: software
 title: "IINA"
+seo_title: "IINA Media Player for macOS (and Linux Options)"
 slug: iina
 tagline: "The modern, native media player for macOS"
 type: open-source
@@ -15,6 +16,9 @@ alternative_to:
 description: "IINA is a free, open source media player built natively for macOS on top of mpv, offering a modern Mac-native interface as an alternative to QuickTime Player."
 featured_image: iina.webp
 last_modified_at: 2026-09-25
+faq:
+  - question: "Is IINA available for Linux or Windows?"
+    answer: "No. IINA is built specifically for macOS with Swift and Apple's AppKit framework, and there is no official Linux or Windows version. On Linux, [Celluloid](/software/celluloid/) and [Haruna](/software/haruna/) offer a similar experience, since both are graphical players built on the same mpv engine as IINA. On Windows, [mpv](/software/mpv/) itself or [VLC](/software/vlc/) are the usual open source choices."
 ---
 
 ## Overview

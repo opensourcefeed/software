@@ -1,6 +1,7 @@
 ---
 layout: software
 title: "Element"
+seo_title: "Element (Matrix Client): Features & Self-Hosting"
 slug: element
 tagline: "Secure, decentralized messaging app"
 type: open-source

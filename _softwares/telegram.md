@@ -1,6 +1,7 @@
 ---
 layout: software
 title: "Telegram"
+seo_title: "Is Telegram Open Source? Client vs. Server Explained"
 slug: telegram
 tagline: "Cloud-based messaging app with open source clients, closed server"
 type: proprietary
@@ -12,7 +13,7 @@ logo: /assets/images/software/telegram.svg
 alternative_to: []
 has_alternatives: true
 description: "Telegram is a cloud-based messaging app with open source client apps but a closed source server, offering large group chats and channels rather than end-to-end encryption by default."
-last_modified_at: 2026-09-16
+last_modified_at: 2026-09-25
 featured_image: telegram.webp
 faq:
   - question: "Is Telegram open source?"
@@ -23,7 +24,7 @@ faq:
 
 Telegram was founded in 2013 by brothers Nikolai and Pavel Durov, who previously built the Russian social network VKontakte, and is now based in Dubai under Telegram FZ-LLC. It's built around its own MTProto protocol and is best known for large-scale public channels and groups (up to 200,000 members), fast cloud sync across devices, and a permissive stance on file sharing and bots.
 
-Telegram occupies a genuinely mixed position on openness that's worth stating precisely rather than glossing over: its client apps for Android, iOS, and desktop are open source (published on GitHub under GPL licenses), and the MTProto protocol specification is public. However, the **server side is entirely closed source** — there is no way to self-host a real Telegram server, only unofficial, protocol-compatible reimplementations built by third parties without Telegram's cooperation. That makes Telegram meaningfully different from a self-hostable open source platform like [Element](/software/element/)/Matrix, even though its clients are auditable — see [Popular Open Source Communication Apps](/software/best-open-source-communication-apps/) for other self-hosted chat options.
+Telegram occupies a genuinely mixed position on openness that's worth stating precisely rather than glossing over: its client apps for Android, iOS, and desktop are open source (published on GitHub under GPL licenses), and the MTProto protocol specification is public. However, the **server side is entirely closed source** — there is no way to self-host a real Telegram server, only unofficial, protocol-compatible reimplementations built by third parties without Telegram's cooperation. That makes Telegram meaningfully different from a self-hostable open source platform like [Element](/software/element/)/Matrix, even though its clients are auditable — see [Best Open Source Communication Apps](/software/best-open-source-communication-apps/) for other self-hosted chat options.
 
 A second important distinction from WhatsApp and Signal: Telegram does **not** enable end-to-end encryption by default. Regular cloud chats are encrypted only in transit and at rest on Telegram's servers, meaning Telegram itself can technically access message content. End-to-end encryption is available only in opt-in "Secret Chats," which lack cloud sync and aren't available for groups or channels.
 

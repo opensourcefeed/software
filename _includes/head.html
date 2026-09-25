@@ -16,7 +16,7 @@
     })();
   </script>
 
-  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{% if page.seo_title %}{{ page.seo_title }}{% elsif page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 
   {% if page.description %}
   <meta name="description" content="{{ page.description }}">
@@ -36,7 +36,7 @@
     logo (software pages), over the site-wide icon so shared links show the
     right artwork.
   {% endcomment %}
-  {% assign og_title = page.title | default: site.title %}
+  {% assign og_title = page.seo_title | default: page.title | default: site.title %}
   {% assign og_description = page.description | default: page.tagline | default: site.description %}
   {% if page.featured_image %}
     {% assign og_image = '/assets/images/software-featured/' | append: page.featured_image | absolute_url %}
