@@ -1,13 +1,31 @@
 ---
 layout: default
 ---
-{% assign entries = site.softwares | where: "category", page.category | where: "type", "open-source" %}
+{% comment %}
+  Roundup ("Best Open Source X"). Ranked order comes from page.picks
+  ([{slug, best_for}]); without picks it falls back to every open-source
+  entry in page.category. The comparison table is generated from each pick's
+  front matter, so it never disagrees with the software pages.
+{% endcomment %}
+{% if page.picks %}
+  {% assign pick_list = page.picks %}
+{% else %}
+  {% assign pick_list = site.softwares | where: "category", page.category | where: "type", "open-source" | map: "slug" %}
+{% endif %}
 
-<article class="alternatives-page">
+<article class="alternatives-page roundup-page">
   <!-- 1. Header -->
   <header class="page-header">
     <h1>{{ page.title }}</h1>
+    {% include byline.html %}
   </header>
+
+  {% if page.verdict %}
+    <aside class="verdict" aria-label="Quick answer">
+      <p class="verdict__label">Quick answer</p>
+      <div class="verdict__body">{{ page.verdict | markdownify }}</div>
+    </aside>
+  {% endif %}
 
   <!-- 2. Ad slot: below header -->
   {% include ad.html slot="roundup-below-header" %}
@@ -20,21 +38,83 @@ layout: default
   <!-- 4. Ad slot: mid-content -->
   {% include ad.html slot="roundup-mid-content" %}
 
-  <!-- 5. Software list -->
+  <!-- 5. Ranked picks -->
   <section class="alternatives-section">
-    <h2 class="section__title">{{ page.title }}</h2>
-    <div class="alternatives-list">
-      {% for software in entries %}
-        {% include software-card.html software=software %}
+    <h2 class="section__title">Our {{ pick_list.size }} {% if pick_list.size == 1 %}Pick{% else %}Picks{% endif %}</h2>
+    <ol class="alt-entries">
+      {% for item in pick_list %}
+        <li>{% include alternative-entry.html item=item rank=forloop.index %}</li>
       {% endfor %}
-    </div>
+    </ol>
   </section>
 
-  <!-- 6. Footer -->
+  <!-- 6. Comparison table, generated from each pick's front matter -->
+  <section class="section">
+    <h2 class="section__title">Comparison at a Glance</h2>
+    <div class="table-scroll">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Software</th>
+            <th>License</th>
+            <th>Desktop</th>
+            <th>Mobile apps</th>
+            <th>Self-hostable</th>
+            <th>Latest version</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in pick_list %}
+            {% assign pick_slug = item.slug | default: item %}
+            {% assign s = site.softwares | where: "slug", pick_slug | first %}
+            {% if s %}
+              {% assign desktop = "" %}
+              {% assign mobile = "" %}
+              {% for p in s.platforms %}
+                {% if p == "Android" or p == "iOS" or p == "iPadOS" %}
+                  {% assign mobile = mobile | append: ", " | append: p %}
+                {% elsif p == "Linux" or p == "Windows" or p == "macOS" or p == "BSD" or p == "*BSD" %}
+                  {% assign desktop = desktop | append: ", " | append: p %}
+                {% endif %}
+              {% endfor %}
+              {% assign desktop = desktop | remove_first: ", " %}
+              {% assign mobile = mobile | remove_first: ", " %}
+              <tr>
+                <td><a href="{{ s.url | relative_url }}">{{ s.title }}</a></td>
+                <td>{{ s.license }}</td>
+                <td>{% if desktop != "" %}{{ desktop }}{% else %}—{% endif %}</td>
+                <td>{% if mobile != "" %}{{ mobile }}{% else %}No{% endif %}</td>
+                <td>{% if s.self_hostable %}Yes{% else %}—{% endif %}</td>
+                <td>{{ s.latest_version | default: "—" }}</td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Versions are the newest stable release tag in each project's repository{% assign checked = site.softwares | where_exp: "s", "s.version_checked_at" | first %}{% if checked %}, checked {{ checked.version_checked_at | date: '%B %-d, %Y' }}{% endif %}.</p>
+  </section>
+
+  <!-- 7. How we picked -->
+  <section class="section how-we-picked">
+    <h2 class="section__title">How We Picked</h2>
+    {% if page.methodology %}
+      {{ page.methodology | markdownify }}
+    {% else %}
+      <p>Every pick is released under an OSI-approved open source license and was actively maintained when this page was last updated.</p>
+    {% endif %}
+    <p><a href="{{ site.methodology_url | relative_url }}">How we evaluate software &rarr;</a></p>
+  </section>
+
+  {% if page.faq %}
+    {% include faq-section.html %}
+  {% endif %}
+
+  <!-- 8. Footer -->
   <footer>
     {% if page.last_modified_at %}
       <p class="last-modified">Last updated: {{ page.last_modified_at | date: '%B %d, %Y' }}</p>
     {% endif %}
-    <a href="{{ '/' | relative_url }}" class="back-link">&larr; Back to Software Directory</a>
+    <a href="{{ '/best-open-source-software/' | relative_url }}" class="back-link">&larr; All Best Open Source Software</a>
   </footer>
 </article>

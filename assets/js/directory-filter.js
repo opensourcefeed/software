@@ -11,7 +11,8 @@
   var groups = document.querySelectorAll('[data-category-group]');
   var cards = document.querySelectorAll('[data-software-card]');
 
-  var state = { query: '', type: 'all', category: 'all' };
+  var state = { query: '', type: 'all', category: 'all', selfHosted: false };
+  var selfHostedChip = controls.querySelector('[data-filter-selfhosted]');
 
   function setActiveChip(chips, value) {
     chips.forEach(function (chip) {
@@ -30,7 +31,8 @@
         card.getAttribute('data-tagline').indexOf(query) !== -1;
       var matchesType = state.type === 'all' || card.getAttribute('data-type') === state.type;
       var matchesCategory = state.category === 'all' || card.getAttribute('data-category') === state.category;
-      var visible = matchesQuery && matchesType && matchesCategory;
+      var matchesSelfHosted = !state.selfHosted || card.getAttribute('data-self-hostable') === 'true';
+      var visible = matchesQuery && matchesType && matchesCategory && matchesSelfHosted;
 
       card.hidden = !visible;
       if (visible) visibleCount++;
@@ -52,9 +54,18 @@
       emptyEl.hidden = visibleCount !== 0;
     }
     if (adEl) {
-      var isFiltered = !!query || state.type !== 'all' || state.category !== 'all';
+      var isFiltered = !!query || state.type !== 'all' || state.category !== 'all' || state.selfHosted;
       adEl.hidden = isFiltered;
     }
+  }
+
+  if (selfHostedChip) {
+    selfHostedChip.addEventListener('click', function () {
+      state.selfHosted = !state.selfHosted;
+      selfHostedChip.classList.toggle('is-active', state.selfHosted);
+      selfHostedChip.setAttribute('aria-pressed', state.selfHosted ? 'true' : 'false');
+      apply();
+    });
   }
 
   if (searchInput) {

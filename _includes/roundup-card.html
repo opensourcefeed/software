@@ -3,7 +3,11 @@
   Usage: {% include roundup-card.html roundup=roundup %}
   Expects: roundup (a collection item from site.roundups)
 {% endcomment %}
-{% assign entry_count = site.softwares | where: "category", include.roundup.category | where: "type", "open-source" | size %}
+{% if include.roundup.picks %}
+  {% assign entry_count = include.roundup.picks | size %}
+{% else %}
+  {% assign entry_count = site.softwares | where: "category", include.roundup.category | where: "type", "open-source" | size %}
+{% endif %}
 
 <article class="card"
   data-software-card

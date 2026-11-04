@@ -65,7 +65,12 @@
     {% assign og_image_large = false %}
   {% endif %}
 
+  {% if page.collection == "softwares" or page.collection == "alternatives" or page.collection == "roundups" %}
+  <meta property="og:type" content="article">
+  {% if page.last_modified_at %}<meta property="article:modified_time" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+  {% else %}
   <meta property="og:type" content="website">
+  {% endif %}
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:title" content="{{ og_title }}">
   <meta property="og:description" content="{{ og_description }}">
@@ -85,10 +90,22 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap">
+  {% comment %}
+    Sora (headings) loads without blocking first paint: the stylesheet starts
+    as media="print" and switches to "all" once fetched; system-ui shows until
+    then (display=swap).
+  {% endcomment %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap"></noscript>
 
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
+  {% comment %}
+    Third-party scripts load async, as before. Measured 2026-11-04 (lab, slow
+    4G + 4x CPU): Google Analytics and AdSense each add ~230 ms of Total
+    Blocking Time; deferring them to idle or first interaction did not help
+    (it moved the cost onto the first tap and raised INP), so they stay as-is.
+  {% endcomment %}
   {% if site.adsense.enabled and site.adsense.client_id %}
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense.client_id }}" crossorigin="anonymous"></script>
   {% endif %}
@@ -108,8 +125,6 @@
   <!-- Ahrefs Analytics -->
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="{{ site.ahrefs_analytics.api_key }}" async></script>
   {% endif %}
-
-  {% feed_meta %}
 
   {% include json-ld-website.html %}
 

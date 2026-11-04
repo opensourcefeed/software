@@ -1,100 +1,86 @@
 {% comment %}
-  JSON-LD structured data for software pages.
-  Renders SoftwareApplication schema with @id references to site-level
-  Organization and WebSite entities defined in json-ld-website.html.
-  Maps license and category to schema.org URLs/types.
-  Adds offers (free) for open-source software, image, dateModified,
-  author, publisher, and mainEntityOfPage for richer SEO.
+  JSON-LD for software pages, as one @graph:
+    - SoftwareApplication: the product. `author` is the vendor (page.developer),
+      never OpenSourceFeed. License URL comes from site.license_urls and
+      applicationCategory from site.category_schema (_config.yml); both are
+      omitted when unmapped rather than emitting invalid values.
+    - SoftwareSourceCode: only when page.repository is set (codeRepository is
+      not a SoftwareApplication property, so the repo hangs off this node).
+    - WebPage: our page about the product, authored by the site author
+      (Person) and published by the OpenSourceFeed organization.
 {% endcomment %}
-{% assign license_url = "" %}
-{% case page.license %}
-  {% when "GPL-3.0" %}
-    {% assign license_url = "https://www.gnu.org/licenses/gpl-3.0.html" %}
-  {% when "GPL-3.0-or-later" %}
-    {% assign license_url = "https://www.gnu.org/licenses/gpl-3.0.html" %}
-  {% when "GPL-2.0" %}
-    {% assign license_url = "https://www.gnu.org/licenses/gpl-2.0.html" %}
-  {% when "GPL-2.0-or-later" %}
-    {% assign license_url = "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html" %}
-  {% when "MIT" %}
-    {% assign license_url = "https://opensource.org/licenses/MIT" %}
-  {% when "Apache-2.0" %}
-    {% assign license_url = "https://www.apache.org/licenses/LICENSE-2.0" %}
-  {% when "BSD-2-Clause" %}
-    {% assign license_url = "https://opensource.org/licenses/BSD-2-Clause" %}
-  {% when "BSD-3-Clause" %}
-    {% assign license_url = "https://opensource.org/licenses/BSD-3-Clause" %}
-  {% when "MPL-2.0" %}
-    {% assign license_url = "https://www.mozilla.org/en-US/MPL/2.0/" %}
-  {% when "AGPL-3.0" %}
-    {% assign license_url = "https://www.gnu.org/licenses/agpl-3.0.html" %}
-  {% when "AGPL-3.0-or-later" %}
-    {% assign license_url = "https://www.gnu.org/licenses/agpl-3.0.html" %}
-  {% when "LGPL-3.0" %}
-    {% assign license_url = "https://www.gnu.org/licenses/lgpl-3.0.html" %}
-{% endcase %}
-
-{% assign app_category = "SoftwareApplication" %}
-{% case page.category %}
-  {% when "image-editing" %}
-    {% assign app_category = "GraphicsApplication" %}
-  {% when "communication" %}
-    {% assign app_category = "CommunicationApplication" %}
-  {% when "media-player" %}
-    {% assign app_category = "MultimediaApplication" %}
-  {% when "video-conferencing" %}
-    {% assign app_category = "CommunicationApplication" %}
-  {% when "office-suite" %}
-    {% assign app_category = "BusinessApplication" %}
-  {% when "development" %}
-    {% assign app_category = "DeveloperApplication" %}
-  {% when "password-manager" %}
-    {% assign app_category = "SecurityApplication" %}
-  {% when "cloud-storage" %}
-    {% assign app_category = "UtilitiesApplication" %}
-  {% when "video-editing" %}
-    {% assign app_category = "MultimediaApplication" %}
-  {% when "containerization" %}
-    {% assign app_category = "DeveloperApplication" %}
-  {% when "note-taking" %}
-    {% assign app_category = "ProductivityApplication" %}
-  {% when "design" %}
-    {% assign app_category = "DesignApplication" %}
-{% endcase %}
-
+{% assign license_url = site.license_urls[page.license] %}
+{% assign app_category = site.category_schema[page.category] %}
 {% assign platforms_str = page.platforms | join: ", " %}
 {% assign org_id = site.url | append: site.baseurl | append: "/#organization" %}
+{% assign website_id = site.url | append: site.baseurl | append: "/#website" %}
+{% assign author_id = site.url | append: site.baseurl | append: "/#author" %}
 {% assign page_url = page.url | absolute_url %}
+{% assign software_id = page_url | append: "#software" %}
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": {{ page.title | jsonify }},
-  "operatingSystem": {{ platforms_str | jsonify }},
-  "applicationCategory": {{ app_category | jsonify }},
-  {% if license_url != "" %}"license": {{ license_url | jsonify }},
-  {% endif %}"url": {{ page.website | jsonify }},
-  "description": {{ page.description | jsonify }},
-  {% if page.featured_image %}"image": {{ '/assets/images/software-featured/' | append: page.featured_image | absolute_url | jsonify }},
-  {% elsif page.logo %}"image": {{ page.logo | absolute_url | jsonify }},
-  {% endif %}"mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": {{ page_url | jsonify }}
-  },
-  {% if page.last_modified_at %}"dateModified": {{ page.last_modified_at | date: '%Y-%m-%d' | jsonify }},
-  {% endif %}"author": {
-    "@id": {{ org_id | jsonify }}
-  },
-  "publisher": {
-    "@id": {{ org_id | jsonify }}
-  }
-  {% if page.type == "open-source" %}
-  ,"offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  }
-  {% endif %}
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": {{ software_id | jsonify }},
+      "name": {{ page.title | jsonify }},
+      "operatingSystem": {{ platforms_str | jsonify }},
+      {% if app_category %}"applicationCategory": {{ app_category | jsonify }},
+      {% endif %}{% if license_url %}"license": {{ license_url | jsonify }},
+      {% endif %}{% if page.developer %}"author": {
+        "@type": "Organization",
+        "name": {{ page.developer | jsonify }}
+      },
+      {% endif %}{% if page.latest_version %}"softwareVersion": {{ page.latest_version | jsonify }},
+      {% endif %}"url": {{ page.website | jsonify }},
+      "description": {{ page.description | jsonify }},
+      {% if page.featured_image %}"image": {{ '/assets/images/software-featured/' | append: page.featured_image | absolute_url | jsonify }},
+      {% elsif page.logo %}"image": {{ page.logo | absolute_url | jsonify }},
+      {% endif %}"mainEntityOfPage": {
+        "@id": {{ page_url | jsonify }}
+      }
+      {% if page.type == "open-source" %}
+      ,"isAccessibleForFree": true
+      ,"offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+      {% endif %}
+    },
+    {% if page.repository %}
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": {{ page_url | append: "#source" | jsonify }},
+      "name": {{ page.title | append: " source code" | jsonify }},
+      "codeRepository": {{ page.repository | jsonify }},
+      {% if license_url %}"license": {{ license_url | jsonify }},
+      {% endif %}"targetProduct": {
+        "@id": {{ software_id | jsonify }}
+      }
+    },
+    {% endif %}
+    {
+      "@type": "WebPage",
+      "@id": {{ page_url | jsonify }},
+      "url": {{ page_url | jsonify }},
+      "name": {{ page.seo_title | default: page.title | jsonify }},
+      "isPartOf": {
+        "@id": {{ website_id | jsonify }}
+      },
+      "mainEntity": {
+        "@id": {{ software_id | jsonify }}
+      },
+      {% if page.last_modified_at %}"dateModified": {{ page.last_modified_at | date: '%Y-%m-%d' | jsonify }},
+      {% endif %}"author": {
+        "@id": {{ author_id | jsonify }}
+      },
+      "publisher": {
+        "@id": {{ org_id | jsonify }}
+      }
+    }
+  ]
 }
 </script>

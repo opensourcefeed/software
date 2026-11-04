@@ -48,7 +48,8 @@
   {% if include.alternative.alternatives %}
     <div class="card__footer">
       <ul class="tag-list">
-        {% for alt_slug in include.alternative.alternatives %}
+        {% for item in include.alternative.alternatives %}
+          {% assign alt_slug = item.slug | default: item %}
           {% assign alt = site.softwares | where: "slug", alt_slug | first %}
           {% if alt %}
             <li class="tag">{{ alt.title }}</li>

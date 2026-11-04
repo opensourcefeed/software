@@ -1,14 +1,57 @@
 <footer class="site-footer">
   <div class="site-footer__inner">
-    <p class="site-footer__copyright">&copy; Tahrik Studio 2015 - {{ site.time | date: '%Y' }}</p>
-    <nav class="site-footer__nav" aria-label="Footer navigation">
-      <ul>
-        <li><a href="{{ '/' | relative_url }}">Software</a></li>
-        <li><a href="{{ '/alternative-to/' | relative_url }}">Alternatives</a></li>
-        <li><a href="{{ '/best-open-source-software/' | relative_url }}">Best Open Source</a></li>
-      </ul>
-    </nav>
-    <nav class="site-footer__nav site-footer__nav--social" aria-label="Follow OpenSourceFeed">
+    <div class="site-footer__hub">
+      <nav class="site-footer__col site-footer__col--wide" aria-label="Software categories">
+        <h2 class="site-footer__heading">Categories</h2>
+        <ul class="site-footer__list site-footer__list--columns">
+          {% for cat in site.category_order %}
+            {% assign cat_name = site.category_names[cat] | default: cat %}
+            {% if site.roundup_pages[cat] %}
+              <li><a href="{{ '/best-open-source-' | append: site.roundup_pages[cat] | append: '/' | relative_url }}">{{ cat_name }}</a></li>
+            {% else %}
+              <li><a href="{{ '/' | relative_url }}#cat-{{ cat }}">{{ cat_name }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+
+      <nav class="site-footer__col" aria-label="Best open source software">
+        <h2 class="site-footer__heading">Best Open Source</h2>
+        <ul class="site-footer__list">
+          {% for roundup in site.roundups %}
+            <li><a href="{{ roundup.url | relative_url }}">{{ roundup.title | remove: "Best Open Source " }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+
+      <nav class="site-footer__col" aria-label="Popular alternatives">
+        <h2 class="site-footer__heading">Popular Alternatives</h2>
+        <ul class="site-footer__list">
+          {% for slug in site.footer_alternatives %}
+            {% assign alt_page = site.alternatives | where: "slug", slug | first %}
+            {% if alt_page %}
+              {% assign prop = site.softwares | where: "slug", alt_page.proprietary_slug | first %}
+              <li><a href="{{ alt_page.url | relative_url }}">{{ prop.title | default: slug }} alternatives</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+
+      <nav class="site-footer__col" aria-label="OpenSourceFeed">
+        <h2 class="site-footer__heading">OpenSourceFeed</h2>
+        <ul class="site-footer__list">
+          <li><a href="{{ '/' | relative_url }}">Software Directory</a></li>
+          <li><a href="{{ '/alternative-to/' | relative_url }}">All Alternatives</a></li>
+          <li><a href="{{ '/best-open-source-software/' | relative_url }}">Best Open Source</a></li>
+          <li><a href="{{ '/self-hosted/' | relative_url }}">Self-Hosted Software</a></li>
+          <li><a href="{{ site.methodology_url | relative_url }}">How We Evaluate Software</a></li>
+          <li><a href="{{ site.main_site_url }}/">OpenSourceFeed Home</a></li>
+          <li><a href="{{ site.main_site_url }}/privacy-policy/">Privacy Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <nav class="site-footer__social" aria-label="Follow OpenSourceFeed">
       <ul>
         <li><a rel="me" href="https://floss.social/@opensourcefeed">Mastodon</a></li>
         <li><a rel="nofollow" href="https://x.com/opensourcefeed">X / Twitter</a></li>
@@ -19,5 +62,7 @@
         <li><a href="{{ site.main_site_url }}/feed.xml">RSS</a></li>
       </ul>
     </nav>
+
+    <p class="site-footer__copyright">&copy; Tahrik Studio 2015 - {{ site.time | date: '%Y' }}</p>
   </div>
 </footer>

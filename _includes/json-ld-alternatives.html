@@ -18,7 +18,7 @@
   "url": {{ page_url | jsonify }},
   {% if page.last_modified_at %}"dateModified": {{ page.last_modified_at | date: '%Y-%m-%d' | jsonify }},
   {% endif %}"author": {
-    "@id": {{ org_id | jsonify }}
+    "@id": {{ site.url | append: site.baseurl | append: "/#author" | jsonify }}
   },
   "publisher": {
     "@id": {{ org_id | jsonify }}
@@ -31,7 +31,8 @@
     "description": {{ proprietary.description | jsonify }}
   },
   {% endif %}"itemListElement": [
-    {% for alt_slug in page.alternatives %}
+    {% for item in page.alternatives %}
+      {% assign alt_slug = item.slug | default: item %}
       {% assign alt = site.softwares | where: "slug", alt_slug | first %}
       {
         "@type": "ListItem",

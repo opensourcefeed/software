@@ -1,0 +1,27 @@
+{% comment %}
+  "Is X open source?" answer for software pages, generated only from front
+  matter (type, license, license_note, repository, developer) so it can't
+  drift from the facts panel. Rendered by _layouts/software.html unless the
+  body already contains its own "...Open Source?" H2.
+{% endcomment %}
+{% assign license_url = site.license_urls[page.license] %}
+<section class="oss-answer" aria-labelledby="oss-answer-title">
+  <h2 class="oss-answer__title" id="oss-answer-title">Is {{ page.title }} open source?</h2>
+  <p>
+    {% if page.type == "open-source" %}
+      <strong>Yes.</strong> {{ page.title }} is open source software released under the
+      {% if license_url %}<a href="{{ license_url }}" rel="noopener noreferrer">{{ page.license }}</a>{% else %}{{ page.license }}{% endif %} license{% if page.developer %} and developed by {{ page.developer }}{% endif %}.
+      {% if page.license_note %}{{ page.license_note }}{% endif %}
+      {% if page.repository %}The source code is public in its <a href="{{ page.repository }}" rel="noopener noreferrer">official repository</a>.{% endif %}
+    {% elsif page.type == "source-available" %}
+      <strong>Not by the standard definition.</strong> {{ page.title }}'s source code is publicly available, but its license is not an OSI-approved open source license, so some uses are restricted.
+      {% if page.license_note %}{{ page.license_note }}{% endif %}
+      {% if page.repository %}You can read the code in its <a href="{{ page.repository }}" rel="noopener noreferrer">public repository</a>.{% endif %}
+    {% else %}
+      <strong>No.</strong> {{ page.title }} is proprietary, closed source software{% if page.developer %} from {{ page.developer }}{% endif %}.
+      {% if page.license_note %}{{ page.license_note }}{% endif %}
+      {% assign alt_page = site.alternatives | where: "proprietary_slug", page.slug | first %}
+      {% if alt_page %}If you need an open source option, see <a href="{{ alt_page.url | relative_url }}">open source alternatives to {{ page.title }}</a>.{% endif %}
+    {% endif %}
+  </p>
+</section>

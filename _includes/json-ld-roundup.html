@@ -5,7 +5,11 @@
 {% endcomment %}
 {% assign org_id = site.url | append: site.baseurl | append: "/#organization" %}
 {% assign page_url = page.url | absolute_url %}
-{% assign entries = site.softwares | where: "category", page.category | where: "type", "open-source" %}
+{% if page.picks %}
+  {% assign entries = page.picks %}
+{% else %}
+  {% assign entries = site.softwares | where: "category", page.category | where: "type", "open-source" | map: "slug" %}
+{% endif %}
 
 <script type="application/ld+json">
 {
@@ -16,13 +20,15 @@
   "url": {{ page_url | jsonify }},
   {% if page.last_modified_at %}"dateModified": {{ page.last_modified_at | date: '%Y-%m-%d' | jsonify }},
   {% endif %}"author": {
-    "@id": {{ org_id | jsonify }}
+    "@id": {{ site.url | append: site.baseurl | append: "/#author" | jsonify }}
   },
   "publisher": {
     "@id": {{ org_id | jsonify }}
   },
   "itemListElement": [
-    {% for software in entries %}
+    {% for item in entries %}
+      {% assign entry_slug = item.slug | default: item %}
+      {% assign software = site.softwares | where: "slug", entry_slug | first %}
       {
         "@type": "ListItem",
         "position": {{ forloop.index }},

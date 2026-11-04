@@ -38,6 +38,7 @@ layout: default
       {% if page.tagline %}
         <p class="software-header__tagline">{{ page.tagline }}</p>
       {% endif %}
+      {% include byline.html %}
     </div>
   </header>
 
@@ -67,13 +68,24 @@ layout: default
         {% if page.license %}
           <div class="software-facts__row software-facts__row--wide">
             <dt>License</dt>
-            <dd>{{ page.license }}</dd>
+            <dd>
+              {% if site.license_urls[page.license] %}<a href="{{ site.license_urls[page.license] }}" rel="noopener noreferrer">{{ page.license }}</a>{% else %}{{ page.license }}{% endif %}
+              {% if page.license_note %}<span class="software-facts__note">{{ page.license_note }}</span>{% endif %}
+            </dd>
           </div>
         {% endif %}
-        {% if page.pricing %}
-          <div class="software-facts__row software-facts__row--wide">
+        {% assign pricing = page.pricing %}
+        {% if pricing == nil and page.type == "open-source" %}{% assign pricing = "Free" %}{% endif %}
+        {% if pricing %}
+          <div class="software-facts__row">
             <dt>Pricing</dt>
-            <dd>{{ page.pricing }}</dd>
+            <dd>{{ pricing }}</dd>
+          </div>
+        {% endif %}
+        {% if page.self_hostable %}
+          <div class="software-facts__row">
+            <dt>Self-hostable</dt>
+            <dd>Yes</dd>
           </div>
         {% endif %}
         {% if page.developer %}
@@ -85,7 +97,7 @@ layout: default
         {% if page.latest_version %}
           <div class="software-facts__row">
             <dt>Latest version</dt>
-            <dd>{{ page.latest_version }}</dd>
+            <dd>{{ page.latest_version }}{% if page.version_checked_at %}<span class="software-facts__note">Checked {{ page.version_checked_at | date: '%b %-d, %Y' }}</span>{% endif %}</dd>
           </div>
         {% endif %}
         {% if page.platforms %}
@@ -98,12 +110,6 @@ layout: default
                 {% endfor %}
               </ul>
             </dd>
-          </div>
-        {% endif %}
-        {% if page.last_modified_at %}
-          <div class="software-facts__row">
-            <dt>Page updated</dt>
-            <dd><time datetime="{{ page.last_modified_at | date: '%Y-%m-%d' }}">{{ page.last_modified_at | date: '%b %-d, %Y' }}</time></dd>
           </div>
         {% endif %}
       </dl>
@@ -130,6 +136,13 @@ layout: default
              fetchpriority="high">
       {% endif %}
 
+      <!-- 2b. "Is X open source?" answer, generated from type + license
+           (skipped when the body already has its own H2 for this question) -->
+      {% assign body_lower = content | downcase %}
+      {% unless body_lower contains "open source?</h2>" %}
+        {% include open-source-answer.html %}
+      {% endunless %}
+
       <!-- 3. Ad slot: below header -->
       {% include ad.html slot="software-below-header" %}
 
@@ -142,10 +155,19 @@ layout: default
       {% include ad.html slot="software-mid-content" %}
 
       <!-- 6. Conditional CTA block -->
-      {% if page.type == "proprietary" and page.has_alternatives %}
-        <div class="cta-banner">
-          <p>Looking for free alternatives? &rarr; <a href="{{ '/alternative-to/' | append: page.slug | append: '/' | relative_url }}">Open source alternatives to {{ page.title }}</a></p>
-        </div>
+      {% assign alt_page = site.alternatives | where: "proprietary_slug", page.slug | first %}
+      {% if page.type == "proprietary" and alt_page %}
+        <section class="section related-alternatives">
+          <h2 class="section__title">Open Source Alternatives to {{ page.title }}</h2>
+          <div class="card-grid card-grid--compact">
+            {% for item in alt_page.alternatives limit: 3 %}
+              {% assign alt_slug = item.slug | default: item %}
+              {% assign alt = site.softwares | where: "slug", alt_slug | first %}
+              {% if alt %}{% include software-card.html software=alt %}{% endif %}
+            {% endfor %}
+          </div>
+          <p class="related-alternatives__more"><a href="{{ alt_page.url | relative_url }}">{% if alt_page.alternatives.size > 3 %}See all {{ alt_page.alternatives.size }} alternatives, compared{% else %}Compare them side by side{% endif %} &rarr;</a></p>
+        </section>
       {% elsif page.type == "open-source" and page.alternative_to.size > 0 or page.type == "source-available" and page.alternative_to.size > 0 %}
         <div class="cta-banner cta-banner--alternative">
           <p>This is a free alternative to:
@@ -161,6 +183,26 @@ layout: default
 
       {% if page.faq %}
         {% include faq-section.html %}
+      {% endif %}
+
+      <!-- 6b. Similar software in the same category (open source first) -->
+      {% assign same_cat = site.softwares | where: "category", page.category | where_exp: "s", "s.slug != page.slug" %}
+      {% assign similar = same_cat | where: "type", "open-source" %}
+      {% assign similar_rest = same_cat | where_exp: "s", "s.type != 'open-source'" %}
+      {% assign similar = similar | concat: similar_rest %}
+      {% if similar.size > 0 %}
+        <section class="section similar-software">
+          <h2 class="section__title">Similar software: {{ category_name }}</h2>
+          <div class="card-grid card-grid--compact">
+            {% for s in similar limit: 6 %}
+              {% include software-card.html software=s %}
+            {% endfor %}
+          </div>
+          {% assign roundup_doc = site.roundups | where: "slug", roundup_slug | first %}
+          {% if roundup_doc %}
+            <p class="related-alternatives__more"><a href="{{ roundup_doc.url | relative_url }}">{{ roundup_doc.title }}: our ranked picks &rarr;</a></p>
+          {% endif %}
+        </section>
       {% endif %}
 
       <!-- 7. Footer: last modified, back link -->

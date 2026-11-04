@@ -35,6 +35,15 @@
           "url": {{ alternative.url | absolute_url | jsonify }}
         }{% unless forloop.last %},{% endunless %}
       {% endfor %}
+    {% elsif page.url contains "/self-hosted/" %}
+      {% assign hosted = site.softwares | where: "self_hostable", true %}
+      {% for software in hosted %}
+        {
+          "@type": "SoftwareApplication",
+          "name": {{ software.title | jsonify }},
+          "url": {{ software.url | absolute_url | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
     {% elsif page.url contains "/best-open-source-software/" %}
       {% for roundup in site.roundups %}
         {

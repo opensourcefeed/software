@@ -1,0 +1,93 @@
+---
+layout: default
+title: "Self-Hosted Open Source Software"
+seo_title: "Self-Hosted Open Source Software: Alternatives by Category"
+description: "Open source software you can run on your own server: self-hosted alternatives to Google Drive, Slack, Teams, Spotify, and AI chat, grouped by category."
+json_ld: collection
+og_image: /assets/images/og/pages/self-hosted.webp
+last_modified_at: 2026-11-04
+permalink: /self-hosted/
+faq:
+  - question: "What does self-hosted mean?"
+    answer: "Self-hosted software runs on a computer you control, such as a home server, a spare PC, or a rented virtual server, instead of on a company's cloud. Your data stays on that machine, and you decide when to update."
+  - question: "What hardware do I need to self-host?"
+    answer: "Many services, including file sync, music streaming, and chat, run comfortably on a small always-on machine such as a mini PC or an old laptop, or on an inexpensive virtual private server. Video transcoding and local AI models need more CPU, memory, or a GPU."
+  - question: "Do I need Docker?"
+    answer: "Not always, but most projects here publish official Docker images or Docker Compose files, and that's usually the simplest way to install, update, and back up a self-hosted service."
+  - question: "Is self-hosting more secure than using a cloud service?"
+    answer: "It gives you more control, not automatic security. Your data no longer sits with a third party, but you become responsible for updates, backups, and how the service is exposed to the internet. Keeping services on your home network or behind a VPN reduces the risk considerably."
+---
+{% comment %}
+  Self-hosted hub. Everything below the intro is generated from front matter:
+  software with `self_hostable: true`, grouped by site.category_order, plus an
+  index of alternatives pages whose alternatives include self-hostable tools.
+{% endcomment %}
+{% assign hosted = site.softwares | where: "self_hostable", true %}
+<div class="landing-page">
+  <div class="hero">
+    <h1>Self-Hosted Open Source Software</h1>
+    <p>Run your own file sync, chat, media server, project tools, and AI assistant on hardware you control. {{ hosted.size }} tools in {{ hosted | map: "category" | uniq | size }} categories, each with a full page on licensing and setup.</p>
+  </div>
+
+  <div class="software-description self-hosted-intro">
+    <h2>What self-hosting involves</h2>
+    <p>Self-hosting means running a service yourself instead of renting it from a cloud provider. The appeal is control: your files, messages, and media stay on your own machine, there are no per-user subscriptions, and no company can change the terms or shut the service down. Most tools here are free and open source; a few offer paid editions with extra features, which their pages note.</p>
+    <p>The practical requirements are modest but real:</p>
+    <ul>
+      <li><strong>A machine that stays on</strong>: a mini PC, an old laptop, a NAS that runs containers, or a small virtual private server. Media transcoding and local AI models need more power.</li>
+      <li><strong>An install method</strong>: most projects ship official Docker images or Compose files, which make installing and updating straightforward.</li>
+      <li><strong>Secure access</strong>: keep services on your home network or reach them through a VPN; if you expose them to the internet, use HTTPS and strong authentication.</li>
+      <li><strong>Backups and updates</strong>: you're now the administrator, so schedule backups and apply security updates.</li>
+    </ul>
+  </div>
+
+  <section class="section">
+    <h2 class="section__title">Self-Hosted Alternatives to Popular Services</h2>
+    <ul class="self-hosted-index">
+      {% assign sorted_alts = site.alternatives | sort: "title" %}
+      {% for page_alt in sorted_alts %}
+        {% assign names = "" %}
+        {% for item in page_alt.alternatives %}
+          {% assign alt_slug = item.slug | default: item %}
+          {% assign s = site.softwares | where: "slug", alt_slug | first %}
+          {% if s.self_hostable %}
+            {% capture link %}<a href="{{ s.url | relative_url }}">{{ s.title }}</a>{% endcapture %}
+            {% if names == "" %}{% assign names = link %}{% else %}{% assign names = names | append: ", " | append: link %}{% endif %}
+          {% endif %}
+        {% endfor %}
+        {% if names != "" %}
+          {% assign prop = site.softwares | where: "slug", page_alt.proprietary_slug | first %}
+          <li><a href="{{ page_alt.url | relative_url }}"><strong>{{ prop.title }}</strong></a> <span aria-hidden="true">&rarr;</span> {{ names }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+
+  {% include ad.html slot="directory-below-title" %}
+
+  <section class="section">
+    <h2 class="section__title">Self-Hosted Software by Category</h2>
+    {% for cat in site.category_order %}
+      {% assign items = hosted | where: "category", cat %}
+      {% if items.size > 0 %}
+        <div class="category-group" id="cat-{{ cat }}">
+          <h3 class="category-group__title">
+            {{ site.category_names[cat] | default: cat }}
+            {% if site.roundup_pages[cat] %}
+              <a class="category-group__roundup-link" href="{{ '/best-open-source-' | append: site.roundup_pages[cat] | append: '/' | relative_url }}">Our picks &rarr;</a>
+            {% endif %}
+          </h3>
+          <div class="card-grid">
+            {% for software in items %}
+              {% include software-card.html software=software %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </section>
+
+  <div class="software-description">
+    {% include faq-section.html %}
+  </div>
+</div>

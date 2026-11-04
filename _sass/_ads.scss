@@ -12,7 +12,7 @@
   .adsbygoogle {
     display: block;
     width: 100%;
-    min-height: 90px;
+    min-height: 280px;
     background-color: var(--color-bg-alt);
     border: 1px dashed var(--color-border);
     border-radius: $radius-md;
@@ -25,7 +25,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 90px;
+  min-height: 280px;
   width: 100%;
   background-color: var(--color-bg-alt);
   border: 1px dashed var(--color-border);
@@ -58,13 +58,16 @@
 }
 
 // --- Responsive ad heights ---
+// Reserve roughly the height of the unit AdSense serves at each width so the
+// page doesn't jump when the ad loads (CLS). Phones get full-width responsive
+// units that are typically 250–280px tall; tune these from real CLS data.
 @include respond-to(tablet) {
   .ad-container .adsbygoogle {
-    min-height: 120px;
+    min-height: 250px;
   }
 
   .ad-placeholder {
-    min-height: 120px;
+    min-height: 250px;
   }
 }
 

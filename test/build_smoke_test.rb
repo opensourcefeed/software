@@ -7,6 +7,9 @@
 #   bundle exec ruby test/build_smoke_test.rb
 
 require "nokogiri"
+require "json"
+require "yaml"
+require "date"
 
 SITE_DIR = File.expand_path("../_site", __dir__)
 SOFTWARES_DIR = File.expand_path("../_softwares", __dir__)
@@ -142,11 +145,96 @@ check(failures, "every og:image resolves to a built, non-SVG file") do
   raise bad.first(5).join("; ") unless bad.empty?
 end
 
+# --- Search snippets: titles <= 60 chars, meta descriptions <= 160 chars (use seo_title / shorter description) ---
+check(failures, "every page title is <= 60 chars and meta description <= 160 chars") do
+  bad = []
+  Dir.glob("#{SITE_DIR}/**/index.html").each do |path|
+    doc = Nokogiri::HTML(File.read(path))
+    title = doc.at_css("title")&.text.to_s.strip
+    desc = doc.at_css('meta[name="description"]')&.[]("content").to_s
+    rel = path.delete_prefix(SITE_DIR)
+    bad << "#{rel}: title #{title.length}" if title.length > 60
+    bad << "#{rel}: description #{desc.length}" if desc.length > 160
+  end
+  raise bad.first(8).join("; ") unless bad.empty?
+end
+
+# --- Structured data: every JSON-LD block parses, and every category maps to a schema.org applicationCategory ---
+check(failures, "every JSON-LD block on every page is valid JSON") do
+  bad = []
+  Dir.glob("#{SITE_DIR}/**/index.html").each do |path|
+    Nokogiri::HTML(File.read(path)).css('script[type="application/ld+json"]').each do |script|
+      JSON.parse(script.text)
+    rescue JSON::ParserError => e
+      bad << "#{path.delete_prefix(SITE_DIR)}: #{e.message[0, 80]}"
+    end
+  end
+  raise bad.first(5).join("; ") unless bad.empty?
+end
+
+check(failures, "every software category has a category_schema mapping in _config.yml") do
+  config = YAML.safe_load(File.read(File.expand_path("../_config.yml", __dir__)), permitted_classes: [Date])
+  mapped = config.fetch("category_schema", {}).keys
+  used = Dir.glob("#{SOFTWARES_DIR}/*.md").map { |f| File.read(f)[/^category:\s*(\S+)/, 1] }.compact.uniq
+  missing = used - mapped
+  raise "unmapped: #{missing.join(', ')}" unless missing.empty?
+end
+
+# --- Front matter data rules (see CONTENT-POLICY.md) ---
+def front_matter(path)
+  YAML.safe_load(File.read(path)[/\A---\s*\n(.*?)\n---/m, 1], permitted_classes: [Date])
+end
+
+check(failures, "software front matter follows the data rules") do
+  config = YAML.safe_load(File.read(File.expand_path("../_config.yml", __dir__)), permitted_classes: [Date])
+  licenses = config.fetch("license_urls", {}).keys + %w[Proprietary Source-available]
+  bad = []
+  Dir.glob("#{SOFTWARES_DIR}/*.md").each do |f|
+    d = front_matter(f)
+    slug = File.basename(f, ".md")
+    bad << "#{slug}: missing developer" if d["developer"].to_s.empty?
+    bad << "#{slug}: open source page without repository" if d["type"] == "open-source" && d["repository"].to_s.empty?
+    bad << "#{slug}: license '#{d['license']}' not a known identifier (use license_note for detail)" unless licenses.include?(d["license"])
+    bad << "#{slug}: latest_version without version_checked_at" if d["latest_version"] && !d["version_checked_at"]
+  end
+  raise bad.first(8).join("; ") unless bad.empty?
+end
+
+check(failures, "every alternative and roundup pick points at an existing software page") do
+  slugs = Dir.glob("#{SOFTWARES_DIR}/*.md").map { |f| File.basename(f, ".md") }
+  bad = []
+  Dir.glob(File.expand_path("../_{alternatives,roundups}/*.md", __dir__)).each do |f|
+    d = front_matter(f)
+    (Array(d["alternatives"]) + Array(d["picks"])).each do |item|
+      slug = item.is_a?(Hash) ? item["slug"] : item
+      bad << "#{File.basename(f)} -> #{slug}" unless slugs.include?(slug)
+    end
+  end
+  raise bad.first(8).join("; ") unless bad.empty?
+end
+
 # --- Theming (dark mode wiring) ---
 check(failures, "compiled CSS defines dark-mode custom properties") do
   css = File.read("#{SITE_DIR}/assets/css/main.css")
   raise "missing prefers-color-scheme: dark block" unless css.include?("prefers-color-scheme: dark")
   raise "missing --color-primary token" unless css.include?("--color-primary")
+end
+
+# --- Freshness warnings (non-failing; act on them with scripts/check-freshness.rb) ---
+warnings = []
+Dir.glob("#{SOFTWARES_DIR}/*.md").each do |f|
+  d = front_matter(f)
+  slug = File.basename(f, ".md")
+  if d["version_checked_at"] && (Date.today - d["version_checked_at"]).to_i > 60
+    warnings << "#{slug}: version last checked #{d['version_checked_at']}"
+  end
+  if d["last_modified_at"] && (Date.today - d["last_modified_at"]).to_i > 365
+    warnings << "#{slug}: content not updated since #{d['last_modified_at']}"
+  end
+end
+unless warnings.empty?
+  puts "Freshness warnings (#{warnings.size}) — run `ruby scripts/check-freshness.rb`:"
+  warnings.first(15).each { |w| puts "  ! #{w}" }
 end
 
 if failures.empty?

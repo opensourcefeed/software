@@ -498,51 +498,102 @@
   }
 }
 
-// --- Site footer (dark, centered — matches opensourcefeed.org) ---
+// --- Site footer: category hub + social row ---
 .site-footer {
   background-color: $color-bg-dark;
-  color: rgba($color-bg, 0.9);
-  text-align: center;
-  padding-block: $spacing-sm;
+  color: rgba($color-bg, 0.85);
   margin-top: $spacing-2xl;
+  padding-block: $spacing-2xl $spacing-lg;
 
   a {
-    color: #69a9df;
-    text-decoration: underline;
+    color: rgba($color-bg, 0.8);
+    text-decoration: none;
 
     &:hover {
-      color: lighten(#69a9df, 10%);
+      color: #fff;
+      text-decoration: underline;
     }
   }
 }
 
 .site-footer__inner {
   @include container;
-  padding-block: $spacing-xs;
+}
+
+.site-footer__hub {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: $spacing-xl $spacing-lg;
+
+  @include respond-to(desktop) {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}
+
+.site-footer__col--wide {
+  grid-column: 1 / -1;
+
+  @include respond-to(desktop) {
+    grid-column: auto;
+  }
+}
+
+.site-footer__heading {
+  margin: 0 0 $spacing-md;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.site-footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin: 0 0 $spacing-xs;
+    font-size: $font-size-sm;
+    line-height: $line-height-base;
+  }
+
+  &--columns {
+    columns: 2;
+    column-gap: $spacing-lg;
+
+    @include respond-to(tablet) {
+      columns: 3;
+    }
+
+    @include respond-to(desktop) {
+      columns: 2;
+    }
+  }
+}
+
+.site-footer__social {
+  margin-top: $spacing-xl;
+  padding-top: $spacing-lg;
+  border-top: 1px solid rgba($color-bg, 0.12);
+
+  ul {
+    @include flex-row($gap: $spacing-sm $spacing-md);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin: 0;
+    font-size: $font-size-sm;
+  }
 }
 
 .site-footer__copyright {
-  margin: 0;
-  font-size: $font-size-sm;
-}
-
-.site-footer__nav {
-  ul {
-    @include flex-row($gap: $spacing-md);
-    list-style: none;
-    padding: 0;
-    margin: $spacing-xs 0 0 0;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  a {
-    font-size: $font-size-sm;
-  }
-
-  &--social a {
-    font-size: $font-size-xs;
-  }
+  margin: $spacing-md 0 0;
+  font-size: $font-size-xs;
+  color: rgba($color-bg, 0.6);
 }
 
 // --- Main content area ---

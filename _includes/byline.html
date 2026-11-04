@@ -1,0 +1,13 @@
+{% comment %}
+  Author / freshness byline for content pages.
+  Usage: {% include byline.html %} (reads page.last_modified_at)
+{% endcomment %}
+<p class="byline">
+  <span>By {{ site.author_profile.name }}</span>
+  {% if page.last_modified_at %}
+    <span aria-hidden="true">·</span>
+    <span>Updated <time datetime="{{ page.last_modified_at | date: '%Y-%m-%d' }}">{{ page.last_modified_at | date: '%b %-d, %Y' }}</time></span>
+  {% endif %}
+  <span aria-hidden="true">·</span>
+  <a href="{{ site.methodology_url | relative_url }}">How we evaluate software</a>
+</p>

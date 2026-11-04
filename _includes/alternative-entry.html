@@ -1,0 +1,61 @@
+{% comment %}
+  One ranked entry on an alternatives page.
+  Usage: {% include alternative-entry.html item=item rank=forloop.index proprietary=proprietary %}
+  `item` is either a slug string or a hash {slug, best_for, gains, trade_offs, migration}.
+{% endcomment %}
+{% if include.item.slug %}
+  {% assign entry_slug = include.item.slug %}
+  {% assign entry = include.item %}
+{% else %}
+  {% assign entry_slug = include.item %}
+  {% assign entry = nil %}
+{% endif %}
+{% assign alt = site.softwares | where: "slug", entry_slug | first %}
+{% if alt %}
+<article class="alt-entry" id="{{ alt.slug }}">
+  <header class="alt-entry__header">
+    <span class="alt-entry__rank" aria-hidden="true">{{ include.rank }}</span>
+    {% if alt.logo %}
+      <img src="{{ alt.logo | relative_url }}" alt="{{ alt.title }} logo" class="alt-entry__logo" width="48" height="48" loading="lazy" decoding="async">
+    {% else %}
+      <div class="alt-entry__logo card__logo--placeholder" aria-hidden="true">{{ alt.title | slice: 0 }}</div>
+    {% endif %}
+    <div class="alt-entry__heading">
+      <h3 class="alt-entry__title"><a href="{{ alt.url | relative_url }}">{{ alt.title }}</a></h3>
+      {% if entry.best_for %}
+        <p class="alt-entry__best-for"><span class="alt-entry__label">Best for</span> {{ entry.best_for }}</p>
+      {% elsif alt.tagline %}
+        <p class="alt-entry__best-for">{{ alt.tagline }}</p>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="alt-entry__meta">
+    {% if alt.type == "open-source" %}<span class="badge badge--open-source">Open Source</span>{% elsif alt.type == "source-available" %}<span class="badge badge--source-available">Source Available</span>{% endif %}
+    {% if alt.license and alt.license != "Source-available" %}<span class="badge badge--license">{{ alt.license }}</span>{% endif %}
+    {% if alt.platforms %}
+      <ul class="tag-list" aria-label="Platforms">
+        {% for platform in alt.platforms %}<li class="tag">{{ platform }}</li>{% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+
+  <p class="alt-entry__description">{{ alt.description }}</p>
+
+  {% if entry.gains or entry.trade_offs or entry.migration %}
+    <dl class="alt-entry__details">
+      {% if entry.gains %}
+        <div><dt>What you gain over {{ include.proprietary.title | default: "the original" }}</dt><dd>{{ entry.gains | markdownify | remove: "<p>" | remove: "</p>" | strip }}</dd></div>
+      {% endif %}
+      {% if entry.trade_offs %}
+        <div><dt>Trade-offs</dt><dd>{{ entry.trade_offs | markdownify | remove: "<p>" | remove: "</p>" | strip }}</dd></div>
+      {% endif %}
+      {% if entry.migration %}
+        <div><dt>Switching</dt><dd>{{ entry.migration | markdownify | remove: "<p>" | remove: "</p>" | strip }}</dd></div>
+      {% endif %}
+    </dl>
+  {% endif %}
+
+  <p class="alt-entry__more"><a href="{{ alt.url | relative_url }}">{{ alt.title }}: features, platforms, and license &rarr;</a></p>
+</article>
+{% endif %}

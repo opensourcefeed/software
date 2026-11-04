@@ -12,7 +12,16 @@ layout: default
   <!-- 1. Header -->
   <header class="page-header">
     <h1>{{ page.title }}</h1>
+    {% include byline.html %}
   </header>
+
+  <!-- 1b. Quick answer (front matter `verdict`, Markdown) — answers the query above the fold -->
+  {% if page.verdict %}
+    <aside class="verdict" aria-label="Quick answer">
+      <p class="verdict__label">Quick answer</p>
+      <div class="verdict__body">{{ page.verdict | markdownify }}</div>
+    </aside>
+  {% endif %}
 
   <!-- 2. Ad slot: below header -->
   {% include ad.html slot="alternatives-below-header" %}
@@ -36,16 +45,30 @@ layout: default
   {% include ad.html slot="alternatives-mid-content" %}
 
   <!-- 6. Alternatives list (cards linking to software pages) -->
+  {% comment %}
+    Entries may be plain slugs or {slug, best_for, gains, trade_offs, migration}.
+    If any entry carries details, render the ranked list; otherwise the card grid.
+  {% endcomment %}
+  {% assign detailed = false %}
+  {% for item in page.alternatives %}{% if item.slug %}{% assign detailed = true %}{% endif %}{% endfor %}
   <section class="alternatives-section">
-    <h2 class="section__title">Open Source Alternatives</h2>
-    <div class="alternatives-list">
-      {% for alt_slug in page.alternatives %}
-        {% assign alt = site.softwares | where: "slug", alt_slug | first %}
-        {% if alt %}
-          {% include software-card.html software=alt show_platforms=true show_footer=true %}
-        {% endif %}
-      {% endfor %}
-    </div>
+    <h2 class="section__title">{% if page.alternatives.size == 1 %}The Open Source Alternative{% else %}{{ page.alternatives.size }} Open Source Alternatives{% endif %}{% if proprietary %} to {{ proprietary.title }}{% endif %}</h2>
+    {% if detailed %}
+      <ol class="alt-entries">
+        {% for item in page.alternatives %}
+          <li>{% include alternative-entry.html item=item rank=forloop.index proprietary=proprietary %}</li>
+        {% endfor %}
+      </ol>
+    {% else %}
+      <div class="alternatives-list">
+        {% for item in page.alternatives %}
+          {% assign alt = site.softwares | where: "slug", item | first %}
+          {% if alt %}
+            {% include software-card.html software=alt show_platforms=true show_footer=true %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
   </section>
 
   <!-- 7. Comparison table (optional — renders only if page.comparison exists) -->
@@ -56,7 +79,7 @@ layout: default
         <table class="comparison-table">
           <thead>
             <tr>
-              <th>Feature</th>
+              <th>{{ page.comparison.row_label | default: "Feature" }}</th>
               {% for col in page.comparison.columns %}
                 <th>{{ col }}</th>
               {% endfor %}
@@ -77,6 +100,13 @@ layout: default
     </section>
   {% endif %}
 
+  {% if roundup_page %}
+    <aside class="roundup-callout">
+      <p class="roundup-callout__label">Not tied to {{ proprietary.title }}?</p>
+      <p><a href="{{ roundup_page.url | relative_url }}">{{ roundup_page.title }}</a>: our ranked picks across the whole category, compared side by side.</p>
+    </aside>
+  {% endif %}
+
   {% if page.faq %}
     {% include faq-section.html %}
   {% endif %}
@@ -85,9 +115,6 @@ layout: default
   <footer>
     {% if page.last_modified_at %}
       <p class="last-modified">Last updated: {{ page.last_modified_at | date: '%B %d, %Y' }}</p>
-    {% endif %}
-    {% if roundup_page %}
-      <p class="roundup-crosslink"><a href="{{ roundup_page.url | relative_url }}">Explore {{ roundup_page.title }} &rarr;</a></p>
     {% endif %}
     <a href="{{ '/alternative-to/' | relative_url }}" class="back-link">&larr; Back to Alternatives</a>
   </footer>

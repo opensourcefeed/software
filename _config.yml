@@ -10,7 +10,6 @@ main_site_url: "https://www.opensourcefeed.org"
 # Build settings
 markdown: kramdown
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
 
 # Exclude theme gem (we use custom layouts)
@@ -105,6 +104,7 @@ category_order:
   - web-browser
   - password-manager
   - code-editor
+  - ai-assistant
   - office-suite
   - email-client
   - communication
@@ -159,6 +159,73 @@ category_names:
   virtualization: "Virtualization"
   remote-desktop: "Remote Desktop"
   file-compression: "File Compression"
+  ai-assistant: "AI Assistants"
+
+# Category -> schema.org applicationCategory (used in json-ld-software.html).
+# Values must come from Google's supported list for software apps; a category
+# missing here simply omits applicationCategory (the smoke test flags it).
+category_schema:
+  image-editing: DesignApplication
+  communication: CommunicationApplication
+  media-player: MultimediaApplication
+  video-conferencing: CommunicationApplication
+  office-suite: BusinessApplication
+  development: DeveloperApplication
+  web-browser: BrowserApplication
+  project-management: BusinessApplication
+  vpn: SecurityApplication
+  note-taking: BusinessApplication
+  music-streaming: MultimediaApplication
+  cloud-storage: UtilitiesApplication
+  containerization: DeveloperApplication
+  design: DesignApplication
+  email-client: CommunicationApplication
+  game-development: DeveloperApplication
+  password-manager: SecurityApplication
+  video-editing: MultimediaApplication
+  3d-modeling: DesignApplication
+  cad: DesignApplication
+  torrent-client: UtilitiesApplication
+  audio-editing: MultimediaApplication
+  code-editor: DeveloperApplication
+  pdf-tools: UtilitiesApplication
+  virtualization: DeveloperApplication
+  remote-desktop: UtilitiesApplication
+  file-compression: UtilitiesApplication
+  ai-assistant: UtilitiesApplication
+
+# License identifier -> canonical license text URL (used in json-ld-software.html
+# and the software page's "Is X open source?" answer). Keep `license` values in
+# _softwares/ to these keys or Proprietary / Source-available.
+license_urls:
+  GPL-2.0: "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
+  GPL-2.0-or-later: "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"
+  GPL-3.0: "https://www.gnu.org/licenses/gpl-3.0.html"
+  GPL-3.0-or-later: "https://www.gnu.org/licenses/gpl-3.0.html"
+  LGPL-2.0-or-later: "https://www.gnu.org/licenses/old-licenses/lgpl-2.0.html"
+  LGPL-2.1-or-later: "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"
+  LGPL-3.0: "https://www.gnu.org/licenses/lgpl-3.0.html"
+  AGPL-3.0: "https://www.gnu.org/licenses/agpl-3.0.html"
+  AGPL-3.0-or-later: "https://www.gnu.org/licenses/agpl-3.0.html"
+  MIT: "https://opensource.org/licenses/MIT"
+  Apache-2.0: "https://www.apache.org/licenses/LICENSE-2.0"
+  BSD-2-Clause: "https://opensource.org/licenses/BSD-2-Clause"
+  BSD-3-Clause: "https://opensource.org/licenses/BSD-3-Clause"
+  MPL-2.0: "https://www.mozilla.org/en-US/MPL/2.0/"
+
+# Alternatives pages linked from the footer hub (highest Search Console
+# impressions, Aug-Nov 2026). Slugs from _alternatives/.
+footer_alternatives:
+  - vlc
+  - spotify
+  - telegram
+  - google-meet
+  - autocad
+  - obsidian
+  - anydesk
+  - onedrive
+  - whatsapp
+  - notion
 
 # Category -> roundup page slug (only categories with a "Best Open Source X" page)
 roundup_pages:
@@ -171,9 +238,14 @@ roundup_pages:
   audio-editing: audio-editors
   code-editor: code-editors
   pdf-tools: pdf-readers
+  ai-assistant: ai-assistants
 
 # SEO
 author: "Niyas C"
+# Byline + JSON-LD Person for content pages (software, alternatives, roundups)
+author_profile:
+  name: "Niyas C"
+methodology_url: "/how-we-evaluate-software/"
 lang: "en"
 
 # GitHub Pages settings

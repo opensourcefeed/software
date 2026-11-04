@@ -11,7 +11,8 @@
   data-title="{{ include.software.title | downcase }}"
   data-tagline="{{ include.software.tagline | downcase }}"
   data-type="{{ include.software.type }}"
-  data-category="{{ include.software.category }}">
+  data-category="{{ include.software.category }}"
+  data-self-hostable="{% if include.software.self_hostable %}true{% else %}false{% endif %}">
   <div class="card__header">
     {% if include.software.logo %}
       <img src="{{ include.software.logo | relative_url }}"

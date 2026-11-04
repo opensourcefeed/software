@@ -88,7 +88,7 @@ def title_class(text)
 end
 
 def chips(slugs, max)
-  items = slugs.filter_map { |s| SOFTWARES[s] }
+  items = slugs.map { |s| s.is_a?(Hash) ? s["slug"] : s }.filter_map { |s| SOFTWARES[s] }
   shown = items.first(max)
   html = shown.map do |sw|
     %(<div class="chip">#{logo_tile(sw, 'tile--xs')}<span>#{h sw['title']}</span></div>)
@@ -141,7 +141,11 @@ def alternatives_card(alt)
 end
 
 def roundup_card(roundup)
-  entries = SOFTWARES.values.select { |s| s["category"] == roundup["category"] && s["type"] == "open-source" }.map { |s| s["slug"] }
+  entries = if roundup["picks"]
+              roundup["picks"].map { |p| p.is_a?(Hash) ? p["slug"] : p }
+            else
+              SOFTWARES.values.select { |s| s["category"] == roundup["category"] && s["type"] == "open-source" }.map { |s| s["slug"] }
+            end
   <<~HTML
     <section class="og og--roundup">
       #{header_html("Best Open Source Software")}
@@ -236,6 +240,13 @@ jobs << ["pages/best-open-source-software", "best-open-source-software", lambda 
   landing_card("#{ROUNDUPS.size} categories", "Best Open Source Software, by Category",
                "Curated picks in categories where open source tools stand on their own.",
                %w[vlc qbittorrent audacity krita])
+}]
+
+jobs << ["pages/self-hosted", "self-hosted", lambda {
+  hosted = SOFTWARES.values.select { |s| s["self_hostable"] }
+  landing_card("#{hosted.size} tools", "Self-Hosted Open Source Software",
+               "Run your own file sync, chat, media, and AI on hardware you control.",
+               %w[nextcloud jellyfin mattermost ollama])
 }]
 
 jobs.select! { |_, slug, _| only.include?(slug) } unless only.empty?
