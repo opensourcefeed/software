@@ -38,8 +38,8 @@ This is a Jekyll static site for opensourcefeed.org's `/software/` section. It c
 
 **Non-overlap is enforced structurally via layouts.** Never bypass this by adding content to the wrong page type:
 
-- Software pages: feature breakdowns, use cases, platform support ONLY
-- Alternatives pages: "why switch" content (2-3 sentences) ONLY
+- Software pages: feature breakdowns, use cases, platform support ONLY (the "Is X open source?" answer, facts panel, related cards, and byline are generated from front matter)
+- Alternatives pages: "why switch" body content, plus front-matter `verdict` and per-alternative `best_for` / `gains` / `trade_offs` / `migration` (see CONTENT-POLICY.md)
 - Landing pages: auto-generated from front matter ONLY (no body content)
 
 See `docs/CONTENT-POLICY.md` for the full matrix.
@@ -62,7 +62,7 @@ Every collection file must have:
 - `description` — 1-2 sentences for meta tags and cards
 - `last_modified_at` — ISO date (YYYY-MM-DD)
 
-Software pages additionally need: `type`, `license`, `website`, `platforms`, `category`, `tagline`
+Software pages additionally need: `type`, `license`, `website`, `platforms`, `category`, `tagline`, `developer`. Open source pages also need a verified `repository` (check with `git ls-remote`); add `latest_version` only with `version_checked_at`. Long licensing detail goes in `license_note`, never in `license`.
 
 ### Optional: `featured_image`
 
@@ -78,11 +78,15 @@ The software layout renders a facts panel (sidebar on desktop, card under the he
 
 ### Optional: `seo_title`
 
-Any page may set `seo_title` to override the `<title>` and `og:title`/`twitter:title`; when set it is used verbatim (no ` | OpenSourceFeed` suffix), so keep it ≤60 characters. `title` still drives the H1, breadcrumbs, cards, and JSON-LD `name`. Use it only where Search Console shows a page ranking for question-style queries (e.g. "is X open source") that the page answers — and the page body must actually answer what the title promises.
+Any page may set `seo_title` to override the `<title>` and `og:title`/`twitter:title`; when set it is used verbatim (no ` | OpenSourceFeed` suffix), so keep it ≤60 characters. `title` still drives the H1, breadcrumbs, cards, and JSON-LD `name`. Use it (a) where Search Console shows a page ranking for queries whose wording the default title misses (e.g. "is X open source", "NordVPN alternatives") — the page body must actually answer what the title promises — or (b) to keep a title within 60 characters when the default `title | OpenSourceFeed` would exceed it. Check the wording people use with `scripts/gsc-report.rb queries --page <path>`.
 
 ## SEO Requirements
 
-- Unique `<title>` and `<meta description>` on every page
+- Unique `<title>` and `<meta description>` on every page; titles ≤60 characters (use `seo_title` when the suffixed title is longer) and `description` ≤160 characters
+- New software categories need an entry in both `category_names` and `category_schema` (schema.org `applicationCategory`, Google-supported values only) in `_config.yml` — the smoke test fails otherwise
+- Only bump `last_modified_at` for real content changes, not for title/description-only edits
+- Freshness: run `ruby scripts/check-freshness.rb --links` monthly (see "Freshness Process" in CONTENT-POLICY.md); pages with unusual release tags need a `version_tag` regex
+- Measure title/content changes 4–5 weeks later with `scripts/gsc-report.rb compare --split <change date>` (needs `GSC_KEY_FILE` pointing to the service-account key, kept outside the repo)
 - JSON-LD structured data on every page (type depends on page type)
 - `dateModified` meta tag from `last_modified_at`
 - Canonical URLs on every page
