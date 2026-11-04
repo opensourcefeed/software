@@ -115,12 +115,12 @@ p {
 }
 
 a {
-  color: $color-primary;
+  color: var(--color-primary);
   text-decoration: none;
   transition: color $transition-fast;
 
   &:hover {
-    color: $color-primary-dark;
+    color: var(--color-primary);
     text-decoration: underline;
   }
 }

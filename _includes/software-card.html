@@ -2,6 +2,9 @@
   Reusable software card.
   Usage: {% include software-card.html software=software %}
   Expects: software (a collection item from site.softwares)
+  Optional:
+    show_platforms=true  — render platform tags in the meta row
+    show_footer=true     — render a "See full details" footer link
 {% endcomment %}
 <article class="card"
   data-software-card
@@ -15,16 +18,17 @@
            alt="{{ include.software.title }} logo"
            class="card__logo"
            width="48" height="48"
+           loading="lazy" decoding="async"
            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-      <div class="card__logo card__logo--placeholder" style="display:none">
+      <div class="card__logo card__logo--placeholder" style="display:none" aria-hidden="true">
         {{ include.software.title | slice: 0 }}
       </div>
     {% else %}
-      <div class="card__logo card__logo--placeholder">
+      <div class="card__logo card__logo--placeholder" aria-hidden="true">
         {{ include.software.title | slice: 0 }}
       </div>
     {% endif %}
-    <div>
+    <div class="card__heading">
       <h3 class="card__title">
         <a href="{{ include.software.url | relative_url }}">{{ include.software.title }}</a>
       </h3>
@@ -39,6 +43,8 @@
   {% assign type_label = "" %}
   {% if include.software.type == "open-source" %}
     {% assign type_label = "Open Source" %}
+  {% elsif include.software.type == "source-available" %}
+    {% assign type_label = "Source Available" %}
   {% elsif include.software.type == "proprietary" %}
     {% assign type_label = "Proprietary" %}
   {% endif %}
@@ -47,8 +53,22 @@
       <span class="badge badge--{{ include.software.type }}">{{ type_label }}</span>
     {% endif %}
 
-    {% if include.software.license and include.software.license != "Proprietary" and include.software.license != "Open Source" %}
+    {% if include.software.license and include.software.license != "Proprietary" and include.software.license != "Open Source" and include.software.license.size <= 24 %}
       <span class="badge badge--license">{{ include.software.license }}</span>
     {% endif %}
+
+    {% if include.show_platforms and include.software.platforms %}
+      <ul class="tag-list" aria-label="Platforms">
+        {% for platform in include.software.platforms %}
+          <li class="tag">{{ platform }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
   </div>
+
+  {% if include.show_footer %}
+    <div class="card__footer">
+      <a href="{{ include.software.url | relative_url }}" class="card__more" aria-label="Full details on {{ include.software.title }}">See full details &rarr;</a>
+    </div>
+  {% endif %}
 </article>

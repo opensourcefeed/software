@@ -68,6 +68,14 @@ Software pages additionally need: `type`, `license`, `website`, `platforms`, `ca
 
 Software pages may optionally set `featured_image` to a filename only (e.g. `featured_image: qbittorrent.jpg`) — unlike `logo`, which stores a full relative path, the folder is fixed and assembled in Liquid. Files live in `assets/images/software-featured/`, standardized at 1200×630 (OG/Twitter card size), ~200KB max. When set, it renders as a hero image above the body content and takes priority over `logo` for `og:image`/`twitter:image`/JSON-LD `image`. Optional `featured_image_alt` overrides the default alt text (`page.title`). Pages without `featured_image` are unaffected — behavior falls back to `logo`/site default exactly as before.
 
+### Generated social cards (`assets/images/og/`)
+
+Pages without a `featured_image` get a generated 1200×630 card for `og:image`/`twitter:image` from `scripts/generate-og-images.rb` (headless Chrome + ImageMagick). Output: `assets/images/og/<collection>/<slug>.webp` (softwares, alternatives, roundups) and `assets/images/og/pages/*.webp` (landing pages, wired via the `og_image` front matter key). `_includes/head.html` uses a generated card only if the file exists, so a new page without one falls back to a raster logo or the site icon (never an SVG). **After adding a page or changing a title, tagline, logo, or alternatives list, run `ruby scripts/generate-og-images.rb <slug>`** (or with no args to fill in any missing images; `--force` regenerates all).
+
+### Optional "At a glance" fields (software pages)
+
+The software layout renders a facts panel (sidebar on desktop, card under the header on mobile) from front matter. Besides the required fields it shows these optional keys when present: `developer`, `latest_version`, `pricing`, `repository` (renders a "Source code" button). Keep values short and factual; only add `latest_version` when you also verify it.
+
 ### Optional: `seo_title`
 
 Any page may set `seo_title` to override the `<title>` and `og:title`/`twitter:title`; when set it is used verbatim (no ` | OpenSourceFeed` suffix), so keep it ≤60 characters. `title` still drives the H1, breadcrumbs, cards, and JSON-LD `name`. Use it only where Search Console shows a page ranking for question-style queries (e.g. "is X open source") that the page answers — and the page body must actually answer what the title promises.

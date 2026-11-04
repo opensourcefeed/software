@@ -13,8 +13,8 @@
     display: block;
     width: 100%;
     min-height: 90px;
-    background-color: $color-bg-alt;
-    border: 1px dashed $color-border-dark;
+    background-color: var(--color-bg-alt);
+    border: 1px dashed var(--color-border);
     border-radius: $radius-md;
   }
 }
@@ -27,8 +27,8 @@
   justify-content: center;
   min-height: 90px;
   width: 100%;
-  background-color: $color-bg-alt;
-  border: 1px dashed $color-border-dark;
+  background-color: var(--color-bg-alt);
+  border: 1px dashed var(--color-border);
   border-radius: $radius-md;
   color: $color-text-muted;
   font-size: $font-size-sm;

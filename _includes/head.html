@@ -32,25 +32,37 @@
   {% comment %}
     Open Graph / Twitter Card metadata.
     og_title/og_description fall back through page-specific fields to the
-    site defaults; og_image prefers a page's own featured_image, then its
-    logo (software pages), over the site-wide icon so shared links show the
-    right artwork.
+    site defaults. og_image priority (all 1200x630 except the last two):
+      1. page.featured_image (hand-made, assets/images/software-featured/)
+      2. page.og_image (explicit path, used by landing pages)
+      3. generated card at assets/images/og/<collection>/<slug>.webp
+         (scripts/generate-og-images.rb) — used only if the file exists
+      4. page.logo, unless it is an SVG (social networks don't render SVG)
+      5. site-wide icon
   {% endcomment %}
   {% assign og_title = page.seo_title | default: page.title | default: site.title %}
   {% assign og_description = page.description | default: page.tagline | default: site.description %}
+  {% assign og_image_large = true %}
+  {% assign og_generated = nil %}
+  {% if page.collection and page.slug %}
+    {% assign og_generated_path = '/assets/images/og/' | append: page.collection | append: '/' | append: page.slug | append: '.webp' %}
+    {% assign og_generated = site.static_files | where: "path", og_generated_path | first %}
+  {% endif %}
   {% if page.featured_image %}
     {% assign og_image = '/assets/images/software-featured/' | append: page.featured_image | absolute_url %}
+  {% elsif page.og_image %}
+    {% assign og_image = page.og_image | absolute_url %}
+  {% elsif og_generated %}
+    {% assign og_image = og_generated_path | absolute_url %}
+  {% elsif page.logo and page.logo contains '.svg' %}
+    {% assign og_image = site.main_site_url | append: "/assets/images/meta/icon.png" %}
+    {% assign og_image_large = false %}
   {% elsif page.logo %}
     {% assign og_image = page.logo | absolute_url %}
-  {% elsif page.layout == "alternative-to" and page.proprietary_slug %}
-    {% assign og_proprietary = site.softwares | where: "slug", page.proprietary_slug | first %}
-    {% if og_proprietary.logo %}
-      {% assign og_image = og_proprietary.logo | absolute_url %}
-    {% else %}
-      {% assign og_image = site.main_site_url | append: "/assets/images/meta/icon.png" %}
-    {% endif %}
+    {% assign og_image_large = false %}
   {% else %}
     {% assign og_image = site.main_site_url | append: "/assets/images/meta/icon.png" %}
+    {% assign og_image_large = false %}
   {% endif %}
 
   <meta property="og:type" content="website">
@@ -59,8 +71,13 @@
   <meta property="og:description" content="{{ og_description }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:image" content="{{ og_image }}">
+  {% if og_image_large %}
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  {% endif %}
+  <meta property="og:image:alt" content="{{ page.featured_image_alt | default: og_title }}">
 
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="{% if og_image_large %}summary_large_image{% else %}summary{% endif %}">
   <meta name="twitter:site" content="@opensourcefeed">
   <meta name="twitter:title" content="{{ og_title }}">
   <meta name="twitter:description" content="{{ og_description }}">

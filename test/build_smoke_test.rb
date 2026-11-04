@@ -128,6 +128,20 @@ check(failures, "alternatives page ad slot comes after the card grid") do
   raise "ad-container appears before card-grid" unless ad_pos > grid_pos
 end
 
+# --- Social images: every og:image hosted on this site must exist, and none may be SVG ---
+check(failures, "every og:image resolves to a built, non-SVG file") do
+  bad = []
+  Dir.glob("#{SITE_DIR}/**/index.html").each do |path|
+    image = File.read(path)[/<meta property="og:image" content="([^"]+)"/, 1]
+    next unless image
+
+    bad << "#{path.delete_prefix(SITE_DIR)}: SVG og:image" if image.end_with?(".svg")
+    local = image[%r{/software(/assets/.+)\z}, 1]
+    bad << "#{path.delete_prefix(SITE_DIR)}: missing #{local}" if local && !File.exist?("#{SITE_DIR}#{local}")
+  end
+  raise bad.first(5).join("; ") unless bad.empty?
+end
+
 # --- Theming (dark mode wiring) ---
 check(failures, "compiled CSS defines dark-mode custom properties") do
   css = File.read("#{SITE_DIR}/assets/css/main.css")

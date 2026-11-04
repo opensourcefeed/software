@@ -39,6 +39,10 @@
     groups.forEach(function (group) {
       var hasVisibleCard = !!group.querySelector('[data-software-card]:not([hidden])');
       group.hidden = !hasVisibleCard;
+
+      // Keep the category jump links in sync with what is visible
+      var jump = document.querySelector('[data-category-jump="' + group.getAttribute('data-category-group') + '"]');
+      if (jump) jump.hidden = !hasVisibleCard;
     });
 
     if (countEl) {

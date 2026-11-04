@@ -1,8 +1,19 @@
 ---
 layout: default
 ---
+{% assign type_label = "" %}
+{% if page.type == "open-source" %}
+  {% assign type_label = "Open Source" %}
+{% elsif page.type == "source-available" %}
+  {% assign type_label = "Source Available" %}
+{% elsif page.type == "proprietary" %}
+  {% assign type_label = "Proprietary" %}
+{% endif %}
+{% assign category_name = site.category_names[page.category] | default: page.category %}
+{% assign roundup_slug = site.roundup_pages[page.category] %}
+
 <article class="software-page">
-  <!-- 1. Header: logo, title, tagline, license badge, platform tags, website link -->
+  <!-- 1. Header: logo, title, tagline, type badge -->
   <header class="software-header">
     {% if page.logo %}
       <img src="{{ page.logo | relative_url }}"
@@ -10,97 +21,155 @@ layout: default
            class="software-header__logo"
            width="80" height="80"
            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-      <div class="software-header__logo software-header__logo--placeholder" style="display:none">
+      <div class="software-header__logo software-header__logo--placeholder" style="display:none" aria-hidden="true">
         {{ page.title | slice: 0 }}
       </div>
     {% else %}
-      <div class="software-header__logo software-header__logo--placeholder">
+      <div class="software-header__logo software-header__logo--placeholder" aria-hidden="true">
         {{ page.title | slice: 0 }}
       </div>
     {% endif %}
 
     <div class="software-header__info">
+      {% if type_label != "" %}
+        <span class="badge badge--{{ page.type }} software-header__badge">{{ type_label }}</span>
+      {% endif %}
       <h1 class="software-header__title">{{ page.title }}</h1>
       {% if page.tagline %}
         <p class="software-header__tagline">{{ page.tagline }}</p>
       {% endif %}
-
-      <div class="software-header__meta">
-        {% if page.type == "open-source" %}
-          <span class="badge badge--open-source">Open Source</span>
-        {% elsif page.type == "source-available" %}
-          <span class="badge badge--source-available">Source Available</span>
-        {% elsif page.type == "proprietary" %}
-          <span class="badge badge--proprietary">Proprietary</span>
-        {% endif %}
-
-        {% if page.license %}
-          <span class="badge badge--license">{{ page.license }}</span>
-        {% endif %}
-
-        {% if page.platforms %}
-          <ul class="tag-list">
-            {% for platform in page.platforms %}
-              <li class="tag">{{ platform }}</li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-      </div>
-
-      {% if page.website %}
-        <p class="software-header__website">
-          <a href="{{ page.website }}" rel="noopener noreferrer">Official website &rarr;</a>
-        </p>
-      {% endif %}
     </div>
   </header>
 
-  {% if page.featured_image %}
-    <img src="{{ '/assets/images/software-featured/' | append: page.featured_image | relative_url }}"
-         alt="{{ page.featured_image_alt | default: page.title }}"
-         class="software-featured-image"
-         width="1200" height="630"
-         fetchpriority="high">
-  {% endif %}
+  <div class="software-layout">
+    <!-- 2. At a glance: facts pulled from front matter only (sticky sidebar on desktop) -->
+    <aside class="software-facts" aria-labelledby="software-facts-title">
+      <h2 class="software-facts__title" id="software-facts-title">At a glance</h2>
+      <dl class="software-facts__list">
+        {% if type_label != "" %}
+          <div class="software-facts__row">
+            <dt>Type</dt>
+            <dd><span class="badge badge--{{ page.type }}">{{ type_label }}</span></dd>
+          </div>
+        {% endif %}
+        {% if page.category %}
+          <div class="software-facts__row">
+            <dt>Category</dt>
+            <dd>
+              {% if roundup_slug %}
+                <a href="{{ '/best-open-source-' | append: roundup_slug | append: '/' | relative_url }}">{{ category_name }}</a>
+              {% else %}
+                <a href="{{ '/' | relative_url }}#cat-{{ page.category }}">{{ category_name }}</a>
+              {% endif %}
+            </dd>
+          </div>
+        {% endif %}
+        {% if page.license %}
+          <div class="software-facts__row software-facts__row--wide">
+            <dt>License</dt>
+            <dd>{{ page.license }}</dd>
+          </div>
+        {% endif %}
+        {% if page.pricing %}
+          <div class="software-facts__row software-facts__row--wide">
+            <dt>Pricing</dt>
+            <dd>{{ page.pricing }}</dd>
+          </div>
+        {% endif %}
+        {% if page.developer %}
+          <div class="software-facts__row">
+            <dt>Developer</dt>
+            <dd>{{ page.developer }}</dd>
+          </div>
+        {% endif %}
+        {% if page.latest_version %}
+          <div class="software-facts__row">
+            <dt>Latest version</dt>
+            <dd>{{ page.latest_version }}</dd>
+          </div>
+        {% endif %}
+        {% if page.platforms %}
+          <div class="software-facts__row software-facts__row--wide">
+            <dt>Platforms</dt>
+            <dd>
+              <ul class="tag-list">
+                {% for platform in page.platforms %}
+                  <li class="tag">{{ platform }}</li>
+                {% endfor %}
+              </ul>
+            </dd>
+          </div>
+        {% endif %}
+        {% if page.last_modified_at %}
+          <div class="software-facts__row">
+            <dt>Page updated</dt>
+            <dd><time datetime="{{ page.last_modified_at | date: '%Y-%m-%d' }}">{{ page.last_modified_at | date: '%b %-d, %Y' }}</time></dd>
+          </div>
+        {% endif %}
+      </dl>
 
-  <!-- 2. Ad slot: below header -->
-  {% include ad.html slot="software-below-header" %}
+      <div class="software-facts__actions">
+        {% if page.website %}
+          <a href="{{ page.website }}" class="button button--primary" rel="noopener noreferrer">Official website <span aria-hidden="true">&#8599;</span></a>
+        {% endif %}
+        {% if page.repository %}
+          <a href="{{ page.repository }}" class="button button--secondary" rel="noopener noreferrer">Source code <span aria-hidden="true">&#8599;</span></a>
+        {% endif %}
+        {% if page.type == "proprietary" and page.has_alternatives %}
+          <a href="{{ '/alternative-to/' | append: page.slug | append: '/' | relative_url }}" class="button button--secondary">Open source alternatives &rarr;</a>
+        {% endif %}
+      </div>
+    </aside>
 
-  <!-- 3. Description: body content (feature breakdown, use cases, who it's for) -->
-  <div class="software-description">
-    {{ content }}
+    <div class="software-main">
+      {% if page.featured_image %}
+        <img src="{{ '/assets/images/software-featured/' | append: page.featured_image | relative_url }}"
+             alt="{{ page.featured_image_alt | default: page.title }}"
+             class="software-featured-image"
+             width="1200" height="630"
+             fetchpriority="high">
+      {% endif %}
+
+      <!-- 3. Ad slot: below header -->
+      {% include ad.html slot="software-below-header" %}
+
+      <!-- 4. Description: body content (feature breakdown, use cases, who it's for) -->
+      <div class="software-description">
+        {{ content }}
+      </div>
+
+      <!-- 5. Ad slot: mid-content -->
+      {% include ad.html slot="software-mid-content" %}
+
+      <!-- 6. Conditional CTA block -->
+      {% if page.type == "proprietary" and page.has_alternatives %}
+        <div class="cta-banner">
+          <p>Looking for free alternatives? &rarr; <a href="{{ '/alternative-to/' | append: page.slug | append: '/' | relative_url }}">Open source alternatives to {{ page.title }}</a></p>
+        </div>
+      {% elsif page.type == "open-source" and page.alternative_to.size > 0 or page.type == "source-available" and page.alternative_to.size > 0 %}
+        <div class="cta-banner cta-banner--alternative">
+          <p>This is a free alternative to:
+            {% for proprietary_slug in page.alternative_to %}
+              {% assign proprietary = site.softwares | where: "slug", proprietary_slug | first %}
+              {% if proprietary %}
+                <a href="{{ '/alternative-to/' | append: proprietary_slug | append: '/' | relative_url }}">{{ proprietary.title }}</a>{% unless forloop.last %}, {% endunless %}
+              {% endif %}
+            {% endfor %}
+          </p>
+        </div>
+      {% endif %}
+
+      {% if page.faq %}
+        {% include faq-section.html %}
+      {% endif %}
+
+      <!-- 7. Footer: last modified, back link -->
+      <footer>
+        {% if page.last_modified_at %}
+          <p class="last-modified">Last updated: {{ page.last_modified_at | date: '%B %d, %Y' }}</p>
+        {% endif %}
+        <a href="{{ '/' | relative_url }}" class="back-link">&larr; Back to Software Directory</a>
+      </footer>
+    </div>
   </div>
-
-  <!-- 4. Ad slot: mid-content -->
-  {% include ad.html slot="software-mid-content" %}
-
-  <!-- 5. Conditional CTA block -->
-  {% if page.type == "proprietary" and page.has_alternatives %}
-    <div class="cta-banner">
-      <p>Looking for free alternatives? &rarr; <a href="{{ '/alternative-to/' | append: page.slug | append: '/' | relative_url }}">Open source alternatives to {{ page.title }}</a></p>
-    </div>
-  {% elsif page.type == "open-source" and page.alternative_to.size > 0 or page.type == "source-available" and page.alternative_to.size > 0 %}
-    <div class="cta-banner cta-banner--alternative">
-      <p>This is a free alternative to:
-        {% for proprietary_slug in page.alternative_to %}
-          {% assign proprietary = site.softwares | where: "slug", proprietary_slug | first %}
-          {% if proprietary %}
-            <a href="{{ '/alternative-to/' | append: proprietary_slug | append: '/' | relative_url }}">{{ proprietary.title }}</a>{% unless forloop.last %}, {% endunless %}
-          {% endif %}
-        {% endfor %}
-      </p>
-    </div>
-  {% endif %}
-
-  {% if page.faq %}
-    {% include faq-section.html %}
-  {% endif %}
-
-  <!-- 6. Footer: last modified, back link -->
-  <footer>
-    {% if page.last_modified_at %}
-      <p class="last-modified">Last updated: {{ page.last_modified_at | date: '%B %d, %Y' }}</p>
-    {% endif %}
-    <a href="{{ '/' | relative_url }}" class="back-link">&larr; Back to Software Directory</a>
-  </footer>
 </article>

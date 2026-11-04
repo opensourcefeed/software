@@ -26,6 +26,8 @@ exclude:
   - docs
   - CLAUDE.md
   - "*.xlsx"
+  - scripts
+  - test
 
 # SASS configuration
 sass:

@@ -42,52 +42,7 @@ layout: default
       {% for alt_slug in page.alternatives %}
         {% assign alt = site.softwares | where: "slug", alt_slug | first %}
         {% if alt %}
-          <article class="card">
-            <div class="card__header">
-              {% if alt.logo %}
-                <img src="{{ alt.logo | relative_url }}"
-                     alt="{{ alt.title }} logo"
-                     class="card__logo"
-                     width="48" height="48"
-                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                <div class="card__logo card__logo--placeholder" style="display:none">
-                  {{ alt.title | slice: 0 }}
-                </div>
-              {% else %}
-                <div class="card__logo card__logo--placeholder">
-                  {{ alt.title | slice: 0 }}
-                </div>
-              {% endif %}
-              <div>
-                <h3 class="card__title">
-                  <a href="{{ alt.url | relative_url }}">{{ alt.title }}</a>
-                </h3>
-                {% if alt.tagline %}
-                  <p class="card__tagline">{{ alt.tagline }}</p>
-                {% endif %}
-              </div>
-            </div>
-
-            <p class="card__description">{{ alt.description }}</p>
-
-            <div class="card__meta">
-              {% if alt.license %}
-                <span class="badge badge--license">{{ alt.license }}</span>
-              {% endif %}
-
-              {% if alt.platforms %}
-                <ul class="tag-list">
-                  {% for platform in alt.platforms %}
-                    <li class="tag">{{ platform }}</li>
-                  {% endfor %}
-                </ul>
-              {% endif %}
-            </div>
-
-            <div class="card__footer">
-              <a href="{{ alt.url | relative_url }}">See full details &rarr;</a>
-            </div>
-          </article>
+          {% include software-card.html software=alt show_platforms=true show_footer=true %}
         {% endif %}
       {% endfor %}
     </div>

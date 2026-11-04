@@ -23,8 +23,8 @@ permalink: /
         <span class="hero__stat-label">Categories</span>
       </div>
       <div class="hero__stat">
-        <span class="hero__stat-value">Free</span>
-        <span class="hero__stat-label">Always</span>
+        <span class="hero__stat-value">{{ site.alternatives.size }}</span>
+        <span class="hero__stat-label">Alternatives guides</span>
       </div>
     </div>
   </div>
@@ -79,8 +79,23 @@ permalink: /
   <!-- Software Directory (grouped by category) -->
   <section class="section" data-directory-list>
     <h2 class="section__title">Directory</h2>
+
+    <!-- Category jump links (plain anchors; a single scrollable row, not a filter) -->
+    <nav class="category-nav" id="categories" aria-label="Jump to a category">
+      <ul class="category-nav__list">
+        {% for group in ordered_grouped %}
+          <li data-category-jump="{{ group.name }}">
+            <a class="category-nav__link" href="#cat-{{ group.name }}">
+              {% if site.category_names[group.name] %}{{ site.category_names[group.name] }}{% else %}{{ group.name | capitalize }}{% endif %}
+              <span class="category-nav__count">{{ group.items.size }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
     {% for group in ordered_grouped %}
-      <div class="category-group" data-category-group="{{ group.name }}">
+      <div class="category-group" id="cat-{{ group.name }}" data-category-group="{{ group.name }}">
         <h3 class="category-group__title">
           {% if site.category_names[group.name] %}
             {{ site.category_names[group.name] }}
@@ -96,6 +111,7 @@ permalink: /
             {% include software-card.html software=software %}
           {% endfor %}
         </div>
+        <a class="category-group__top" href="#categories">Back to categories <span aria-hidden="true">&uarr;</span></a>
       </div>
 
       <!-- Ad slot: after the first category group, out of the above-the-fold hero -->

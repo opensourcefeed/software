@@ -24,7 +24,7 @@
     transition: color $transition-fast;
 
     &:hover {
-      color: $color-primary;
+      color: var(--color-primary);
       text-decoration: none;
     }
   }
@@ -122,7 +122,7 @@
     &--placeholder {
       @include flex-center;
       background-color: var(--color-primary-light);
-      color: $color-primary;
+      color: var(--color-primary);
       font-weight: $font-weight-bold;
       font-size: $font-size-xl;
     }
@@ -307,25 +307,36 @@
 
 // --- Software page header ---
 .software-header {
-  @include flex-row($gap: $spacing-lg);
-  align-items: flex-start;
-  flex-wrap: wrap;
-  margin-bottom: $spacing-xl;
-  padding-bottom: $spacing-xl;
-  border-bottom: 1px solid var(--color-border);
+  @include flex-row($gap: $spacing-md, $wrap: false);
+  align-items: center;
+  margin-bottom: $spacing-lg;
+
+  @include respond-to(tablet) {
+    gap: $spacing-lg;
+    margin-bottom: $spacing-xl;
+  }
 
   &__logo {
-    width: 80px;
-    height: 80px;
-    border-radius: $radius-md;
+    width: 64px;
+    height: 64px;
+    padding: 10px;
+    border-radius: $radius-lg;
     object-fit: contain;
     flex-shrink: 0;
-    background-color: var(--color-bg-alt);
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-card);
+
+    @include respond-to(tablet) {
+      width: 96px;
+      height: 96px;
+      padding: 14px;
+    }
 
     &--placeholder {
       @include flex-center;
       background-color: var(--color-primary-light);
-      color: $color-primary;
+      color: var(--color-primary);
       font-weight: $font-weight-bold;
       font-size: $font-size-2xl;
     }
@@ -333,28 +344,196 @@
 
   &__info {
     flex: 1;
-    min-width: 200px;
+    min-width: 0;
+  }
+
+  &__badge {
+    margin-bottom: $spacing-sm;
   }
 
   &__title {
-    font-size: $font-size-3xl;
+    font-size: $font-size-2xl;
     margin: 0 0 $spacing-xs 0;
+    overflow-wrap: anywhere;
+
+    @include respond-to(tablet) {
+      font-size: $font-size-4xl;
+    }
   }
 
   &__tagline {
     color: var(--color-text-light);
-    font-size: $font-size-lg;
+    font-size: $font-size-base;
+    margin: 0;
+
+    @include respond-to(tablet) {
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+// --- Software page: two-column layout (facts sidebar on desktop) ---
+.software-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: $spacing-lg;
+
+  @include respond-to(desktop) {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    grid-template-areas: "main facts";
+    gap: $spacing-2xl;
+    align-items: start;
+
+    .software-facts { grid-area: facts; }
+    .software-main { grid-area: main; }
+  }
+}
+
+.software-main {
+  min-width: 0;
+
+  > .ad-container:first-child,
+  > .software-featured-image + .ad-container {
+    margin-top: 0;
+  }
+}
+
+// --- "At a glance" facts card ---
+.software-facts {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: $radius-lg;
+  box-shadow: var(--shadow-card);
+  padding: $spacing-md;
+
+  @include respond-to(tablet) {
+    padding: $spacing-lg;
+  }
+
+  @include respond-to(desktop) {
+    position: sticky;
+    top: 5rem;
+  }
+
+  &__title {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-light);
     margin: 0 0 $spacing-md 0;
   }
 
-  &__meta {
-    @include flex-row($gap: $spacing-md);
-    align-items: center;
-    flex-wrap: wrap;
+  // Mobile/tablet: two-up grid of short facts; desktop sidebar: single column
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: $spacing-md;
+    margin: 0;
+
+    @include respond-to(tablet) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    @include respond-to(desktop) {
+      grid-template-columns: minmax(0, 1fr);
+    }
   }
 
-  &__website {
-    margin-top: $spacing-sm;
+  &__row {
+    min-width: 0;
+
+    // Long values (license text, platform tags): full row on phones,
+    // half the 4-column grid on tablets, normal row in the desktop sidebar
+    &--wide {
+      grid-column: 1 / -1;
+
+      @include respond-to(tablet) {
+        grid-column: span 2;
+      }
+
+      @include respond-to(desktop) {
+        grid-column: auto;
+      }
+    }
+
+    dt {
+      font-size: $font-size-xs;
+      color: var(--color-text-light);
+      margin-bottom: 2px;
+    }
+
+    dd {
+      margin: 0;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-medium;
+      color: var(--color-text);
+      overflow-wrap: anywhere;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    margin-top: $spacing-lg;
+    padding-top: $spacing-md;
+    border-top: 1px solid var(--color-border);
+
+    @include respond-to(tablet) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @include respond-to(desktop) {
+      flex-direction: column;
+    }
+  }
+}
+
+// --- Buttons ---
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-xs;
+  min-height: 44px;
+  padding: $spacing-sm $spacing-lg;
+  border-radius: $radius-md;
+  border: 1px solid transparent;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  text-align: center;
+  transition: background-color $transition-fast, border-color $transition-fast, color $transition-fast;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    color: #fff;
+
+    &:hover {
+      background-color: $color-primary-dark;
+      color: #fff;
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    border-color: var(--color-border);
+    color: var(--color-text);
+
+    &:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
   }
 }
 
@@ -378,7 +557,7 @@
   color: var(--color-text-light);
 
   &:hover {
-    color: $color-primary;
+    color: var(--color-primary);
   }
 }
 

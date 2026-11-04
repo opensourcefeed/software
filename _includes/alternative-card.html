@@ -17,6 +17,7 @@
            alt="{{ proprietary.title }} logo"
            class="card__logo"
            width="48" height="48"
+           loading="lazy" decoding="async"
            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
       <div class="card__logo card__logo--placeholder" style="display:none">
         {{ proprietary.title | slice: 0 }}

@@ -19,19 +19,21 @@
 }
 
 .site-header__inner {
-  @include flex-row($gap: $spacing-md);
+  @include flex-row($gap: $spacing-sm);
   align-items: center;
   padding-block: $spacing-sm;
   padding-inline: $container-padding;
   flex-wrap: nowrap;
 
   @include respond-to(tablet) {
+    gap: $spacing-md;
     padding-inline: $spacing-lg;
   }
 }
 
 .site-header__logo {
-  @include flex-row($gap: $spacing-sm);
+  @include flex-row($gap: $spacing-sm, $wrap: false);
+  flex-shrink: 0;
   align-items: center;
   font-size: $font-size-lg;
   font-weight: $font-weight-bold;
@@ -344,8 +346,10 @@
 }
 
 // Desktop (compact): inline nav with hover dropdowns — reduced spacing to fit
-// 1200px–1439px viewports on a single line. Full spacing restored at 2xl.
-@include respond-to(xl) {
+// 1024px–1439px viewports on a single line. Social icons are hidden below xl
+// (they are repeated in the footer) so the nav fits at 1024px. Full spacing
+// restored at 2xl.
+@include respond-to(desktop) {
   .site-header__inner {
     gap: $spacing-sm;
   }
@@ -373,6 +377,7 @@
     @include flex-row($gap: $spacing-xs, $wrap: false);
     align-items: center;
     margin: 0;
+    white-space: nowrap;
 
     a {
       padding: $spacing-xs $spacing-sm;
@@ -448,6 +453,16 @@
   .social-icons img {
     height: 20px;
   }
+
+  .site-header__social {
+    display: none;
+  }
+}
+
+@include respond-to(xl) {
+  .site-header__social {
+    display: flex;
+  }
 }
 
 // Desktop (full): restore standard spacing at 1440px+
@@ -460,26 +475,26 @@
     gap: 0.25rem;
 
     a {
-      padding: $spacing-sm $spacing-md;
+      padding: $spacing-sm $spacing-sm;
       font-size: $font-size-sm;
     }
   }
 
   .site-header__dropdown-toggle {
-    padding: $spacing-sm $spacing-md;
+    padding: $spacing-sm $spacing-sm;
     font-size: $font-size-sm;
   }
 
   .site-header__social {
-    gap: $spacing-sm;
+    gap: $spacing-xs;
 
     a {
-      padding: $spacing-xs;
+      padding: 2px;
     }
   }
 
   .social-icons img {
-    height: 25px;
+    height: 22px;
   }
 }
 
@@ -524,6 +539,10 @@
   a {
     font-size: $font-size-sm;
   }
+
+  &--social a {
+    font-size: $font-size-xs;
+  }
 }
 
 // --- Main content area ---
@@ -560,7 +579,7 @@
   font-size: $font-size-2xl;
   margin-bottom: $spacing-lg;
   padding-bottom: $spacing-sm;
-  border-bottom: 2px solid $color-border;
+  border-bottom: 2px solid var(--color-border);
 }
 
 // --- Table scroll wrapper (responsive tables) ---
