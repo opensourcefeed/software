@@ -6,7 +6,7 @@ tagline: "KDE's universal document viewer"
 type: open-source
 license: GPL-2.0-or-later
 website: https://okular.kde.org
-platforms: [Linux, Windows, macOS, *BSD]
+platforms: [Linux, Windows, macOS, "*BSD"]
 category: pdf-tools
 logo: /assets/images/software/okular.svg
 alternative_to:

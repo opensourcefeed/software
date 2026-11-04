@@ -13,7 +13,7 @@ alternative_to:
   - windows-media-player
   - quicktime
 description: "VLC Media Player is a free, open source multimedia player by VideoLAN that plays almost every video and audio format on all major platforms."
-last_modified_at: 2026-08-06
+last_modified_at: 2026-11-04
 ---
 
 ## Overview
@@ -24,7 +24,7 @@ VLC is maintained by VideoLAN, a non-profit organization, and released under the
 
 ## Is VLC Open Source?
 
-Yes. VLC is released under the GNU LGPL v2.1 or later (some bundled modules use GPL), maintained by the non-profit VideoLAN organization with source on [GitHub](https://github.com/videolan/vlc). LGPL is more permissive than the GPL that [Signal](/software/signal/) or [Element](/software/element/) use — it's why VLC's core libraries (libVLC) can be embedded in other commercial applications without those applications having to open their own source.
+Yes. The VLC application is released under the GNU GPL version 2 or later and maintained by the non-profit VideoLAN organization, with source code hosted on VideoLAN's own [GitLab](https://code.videolan.org/videolan/vlc) (mirrored on [GitHub](https://github.com/videolan/vlc)). Its playback engine, libVLC, and most of its modules are licensed differently: VideoLAN relicensed them to the more permissive LGPL version 2.1 or later in 2011–2012. That split is why other applications, including commercial ones, can embed libVLC without releasing their own source code, while VLC itself stays under the GPL. By comparison, [Signal](/software/signal/) and [Element](/software/element/) use the AGPL-3.0, a stricter copyleft license that also covers software offered over a network.
 
 ## Key Features
 
@@ -33,7 +33,7 @@ Yes. VLC is released under the GNU LGPL v2.1 or later (some bundled modules use 
 - **Subtitle support** — Loads external subtitle files (SRT, ASS, SSA) and handles embedded subtitles in MKV and MP4
 - **Video and audio filters** — Real-time equalizer, audio normalization, video deinterlacing, and color correction
 - **Playlist and media library** — Manages local files, podcasts, and internet radio streams in a unified library
-- **Cross-platform** — Identical feature set across Windows, macOS, Linux, Android, and iOS
+- **Cross-platform** — Runs on Windows, macOS, Linux, Android, iOS, and ChromeOS; the mobile apps focus on playback and omit some desktop features such as streaming-server mode and advanced conversion
 
 ## Use Cases
 
