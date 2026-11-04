@@ -6,6 +6,7 @@ tagline: "Browser-based collaborative interface design tool"
 type: proprietary
 license: Proprietary
 website: https://www.figma.com
+developer: "Figma, Inc."
 platforms: [Windows, macOS, Linux via web]
 category: design
 logo: /assets/images/software/figma.svg

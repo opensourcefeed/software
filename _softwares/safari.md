@@ -4,14 +4,16 @@ title: "Safari"
 slug: safari
 tagline: "Proprietary browser built into macOS and iOS"
 type: proprietary
-license: Proprietary (built on open source WebKit)
+license: Proprietary
+license_note: "Built on the open source WebKit engine."
 website: https://www.apple.com/safari/
+developer: "Apple"
 platforms: [macOS, iOS]
 category: web-browser
 logo: /assets/images/software/safari.svg
 alternative_to: []
 has_alternatives: true
-description: "Safari is Apple's proprietary default browser for macOS and iOS, built on the open source WebKit engine but closed source itself and unavailable outside Apple platforms."
+description: "Safari is Apple's proprietary default browser for macOS and iOS, built on the open source WebKit engine but closed source and unavailable elsewhere."
 featured_image: safari.webp
 last_modified_at: 2026-09-17
 faq:

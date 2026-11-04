@@ -6,12 +6,13 @@ tagline: "Proprietary drag-and-drop design platform"
 type: proprietary
 license: Proprietary
 website: https://www.canva.com
+developer: "Canva"
 platforms: [Windows, macOS, Linux via web, Android, iOS]
 category: design
 logo: /assets/images/software/canva.svg
 alternative_to: []
 has_alternatives: true
-description: "Canva is a proprietary, cloud-hosted design platform built around drag-and-drop templates for social media graphics, presentations, and print materials, rather than freeform illustration tools."
+description: "Canva is a proprietary, cloud-hosted design platform built on drag-and-drop templates for social graphics, presentations, and print, not freeform illustration."
 last_modified_at: 2026-09-16
 faq:
   - question: "Is Canva open source?"

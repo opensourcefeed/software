@@ -6,12 +6,13 @@ tagline: "Professional 3D modeling, animation, and rendering software"
 type: proprietary
 license: Proprietary
 website: https://www.autodesk.com/products/maya
+developer: "Autodesk"
 platforms: [Windows, macOS, Linux]
 category: 3d-modeling
 logo: /assets/images/software/maya.svg
 alternative_to: []
 has_alternatives: true
-description: "Autodesk Maya is a professional 3D computer graphics application used for modeling, rigging, animation, simulation, and rendering in film, TV, and game production."
+description: "Autodesk Maya is professional 3D software for modeling, rigging, animation, simulation, and rendering in film, TV, and game production."
 last_modified_at: 2026-08-01
 ---
 

@@ -6,6 +6,7 @@ tagline: "Suite of productivity apps including Word, Excel, and PowerPoint"
 type: proprietary
 license: Proprietary
 website: https://www.microsoft.com/en-us/microsoft-365
+developer: "Microsoft"
 platforms: [Windows, macOS, Linux via web, Android, iOS]
 category: office-suite
 logo: /assets/images/software/microsoft-office.svg

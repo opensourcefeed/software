@@ -6,6 +6,11 @@ tagline: "Independent, open source web browser"
 type: open-source
 license: MPL-2.0
 website: https://www.mozilla.org/firefox/
+developer: "Mozilla"
+repository: https://github.com/mozilla-firefox/firefox
+latest_version: "159.0.1"
+version_tag: '^FIREFOX_(\d+_\d+(?:_\d+)?)_RELEASE$'
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS, Android, iOS]
 category: web-browser
 logo: /assets/images/software/firefox.svg
@@ -13,7 +18,7 @@ alternative_to:
   - chrome
   - edge
   - safari
-description: "Firefox is a free, open source web browser developed by the Mozilla Foundation, built on its own Gecko engine and offering strong privacy controls as an alternative to Chromium-based browsers."
+description: "Firefox is a free, open source web browser from Mozilla, built on its own Gecko engine, with strong privacy controls and an alternative to Chromium browsers."
 featured_image: firefox.webp
 faq:
   - question: "Is Firefox open source?"

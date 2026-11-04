@@ -6,6 +6,10 @@ tagline: "Simple GTK4 frontend for mpv"
 type: open-source
 license: GPL-3.0
 website: https://celluloid-player.github.io/
+developer: "Celluloid contributors"
+repository: https://github.com/celluloid-player/celluloid
+latest_version: "0.30"
+version_checked_at: 2026-11-04
 platforms: [Linux]
 category: media-player
 logo: /assets/images/software/celluloid.png

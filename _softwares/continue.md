@@ -6,6 +6,8 @@ tagline: "Open source coding agent for VS Code and JetBrains"
 type: open-source
 license: Apache-2.0
 website: https://continue.dev
+developer: "Continue Dev, Inc."
+repository: https://github.com/continuedev/continue
 platforms: [Linux, Windows, macOS]
 category: development
 logo: /assets/images/software/continue.png

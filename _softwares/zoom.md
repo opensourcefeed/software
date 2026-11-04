@@ -6,6 +6,7 @@ tagline: "Video conferencing and online meetings"
 type: proprietary
 license: Proprietary
 website: https://zoom.us
+developer: "Zoom Communications"
 platforms: [Linux, Windows, macOS, Android, iOS]
 category: video-conferencing
 logo: /assets/images/software/zoom.png

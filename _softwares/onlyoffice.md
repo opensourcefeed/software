@@ -6,8 +6,13 @@ tagline: "Collaborative office suite compatible with Microsoft Office formats"
 type: open-source
 license: AGPL-3.0
 website: https://www.onlyoffice.com
+developer: "Ascensio System SIA"
+repository: https://github.com/ONLYOFFICE/DesktopEditors
+latest_version: "10.0.0"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: office-suite
+self_hostable: true
 logo: /assets/images/software/onlyoffice.svg
 alternative_to:
   - microsoft-office

@@ -6,6 +6,7 @@ tagline: "Cross-platform proprietary game engine"
 type: proprietary
 license: Proprietary
 website: https://unity.com
+developer: "Unity Technologies"
 platforms: [Windows, macOS, Linux]
 category: game-development
 logo: /assets/images/software/unity.svg

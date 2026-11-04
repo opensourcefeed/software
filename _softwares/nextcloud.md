@@ -6,14 +6,19 @@ tagline: "Self-hosted file sync, share, and collaboration platform"
 type: open-source
 license: AGPL-3.0-or-later
 website: https://nextcloud.com
+developer: "Nextcloud GmbH"
+repository: https://github.com/nextcloud/server
+latest_version: "35.0.2"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: cloud-storage
+self_hostable: true
 logo: /assets/images/software/nextcloud.svg
 alternative_to:
   - dropbox
   - google-drive
   - onedrive
-description: "Nextcloud is a self-hosted file sync, share, and collaboration platform offering an open source alternative to Dropbox, Google Drive, OneDrive, and Microsoft 365."
+description: "Nextcloud is a self-hosted file sync, sharing, and collaboration platform, and an open source alternative to Dropbox, Google Drive, OneDrive, and Microsoft 365."
 featured_image: nextcloud.webp
 last_modified_at: 2026-09-17
 ---

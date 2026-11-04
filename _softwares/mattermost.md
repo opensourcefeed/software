@@ -4,15 +4,21 @@ title: "Mattermost"
 slug: mattermost
 tagline: "Self-hosted team messaging for developers and enterprises"
 type: open-source
-license: "Team Edition: MIT · Enterprise Edition: proprietary commercial license"
+license: MIT
+license_note: "Team Edition is MIT-licensed; Enterprise Edition uses a proprietary commercial license."
 website: https://mattermost.com
+developer: "Mattermost, Inc."
+repository: https://github.com/mattermost/mattermost
+latest_version: "12.0.2"
+version_checked_at: 2026-11-04
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: communication
+self_hostable: true
 logo: /assets/images/software/mattermost.svg
 alternative_to:
   - slack
   - microsoft-teams
-description: "Mattermost is a self-hosted, open source team messaging platform built for developers and enterprises, offering an MIT-licensed core with an optional paid Enterprise Edition."
+description: "Mattermost is an open source, self-hosted team messaging platform for developers and enterprises, with an MIT-licensed core and a paid Enterprise Edition."
 last_modified_at: 2026-08-01
 ---
 

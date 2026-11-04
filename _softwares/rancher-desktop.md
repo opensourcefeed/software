@@ -7,12 +7,16 @@ tagline: "Open source Kubernetes and container management for desktop"
 type: open-source
 license: Apache-2.0
 website: https://rancherdesktop.io
+developer: "SUSE"
+repository: https://github.com/rancher-sandbox/rancher-desktop
+latest_version: "1.24.0"
+version_checked_at: 2026-11-04
 platforms: [Windows, macOS, Linux]
 category: containerization
 logo: /assets/images/software/rancher-desktop.svg
 alternative_to:
   - docker-desktop
-description: "Rancher Desktop is a free, Apache-2.0-licensed desktop application from SUSE that bundles a local Kubernetes cluster (k3s) and a container engine, offering an open source alternative to Docker Desktop with no licensing fees."
+description: "Rancher Desktop is SUSE's free, Apache-2.0 desktop app bundling local Kubernetes (k3s) and a container engine, an open source Docker Desktop alternative."
 featured_image: rancher-desktop.webp
 last_modified_at: 2026-09-25
 faq:

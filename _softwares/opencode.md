@@ -6,12 +6,16 @@ tagline: "Open source AI coding agent for the terminal, desktop, and IDE"
 type: open-source
 license: MIT
 website: https://opencode.ai
+developer: "Anomaly"
+repository: https://github.com/anomalyco/opencode
+latest_version: "2.2.5"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: development
 logo: /assets/images/software/opencode.svg
 alternative_to:
   - claude-code
-description: "OpenCode is a free, MIT-licensed AI coding agent with a terminal interface, desktop app, and IDE integration that works with 75+ model providers, local models, and existing ChatGPT, GitHub Copilot, or GitLab Duo subscriptions."
+description: "OpenCode is a free, MIT-licensed AI coding agent for the terminal, desktop, and IDEs that works with 75+ model providers, local models, and existing plans."
 last_modified_at: 2026-09-25
 faq:
   - question: "Is OpenCode free?"

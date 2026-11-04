@@ -6,12 +6,13 @@ tagline: "Proprietary freeware PDF reader and annotator"
 type: proprietary
 license: Proprietary
 website: https://xodo.com
+developer: "Apryse"
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: pdf-tools
 logo: /assets/images/software/xodo.svg
 alternative_to: []
 has_alternatives: true
-description: "Xodo is a free, closed source PDF reader and annotator owned by Apryse, offering cross-platform viewing, markup, and form-filling without publishing its source code."
+description: "Xodo is a free, closed source PDF reader and annotator owned by Apryse, with cross-platform viewing, markup, and form-filling."
 featured_image: xodo.webp
 last_modified_at: 2026-09-17
 faq:

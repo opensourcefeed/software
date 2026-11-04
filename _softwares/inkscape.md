@@ -6,13 +6,18 @@ tagline: "Free and open source vector graphics editor"
 type: open-source
 license: GPL-3.0-or-later
 website: https://inkscape.org
+developer: "Inkscape Project"
+repository: https://gitlab.com/inkscape/inkscape
+latest_version: "1.4.4"
+version_tag: '^INKSCAPE_(\d+_\d+(?:_\d+)?)$'
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: image-editing
 logo: /assets/images/software/inkscape.svg
 alternative_to:
   - illustrator
   - canva
-description: "Inkscape is a free, open source vector graphics editor built around the SVG standard, offering professional drawing, illustration, and logo design tools as an alternative to Adobe Illustrator."
+description: "Inkscape is a free, open source vector graphics editor built around SVG, with professional illustration and logo design tools, and an Illustrator alternative."
 featured_image: inkscape.webp
 last_modified_at: 2026-09-17
 ---

@@ -6,12 +6,17 @@ tagline: "Terminal-based BitTorrent client for servers and seedboxes"
 type: open-source
 license: GPL-2.0
 website: https://github.com/rakshasa/rtorrent
+developer: "Jari Sundell"
+repository: https://github.com/rakshasa/rtorrent
+latest_version: "0.16.27"
+version_checked_at: 2026-11-04
 platforms: [Linux, macOS]
 category: torrent-client
+self_hostable: true
 logo: /assets/images/software/rtorrent.svg
 alternative_to:
   - utorrent
-description: "rTorrent is a free, open source, text-based BitTorrent client that runs entirely in the terminal, commonly paired with the ruTorrent web front end for remote management on seedboxes and headless servers."
+description: "rTorrent is a free, open source terminal BitTorrent client, often paired with the ruTorrent web front end to manage seedboxes and headless servers."
 last_modified_at: 2026-08-11
 ---
 

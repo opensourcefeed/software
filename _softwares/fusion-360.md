@@ -4,14 +4,16 @@ title: "Autodesk Fusion 360"
 slug: fusion-360
 tagline: "Cloud-connected 3D CAD, CAM, and simulation software"
 type: proprietary
-license: Proprietary (limited free tier for hobbyists)
+license: Proprietary
+license_note: "Limited free tier for hobbyists."
 website: https://www.autodesk.com/products/fusion-360
+developer: "Autodesk"
 platforms: [Windows, macOS]
 category: cad
 logo: /assets/images/software/fusion-360.svg
 alternative_to: []
 has_alternatives: true
-description: "Autodesk Fusion 360 is a proprietary, cloud-connected CAD/CAM/simulation platform popular with makers and product designers, requiring an Autodesk account and subscription."
+description: "Autodesk Fusion 360 is a proprietary, cloud-connected CAD/CAM and simulation platform popular with makers, requiring an Autodesk account and subscription."
 last_modified_at: 2026-08-01
 ---
 

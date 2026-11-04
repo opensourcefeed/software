@@ -4,14 +4,19 @@ title: "QEMU/KVM"
 slug: qemu-kvm
 tagline: "Open source Linux virtualization built on the kernel's KVM hypervisor"
 type: open-source
-license: "GPL-2.0-or-later (QEMU); GPL-2.0 (KVM kernel module)"
+license: GPL-2.0-or-later
+license_note: "QEMU is GPL-2.0-or-later; the KVM kernel module is GPL-2.0."
 website: https://www.qemu.org
+developer: "QEMU project"
+repository: https://gitlab.com/qemu-project/qemu
+latest_version: "11.1.3"
+version_checked_at: 2026-11-04
 platforms: [Linux]
 category: virtualization
 logo: /assets/images/software/qemu-kvm.svg
 alternative_to:
   - vmware-workstation
-description: "QEMU/KVM pairs the Linux kernel's built-in KVM hypervisor with the open source QEMU emulator for near-native-speed virtualization, offered as a free, source-available alternative to VMware Workstation."
+description: "QEMU/KVM pairs the Linux kernel's KVM hypervisor with the open source QEMU emulator for near-native virtualization, and a free VMware Workstation alternative."
 faq:
   - question: "What is the difference between QEMU and KVM?"
     answer: "KVM is a Linux kernel module that turns the kernel into a type-1 hypervisor, providing the hardware-accelerated virtualization layer. QEMU is a separate, general-purpose machine emulator that provides virtual devices and can use KVM as a backend to run guest operating systems at near-native speed, rather than emulating the CPU in software."

@@ -4,14 +4,16 @@ title: "Obsidian"
 slug: obsidian
 tagline: "Proprietary note-taking app built on local Markdown files"
 type: proprietary
-license: Proprietary (free for personal use)
+license: Proprietary
+license_note: "Free for personal use."
 website: https://obsidian.md
+developer: "Dynalist Inc."
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: note-taking
 logo: /assets/images/software/obsidian.svg
 alternative_to: []
 has_alternatives: true
-description: "Obsidian is a closed source note-taking app that stores notes as local Markdown files with bi-directional linking, free for personal use but with proprietary sync and publishing add-ons."
+description: "Obsidian is a closed source note-taking app that keeps notes as local Markdown files with bi-directional links, free for personal use, with paid add-ons."
 last_modified_at: 2026-08-01
 ---
 

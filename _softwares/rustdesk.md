@@ -6,14 +6,19 @@ tagline: "Open source, self-hostable remote desktop software"
 type: open-source
 license: AGPL-3.0
 website: https://rustdesk.com
+developer: "Purslane Ltd"
+repository: https://github.com/rustdesk/rustdesk
+latest_version: "1.5.1"
+version_checked_at: 2026-11-04
 platforms: [Windows, macOS, Linux, Android, iOS, Web]
 category: remote-desktop
+self_hostable: true
 logo: /assets/images/software/rustdesk.svg
 alternative_to:
   - anydesk
   - nomachine
   - teamviewer
-description: "RustDesk is an open source remote desktop application written in Rust, designed for self-hosting your own relay server as a free, auditable alternative to AnyDesk, NoMachine, and TeamViewer."
+description: "RustDesk is an open source remote desktop app written in Rust that you can self-host with your own relay server, an alternative to AnyDesk and TeamViewer."
 featured_image: rustdesk.webp
 last_modified_at: 2026-09-18
 ---

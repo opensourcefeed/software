@@ -4,14 +4,16 @@ title: "Microsoft Edge"
 slug: edge
 tagline: "Proprietary browser built on Chromium, bundled with Windows"
 type: proprietary
-license: Proprietary (built on open source Chromium)
+license: Proprietary
+license_note: "Built on the open source Chromium project."
 website: https://www.microsoft.com/edge
+developer: "Microsoft"
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: web-browser
 logo: /assets/images/software/edge.svg
 alternative_to: []
 has_alternatives: true
-description: "Microsoft Edge is a proprietary web browser built on Chromium, bundled as the default browser on Windows and layered with Microsoft account sync and Copilot AI features."
+description: "Microsoft Edge is a proprietary Chromium-based browser, the default on Windows, with Microsoft account sync and Copilot AI features built in."
 featured_image: edge.webp
 last_modified_at: 2026-09-17
 ---

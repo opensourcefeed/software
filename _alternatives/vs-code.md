@@ -1,15 +1,21 @@
 ---
 layout: alternative-to
 title: "Open Source Alternatives to Visual Studio Code"
+seo_title: "Open Source Alternatives to Visual Studio Code"
 slug: vs-code
 proprietary_slug: vs-code
 alternatives:
-  - vscodium
-  - neovim
-  - zed
-  - pulsar
-description: "Best open source alternatives to Visual Studio Code. Editors without Microsoft's telemetry or proprietary marketplace restrictions, from a drop-in VS Code build to entirely different editing paradigms."
-last_modified_at: 2026-09-05
+  - slug: vscodium
+    best_for: "VS Code without telemetry"
+  - slug: neovim
+    best_for: "Modal, keyboard-driven editing in the terminal"
+  - slug: zed
+    best_for: "Fast editing with built-in collaboration"
+  - slug: pulsar
+    best_for: "Former Atom users"
+description: "Open source alternatives to VS Code without Microsoft's telemetry or marketplace restrictions, from a drop-in VS Code build to entirely different editors."
+verdict: "[VSCodium](/software/vscodium/) is the drop-in open source alternative to VS Code: the same editor without Microsoft's telemetry or branding. [Neovim](/software/neovim/), [Zed](/software/zed/), and [Pulsar](/software/pulsar/) offer different ways of working."
+last_modified_at: 2026-11-04
 comparison:
   columns: ["Platforms", "Interface", "Extension Ecosystem", "Best For"]
   rows:

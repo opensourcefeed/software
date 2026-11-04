@@ -4,8 +4,14 @@ title: "Mullvad VPN"
 slug: mullvad
 tagline: "Privacy-first VPN with no account or email required"
 type: open-source
-license: GPL-3.0 (client apps)
+license: GPL-3.0
+license_note: "Covers the client apps."
 website: https://mullvad.net
+developer: "Mullvad VPN AB"
+repository: https://github.com/mullvad/mullvadvpn-app
+latest_version: "2026.5"
+version_tag: '^(\d{4}\.\d+)$'
+version_checked_at: 2026-11-04
 logo: /assets/images/software/mullvad.svg
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: vpn

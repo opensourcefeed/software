@@ -5,14 +5,16 @@ seo_title: "Is Unreal Engine Open Source? Source-Available Explained"
 slug: unreal-engine
 tagline: "Proprietary high-fidelity game engine from Epic Games"
 type: proprietary
-license: Proprietary (source-available, royalty-based)
+license: Proprietary
+license_note: "Source-available, with a royalty on commercial revenue above a threshold."
 website: https://www.unrealengine.com
+developer: "Epic Games"
 platforms: [Windows, macOS, Linux]
 category: game-development
 logo: /assets/images/software/unreal-engine.svg
 alternative_to: []
 has_alternatives: true
-description: "Unreal Engine is Epic Games' proprietary, source-available game engine known for high-fidelity 3D rendering, distributed free of upfront cost but with a royalty on commercial revenue above a threshold."
+description: "Unreal Engine is Epic Games' proprietary, source-available engine for high-fidelity 3D, free upfront with a royalty on commercial revenue above a threshold."
 last_modified_at: 2026-09-25
 faq:
   - question: "Is Unreal Engine open source?"

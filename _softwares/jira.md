@@ -6,6 +6,7 @@ tagline: "Proprietary issue tracking and agile project management"
 type: proprietary
 license: Proprietary
 website: https://www.atlassian.com/software/jira
+developer: "Atlassian"
 platforms: [Windows, macOS, Linux via web, Android, iOS]
 category: project-management
 logo: /assets/images/software/jira.svg

@@ -6,8 +6,13 @@ tagline: "Free and open source 2D CAD application"
 type: open-source
 license: GPL-2.0
 website: https://librecad.org
+developer: "LibreCAD community"
+repository: https://github.com/LibreCAD/LibreCAD
+latest_version: "2.2.1.6"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: cad
+logo: /assets/images/software/librecad.svg
 alternative_to:
   - autocad
 description: "LibreCAD is a free, open source 2D computer-aided design application for technical drawing, offering a lightweight alternative to AutoCAD's 2D drafting tools."

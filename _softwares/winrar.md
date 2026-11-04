@@ -4,14 +4,16 @@ title: "WinRAR"
 slug: winrar
 tagline: "Trialware file archiver and RAR/ZIP compression tool for Windows"
 type: proprietary
-license: "Trialware (unlimited-length evaluation; $29 one-time license for continued use without reminder screens)"
+license: Proprietary
+license_note: "Trialware: the evaluation never expires, and a $29 one-time license removes the reminder screens."
 website: https://www.win-rar.com
+developer: "RARLAB"
 platforms: [Windows]
 category: file-compression
 logo: /assets/images/software/winrar.svg
 alternative_to: []
 has_alternatives: true
-description: "WinRAR is a proprietary Windows file archiver from RARLAB, best known for creating and extracting RAR and ZIP archives, distributed as trialware that keeps working indefinitely but nags for a $29 license after a 40-day evaluation period."
+description: "WinRAR is RARLAB's proprietary Windows archiver for RAR and ZIP, sold as trialware that keeps working after its 40-day trial but nags for a $29 license."
 faq:
   - question: "Is WinRAR actually free?"
     answer: "WinRAR is trialware, not free software. After its 40-day evaluation period, it keeps working fully but shows a reminder screen on launch asking you to buy a $29 single-user license. There is no hard cutoff that disables the program, which leads many users to run it indefinitely without paying."

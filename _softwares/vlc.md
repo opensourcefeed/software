@@ -6,6 +6,10 @@ tagline: "Free and open source cross-platform multimedia player"
 type: open-source
 license: GPL-2.0-or-later
 website: https://www.videolan.org/vlc/
+developer: "VideoLAN"
+repository: https://code.videolan.org/videolan/vlc
+latest_version: "3.0.24"
+version_checked_at: 2026-11-04
 platforms: [Windows, macOS, Linux, Android, iOS, ChromeOS]
 category: media-player
 logo: /assets/images/software/vlc.png

@@ -6,12 +6,17 @@ tagline: "Open source workspace for documents, wikis, and databases"
 type: open-source
 license: AGPL-3.0
 website: https://appflowy.com
+developer: "AppFlowy"
+repository: https://github.com/AppFlowy-IO/AppFlowy
+latest_version: "0.15.0"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS, Android, iOS, Web]
 category: note-taking
+self_hostable: true
 logo: /assets/images/software/appflowy.svg
 alternative_to:
   - notion
-description: "AppFlowy is a free, AGPL-3.0-licensed workspace app for documents, wikis, and databases with grid, board, and calendar views, built in Flutter and Rust and usable offline or self-hosted."
+description: "AppFlowy is a free, AGPL-3.0 workspace for docs, wikis, and databases with grid, board, and calendar views, usable offline or self-hosted."
 last_modified_at: 2026-09-25
 faq:
   - question: "Is AppFlowy free?"

@@ -1,28 +1,34 @@
 ---
 layout: software
 title: "Element"
-seo_title: "Element (Matrix Client): Features & Self-Hosting"
+seo_title: "Self-Hosting Element (Matrix): Setup, Clients & Features"
 slug: element
 tagline: "Secure, decentralized messaging app"
 type: open-source
 license: AGPL-3.0
 website: https://element.io
+developer: "Element"
+repository: https://github.com/element-hq/element-web
+latest_version: "1.12.33"
+version_tag: '^v(\d+\.\d+\.\d+)$'
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS, Android, iOS]
 category: communication
+self_hostable: true
 logo: /assets/images/software/element.png
 alternative_to:
   - slack
   - discord
   - microsoft-teams
 description: "Element is a free, open source messaging app built on the Matrix protocol, offering end-to-end encryption, decentralized hosting, and team collaboration."
-last_modified_at: 2026-09-25
+last_modified_at: 2026-11-04
 faq:
   - question: "Is Element secure?"
     answer: "Yes — Element encrypts messages, files, and calls end-to-end by default in encrypted rooms, using the Matrix protocol's Olm/Megolm cryptographic ratchet, the same cryptographic approach used by Signal's protocol."
   - question: "Is Element free?"
     answer: "Yes, the Element client apps are free to use and free to self-host. Element the company also sells paid hosting, support, and enterprise features on top of the free, open source core."
   - question: "Can I self-host Element?"
-    answer: "Yes. You'll need to run a Matrix homeserver (typically Synapse) plus the Element Web client — see the Self-Hosting Element section above for a starting docker-compose setup."
+    answer: "Yes. A self-hosted Element setup is a Matrix homeserver (typically Synapse) plus the Element Web client, which is a static web app. See the self-hosting section above for a starting Docker Compose file, or use Element Server Suite (ESS) Community, which installs the pieces together."
   - question: "What protocol does Element use?"
     answer: "Element is built on Matrix, an open standard for decentralized, real-time communication maintained by the non-profit Matrix.org Foundation — independent of Element the company."
 ---
@@ -35,7 +41,7 @@ Element's client code is released under a dual/triple licensing model: it can be
 
 ## Is Element Open Source?
 
-Yes. Element's client applications (Element Web, Desktop, Android, and iOS) are dual/triple-licensed under AGPL-3.0, GPL-3.0, or a paid Element Commercial License for organizations that need different terms — source is public on [GitHub](https://github.com/element-hq). The Matrix protocol itself, along with the reference Synapse homeserver, is developed separately under the non-profit Matrix.org Foundation. It's worth noting Element is a Matrix *client*, not a standalone messenger — it's one of several apps (including Cinny, FluffyChat, and SchildiChat) built on the same open Matrix network, so "is Element open source" and "is Matrix open source" are related but distinct questions.
+Yes. Element's client applications (Element Web, Desktop, Android, and iOS) are dual/triple-licensed under AGPL-3.0, GPL-3.0, or a paid Element Commercial License for organizations that need different terms — source is public on [GitHub](https://github.com/element-hq). The Matrix protocol itself is governed separately by the non-profit Matrix.org Foundation. Synapse, the most widely used Matrix homeserver, began as a Foundation project; since late 2023 it has been developed by Element under the AGPL-3.0. It's worth noting Element is a Matrix *client*, not a standalone messenger — it's one of several apps (including Cinny, FluffyChat, and SchildiChat) built on the same open Matrix network, so "is Element open source" and "is Matrix open source" are related but distinct questions.
 
 ## Key Features
 
@@ -55,9 +61,9 @@ Yes. Element's client applications (Element Web, Desktop, Android, and iOS) are 
 - **Cross-platform messaging** — Unified chat across networks via bridges
 - **Enterprise** — Self-hosted collaboration with data sovereignty
 
-## Self-Hosting Element
+## Self-Hosting Element and a Matrix Homeserver
 
-Self-hosting Element means running two separate pieces: a Matrix homeserver (most commonly [Synapse](https://github.com/element-hq/synapse), Matrix.org's reference implementation) that stores accounts and messages, and the Element Web client that people actually log into. Element Desktop is just Element Web wrapped in Electron, so it talks to the same homeserver — there's nothing extra to self-host for the desktop app itself.
+Self-hosting Element means running two separate pieces: a Matrix homeserver (most commonly [Synapse](https://github.com/element-hq/synapse), the most widely deployed implementation, maintained by Element) that stores accounts and messages, and the Element Web client that people actually log into. Element Desktop is just Element Web wrapped in Electron, so it talks to the same homeserver — there's nothing extra to self-host for the desktop app itself.
 
 A minimal starting point looks like this (Synapse still needs a one-time `generate` step to create its config and signing keys before this will start cleanly — see the [Synapse documentation](https://element-hq.github.io/synapse/latest/setup/installation.html) for that step):
 
@@ -81,7 +87,14 @@ services:
       - synapse
 ```
 
-In production you'll also want TLS termination (e.g. via a reverse proxy) and, for federation with other Matrix servers, a `.well-known` delegation setup — both covered in Synapse's own docs.
+In production you'll also want TLS termination (e.g. via a reverse proxy) and, for federation with other Matrix servers, a `.well-known` delegation setup — both covered in Synapse's own docs. Element Web is a static web app configured through a `config.json` file; set its default homeserver to your own domain so users don't land on matrix.org.
+
+### Self-hosting checklist
+
+- **Homeserver:** Synapse is the most complete option and the one Element tests against.
+- **Mobile apps:** Element X, the current mobile app, needs a homeserver with sliding sync support. Current Synapse releases include it natively, so keep Synapse up to date.
+- **Packaged option:** Element Server Suite (ESS) Community is Element's free, Helm-based distribution that installs Synapse, Element Web, and supporting services together. It's an alternative to assembling the containers yourself.
+- **Federation:** optional. A private server for one team can leave federation off; enable it to talk to users on other Matrix servers.
 
 ## Element vs Signal vs Telegram
 

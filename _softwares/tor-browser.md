@@ -6,6 +6,8 @@ tagline: "Anonymous browsing through the Tor network"
 type: open-source
 license: MPL-2.0
 website: https://www.torproject.org
+developer: "The Tor Project"
+repository: https://gitlab.torproject.org/tpo/applications/tor-browser
 platforms: [Windows, macOS, Linux, Android]
 category: web-browser
 logo: /assets/images/software/tor-browser.svg
@@ -13,7 +15,7 @@ alternative_to:
   - chrome
   - edge
   - safari
-description: "Tor Browser is a free, open source Firefox ESR fork maintained by The Tor Project that routes traffic through the Tor network for anonymous, censorship-resistant browsing."
+description: "Tor Browser is a free, open source Firefox ESR fork from The Tor Project that routes traffic through the Tor network for anonymous, uncensored browsing."
 featured_image: tor-browser.webp
 last_modified_at: 2026-09-17
 ---

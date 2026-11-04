@@ -1,15 +1,21 @@
 ---
 layout: alternative-to
 title: "Open Source Alternatives to Adobe Premiere Pro"
+seo_title: "Open Source Alternatives to Adobe Premiere Pro"
 slug: premiere-pro
 proprietary_slug: premiere-pro
 alternatives:
-  - kdenlive
-  - shotcut
-  - openshot
-  - olive
+  - slug: kdenlive
+    best_for: "Full-featured multitrack editing"
+  - slug: shotcut
+    best_for: "Cross-platform editing with broad format support"
+  - slug: openshot
+    best_for: "Simple cuts and titles"
+  - slug: olive
+    best_for: "Experimenting with node-based compositing"
 description: "Best open source alternatives to Adobe Premiere Pro for Linux, Windows, and macOS. Free non-linear video editors with no subscription required."
-last_modified_at: 2026-09-25
+verdict: "[Kdenlive](/software/kdenlive/) is the closest open source alternative to Premiere Pro for multitrack editing, with [Shotcut](/software/shotcut/) as a strong second. [OpenShot](/software/openshot/) is simpler, and [Olive](/software/olive/) is still early."
+last_modified_at: 2026-11-04
 comparison:
   columns: ["GPU Acceleration", "Platforms", "Maturity"]
   rows:

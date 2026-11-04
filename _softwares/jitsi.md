@@ -6,14 +6,17 @@ tagline: "Free, open source video conferencing for secure online meetings"
 type: open-source
 license: Apache-2.0
 website: https://jitsi.org
+developer: "8x8 and the Jitsi community"
+repository: https://github.com/jitsi/jitsi-meet
 platforms: [Linux, Windows, macOS, Android, iOS]
 category: video-conferencing
+self_hostable: true
 logo: /assets/images/software/jitsi.png
 alternative_to:
   - zoom
   - microsoft-teams
   - google-meet
-description: "Jitsi Meet is a free and open source video conferencing tool. Participants join from a link without an account, there are no time limits, and it is fully self-hostable for complete data control."
+description: "Jitsi Meet is a free, open source video conferencing tool: join from a link with no account, no time limits, and full self-hosting for data control."
 last_modified_at: 2026-09-25
 ---
 

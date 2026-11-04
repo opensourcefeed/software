@@ -4,14 +4,20 @@ title: "Planka"
 slug: planka
 tagline: "Source-available kanban board with a Trello-like interface"
 type: source-available
-license: "PLANKA Community License v1.1 (source-available, not OSI-approved); paid Pro/Enterprise tiers add features"
+license: Source-available
+license_note: "PLANKA Community License v1.1 (not OSI-approved); paid Pro and Enterprise tiers add features."
 website: https://planka.app
+developer: "PLANKA Software GmbH"
+repository: https://github.com/plankanban/planka
+latest_version: "2.2.1"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS, Docker]
 category: project-management
+self_hostable: true
 logo: /assets/images/software/planka.png
 alternative_to:
   - trello
-description: "Planka is a self-hostable kanban board with a modern interface closely modeled on Trello's board/list/card layout. Its Community edition is free and source-available under a non-OSI license, with paid Pro and Enterprise tiers for additional features."
+description: "Planka is a self-hostable, Trello-style kanban board. Its Community edition is free and source-available (not OSI-approved), with paid Pro and Enterprise tiers."
 last_modified_at: 2026-08-01
 ---
 

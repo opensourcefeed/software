@@ -4,15 +4,21 @@ title: "Tabby"
 slug: tabby
 tagline: "Self-hosted AI code completion server"
 type: open-source
-license: "Apache-2.0 (ee/ enterprise directory under a separate license)"
+license: Apache-2.0
+license_note: "The ee/ enterprise directory is under a separate license."
 website: https://www.tabbyml.com
+developer: "TabbyML"
+repository: https://github.com/TabbyML/tabby
+latest_version: "4.3.1"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS, Docker]
 category: development
+self_hostable: true
 logo: /assets/images/software/tabby.png
 alternative_to:
   - github-copilot
   - cursor
-description: "Tabby is a free, open source, self-hosted AI code completion server built in Rust, offering GitHub Copilot-style inline suggestions that run entirely on your own infrastructure and GPUs."
+description: "Tabby is a free, open source, self-hosted AI code completion server written in Rust, giving Copilot-style suggestions on your own infrastructure and GPUs."
 last_modified_at: 2026-08-01
 ---
 

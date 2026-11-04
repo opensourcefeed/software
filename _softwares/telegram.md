@@ -1,18 +1,20 @@
 ---
 layout: software
 title: "Telegram"
-seo_title: "Is Telegram Open Source? Client vs. Server Explained"
+seo_title: "Telegram: Open Source Apps, Closed-Source Server"
 slug: telegram
 tagline: "Cloud-based messaging app with open source clients, closed server"
 type: proprietary
-license: "Client: GPL-2.0/GPL-3.0 (open source) · Server: Proprietary"
+license: Proprietary
+license_note: "Client apps are GPL-2.0/GPL-3.0 open source; the server is proprietary."
 website: https://telegram.org
+developer: "Telegram FZ-LLC"
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: communication
 logo: /assets/images/software/telegram.svg
 alternative_to: []
 has_alternatives: true
-description: "Telegram is a cloud-based messaging app with open source client apps but a closed source server, offering large group chats and channels rather than end-to-end encryption by default."
+description: "Telegram is a cloud messaging app with open source clients and a closed source server, built for big groups and channels, without default end-to-end encryption."
 last_modified_at: 2026-09-25
 featured_image: telegram.webp
 faq:

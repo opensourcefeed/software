@@ -6,6 +6,11 @@ tagline: "Free and open source image editor"
 type: open-source
 license: GPL-3.0
 website: https://gimp.org
+developer: "The GIMP Development Team"
+repository: https://gitlab.gnome.org/GNOME/gimp
+latest_version: "3.2.8"
+version_tag: '^GIMP_(\d+_\d+_\d+)$'
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: image-editing
 logo: /assets/images/software/gimp.png

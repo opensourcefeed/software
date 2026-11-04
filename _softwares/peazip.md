@@ -6,12 +6,16 @@ tagline: "Cross-platform open source file archiver and encryption tool"
 type: open-source
 license: LGPL-3.0
 website: https://peazip.github.io/
+developer: "Giorgio Tani"
+repository: https://github.com/peazip/PeaZip
+latest_version: "11.4.0"
+version_checked_at: 2026-11-04
 platforms: [Windows, Linux, macOS, BSD]
 category: file-compression
 logo: /assets/images/software/peazip.svg
 alternative_to:
   - winrar
-description: "PeaZip is a free, open source file archiver and encryption utility with a native graphical interface on Windows, Linux, macOS, and BSD, supporting over 200 archive formats under the LGPL-3.0 license."
+description: "PeaZip is a free, LGPL-3.0 file archiver and encryption tool with a native interface on Windows, Linux, macOS, and BSD, supporting over 200 archive formats."
 featured_image: peazip.webp
 last_modified_at: 2026-09-19
 ---

@@ -6,6 +6,10 @@ tagline: "Free, open source, cross-platform video editor"
 type: open-source
 license: GPL-3.0
 website: https://shotcut.org
+developer: "Meltytech"
+repository: https://github.com/mltframework/shotcut
+latest_version: "26.10.30"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: video-editing
 logo: /assets/images/software/shotcut.svg

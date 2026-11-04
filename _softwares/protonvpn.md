@@ -4,8 +4,11 @@ title: "Proton VPN"
 slug: protonvpn
 tagline: "VPN service with fully open source client apps"
 type: open-source
-license: GPL-3.0 (client apps)
+license: GPL-3.0
+license_note: "Covers the client apps."
 website: https://protonvpn.com
+developer: "Proton AG"
+repository: https://github.com/ProtonVPN
 logo: /assets/images/software/protonvpn.svg
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: vpn

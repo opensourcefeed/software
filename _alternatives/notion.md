@@ -4,12 +4,17 @@ title: "Open Source Alternatives to Notion"
 slug: notion
 proprietary_slug: notion
 alternatives:
-  - appflowy
-  - affine
-  - anytype
-  - logseq
-description: "Open source alternatives to Notion for docs, wikis, and databases: AppFlowy, AFFiNE, Anytype, and Logseq, compared by license, databases, offline use, and self-hosting."
-last_modified_at: 2026-09-25
+  - slug: appflowy
+    best_for: "Notion-style documents and databases"
+  - slug: affine
+    best_for: "Documents and a whiteboard in one workspace"
+  - slug: anytype
+    best_for: "Peer-to-peer, encrypted objects (source-available)"
+  - slug: logseq
+    best_for: "Outlining and linked notes in local files"
+description: "Open source Notion alternatives for docs, wikis, and databases: AppFlowy, AFFiNE, Anytype, and Logseq, compared by license, offline use, and self-hosting."
+verdict: "[AppFlowy](/software/appflowy/) is the closest open source match to Notion's documents and databases. [AFFiNE](/software/affine/) adds a whiteboard, [Logseq](/software/logseq/) suits outliners, and [Anytype](/software/anytype/) offers encrypted peer-to-peer sync but is source-available rather than open source."
+last_modified_at: 2026-11-04
 comparison:
   columns: ["License", "Editing model", "Database views", "Self-hosted sync"]
   rows:

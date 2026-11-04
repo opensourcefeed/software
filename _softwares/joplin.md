@@ -6,14 +6,20 @@ tagline: "Privacy-focused, open source note-taking app"
 type: open-source
 license: AGPL-3.0-or-later
 website: https://joplinapp.org
+developer: "Laurent Cozic"
+repository: https://github.com/laurent22/joplin
+latest_version: "3.7.22"
+version_tag: '^v(\d+\.\d+\.\d+)$'
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS, Android, iOS]
 category: note-taking
+self_hostable: true
 logo: /assets/images/software/joplin.svg
 alternative_to:
   - evernote
   - obsidian
   - onenote
-description: "Joplin is a free, open source Markdown note-taking app with end-to-end encryption and multi-platform sync, built as a privacy-focused alternative to Evernote and Obsidian."
+description: "Joplin is a free, open source Markdown note-taking app with end-to-end encrypted sync across platforms, and a privacy-focused Evernote alternative."
 last_modified_at: 2026-09-16
 ---
 

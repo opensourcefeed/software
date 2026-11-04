@@ -6,6 +6,7 @@ tagline: "Industry-standard vector graphics editor"
 type: proprietary
 license: Proprietary
 website: https://www.adobe.com/products/illustrator.html
+developer: "Adobe"
 platforms: [Windows, macOS]
 category: image-editing
 logo: /assets/images/software/illustrator.svg

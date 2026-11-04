@@ -6,6 +6,7 @@ tagline: "Cloud file storage integrated with Microsoft 365"
 type: proprietary
 license: Proprietary
 website: https://www.microsoft.com/onedrive
+developer: "Microsoft"
 platforms: [Windows, macOS, Linux via web, Android, iOS]
 category: cloud-storage
 logo: /assets/images/software/onedrive.svg

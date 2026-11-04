@@ -6,6 +6,7 @@ tagline: "Cloud file storage integrated with Google Workspace"
 type: proprietary
 license: Proprietary
 website: https://drive.google.com
+developer: "Google"
 platforms: [Windows, macOS, Linux via web, Android, iOS]
 category: cloud-storage
 logo: /assets/images/software/google-drive.svg

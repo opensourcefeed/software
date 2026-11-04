@@ -6,11 +6,13 @@ tagline: "Proprietary digital sculpting and painting software"
 type: proprietary
 license: Proprietary
 website: https://www.maxon.net/en/zbrush
+developer: "Maxon"
 platforms: [Windows, macOS]
 category: 3d-modeling
+logo: /assets/images/software/zbrush.svg
 alternative_to: []
 has_alternatives: true
-description: "ZBrush is a proprietary digital sculpting application known for its pixol-based sculpting engine, widely used to create high-resolution organic models for film, games, and collectibles."
+description: "ZBrush is a proprietary digital sculpting app with a pixol-based engine, widely used for high-resolution organic models in film, games, and collectibles."
 featured_image: zbrush.webp
 last_modified_at: 2026-09-17
 ---

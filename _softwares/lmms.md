@@ -6,11 +6,15 @@ tagline: "Free and open source music production and beat-making software"
 type: open-source
 license: GPL-2.0-or-later
 website: https://lmms.io
+developer: "LMMS developers"
+repository: https://github.com/LMMS/lmms
+latest_version: "1.2.2"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: audio-editing
 logo: /assets/images/software/lmms.svg
 alternative_to: []
-description: "LMMS is a free, open source digital audio workstation focused on beat-making, synthesis, and loop-based music production, with a built-in library of instruments and effects."
+description: "LMMS is a free, open source digital audio workstation for beat-making, synthesis, and loop-based production, with built-in instruments and effects."
 last_modified_at: 2026-09-25
 ---
 

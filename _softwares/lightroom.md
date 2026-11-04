@@ -6,12 +6,13 @@ tagline: "Proprietary RAW photo editing and cataloging software"
 type: proprietary
 license: Proprietary
 website: https://www.adobe.com/products/photoshop-lightroom.html
+developer: "Adobe"
 platforms: [Windows, macOS, Android, iOS]
 category: image-editing
 logo: /assets/images/software/lightroom.svg
 alternative_to: []
 has_alternatives: true
-description: "Adobe Lightroom is a proprietary RAW photo editor and catalog manager distributed only through Adobe Creative Cloud, distinct from Photoshop's pixel-editing focus."
+description: "Adobe Lightroom is a proprietary RAW photo editor and catalog manager sold only through Creative Cloud, distinct from Photoshop's pixel-editing focus."
 last_modified_at: 2026-08-01
 ---
 

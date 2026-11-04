@@ -6,6 +6,7 @@ tagline: "Professional timeline-based video editing software"
 type: proprietary
 license: Proprietary
 website: https://www.adobe.com/products/premiere.html
+developer: "Adobe"
 platforms: [Windows, macOS]
 category: video-editing
 logo: /assets/images/software/premiere-pro.svg

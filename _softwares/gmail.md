@@ -6,6 +6,7 @@ tagline: "Proprietary webmail service from Google"
 type: proprietary
 license: Proprietary
 website: https://mail.google.com
+developer: "Google"
 platforms: [Windows, macOS, Linux via web, Android, iOS]
 category: email-client
 logo: /assets/images/software/gmail.svg

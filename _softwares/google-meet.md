@@ -6,12 +6,13 @@ tagline: "Video conferencing integrated with Google Workspace"
 type: proprietary
 license: Proprietary
 website: https://meet.google.com
+developer: "Google"
 platforms: [Windows, macOS, Linux via web, Android, iOS]
 category: video-conferencing
 logo: /assets/images/software/google-meet.svg
 alternative_to: []
 has_alternatives: true
-description: "Google Meet is a proprietary video conferencing service tied to Google accounts and Workspace, running entirely on Google's cloud infrastructure with no self-hosted option."
+description: "Google Meet is a proprietary video conferencing service tied to Google accounts and Workspace, running only on Google's cloud with no self-hosted option."
 last_modified_at: 2026-08-01
 ---
 

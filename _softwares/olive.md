@@ -6,12 +6,17 @@ tagline: "Free, open source non-linear video editor"
 type: open-source
 license: GPL-3.0
 website: https://www.olivevideoeditor.org
+developer: "Olive Team"
+repository: https://github.com/olive-editor/olive
+latest_version: "0.1.2"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: video-editing
+logo: /assets/images/software/olive.png
 alternative_to:
   - premiere-pro
   - davinci-resolve
-description: "Olive is a free, open source non-linear video editor with a node-based compositing system, still under active development toward feature parity with established editors."
+description: "Olive is a free, open source non-linear video editor with node-based compositing, still in active development toward parity with established editors."
 last_modified_at: 2026-08-06
 faq:
   - question: "Is Olive ready to replace DaVinci Resolve or Premiere Pro?"

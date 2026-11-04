@@ -6,12 +6,13 @@ tagline: "Professional 3D modeling, animation, and motion graphics software"
 type: proprietary
 license: Proprietary
 website: https://www.maxon.net/cinema-4d
+developer: "Maxon"
 platforms: [Windows, macOS]
 category: 3d-modeling
 logo: /assets/images/software/cinema-4d.svg
 alternative_to: []
 has_alternatives: true
-description: "Cinema 4D is a proprietary 3D modeling and motion graphics application from Maxon, widely used in broadcast design and known for its comparatively approachable learning curve."
+description: "Cinema 4D is Maxon's proprietary 3D modeling and motion graphics app, widely used in broadcast design and known for an approachable learning curve."
 featured_image: cinema-4d.webp
 last_modified_at: 2026-09-17
 ---

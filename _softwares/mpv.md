@@ -6,6 +6,10 @@ tagline: "A free and open source media player based on MPlayer and mplayer2"
 type: open-source
 license: GPL-2.0-or-later
 website: https://mpv.io/
+developer: "mpv developers"
+repository: https://github.com/mpv-player/mpv
+latest_version: "0.41.0"
+version_checked_at: 2026-11-04
 platforms: [Windows, macOS, Linux, BSD]
 category: media-player
 logo: /assets/images/software/mpv.png

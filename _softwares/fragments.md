@@ -6,12 +6,16 @@ tagline: "GNOME-native BitTorrent client built with GTK4 and libadwaita"
 type: open-source
 license: GPL-3.0
 website: https://apps.gnome.org/Fragments/
+developer: "Felix Häcker"
+repository: https://gitlab.gnome.org/World/Fragments
+latest_version: "3.0.1"
+version_checked_at: 2026-11-04
 platforms: [Linux]
 category: torrent-client
 logo: /assets/images/software/fragments.svg
 alternative_to:
   - utorrent
-description: "Fragments is a free, open source BitTorrent client built with GTK4 and libadwaita, designed to look and behave like a native part of the GNOME desktop rather than a cross-platform port."
+description: "Fragments is a free, open source BitTorrent client built with GTK4 and libadwaita to look and behave like a native part of the GNOME desktop."
 featured_image: fragments.webp
 last_modified_at: 2026-09-17
 ---

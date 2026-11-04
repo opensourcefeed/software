@@ -6,12 +6,13 @@ tagline: "Proprietary digital notebook from Microsoft"
 type: proprietary
 license: Proprietary
 website: https://www.onenote.com
+developer: "Microsoft"
 platforms: [Windows, macOS, Linux via web, Android, iOS]
 category: note-taking
 logo: /assets/images/software/onenote.svg
 alternative_to: []
 has_alternatives: true
-description: "Microsoft OneNote is a proprietary digital notebook app that organizes notes into notebooks, sections, and pages, storing everything in a closed binary format synced through OneDrive."
+description: "Microsoft OneNote is a proprietary digital notebook that organizes notes into notebooks, sections, and pages in a closed format synced through OneDrive."
 last_modified_at: 2026-09-16
 faq:
   - question: "Is OneNote open source?"

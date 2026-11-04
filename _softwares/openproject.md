@@ -4,15 +4,22 @@ title: "OpenProject"
 slug: openproject
 tagline: "Open source project management and issue tracking"
 type: open-source
-license: GPL-3.0 (Community edition)
+license: GPL-3.0
+license_note: "Covers the Community edition."
 website: https://www.openproject.org
+developer: "OpenProject GmbH"
+repository: https://github.com/opf/openproject
+latest_version: "17.9.6"
+version_tag: '^v(\d+\.\d+\.\d+)$'
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS via web]
 category: project-management
+self_hostable: true
 logo: /assets/images/software/openproject.svg
 alternative_to:
   - asana
   - jira
-description: "OpenProject is a self-hostable, open source project management tool with Gantt charts, agile boards, and issue tracking, offered as an alternative to Asana and Jira."
+description: "OpenProject is an open source, self-hostable project management tool with Gantt charts, agile boards, and issue tracking, and an Asana and Jira alternative."
 featured_image: openproject.webp
 last_modified_at: 2026-09-17
 ---

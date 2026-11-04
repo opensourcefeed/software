@@ -6,6 +6,7 @@ tagline: "Team collaboration and messaging platform"
 type: proprietary
 license: Proprietary
 website: https://slack.com
+developer: "Slack Technologies (Salesforce)"
 platforms: [Linux, Windows, macOS, Android, iOS]
 category: communication
 logo: /assets/images/software/slack.png

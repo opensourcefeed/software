@@ -6,13 +6,17 @@ tagline: "KDE's universal document viewer"
 type: open-source
 license: GPL-2.0-or-later
 website: https://okular.kde.org
+developer: "KDE"
+repository: https://invent.kde.org/graphics/okular
+latest_version: "26.08.2"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS, "*BSD"]
 category: pdf-tools
 logo: /assets/images/software/okular.svg
 alternative_to:
   - adobe-acrobat
   - xodo
-description: "Okular is a free, open source universal document viewer from KDE that reads PDFs, ePub, comic books, and more, with full annotation and digital signature support."
+description: "Okular is KDE's free, open source document viewer for PDF, ePub, comics, and more, with full annotation and digital signature support."
 featured_image: okular.webp
 last_modified_at: 2026-09-17
 faq:

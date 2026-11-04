@@ -6,6 +6,8 @@ tagline: "Free and open source email client"
 type: open-source
 license: MPL-2.0
 website: https://www.thunderbird.net
+developer: "MZLA Technologies (Mozilla)"
+repository: https://hg.mozilla.org/comm-central
 platforms: [Linux, Windows, macOS]
 category: email-client
 logo: /assets/images/software/thunderbird.svg
@@ -13,7 +15,7 @@ alternative_to:
   - outlook
   - gmail
   - apple-mail
-description: "Thunderbird is a free, open source email client from the Mozilla Foundation supporting email, calendaring, contacts, and chat through standard protocols like IMAP and CalDAV."
+description: "Thunderbird is a free, open source email client from Mozilla with email, calendar, contacts, and chat over standard protocols like IMAP and CalDAV."
 last_modified_at: 2026-08-01
 ---
 

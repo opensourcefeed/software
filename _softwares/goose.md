@@ -6,12 +6,16 @@ tagline: "Open source, general-purpose AI agent with a desktop app and CLI"
 type: open-source
 license: Apache-2.0
 website: https://goose-docs.ai
+developer: "Agentic AI Foundation (originally Block)"
+repository: https://github.com/aaif-goose/goose
+latest_version: "1.57.0"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: development
 logo: /assets/images/software/goose.svg
 alternative_to:
   - claude-code
-description: "goose is a free, Apache-2.0-licensed AI agent originally built at Block and now part of the Linux Foundation's Agentic AI Foundation, with a desktop app and CLI that work with 15+ model providers and extend through MCP."
+description: "goose is a free, Apache-2.0 AI agent built at Block and now part of the Linux Foundation's Agentic AI Foundation, with a desktop app, CLI, and MCP extensions."
 last_modified_at: 2026-09-25
 faq:
   - question: "Is goose only for coding?"

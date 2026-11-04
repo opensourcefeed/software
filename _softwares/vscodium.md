@@ -6,12 +6,16 @@ tagline: "Community builds of VS Code without Microsoft branding or telemetry"
 type: open-source
 license: MIT
 website: https://vscodium.com
+developer: "VSCodium community"
+repository: https://github.com/VSCodium/vscodium
+latest_version: "1.143.17232"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: code-editor
 logo: /assets/images/software/vscodium.svg
 alternative_to:
   - vs-code
-description: "VSCodium provides free, community-built binaries of Microsoft's open source 'Code - OSS' project, with telemetry disabled and Microsoft's branding and licensing removed."
+description: "VSCodium is a set of free, community-built binaries of Microsoft's open source 'Code - OSS' project, with telemetry disabled and Microsoft branding removed."
 last_modified_at: 2026-09-05
 ---
 

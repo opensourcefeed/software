@@ -6,12 +6,17 @@ tagline: "Open source, GPU-accelerated code editor built in Rust"
 type: open-source
 license: GPL-3.0
 website: https://zed.dev
+developer: "Zed Industries"
+repository: https://github.com/zed-industries/zed
+latest_version: "1.26.2"
+version_tag: '^v(\d+\.\d+\.\d+)$'
+version_checked_at: 2026-11-04
 platforms: [Linux, macOS]
 category: code-editor
 logo: /assets/images/software/zed.svg
 alternative_to:
   - vs-code
-description: "Zed is a free, open source code editor built in Rust by former Atom and Tree-sitter developers, designed for high performance and built-in real-time collaboration."
+description: "Zed is a free, open source code editor written in Rust by former Atom and Tree-sitter developers, built for performance and real-time collaboration."
 last_modified_at: 2026-09-05
 ---
 

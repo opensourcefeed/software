@@ -6,6 +6,7 @@ tagline: "Proprietary work and project management platform"
 type: proprietary
 license: Proprietary
 website: https://asana.com
+developer: "Asana, Inc."
 platforms: [Windows, macOS, Linux via web, Android, iOS]
 category: project-management
 logo: /assets/images/software/asana.svg

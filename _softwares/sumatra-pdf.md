@@ -4,14 +4,20 @@ title: "Sumatra PDF"
 slug: sumatra-pdf
 tagline: "Lightweight, open source PDF reader for Windows"
 type: open-source
-license: "GPL-3.0 (some components BSD)"
+license: GPL-3.0
+license_note: "Some components are BSD-licensed."
 website: https://www.sumatrapdfreader.org
+developer: "Krzysztof Kowalczyk"
+repository: https://github.com/sumatrapdfreader/sumatrapdf
+latest_version: "3.6.1"
+version_tag: '^(\d+\.\d+(?:\.\d+)?)rel$'
+version_checked_at: 2026-11-04
 platforms: [Windows]
 category: pdf-tools
 logo: /assets/images/software/sumatra-pdf.svg
 alternative_to:
   - adobe-acrobat
-description: "Sumatra PDF is a free, open source PDF, ebook, and comic book reader for Windows built for minimal size and near-instant startup rather than editing or annotation features."
+description: "Sumatra PDF is a free, open source PDF, ebook, and comic reader for Windows built for small size and near-instant startup rather than editing."
 featured_image: sumatra-pdf.webp
 last_modified_at: 2026-09-17
 faq:

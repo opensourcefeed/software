@@ -6,6 +6,7 @@ tagline: "All-in-one workspace for notes, docs, and wikis"
 type: proprietary
 license: Proprietary
 website: https://www.notion.so
+developer: "Notion Labs"
 platforms: [Windows, macOS, Linux via web, Android, iOS]
 category: note-taking
 logo: /assets/images/software/notion.svg

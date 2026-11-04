@@ -6,13 +6,17 @@ tagline: "Decentralized messenger with no phone number required"
 type: open-source
 license: GPL-3.0
 website: https://getsession.org
+developer: "Session Technology Foundation"
+repository: https://github.com/session-foundation/session-desktop
+latest_version: "1.18.3"
+version_checked_at: 2026-11-04
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: communication
 logo: /assets/images/software/session.svg
 alternative_to:
   - whatsapp
   - telegram
-description: "Session is a free, open source messenger that requires no phone number or email, routing encrypted messages through a decentralized onion-routing network instead of central servers."
+description: "Session is a free, open source messenger that needs no phone number or email, routing encrypted messages through a decentralized onion-routing network."
 last_modified_at: 2026-08-01
 ---
 

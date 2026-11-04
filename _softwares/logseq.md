@@ -6,13 +6,18 @@ tagline: "Open source outliner for notes and knowledge graphs"
 type: open-source
 license: AGPL-3.0
 website: https://logseq.com
+developer: "Logseq"
+repository: https://github.com/logseq/logseq
+latest_version: "2.0.2"
+version_checked_at: 2026-11-04
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: note-taking
 logo: /assets/images/software/logseq.svg
 alternative_to:
   - notion
   - obsidian
-description: "Logseq is a free, open source outliner that stores notes as local plain-text Markdown or Org files, offering bi-directional linking and a knowledge graph as a privacy-respecting alternative to Notion and Obsidian."
+  - onenote
+description: "Logseq is a free, open source outliner that stores notes as local Markdown or Org files, with bi-directional links and a knowledge graph."
 last_modified_at: 2026-07-27
 ---
 

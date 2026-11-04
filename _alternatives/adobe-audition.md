@@ -4,12 +4,17 @@ title: "Open Source Alternatives to Adobe Audition"
 slug: adobe-audition
 proprietary_slug: adobe-audition
 alternatives:
-  - audacity
-  - ardour
-  - tenacity
-  - qtractor
-description: "Best open source alternatives to Adobe Audition. Free audio editors and DAWs for podcast production, restoration, and multitrack recording without a Creative Cloud subscription."
-last_modified_at: 2026-09-05
+  - slug: audacity
+    best_for: "Waveform editing, noise reduction, and podcasts"
+  - slug: ardour
+    best_for: "Multitrack recording, mixing, and full productions"
+  - slug: tenacity
+    best_for: "The Audacity workflow under community governance"
+  - slug: qtractor
+    best_for: "Linux studios built around JACK"
+description: "Open source alternatives to Adobe Audition: free audio editors and DAWs for podcasts, restoration, and multitrack recording, without Creative Cloud."
+verdict: "[Audacity](/software/audacity/) is the closest open source alternative to Adobe Audition for waveform editing, cleanup, and podcast work. For multitrack recording and mixing, use [Ardour](/software/ardour/)."
+last_modified_at: 2026-11-04
 comparison:
   columns: ["Platforms", "Multitrack", "Restoration Tools", "Best For"]
   rows:

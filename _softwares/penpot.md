@@ -6,14 +6,19 @@ tagline: "Open source design and prototyping platform"
 type: open-source
 license: MPL-2.0
 website: https://penpot.app
+developer: "Kaleidos"
+repository: https://github.com/penpot/penpot
+latest_version: "2.18.6"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: design
+self_hostable: true
 logo: /assets/images/software/penpot.svg
 alternative_to:
   - figma
   - sketch
   - adobe-xd
-description: "Penpot is a free, open source, browser-based design and prototyping platform built on open web standards, offering a self-hostable alternative to Figma, Sketch, and Adobe XD."
+description: "Penpot is a free, open source, browser-based design and prototyping platform built on web standards, and a self-hostable alternative to Figma and Sketch."
 featured_image: penpot.webp
 last_modified_at: 2026-09-17
 ---

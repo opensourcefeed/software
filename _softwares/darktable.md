@@ -6,12 +6,17 @@ tagline: "Free and open source RAW photo editor and workflow application"
 type: open-source
 license: GPL-3.0-or-later
 website: https://www.darktable.org
+developer: "darktable community"
+repository: https://github.com/darktable-org/darktable
+latest_version: "5.7.0"
+version_tag: '^release-(\d+\.\d+\.\d+)$'
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: image-editing
 logo: /assets/images/software/darktable.svg
 alternative_to:
   - lightroom
-description: "darktable is a free, open source RAW photo editor with non-destructive editing and library management, built as a privacy-respecting alternative to Adobe Lightroom."
+description: "darktable is a free, open source RAW photo editor with non-destructive editing and library management, and a privacy-respecting Lightroom alternative."
 featured_image: darktable.webp
 last_modified_at: 2026-09-17
 ---

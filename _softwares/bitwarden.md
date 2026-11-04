@@ -6,13 +6,19 @@ tagline: "Open source password manager"
 type: open-source
 license: GPL-3.0
 website: https://bitwarden.com
+developer: "Bitwarden, Inc."
+repository: https://github.com/bitwarden/clients
+latest_version: "2026.10.3"
+version_tag: '^desktop-v(\d+\.\d+\.\d+)$'
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS, Android, iOS]
 category: password-manager
+self_hostable: true
 logo: /assets/images/software/bitwarden.svg
 alternative_to:
   - 1password
   - lastpass
-description: "Bitwarden is an open source password manager with end-to-end encryption, cross-platform apps, and self-hosting, offered as an alternative to 1Password and LastPass."
+description: "Bitwarden is an open source password manager with end-to-end encryption, cross-platform apps, and self-hosting, and an alternative to 1Password and LastPass."
 featured_image: bitwarden.webp
 last_modified_at: 2026-09-17
 ---

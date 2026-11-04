@@ -6,13 +6,18 @@ tagline: "Open source team chat organized by topic threads"
 type: open-source
 license: Apache-2.0
 website: https://zulip.com
+developer: "Kandra Labs"
+repository: https://github.com/zulip/zulip
+latest_version: "12.3"
+version_checked_at: 2026-11-04
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: communication
+self_hostable: true
 logo: /assets/images/software/zulip.svg
 alternative_to:
   - slack
   - discord
-description: "Zulip is a free, fully open source team chat app under the Apache-2.0 license, built around topic-threaded conversations designed to keep asynchronous discussions organized and easy to catch up on."
+description: "Zulip is a free, Apache-2.0 team chat app built around topic-threaded conversations that keep asynchronous discussions organized and easy to catch up on."
 last_modified_at: 2026-08-01
 ---
 

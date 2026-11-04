@@ -6,13 +6,18 @@ tagline: "Free and open source game engine"
 type: open-source
 license: MIT
 website: https://godotengine.org
+developer: "Godot Foundation and community"
+repository: https://github.com/godotengine/godot
+latest_version: "4.7.2"
+version_tag: '^(\d+\.\d+(?:\.\d+)?)-stable$'
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: game-development
 logo: /assets/images/software/godot.svg
 alternative_to:
   - unity
   - unreal-engine
-description: "Godot Engine is a free, open source game engine for building 2D and 3D games, featuring a node-based scene system, its own GDScript language, and no royalties or revenue-share requirements."
+description: "Godot Engine is a free, open source 2D and 3D game engine with a node-based scene system, its own GDScript language, and no royalties or revenue share."
 featured_image: godot.webp
 last_modified_at: 2026-09-17
 ---

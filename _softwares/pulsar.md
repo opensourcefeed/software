@@ -6,12 +6,16 @@ tagline: "Community-maintained continuation of GitHub's discontinued Atom editor
 type: open-source
 license: MIT
 website: https://pulsar-edit.dev
+developer: "Pulsar community"
+repository: https://github.com/pulsar-edit/pulsar
+latest_version: "1.133.1"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: code-editor
 logo: /assets/images/software/pulsar.png
 alternative_to:
   - vs-code
-description: "Pulsar is a free, open source code editor that continues development of GitHub's Atom editor after Microsoft discontinued it in December 2022, preserving Atom's interface and package ecosystem."
+description: "Pulsar is a free, open source code editor that continues GitHub's Atom after it was discontinued in December 2022, keeping Atom's interface and packages."
 last_modified_at: 2026-09-05
 ---
 

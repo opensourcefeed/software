@@ -6,12 +6,13 @@ tagline: "Proprietary music streaming service from Google"
 type: proprietary
 license: Proprietary
 website: https://music.youtube.com
+developer: "Google"
 platforms: [Windows, macOS, Linux via web, Android, iOS]
 category: music-streaming
 logo: /assets/images/software/youtube-music.svg
 alternative_to: []
 has_alternatives: true
-description: "YouTube Music is a proprietary, closed-source streaming service from Google that combines a licensed music catalog with YouTube's video and user-uploaded content."
+description: "YouTube Music is Google's proprietary, closed source streaming service combining a licensed music catalog with YouTube videos and user uploads."
 last_modified_at: 2026-08-01
 ---
 

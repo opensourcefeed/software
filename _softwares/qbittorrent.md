@@ -6,12 +6,18 @@ tagline: "Free and open source BitTorrent client with no ads"
 type: open-source
 license: GPL-2.0-or-later
 website: https://www.qbittorrent.org
+developer: "qBittorrent project"
+repository: https://github.com/qbittorrent/qBittorrent
+latest_version: "5.3.0"
+version_tag: '^release-(\d+\.\d+\.\d+)$'
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: torrent-client
+self_hostable: true
 logo: /assets/images/software/qbittorrent.svg
 alternative_to:
   - utorrent
-description: "qBittorrent is a free, open source BitTorrent client built with the Qt toolkit, offering a built-in search engine, RSS downloader, and remote-control web UI with no ads or bundled software."
+description: "qBittorrent is a free, open source Qt BitTorrent client with a built-in search engine, RSS downloader, and remote web UI, with no ads or bundled software."
 last_modified_at: 2026-08-11
 ---
 

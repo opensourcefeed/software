@@ -6,11 +6,16 @@ tagline: "Extensible, free software text editor and computing environment"
 type: open-source
 license: GPL-3.0
 website: https://www.gnu.org/software/emacs/
+developer: "GNU Project"
+repository: https://git.savannah.gnu.org/git/emacs.git
+latest_version: "31.1"
+version_tag: '^emacs-(\d+\.\d+)$'
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: code-editor
 logo: /assets/images/software/emacs.svg
 alternative_to: []
-description: "GNU Emacs is a free, highly extensible text editor built around its own Lisp dialect, used as a general-purpose editing and computing environment well beyond plain code editing."
+description: "GNU Emacs is a free, highly extensible text editor built around its own Lisp dialect and used as a general-purpose computing environment, not just for code."
 last_modified_at: 2026-09-05
 ---
 

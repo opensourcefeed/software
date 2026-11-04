@@ -6,12 +6,13 @@ tagline: "Cloud-based password manager"
 type: proprietary
 license: Proprietary
 website: https://www.lastpass.com
+developer: "LastPass"
 platforms: [Windows, macOS, Linux via browser, Android, iOS]
 category: password-manager
 logo: /assets/images/software/lastpass.svg
 alternative_to: []
 has_alternatives: true
-description: "LastPass is a proprietary, cloud-hosted password manager whose closed source vaults were exposed in a major 2022 security breach, prompting many users to look for auditable alternatives."
+description: "LastPass is a proprietary, cloud-hosted password manager whose encrypted vaults were stolen in a 2022 breach, leading many users to auditable alternatives."
 faq:
   - question: "Is LastPass open source?"
     answer: "No. LastPass is closed source proprietary software owned by GoTo. Bitwarden and KeePassXC are open source password managers whose code can be independently audited."

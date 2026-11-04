@@ -6,6 +6,10 @@ tagline: "Open source remote desktop client for Linux"
 type: open-source
 license: GPL-2.0-or-later
 website: https://remmina.org
+developer: "Remmina team"
+repository: https://gitlab.com/Remmina/Remmina
+latest_version: "1.4.43"
+version_checked_at: 2026-11-04
 platforms: [Linux, BSD]
 category: remote-desktop
 logo: /assets/images/software/remmina.svg
@@ -13,7 +17,7 @@ alternative_to:
   - anydesk
   - nomachine
   - teamviewer
-description: "Remmina is a free, open source remote desktop client for Linux and other POSIX systems, supporting RDP, VNC, SSH, SPICE, and X2Go through a single GTK application."
+description: "Remmina is a free, open source remote desktop client for Linux and other POSIX systems, supporting RDP, VNC, SSH, SPICE, and X2Go in one GTK app."
 featured_image: remmina.webp
 last_modified_at: 2026-09-18
 ---

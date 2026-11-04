@@ -6,6 +6,10 @@ tagline: "Free digital painting application"
 type: open-source
 license: GPL-3.0
 website: https://krita.org
+developer: "Krita Foundation and KDE"
+repository: https://invent.kde.org/graphics/krita
+latest_version: "6.0.4.1"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS, Android]
 category: image-editing
 logo: /assets/images/software/krita.png

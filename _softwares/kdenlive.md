@@ -6,6 +6,10 @@ tagline: "Free and open source non-linear video editor"
 type: open-source
 license: GPL-3.0-or-later
 website: https://kdenlive.org
+developer: "KDE"
+repository: https://invent.kde.org/multimedia/kdenlive
+latest_version: "26.08.2"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: video-editing
 logo: /assets/images/software/kdenlive.svg

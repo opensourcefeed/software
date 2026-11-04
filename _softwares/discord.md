@@ -6,6 +6,7 @@ tagline: "Proprietary voice, video, and text chat platform"
 type: proprietary
 license: Proprietary
 website: https://discord.com
+developer: "Discord Inc."
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: communication
 logo: /assets/images/software/discord.svg

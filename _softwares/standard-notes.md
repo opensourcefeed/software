@@ -6,12 +6,18 @@ tagline: "End-to-end encrypted, open source note-taking app"
 type: open-source
 license: AGPL-3.0
 website: https://standardnotes.com
+developer: "Standard Notes (Proton AG)"
+repository: https://github.com/standardnotes/app
+latest_version: "3.203.0"
+version_tag: '^@standardnotes/desktop@(\d+\.\d+\.\d+)$'
+version_checked_at: 2026-11-04
 platforms: [Windows, macOS, Linux, Android, iOS, Web]
 category: note-taking
+self_hostable: true
 logo: /assets/images/software/standard-notes.png
 alternative_to:
   - evernote
-description: "Standard Notes is a free, open source, end-to-end encrypted note-taking app focused on long-term, dependable plain-text notes, offered as a privacy-first alternative to Evernote."
+description: "Standard Notes is a free, open source, end-to-end encrypted note-taking app focused on dependable long-term notes, and a privacy-first Evernote alternative."
 last_modified_at: 2026-08-01
 ---
 

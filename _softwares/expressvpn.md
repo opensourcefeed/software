@@ -6,6 +6,7 @@ tagline: "Commercial VPN service known for speed and streaming access"
 type: proprietary
 license: Proprietary
 website: https://www.expressvpn.com
+developer: "ExpressVPN"
 logo: /assets/images/software/expressvpn.svg
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: vpn

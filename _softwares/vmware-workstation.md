@@ -4,14 +4,16 @@ title: "VMware Workstation Pro"
 slug: vmware-workstation
 tagline: "Desktop hypervisor for running virtual machines on Windows and Linux"
 type: proprietary
-license: "Freeware (formerly paid commercial software)"
+license: Proprietary
+license_note: "Free of charge since November 2024; previously paid commercial software."
 website: https://www.vmware.com/products/workstation-pro.html
+developer: "Broadcom (VMware)"
 platforms: [Windows, Linux]
 category: virtualization
 logo: /assets/images/software/vmware-workstation.svg
 alternative_to: []
 has_alternatives: true
-description: "VMware Workstation Pro is Broadcom's desktop virtualization hypervisor for Windows and Linux, made free for commercial, educational, and personal use in November 2024 after being sold as paid software for over two decades."
+description: "VMware Workstation Pro is Broadcom's desktop hypervisor for Windows and Linux, free for all uses since November 2024 after two decades as paid software."
 faq:
   - question: "Is VMware Workstation Pro open source?"
     answer: "No. VMware Workstation Pro is closed source software owned by Broadcom. As of November 2024 it is free to use, but its source code is not published or auditable. VirtualBox and QEMU/KVM are open source alternatives."

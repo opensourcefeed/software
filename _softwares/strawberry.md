@@ -6,13 +6,17 @@ tagline: "Open source music player and library organizer, forked from Clementine
 type: open-source
 license: GPL-3.0-or-later
 website: https://www.strawberrymusicplayer.org
+developer: "Jonas Kvinge"
+repository: https://github.com/strawberrymusicplayer/strawberry
+latest_version: "1.2.31"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: music-streaming
 logo: /assets/images/software/strawberry.png
 alternative_to:
   - spotify
   - apple-music
-description: "Strawberry is a free, open source music player and collection organizer forked from Clementine, built for people managing large local audio libraries, with optional streaming integration for services like Tidal and Qobuz."
+description: "Strawberry is a free, open source music player and library organizer forked from Clementine, built for large local collections, with optional Tidal and Qobuz."
 last_modified_at: 2026-08-06
 faq:
   - question: "Is Strawberry a streaming service like Spotify?"

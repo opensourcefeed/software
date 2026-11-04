@@ -4,15 +4,21 @@ title: "Anytype"
 slug: anytype
 tagline: "Local-first, source-available workspace for notes and objects"
 type: source-available
-license: "Any Source Available License (clients/middleware); MIT (any-sync protocol)"
+license: Source-available
+license_note: "Any Source Available License for the clients and middleware; MIT for the any-sync protocol."
 website: https://anytype.io
+developer: "Any Association"
+repository: https://github.com/anyproto/anytype-ts
+latest_version: "0.57.7"
+version_checked_at: 2026-11-04
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: note-taking
+self_hostable: true
 logo: /assets/images/software/anytype.svg
 alternative_to:
   - notion
   - obsidian
-description: "Anytype is a local-first, source-available workspace that mirrors Notion's block-and-database model while storing data on-device and syncing peer-to-peer, without requiring a central server."
+description: "Anytype is a local-first, source-available workspace with Notion-style blocks and databases that stores data on-device and syncs peer-to-peer."
 last_modified_at: 2026-08-01
 ---
 

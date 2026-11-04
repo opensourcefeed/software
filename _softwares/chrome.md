@@ -4,8 +4,10 @@ title: "Google Chrome"
 slug: chrome
 tagline: "Widely-used web browser built on Chromium"
 type: proprietary
-license: Proprietary (built on open source Chromium)
+license: Proprietary
+license_note: "Built on the open source Chromium project."
 website: https://www.google.com/chrome/
+developer: "Google"
 logo: /assets/images/software/chrome.svg
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: web-browser

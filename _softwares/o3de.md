@@ -6,13 +6,15 @@ tagline: "Open source 3D engine for games and simulations"
 type: open-source
 license: Apache-2.0
 website: https://o3de.org
+developer: "Open 3D Foundation"
+repository: https://github.com/o3de/o3de
 platforms: [Windows, Linux]
 category: game-development
 logo: /assets/images/software/o3de.svg
 alternative_to:
   - unity
   - unreal-engine
-description: "Open 3D Engine (O3DE) is a free, Apache-2.0-licensed 3D engine for AAA-style games, cinema-quality rendering, and high-fidelity simulations, descended from Amazon's Lumberyard engine."
+description: "Open 3D Engine (O3DE) is a free, Apache-2.0 3D engine for AAA-style games, cinematic rendering, and simulation, descended from Amazon's Lumberyard."
 featured_image: o3de.webp
 last_modified_at: 2026-09-17
 ---

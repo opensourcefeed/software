@@ -6,13 +6,18 @@ tagline: "Free and open source parametric 3D CAD modeler"
 type: open-source
 license: LGPL-2.0-or-later
 website: https://www.freecad.org
+developer: "FreeCAD community"
+repository: https://github.com/FreeCAD/FreeCAD
+latest_version: "1.1.4"
+version_tag: '^(\d+\.\d+\.\d+)$'
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: cad
 logo: /assets/images/software/freecad.svg
 alternative_to:
   - autocad
   - fusion-360
-description: "FreeCAD is a free, open source parametric 3D CAD application for mechanical engineering and product design, with a modular architecture and Python scripting support."
+description: "FreeCAD is a free, open source parametric 3D CAD application for mechanical engineering and product design, with a modular design and Python scripting."
 featured_image: freecad.webp
 last_modified_at: 2026-09-17
 ---

@@ -6,6 +6,10 @@ tagline: "Linux-native open source multitrack audio and MIDI editor"
 type: open-source
 license: GPL-2.0-or-later
 website: https://qtractor.org
+developer: "Rui Nuno Capela"
+repository: https://github.com/rncbc/qtractor
+latest_version: "1.6.5"
+version_checked_at: 2026-11-04
 platforms: [Linux]
 category: audio-editing
 logo: /assets/images/software/qtractor.svg

@@ -4,14 +4,20 @@ title: "AFFiNE"
 slug: affine
 tagline: "Local-first workspace combining documents, whiteboards, and databases"
 type: open-source
-license: "MIT (editor and apps); AFFiNE Enterprise Edition license (self-hosted server, source-available)"
+license: MIT
+license_note: "MIT for the editor and apps; the self-hosted server is source-available under the AFFiNE Enterprise Edition license."
 website: https://affine.pro
+developer: "Toeverything"
+repository: https://github.com/toeverything/AFFiNE
+latest_version: "0.27.4"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS, Android, iOS, Web]
 category: note-taking
+self_hostable: true
 logo: /assets/images/software/affine.svg
 alternative_to:
   - notion
-description: "AFFiNE is a local-first workspace that combines documents, an infinite whiteboard, and databases in one app, with an MIT-licensed editor and apps and a source-available self-hosted server."
+description: "AFFiNE is a local-first workspace combining docs, an infinite whiteboard, and databases, with MIT-licensed apps and a source-available self-hosted server."
 last_modified_at: 2026-09-25
 faq:
   - question: "Is AFFiNE open source?"

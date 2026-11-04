@@ -5,14 +5,16 @@ seo_title: "Is DaVinci Resolve Open Source? Free vs. Studio"
 slug: davinci-resolve
 tagline: "Proprietary color grading and video editing suite"
 type: proprietary
-license: Proprietary (free edition available)
+license: Proprietary
+license_note: "A free edition is available."
 website: https://www.blackmagicdesign.com/products/davinciresolve
+developer: "Blackmagic Design"
 platforms: [Windows, macOS, Linux]
 category: video-editing
 logo: /assets/images/software/davinci-resolve.svg
 alternative_to: []
 has_alternatives: true
-description: "DaVinci Resolve is a proprietary video editing and color grading suite from Blackmagic Design, free for most features with a paid Studio tier unlocking advanced tools."
+description: "DaVinci Resolve is Blackmagic Design's proprietary video editing and color grading suite, free for most features, with a paid Studio tier for advanced tools."
 featured_image: davinci-resolve.webp
 last_modified_at: 2026-09-25
 faq:

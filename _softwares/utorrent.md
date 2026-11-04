@@ -4,14 +4,16 @@ title: "uTorrent"
 slug: utorrent
 tagline: "Proprietary BitTorrent client from BitTorrent, Inc."
 type: proprietary
-license: Proprietary (free with ads; paid Pro tier available)
+license: Proprietary
+license_note: "Free with ads; a paid Pro tier is available."
 website: https://www.utorrent.com
+developer: "BitTorrent, Inc."
 platforms: [Windows, macOS, Android]
 category: torrent-client
 logo: /assets/images/software/utorrent.svg
 alternative_to: []
 has_alternatives: true
-description: "uTorrent is a proprietary BitTorrent client from BitTorrent, Inc., free to use with ads and a bundled installer, with a paid Pro tier removing ads and adding extra features."
+description: "uTorrent is a proprietary BitTorrent client from BitTorrent, Inc., free with ads and a bundled installer, with a paid Pro tier that removes ads."
 last_modified_at: 2026-08-11
 ---
 

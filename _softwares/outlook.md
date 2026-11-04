@@ -6,11 +6,13 @@ tagline: "Proprietary email client and personal information manager"
 type: proprietary
 license: Proprietary
 website: https://www.microsoft.com/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook
+developer: "Microsoft"
 platforms: [Windows, macOS, Web]
 category: email-client
+logo: /assets/images/software/outlook.svg
 alternative_to: []
 has_alternatives: true
-description: "Microsoft Outlook is a proprietary email client and personal information manager bundled with Microsoft 365, combining email, calendaring, contacts, and task management."
+description: "Microsoft Outlook is a proprietary email client and personal information manager bundled with Microsoft 365, combining email, calendar, contacts, and tasks."
 last_modified_at: 2026-08-01
 ---
 

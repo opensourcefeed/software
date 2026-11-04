@@ -6,13 +6,19 @@ tagline: "Self-hosted music streaming server for your own library"
 type: open-source
 license: GPL-3.0
 website: https://www.navidrome.org
+developer: "Deluan Quintão and contributors"
+repository: https://github.com/navidrome/navidrome
+latest_version: "0.64.2"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS, Docker]
 category: music-streaming
+self_hostable: true
+logo: /assets/images/software/navidrome.png
 alternative_to:
   - spotify
   - apple-music
   - youtube-music
-description: "Navidrome is a free, open source, self-hosted music server that streams your own audio library through a modern web player and Subsonic-compatible mobile apps, as an alternative to licensed streaming services."
+description: "Navidrome is a free, open source, self-hosted music server that streams your own library through a web player and Subsonic-compatible mobile apps."
 last_modified_at: 2026-07-27
 ---
 

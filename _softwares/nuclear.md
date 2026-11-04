@@ -6,12 +6,18 @@ tagline: "Open source music player that streams from free online sources"
 type: open-source
 license: MIT
 website: https://nuclear.js.org
+developer: "nukeop and contributors"
+repository: https://github.com/nukeop/nuclear
+latest_version: "0.6.48"
+version_tag: '^v(\d+\.\d+\.\d+)$'
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: music-streaming
+logo: /assets/images/software/nuclear.svg
 alternative_to:
   - spotify
   - apple-music
-description: "Nuclear is a free, open source desktop music player that searches and streams tracks from free sources like YouTube and SoundCloud instead of a paid catalog, with no account or subscription required."
+description: "Nuclear is a free, open source desktop music player that streams tracks from free sources like YouTube and SoundCloud, with no account or subscription."
 last_modified_at: 2026-08-06
 faq:
   - question: "Is Nuclear a free Spotify alternative?"

@@ -6,12 +6,18 @@ tagline: "Plugin-based open source BitTorrent client with a client/daemon split"
 type: open-source
 license: GPL-3.0
 website: https://deluge-torrent.org
+developer: "Deluge Team"
+repository: https://github.com/deluge-torrent/deluge
+latest_version: "2.2.0"
+version_tag: '^deluge-(\d+\.\d+\.\d+)$'
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: torrent-client
+self_hostable: true
 logo: /assets/images/software/deluge.svg
 alternative_to:
   - utorrent
-description: "Deluge is a free, open source BitTorrent client that separates its download daemon from its GTK, web, and console front ends, and extends its core functionality through a plugin system."
+description: "Deluge is a free, open source BitTorrent client that separates its download daemon from its GTK, web, and console front ends and extends through plugins."
 last_modified_at: 2026-08-11
 ---
 

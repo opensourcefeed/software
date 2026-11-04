@@ -4,14 +4,19 @@ title: "7-Zip"
 slug: 7-zip
 tagline: "Free, open source file archiver for Windows with high compression ratios"
 type: open-source
-license: "LGPL-2.1-or-later (with a separate unRAR license restriction on RAR-decoding code)"
+license: LGPL-2.1-or-later
+license_note: "A separate unRAR license restricts the RAR-decoding code."
 website: https://www.7-zip.org
+developer: "Igor Pavlov"
+repository: https://github.com/ip7z/7zip
+latest_version: "26.05"
+version_checked_at: 2026-11-04
 platforms: [Windows, Linux, macOS]
 category: file-compression
 logo: /assets/images/software/7-zip.svg
 alternative_to:
   - winrar
-description: "7-Zip is a free, open source file archiver for Windows built around its own high-ratio 7z format, with no license fees, no nag screens, and command-line ports available for Linux and macOS."
+description: "7-Zip is a free, open source file archiver for Windows built around its high-ratio 7z format, with no nag screens and command-line ports for Linux and macOS."
 featured_image: 7-zip.webp
 last_modified_at: 2026-09-19
 ---

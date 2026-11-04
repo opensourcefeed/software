@@ -6,6 +6,7 @@ tagline: "GUI application for building and running containers on the desktop"
 type: proprietary
 license: Proprietary
 website: https://www.docker.com/products/docker-desktop
+developer: "Docker, Inc."
 platforms: [Windows, macOS, Linux]
 category: containerization
 logo: /assets/images/software/docker-desktop.svg

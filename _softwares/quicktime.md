@@ -6,6 +6,7 @@ tagline: "Apple's default multimedia player for macOS"
 type: proprietary
 license: Proprietary
 website: https://support.apple.com/quicktime
+developer: "Apple"
 platforms: [macOS]
 category: media-player
 logo: /assets/images/software/quicktime.png

@@ -6,6 +6,7 @@ tagline: "Agentic coding tool that lives in your terminal"
 type: proprietary
 license: Proprietary
 website: https://code.claude.com/docs/en/overview
+developer: "Anthropic"
 platforms: [Linux, Windows, macOS]
 category: development
 logo: /assets/images/software/claude-code.png

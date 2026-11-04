@@ -6,13 +6,16 @@ tagline: "Open source project management for agile teams"
 type: open-source
 license: AGPL-3.0
 website: https://www.taiga.io
+developer: "Kaleidos"
+repository: https://github.com/kaleidos-ventures/taiga
 platforms: [Linux, Windows, macOS via web, Docker]
 category: project-management
+self_hostable: true
 logo: /assets/images/software/taiga.png
 alternative_to:
   - asana
   - jira
-description: "Taiga is a free, open source, Scrum- and Kanban-focused project management tool built for agile teams, offered as a lighter-weight, self-hostable alternative to Asana and Jira."
+description: "Taiga is a free, open source Scrum and Kanban project management tool for agile teams, and a lighter, self-hostable alternative to Asana and Jira."
 last_modified_at: 2026-08-01
 ---
 

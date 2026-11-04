@@ -6,12 +6,13 @@ tagline: "Proprietary chat, video meetings, and collaboration hub"
 type: proprietary
 license: Proprietary
 website: https://www.microsoft.com/microsoft-teams
+developer: "Microsoft"
 platforms: [Windows, macOS, Linux via web, Android, iOS]
 category: communication
 logo: /assets/images/software/microsoft-teams.svg
 alternative_to: []
 has_alternatives: true
-description: "Microsoft Teams is a proprietary workplace chat, video meeting, and file collaboration platform bundled with Microsoft 365, tying communication to Microsoft's cloud ecosystem."
+description: "Microsoft Teams is a proprietary workplace chat, meeting, and file collaboration platform bundled with Microsoft 365 and tied to Microsoft's cloud."
 last_modified_at: 2026-08-01
 ---
 

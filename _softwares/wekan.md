@@ -6,9 +6,14 @@ tagline: "Self-hosted, open source kanban board"
 type: open-source
 license: MIT
 website: https://wekan.github.io
+developer: "Lauri Ojansivu and contributors"
+repository: https://github.com/wekan/wekan
+latest_version: "12.94"
+version_checked_at: 2026-11-04
 logo: /assets/images/software/wekan.svg
 platforms: [Linux, Windows, macOS]
 category: project-management
+self_hostable: true
 alternative_to:
   - trello
   - asana

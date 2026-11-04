@@ -4,14 +4,16 @@ title: "TeamViewer"
 slug: teamviewer
 tagline: "Proprietary remote desktop and remote access software"
 type: proprietary
-license: "Proprietary (free for personal, non-commercial use)"
+license: Proprietary
+license_note: "Free for personal, non-commercial use."
 website: https://www.teamviewer.com
+developer: "TeamViewer SE"
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: remote-desktop
 logo: /assets/images/software/teamviewer.svg
 alternative_to: []
 has_alternatives: true
-description: "TeamViewer is a proprietary remote desktop and remote access platform used widely for IT support and unattended device management, free for personal use with paid Remote Access, Business, Premium, Corporate, and Tensor subscription tiers for commercial use."
+description: "TeamViewer is a proprietary remote access platform widely used for IT support and unattended devices, free for personal use with paid tiers for business."
 faq:
   - question: "Is TeamViewer free?"
     answer: "TeamViewer offers a free version for personal, non-commercial use, including screen sharing and basic remote access. Commercial use requires a paid annual subscription, with tiers ranging from Remote Access up to Tensor for large enterprises."

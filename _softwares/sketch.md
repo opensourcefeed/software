@@ -6,12 +6,13 @@ tagline: "Proprietary Mac-only interface design tool"
 type: proprietary
 license: Proprietary
 website: https://www.sketch.com
+developer: "Sketch B.V."
 platforms: [macOS]
 category: design
 logo: /assets/images/software/sketch.svg
 alternative_to: []
 has_alternatives: true
-description: "Sketch is a proprietary, Mac-only vector interface design tool from Bohemian Coding, an early leader in UI/UX design software that predates Figma's browser-based collaboration model."
+description: "Sketch is Bohemian Coding's proprietary, Mac-only vector interface design tool, an early UI/UX design leader that predates Figma's browser-based model."
 featured_image: sketch.webp
 last_modified_at: 2026-09-17
 ---

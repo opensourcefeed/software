@@ -4,15 +4,21 @@ title: "Rocket.Chat"
 slug: rocket-chat
 tagline: "Open source team chat with an omnichannel customer service layer"
 type: open-source
-license: "Community Edition: MIT · Enterprise Edition: proprietary commercial license"
+license: MIT
+license_note: "Community Edition is MIT-licensed; Enterprise Edition uses a proprietary commercial license."
 website: https://www.rocket.chat
+developer: "Rocket.Chat Technologies"
+repository: https://github.com/RocketChat/Rocket.Chat
+latest_version: "8.9.0"
+version_checked_at: 2026-11-04
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: communication
+self_hostable: true
 logo: /assets/images/software/rocket-chat.svg
 alternative_to:
   - slack
   - microsoft-teams
-description: "Rocket.Chat is a self-hosted, open source team chat and customer service platform, offering an MIT-licensed Community Edition alongside a paid Enterprise Edition with omnichannel support."
+description: "Rocket.Chat is an open source, self-hosted team chat and customer service platform, with an MIT-licensed Community Edition and a paid Enterprise Edition."
 last_modified_at: 2026-08-01
 ---
 

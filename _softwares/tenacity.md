@@ -6,6 +6,10 @@ tagline: "Privacy-focused, community-maintained fork of Audacity"
 type: open-source
 license: GPL-3.0-or-later
 website: https://tenacityaudio.org
+developer: "Tenacity contributors"
+repository: https://codeberg.org/tenacityteam/tenacity
+latest_version: "1.3.5"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: audio-editing
 logo: /assets/images/software/tenacity.svg

@@ -4,12 +4,17 @@ title: "Open Source Alternatives to DaVinci Resolve"
 slug: davinci-resolve
 proprietary_slug: davinci-resolve
 alternatives:
-  - kdenlive
-  - shotcut
-  - openshot
-  - olive
+  - slug: kdenlive
+    best_for: "Full-featured multitrack editing"
+  - slug: shotcut
+    best_for: "Cross-platform editing with broad format support"
+  - slug: openshot
+    best_for: "Simple cuts and titles for beginners"
+  - slug: olive
+    best_for: "Trying node-based compositing (still early)"
 description: "Best open source alternatives to DaVinci Resolve for video editing. Free, fully open source non-linear editors with no proprietary Studio upgrade."
-last_modified_at: 2026-08-06
+verdict: "[Kdenlive](/software/kdenlive/) is the most complete open source alternative to DaVinci Resolve for timeline editing, with [Shotcut](/software/shotcut/) close behind. None of them matches Resolve's color grading, Fairlight audio, or Fusion compositing."
+last_modified_at: 2026-11-04
 comparison:
   columns: ["GPU Acceleration", "Platforms", "Maturity"]
   rows:

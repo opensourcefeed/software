@@ -6,12 +6,13 @@ tagline: "Proprietary messaging app owned by Meta"
 type: proprietary
 license: Proprietary
 website: https://www.whatsapp.com
+developer: "Meta"
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: communication
 logo: /assets/images/software/whatsapp.svg
 alternative_to: []
 has_alternatives: true
-description: "WhatsApp is a proprietary messaging app owned by Meta, offering end-to-end encrypted chat, voice, and video calls to billions of users worldwide, but tied to a phone number and Meta's infrastructure."
+description: "WhatsApp is Meta's proprietary messaging app with end-to-end encrypted chat and calls for billions of users, tied to a phone number and Meta's infrastructure."
 last_modified_at: 2026-08-01
 ---
 

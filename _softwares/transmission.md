@@ -6,12 +6,17 @@ tagline: "Lightweight, low-resource open source BitTorrent client"
 type: open-source
 license: GPL-2.0
 website: https://transmissionbt.com
+developer: "Transmission Project"
+repository: https://github.com/transmission/transmission
+latest_version: "4.1.4"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: torrent-client
+self_hostable: true
 logo: /assets/images/software/transmission.svg
 alternative_to:
   - utorrent
-description: "Transmission is a free, open source BitTorrent client designed to be lightweight and easy to use, shipped by default in many Linux distribution repositories and available as a native GTK app, Qt app, daemon, or web interface."
+description: "Transmission is a free, open source, lightweight BitTorrent client, preinstalled on many Linux distributions and available as GTK, Qt, daemon, and web versions."
 last_modified_at: 2026-08-11
 ---
 

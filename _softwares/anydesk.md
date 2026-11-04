@@ -4,14 +4,16 @@ title: "AnyDesk"
 slug: anydesk
 tagline: "Proprietary remote desktop software for support and remote access"
 type: proprietary
-license: "Proprietary (free for personal, non-commercial use)"
+license: Proprietary
+license_note: "Free for personal, non-commercial use."
 website: https://anydesk.com
+developer: "AnyDesk Software GmbH"
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: remote-desktop
 logo: /assets/images/software/anydesk.svg
 alternative_to: []
 has_alternatives: true
-description: "AnyDesk is a proprietary remote desktop application built around its own DeskRT codec, widely used for IT support and remote access, with a free personal tier and paid Solo, Standard, Advanced, and Ultimate business plans."
+description: "AnyDesk is a proprietary remote desktop app built on its own DeskRT codec, widely used for IT support, with a free personal tier and paid business plans."
 faq:
   - question: "Is AnyDesk free?"
     answer: "AnyDesk is free for personal, non-commercial use. Business and professional use requires a paid license, with tiers ranging from Solo up to custom-quoted Ultimate plans for larger organizations. Only the person initiating a session needs a paid license; the person being connected to does not."

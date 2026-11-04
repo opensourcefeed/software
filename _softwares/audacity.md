@@ -6,12 +6,17 @@ tagline: "Free and open source multi-track audio editor and recorder"
 type: open-source
 license: GPL-3.0-or-later
 website: https://www.audacityteam.org
+developer: "Muse Group and the Audacity team"
+repository: https://github.com/audacity/audacity
+latest_version: "4.0.2"
+version_tag: '^Audacity-(\d+\.\d+\.\d+)$'
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: audio-editing
 logo: /assets/images/software/audacity.svg
 alternative_to:
   - adobe-audition
-description: "Audacity is a free, open source audio editor and recorder for Linux, Windows, and macOS, offering multi-track editing, noise reduction, and a large library of effects and format support."
+description: "Audacity is a free, open source audio editor and recorder for Linux, Windows, and macOS, with multitrack editing, noise reduction, and a large effects library."
 featured_image: audacity.webp
 last_modified_at: 2026-09-05
 ---

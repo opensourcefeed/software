@@ -6,12 +6,16 @@ tagline: "Free and open source RAW image processing software with a high-precisi
 type: open-source
 license: GPL-3.0-or-later
 website: https://www.rawtherapee.com
+developer: "RawTherapee team"
+repository: https://github.com/RawTherapee/RawTherapee
+latest_version: "5.13"
+version_checked_at: 2026-11-04
 platforms: [Windows, macOS, Linux]
 category: image-editing
 logo: /assets/images/software/rawtherapee.svg
 alternative_to:
   - lightroom
-description: "RawTherapee is a free, open source RAW photo processor with a 32-bit floating-point pipeline and extensive local editing tools, built as an alternative to Adobe Lightroom."
+description: "RawTherapee is a free, open source RAW photo processor with a 32-bit floating-point pipeline and extensive local editing tools, and a Lightroom alternative."
 featured_image: rawtherapee.webp
 last_modified_at: 2026-09-17
 ---

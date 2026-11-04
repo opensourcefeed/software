@@ -6,12 +6,13 @@ tagline: "Proprietary music and podcast streaming service"
 type: proprietary
 license: Proprietary
 website: https://www.spotify.com
+developer: "Spotify AB"
 platforms: [Windows, macOS, Linux, Android, iOS, Web]
 category: music-streaming
 logo: /assets/images/software/spotify.svg
 alternative_to: []
 has_alternatives: true
-description: "Spotify is a proprietary, closed-source music and podcast streaming service that licenses its catalog from rights holders and requires an account and internet connection to use."
+description: "Spotify is a proprietary, closed source music and podcast streaming service with a catalog licensed from rights holders, requiring an account to use."
 last_modified_at: 2026-07-27
 ---
 

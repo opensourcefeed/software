@@ -6,13 +6,18 @@ tagline: "Open source, end-to-end encrypted messenger"
 type: open-source
 license: AGPL-3.0
 website: https://signal.org
+developer: "Signal Technology Foundation"
+repository: https://github.com/signalapp/Signal-Desktop
+latest_version: "8.33.0"
+version_tag: '^v(\d+\.\d+\.\d+)$'
+version_checked_at: 2026-11-04
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: communication
 logo: /assets/images/software/signal.svg
 alternative_to:
   - whatsapp
   - telegram
-description: "Signal is a free, open source messaging app with end-to-end encryption enabled by default for all chats, calls, and groups, run by a non-profit foundation instead of a for-profit company."
+description: "Signal is a free, open source messaging app with end-to-end encryption on by default for all chats, calls, and groups, run by a non-profit foundation."
 last_modified_at: 2026-09-16
 faq:
   - question: "Is Signal open source?"

@@ -6,8 +6,14 @@ tagline: "AI-driven autonomous development assistant"
 type: open-source
 license: MIT
 website: https://openhands.dev
+developer: "All Hands AI"
+repository: https://github.com/OpenHands/OpenHands
+latest_version: "1.35.0"
+version_tag: '^v?(\d+\.\d+\.\d+)$'
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: development
+self_hostable: true
 logo: /assets/images/software/openhands.png
 alternative_to:
   - claude-code

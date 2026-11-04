@@ -6,12 +6,13 @@ tagline: "Proprietary music streaming service from Apple"
 type: proprietary
 license: Proprietary
 website: https://music.apple.com
+developer: "Apple"
 platforms: [Windows, macOS, Android, iOS, Web]
 category: music-streaming
 logo: /assets/images/software/apple-music.svg
 alternative_to: []
 has_alternatives: true
-description: "Apple Music is a proprietary, closed-source music streaming service bundled into Apple's ecosystem, licensing its catalog from rights holders rather than hosting user-owned files."
+description: "Apple Music is a proprietary, closed source music streaming service built into Apple's ecosystem, with a catalog licensed from rights holders."
 last_modified_at: 2026-08-01
 ---
 

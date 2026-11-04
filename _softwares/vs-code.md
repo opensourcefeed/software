@@ -4,14 +4,16 @@ title: "Visual Studio Code"
 slug: vs-code
 tagline: "Proprietary code editor built by Microsoft on an open source core"
 type: proprietary
-license: Proprietary (built on the MIT-licensed "Code - OSS" core)
+license: Proprietary
+license_note: "Built on the MIT-licensed 'Code - OSS' core."
 website: https://code.visualstudio.com
+developer: "Microsoft"
 platforms: [Linux, Windows, macOS]
 category: code-editor
 logo: /assets/images/software/vs-code.png
 alternative_to: []
 has_alternatives: true
-description: "Visual Studio Code is Microsoft's proprietary code editor, built on top of the MIT-licensed 'Code - OSS' project but distributed under a closed license with added telemetry, branding, and a proprietary extension marketplace."
+description: "Visual Studio Code is Microsoft's proprietary editor, built on the MIT-licensed 'Code - OSS' but shipped with telemetry and a proprietary extension marketplace."
 last_modified_at: 2026-09-05
 ---
 

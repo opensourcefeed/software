@@ -6,11 +6,13 @@ tagline: "Proprietary 3D modeling and rendering software for Windows"
 type: proprietary
 license: Proprietary
 website: https://www.autodesk.com/products/3ds-max
+developer: "Autodesk"
 platforms: [Windows]
 category: 3d-modeling
+logo: /assets/images/software/3ds-max.svg
 alternative_to: []
 has_alternatives: true
-description: "Autodesk 3ds Max is a proprietary 3D modeling, animation, and rendering application for Windows, widely used in game asset creation, architectural visualization, and motion graphics."
+description: "Autodesk 3ds Max is a proprietary 3D modeling, animation, and rendering app for Windows, used for game assets, architectural visualization, and motion graphics."
 last_modified_at: 2026-08-01
 ---
 

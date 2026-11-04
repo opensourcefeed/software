@@ -6,6 +6,10 @@ tagline: "Decentralized, peer-to-peer file synchronization"
 type: open-source
 license: MPL-2.0
 website: https://syncthing.net
+developer: "Syncthing Foundation"
+repository: https://github.com/syncthing/syncthing
+latest_version: "2.1.7"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: cloud-storage
 logo: /assets/images/software/syncthing.svg

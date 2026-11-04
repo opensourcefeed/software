@@ -4,14 +4,16 @@ title: "Adobe Audition"
 slug: adobe-audition
 tagline: "Proprietary digital audio workstation from Adobe"
 type: proprietary
-license: Proprietary (Creative Cloud subscription)
+license: Proprietary
+license_note: "Sold through a Creative Cloud subscription."
 website: https://www.adobe.com/products/audition.html
+developer: "Adobe"
 platforms: [Windows, macOS]
 category: audio-editing
 logo: /assets/images/software/adobe-audition.svg
 alternative_to: []
 has_alternatives: true
-description: "Adobe Audition is a proprietary digital audio workstation for recording, editing, mixing, and restoring audio, sold as part of Adobe's Creative Cloud subscription."
+description: "Adobe Audition is a proprietary digital audio workstation for recording, editing, mixing, and restoring audio, sold through Adobe's Creative Cloud subscription."
 last_modified_at: 2026-09-05
 ---
 

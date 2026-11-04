@@ -6,6 +6,7 @@ tagline: "Industry-standard image editing software"
 type: proprietary
 license: Proprietary
 website: https://www.adobe.com/products/photoshop.html
+developer: "Adobe"
 platforms: [Windows, macOS]
 category: image-editing
 logo: /assets/images/software/photoshop.png

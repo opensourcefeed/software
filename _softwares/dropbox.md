@@ -6,6 +6,7 @@ tagline: "Cloud file storage and synchronization service"
 type: proprietary
 license: Proprietary
 website: https://www.dropbox.com
+developer: "Dropbox, Inc."
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: cloud-storage
 logo: /assets/images/software/dropbox.svg

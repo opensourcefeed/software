@@ -6,13 +6,18 @@ tagline: "Open source virtual classroom and web conferencing system"
 type: open-source
 license: LGPL-3.0
 website: https://bigbluebutton.org
+developer: "BigBlueButton Inc. and community"
+repository: https://github.com/bigbluebutton/bigbluebutton
+latest_version: "4.0.1"
+version_checked_at: 2026-11-04
 platforms: [Web, Linux (server)]
 category: video-conferencing
+self_hostable: true
 logo: /assets/images/software/bigbluebutton.svg
 alternative_to:
   - google-meet
   - zoom
-description: "BigBlueButton is a free, LGPL-3.0-licensed web conferencing system built for online teaching, with a shared whiteboard, breakout rooms, polls, recording, and built-in integration with Moodle and other learning platforms."
+description: "BigBlueButton is a free, LGPL-3.0 web conferencing system for online teaching, with a whiteboard, breakout rooms, polls, recording, and Moodle integration."
 last_modified_at: 2026-09-25
 faq:
   - question: "Is BigBlueButton free?"

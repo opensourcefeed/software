@@ -7,6 +7,10 @@ tagline: "The modern, native media player for macOS"
 type: open-source
 license: GPL-3.0-or-later
 website: https://iina.io
+developer: "IINA team"
+repository: https://github.com/iina/iina
+latest_version: "1.5.0"
+version_checked_at: 2026-11-04
 platforms: [macOS]
 category: media-player
 logo: /assets/images/software/iina.png

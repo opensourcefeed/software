@@ -6,14 +6,19 @@ tagline: "Federated, open source music streaming platform"
 type: open-source
 license: AGPL-3.0
 website: https://www.funkwhale.audio
+developer: "Funkwhale collective"
+repository: https://dev.funkwhale.audio/funkwhale/funkwhale
+latest_version: "2.0.13"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS via web, Android]
 category: music-streaming
+self_hostable: true
 logo: /assets/images/software/funkwhale.svg
 alternative_to:
   - spotify
   - apple-music
   - youtube-music
-description: "Funkwhale is a free, open source, federated music streaming server built on ActivityPub, letting communities share and stream self-hosted music libraries across independent servers."
+description: "Funkwhale is a free, open source music streaming server that federates over ActivityPub, letting communities share self-hosted libraries across servers."
 last_modified_at: 2026-08-01
 ---
 

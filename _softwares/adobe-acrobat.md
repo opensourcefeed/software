@@ -6,12 +6,13 @@ tagline: "Proprietary PDF creation, editing, and signing suite"
 type: proprietary
 license: Proprietary
 website: https://www.adobe.com/acrobat.html
+developer: "Adobe"
 platforms: [Windows, macOS, Linux via web, Android, iOS]
 category: pdf-tools
 logo: /assets/images/software/adobe-acrobat.svg
 alternative_to: []
 has_alternatives: true
-description: "Adobe Acrobat is Adobe's proprietary PDF suite for creating, editing, signing, and annotating documents, available as a free reader plus subscription-only Standard and Pro tiers."
+description: "Adobe Acrobat is Adobe's proprietary PDF suite for creating, editing, signing, and annotating documents: a free reader plus subscription Standard and Pro tiers."
 last_modified_at: 2026-09-16
 faq:
   - question: "Is Adobe Acrobat open source?"

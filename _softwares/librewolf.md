@@ -6,6 +6,11 @@ tagline: "Privacy-hardened fork of Firefox"
 type: open-source
 license: MPL-2.0
 website: https://librewolf.net
+developer: "LibreWolf community"
+repository: https://codeberg.org/librewolf/source
+latest_version: "159.0.1"
+version_tag: '^(\d+\.\d+(?:\.\d+)?)-\d+$'
+version_checked_at: 2026-11-04
 logo: /assets/images/software/librewolf.svg
 platforms: [Windows, macOS, Linux]
 category: web-browser

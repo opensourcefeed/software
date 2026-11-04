@@ -4,10 +4,13 @@ title: "Open Source Alternatives to Google Meet"
 slug: google-meet
 proprietary_slug: google-meet
 alternatives:
-  - jitsi
-  - bigbluebutton
-description: "Open source alternatives to Google Meet: Jitsi Meet for everyday video calls and BigBlueButton for online classes, both self-hostable with no Google account or Workspace subscription."
-last_modified_at: 2026-09-25
+  - slug: jitsi
+    best_for: "Quick video calls from a link, hosted or self-hosted"
+  - slug: bigbluebutton
+    best_for: "Online teaching with whiteboards and breakout rooms"
+description: "Open source Google Meet alternatives: Jitsi Meet for everyday video calls and BigBlueButton for online classes, both self-hostable, no Google account."
+verdict: "[Jitsi Meet](/software/jitsi/) is the closest open source alternative to Google Meet: people join from a link with no account, and you can self-host it. For online classes with whiteboards, polls, and breakout rooms, use [BigBlueButton](/software/bigbluebutton/)."
+last_modified_at: 2026-11-04
 comparison:
   columns: ["License", "Best for", "Account to join", "Recording", "Hosting"]
   rows:

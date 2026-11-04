@@ -6,12 +6,13 @@ tagline: "Adobe's discontinued UI/UX design and prototyping tool"
 type: proprietary
 license: Proprietary
 website: https://www.adobe.com/products/xd.html
+developer: "Adobe"
 platforms: [Windows, macOS]
 category: design
 logo: /assets/images/software/adobe-xd.svg
 alternative_to: []
 has_alternatives: true
-description: "Adobe XD was Adobe's proprietary UI/UX design and prototyping tool, launched to compete with Sketch and Figma; Adobe has wound down active development and steered customers toward other tools."
+description: "Adobe XD was Adobe's proprietary UI/UX design and prototyping tool, a Sketch and Figma rival that Adobe has since wound down in favor of other tools."
 last_modified_at: 2026-08-01
 ---
 

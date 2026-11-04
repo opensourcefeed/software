@@ -6,12 +6,13 @@ tagline: "Proprietary AI-first code editor forked from VS Code"
 type: proprietary
 license: Proprietary
 website: https://cursor.com
+developer: "Anysphere"
 platforms: [Windows, macOS, Linux]
 category: development
 logo: /assets/images/software/cursor.svg
 alternative_to: []
 has_alternatives: true
-description: "Cursor is a proprietary AI-first code editor forked from VS Code, built by Anysphere, offering agentic multi-file editing tied to its own closed source app and subscription."
+description: "Cursor is Anysphere's proprietary AI-first code editor, forked from VS Code, offering agentic multi-file editing through a closed source app and subscription."
 last_modified_at: 2026-08-01
 ---
 

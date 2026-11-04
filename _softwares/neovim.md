@@ -6,12 +6,16 @@ tagline: "Open source, extensible terminal-based text editor and IDE"
 type: open-source
 license: Apache-2.0
 website: https://neovim.io
+developer: "Neovim contributors"
+repository: https://github.com/neovim/neovim
+latest_version: "0.12.6"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: code-editor
 logo: /assets/images/software/neovim.svg
 alternative_to:
   - vs-code
-description: "Neovim is a free, open source refactor of Vim, focused on extensibility and modern plugin architecture while keeping Vim's modal editing model and terminal-based interface."
+description: "Neovim is a free, open source refactor of Vim focused on extensibility and a modern plugin architecture, keeping Vim's modal editing in the terminal."
 last_modified_at: 2026-09-05
 ---
 

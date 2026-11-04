@@ -6,6 +6,7 @@ tagline: "Cross-platform note-taking and organization app"
 type: proprietary
 license: Proprietary
 website: https://evernote.com
+developer: "Evernote Corporation (Bending Spoons)"
 platforms: [Windows, macOS, Android, iOS]
 category: note-taking
 logo: /assets/images/software/evernote.svg

@@ -6,6 +6,7 @@ tagline: "Proprietary email client built into macOS and iOS"
 type: proprietary
 license: Proprietary
 website: https://support.apple.com/mail
+developer: "Apple"
 platforms: [macOS, iOS]
 category: email-client
 logo: /assets/images/software/apple-mail.svg

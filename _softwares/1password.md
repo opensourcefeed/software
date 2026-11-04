@@ -6,6 +6,7 @@ tagline: "Password manager and secrets vault for individuals and teams"
 type: proprietary
 license: Proprietary
 website: https://1password.com
+developer: "1Password (AgileBits Inc.)"
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: password-manager
 logo: /assets/images/software/1password.svg

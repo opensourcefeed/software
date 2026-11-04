@@ -6,12 +6,17 @@ tagline: "Free, open source video editor built for simplicity"
 type: open-source
 license: GPL-3.0
 website: https://www.openshot.org
+developer: "OpenShot Studios"
+repository: https://github.com/OpenShot/openshot-qt
+latest_version: "4.1.1"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: video-editing
+logo: /assets/images/software/openshot.png
 alternative_to:
   - premiere-pro
   - davinci-resolve
-description: "OpenShot is a free, open source video editor focused on an approachable, drag-and-drop interface, built on the libopenshot engine and used mainly for straightforward editing rather than advanced color grading or compositing."
+description: "OpenShot is a free, open source video editor with an approachable drag-and-drop interface, built for straightforward editing rather than grading or compositing."
 last_modified_at: 2026-08-06
 faq:
   - question: "Is OpenShot good for beginners?"

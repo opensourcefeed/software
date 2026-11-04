@@ -6,12 +6,13 @@ tagline: "Proprietary AI pair programmer from GitHub and Microsoft"
 type: proprietary
 license: Proprietary
 website: https://github.com/features/copilot
+developer: "GitHub (Microsoft)"
 platforms: [Linux, Windows, macOS]
 category: development
 logo: /assets/images/software/github-copilot.svg
 alternative_to: []
 has_alternatives: true
-description: "GitHub Copilot is a proprietary AI coding assistant built into VS Code, JetBrains IDEs, and GitHub.com, offered as a subscription add-on locked to GitHub's platform and approved models."
+description: "GitHub Copilot is a proprietary AI coding assistant for VS Code, JetBrains IDEs, and GitHub.com, sold as a subscription tied to GitHub's platform and models."
 last_modified_at: 2026-08-01
 ---
 

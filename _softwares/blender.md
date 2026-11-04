@@ -6,6 +6,10 @@ tagline: "Free and open source 3D creation suite"
 type: open-source
 license: GPL-2.0-or-later
 website: https://www.blender.org
+developer: "Blender Foundation"
+repository: https://projects.blender.org/blender/blender
+latest_version: "5.2.3"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: 3d-modeling
 logo: /assets/images/software/blender.svg
@@ -14,7 +18,7 @@ alternative_to:
   - 3ds-max
   - zbrush
   - cinema-4d
-description: "Blender is a free, open source 3D creation suite covering modeling, rigging, animation, simulation, rendering, and video editing, funded and maintained by the Blender Foundation."
+description: "Blender is a free, open source 3D suite for modeling, rigging, animation, simulation, rendering, and video editing, maintained by the Blender Foundation."
 featured_image: blender.webp
 last_modified_at: 2026-09-17
 ---

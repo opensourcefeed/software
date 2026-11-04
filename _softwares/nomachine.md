@@ -4,14 +4,16 @@ title: "NoMachine"
 slug: nomachine
 tagline: "Cross-platform proprietary remote desktop software"
 type: proprietary
-license: "Proprietary (free for personal, non-commercial use)"
+license: Proprietary
+license_note: "Free for personal, non-commercial use."
 website: https://www.nomachine.com
+developer: "NoMachine"
 platforms: [Windows, macOS, Linux, Raspberry Pi]
 category: remote-desktop
 logo: /assets/images/software/nomachine.svg
 alternative_to: []
 has_alternatives: true
-description: "NoMachine is a proprietary remote desktop application built on the NX protocol, offering fast cross-platform remote access with a free personal-use edition and paid Enterprise subscriptions for business use."
+description: "NoMachine is a proprietary remote desktop app built on the NX protocol, with a free personal-use edition and paid Enterprise subscriptions for business."
 faq:
   - question: "Is NoMachine free to use?"
     answer: "NoMachine offers a free \"NoMachine\" edition for personal, non-commercial use with no session time limits. Commercial and enterprise use requires a paid subscription, such as the Enterprise Desktop license."

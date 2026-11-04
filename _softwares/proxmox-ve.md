@@ -6,12 +6,15 @@ tagline: "Open source server virtualization platform built on KVM and LXC"
 type: open-source
 license: AGPL-3.0
 website: https://www.proxmox.com/en/products/proxmox-virtual-environment/overview
+developer: "Proxmox Server Solutions GmbH"
+repository: https://git.proxmox.com/
 platforms: [Linux]
 category: virtualization
+self_hostable: true
 logo: /assets/images/software/proxmox-ve.svg
 alternative_to:
   - vmware-workstation
-description: "Proxmox VE is an open source, web-managed server virtualization platform combining KVM virtual machines and LXC containers, with every feature available free under the AGPL-3.0 license and optional paid support subscriptions."
+description: "Proxmox VE is an open source, web-managed virtualization platform for KVM virtual machines and LXC containers, fully free under AGPL-3.0, with paid support."
 faq:
   - question: "Is Proxmox VE free?"
     answer: "Yes. Proxmox VE is free to download, install, and run in production, including commercial use, with every feature available in the free download. Paid subscriptions add access to a more conservatively tested Enterprise package repository and official support, rather than unlocking extra features."

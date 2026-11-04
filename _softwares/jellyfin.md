@@ -6,13 +6,18 @@ tagline: "Free, self-hosted media server with no telemetry or fees"
 type: open-source
 license: GPL-2.0-or-later
 website: https://jellyfin.org
+developer: "Jellyfin Project"
+repository: https://github.com/jellyfin/jellyfin
+latest_version: "12.4"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS, Docker]
 category: music-streaming
+self_hostable: true
 logo: /assets/images/software/jellyfin.svg
 alternative_to:
   - spotify
   - apple-music
-description: "Jellyfin is a free, open source media server you self-host to stream your own movies, TV, and music library, forked from Emby in 2018 after Emby moved toward a closed, paid model."
+description: "Jellyfin is a free, open source media server for streaming your own movies, TV, and music, forked from Emby in 2018 after Emby moved to a closed model."
 featured_image: jellyfin.webp
 last_modified_at: 2026-09-17
 faq:

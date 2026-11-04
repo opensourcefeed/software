@@ -4,14 +4,17 @@ title: "VirtualBox"
 slug: virtualbox
 tagline: "Open source desktop virtualization for Windows, macOS, and Linux"
 type: open-source
-license: "GPL-3.0 (base package); Extension Pack under a separate proprietary PUEL license"
+license: GPL-3.0
+license_note: "Covers the base package; the Extension Pack uses the separate proprietary PUEL license."
 website: https://www.virtualbox.org
+developer: "Oracle"
+repository: https://github.com/VirtualBox/virtualbox
 platforms: [Windows, macOS, Linux, Oracle Solaris]
 category: virtualization
 logo: /assets/images/software/virtualbox.svg
 alternative_to:
   - vmware-workstation
-description: "VirtualBox is Oracle's open source desktop virtualization software, distributing its GPL-3.0 base package for Windows, macOS, Linux, and Solaris hosts as a free alternative to VMware Workstation."
+description: "VirtualBox is Oracle's open source desktop virtualization software, with a free GPL-3.0 base package for Windows, macOS, Linux, and Solaris hosts."
 faq:
   - question: "Is VirtualBox open source?"
     answer: "The VirtualBox base package is open source, released under the GNU General Public License version 3 (GPLv3). A separate add-on, the VirtualBox Extension Pack, ships under Oracle's proprietary Personal Use and Educational License (PUEL) and is free only for personal, educational, and evaluation use."

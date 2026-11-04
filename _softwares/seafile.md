@@ -4,16 +4,20 @@ title: "Seafile"
 slug: seafile
 tagline: "High-performance file sync and share with library-based versioning"
 type: open-source
-license: "AGPL-3.0 (server core, Community Edition); Apache-2.0 (Seahub web UI); GPLv2 (desktop clients); Professional Edition is proprietary"
+license: AGPL-3.0
+license_note: "AGPL-3.0 for the Community Edition server core, Apache-2.0 for the Seahub web UI, and GPL-2.0 for the desktop clients; the Professional Edition is proprietary."
 website: https://www.seafile.com
+developer: "Seafile Ltd."
+repository: https://github.com/haiwen/seafile
 platforms: [Linux, Windows, macOS]
 category: cloud-storage
+self_hostable: true
 logo: /assets/images/software/seafile.svg
 alternative_to:
   - dropbox
   - google-drive
   - onedrive
-description: "Seafile is a file sync and share platform focused on sync performance and file versioning, with an open source Community Edition (AGPL-3.0) and a separate proprietary Professional Edition."
+description: "Seafile is a file sync and share platform focused on speed and versioning, with an AGPL-3.0 Community Edition and a separate proprietary Professional Edition."
 featured_image: seafile.webp
 last_modified_at: 2026-09-17
 ---

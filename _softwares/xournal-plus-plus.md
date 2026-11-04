@@ -6,13 +6,18 @@ tagline: "Open source handwritten notes and PDF annotation app"
 type: open-source
 license: GPL-2.0
 website: https://xournalpp.github.io
+developer: "Xournal++ team"
+repository: https://github.com/xournalpp/xournalpp
+latest_version: "1.3.8"
+version_checked_at: 2026-11-04
 platforms: [Linux, Windows, macOS]
 category: pdf-tools
 logo: /assets/images/software/xournal-plus-plus.svg
 alternative_to:
   - adobe-acrobat
   - xodo
-description: "Xournal++ is a free, open source handwriting and note-taking app with PDF annotation support, built for pen/tablet input and precise markup on top of existing documents."
+  - onenote
+description: "Xournal++ is a free, open source handwriting and note-taking app with PDF annotation, built for pen and tablet input and precise markup on existing documents."
 featured_image: xournal-plus-plus.webp
 last_modified_at: 2026-09-17
 faq:
