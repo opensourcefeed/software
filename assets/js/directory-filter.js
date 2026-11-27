@@ -11,7 +11,7 @@
   var extraEls = document.querySelectorAll('[data-directory-extra]');
   var list = document.querySelector('[data-directory-list]');
   var groups = document.querySelectorAll('[data-category-group]');
-  var cards = list ? list.querySelectorAll('[data-software-card]') : [];
+  var cards = (list || document).querySelectorAll('[data-software-card]');
 
   // Long category groups start trimmed (CSS hides cards past the per-breakpoint
   // limit while .is-collapsible is set). "Show all" expands one group; any
