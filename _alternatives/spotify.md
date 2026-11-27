@@ -1,7 +1,7 @@
 ---
 layout: alternative-to
 title: "Open Source Alternatives to Spotify"
-seo_title: "Open Source Spotify Alternatives: Self-Hosted and Free"
+seo_title: "Spotify Open Source Alternatives: Self-Hosted and Free"
 slug: spotify
 proprietary_slug: spotify
 alternatives:
@@ -27,7 +27,7 @@ alternatives:
     trade_offs: "Desktop only; to listen on your phone you still need a server such as Navidrome."
 description: "Open source Spotify alternatives: self-host your music with Navidrome, Funkwhale, or Jellyfin, or use Nuclear and Strawberry as desktop players."
 verdict: "No open source app offers Spotify's licensed catalog. To stream music you own, [Navidrome](/software/navidrome/) is the simplest self-hosted server; [Jellyfin](/software/jellyfin/) also covers video, and [Strawberry](/software/strawberry/) plays local files with no server."
-last_modified_at: 2026-11-04
+last_modified_at: 2026-11-27
 comparison:
   columns: ["Model", "Needs your own files", "Setup"]
   rows:
