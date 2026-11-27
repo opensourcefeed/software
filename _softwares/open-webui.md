@@ -10,8 +10,8 @@ license_note: "Open WebUI License: BSD-3-Clause terms plus a clause that forbids
 website: https://openwebui.com
 developer: "Open WebUI Inc."
 repository: https://github.com/open-webui/open-webui
-latest_version: "0.13.0"
-version_checked_at: 2026-11-04
+latest_version: "0.13.5"
+version_checked_at: 2026-11-27
 platforms: [Web, Docker, Windows, macOS, Linux]
 category: ai-assistant
 self_hostable: true

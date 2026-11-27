@@ -8,8 +8,8 @@ license: GPL-2.0
 website: https://github.com/rakshasa/rtorrent
 developer: "Jari Sundell"
 repository: https://github.com/rakshasa/rtorrent
-latest_version: "0.16.27"
-version_checked_at: 2026-11-04
+latest_version: "0.16.29"
+version_checked_at: 2026-11-27
 platforms: [Linux, macOS]
 category: torrent-client
 self_hostable: true

@@ -9,9 +9,9 @@ license: MIT
 website: https://www.librechat.ai
 developer: "LibreChat (Danny Avila and contributors)"
 repository: https://github.com/LibreChat-AI/LibreChat
-latest_version: "0.8.8"
+latest_version: "0.8.9"
 version_tag: '^v(\d+\.\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Web, Docker]
 category: ai-assistant
 self_hostable: true

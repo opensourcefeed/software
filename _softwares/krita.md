@@ -8,8 +8,8 @@ license: GPL-3.0
 website: https://krita.org
 developer: "Krita Foundation and KDE"
 repository: https://invent.kde.org/graphics/krita
-latest_version: "6.0.4.1"
-version_checked_at: 2026-11-04
+latest_version: "6.0.5.1"
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS, Android]
 category: image-editing
 logo: /assets/images/software/krita.png

@@ -8,8 +8,8 @@ license: Apache-2.0
 website: https://zulip.com
 developer: "Kandra Labs"
 repository: https://github.com/zulip/zulip
-latest_version: "12.3"
-version_checked_at: 2026-11-04
+latest_version: "13.3"
+version_checked_at: 2026-11-27
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: communication
 self_hostable: true

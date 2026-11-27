@@ -9,7 +9,7 @@ website: https://keepassxc.org
 developer: "KeePassXC Team"
 repository: https://github.com/keepassxreboot/keepassxc
 latest_version: "2.8.0"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: password-manager
 logo: /assets/images/software/keepassxc.svg

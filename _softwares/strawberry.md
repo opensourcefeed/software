@@ -9,7 +9,7 @@ website: https://www.strawberrymusicplayer.org
 developer: "Jonas Kvinge"
 repository: https://github.com/strawberrymusicplayer/strawberry
 latest_version: "1.2.31"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: music-streaming
 logo: /assets/images/software/strawberry.png

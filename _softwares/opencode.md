@@ -8,8 +8,8 @@ license: MIT
 website: https://opencode.ai
 developer: "Anomaly"
 repository: https://github.com/anomalyco/opencode
-latest_version: "2.2.5"
-version_checked_at: 2026-11-04
+latest_version: "2.4.2"
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: development
 logo: /assets/images/software/opencode.svg

@@ -10,7 +10,7 @@ website: https://www.tabbyml.com
 developer: "TabbyML"
 repository: https://github.com/TabbyML/tabby
 latest_version: "4.3.1"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS, Docker]
 category: development
 self_hostable: true

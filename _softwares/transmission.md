@@ -9,7 +9,7 @@ website: https://transmissionbt.com
 developer: "Transmission Project"
 repository: https://github.com/transmission/transmission
 latest_version: "4.1.4"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: torrent-client
 self_hostable: true

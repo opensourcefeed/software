@@ -8,9 +8,9 @@ license: GPL-3.0
 website: https://bitwarden.com
 developer: "Bitwarden, Inc."
 repository: https://github.com/bitwarden/clients
-latest_version: "2026.10.3"
+latest_version: "2026.11.0"
 version_tag: '^desktop-v(\d+\.\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS, Android, iOS]
 category: password-manager
 self_hostable: true

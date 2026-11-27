@@ -8,8 +8,8 @@ license: Apache-2.0
 website: https://podman-desktop.io
 developer: "Red Hat and community"
 repository: https://github.com/podman-desktop/podman-desktop
-latest_version: "1.30.5"
-version_checked_at: 2026-11-04
+latest_version: "1.31.0"
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: containerization
 logo: /assets/images/software/podman-desktop.svg

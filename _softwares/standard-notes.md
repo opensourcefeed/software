@@ -8,9 +8,9 @@ license: AGPL-3.0
 website: https://standardnotes.com
 developer: "Standard Notes (Proton AG)"
 repository: https://github.com/standardnotes/app
-latest_version: "3.203.0"
+latest_version: "3.203.3"
 version_tag: '^@standardnotes/desktop@(\d+\.\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Windows, macOS, Linux, Android, iOS, Web]
 category: note-taking
 self_hostable: true

@@ -9,7 +9,7 @@ website: https://peazip.github.io/
 developer: "Giorgio Tani"
 repository: https://github.com/peazip/PeaZip
 latest_version: "11.4.0"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Windows, Linux, macOS, BSD]
 category: file-compression
 logo: /assets/images/software/peazip.svg

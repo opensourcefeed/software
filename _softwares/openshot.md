@@ -9,7 +9,7 @@ website: https://www.openshot.org
 developer: "OpenShot Studios"
 repository: https://github.com/OpenShot/openshot-qt
 latest_version: "4.1.1"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: video-editing
 logo: /assets/images/software/openshot.png

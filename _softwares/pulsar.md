@@ -9,7 +9,7 @@ website: https://pulsar-edit.dev
 developer: "Pulsar community"
 repository: https://github.com/pulsar-edit/pulsar
 latest_version: "1.133.1"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: code-editor
 logo: /assets/images/software/pulsar.png

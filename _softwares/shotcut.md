@@ -8,8 +8,8 @@ license: GPL-3.0
 website: https://shotcut.org
 developer: "Meltytech"
 repository: https://github.com/mltframework/shotcut
-latest_version: "26.10.30"
-version_checked_at: 2026-11-04
+latest_version: "26.11.15"
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: video-editing
 logo: /assets/images/software/shotcut.svg

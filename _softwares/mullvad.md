@@ -9,9 +9,9 @@ license_note: "Covers the client apps."
 website: https://mullvad.net
 developer: "Mullvad VPN AB"
 repository: https://github.com/mullvad/mullvadvpn-app
-latest_version: "2026.5"
+latest_version: "2026.6"
 version_tag: '^(\d{4}\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 logo: /assets/images/software/mullvad.svg
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: vpn

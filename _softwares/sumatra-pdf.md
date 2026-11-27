@@ -11,7 +11,7 @@ developer: "Krzysztof Kowalczyk"
 repository: https://github.com/sumatrapdfreader/sumatrapdf
 latest_version: "3.6.1"
 version_tag: '^(\d+\.\d+(?:\.\d+)?)rel$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Windows]
 category: pdf-tools
 logo: /assets/images/software/sumatra-pdf.svg

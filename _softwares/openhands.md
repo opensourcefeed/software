@@ -8,9 +8,9 @@ license: MIT
 website: https://openhands.dev
 developer: "All Hands AI"
 repository: https://github.com/OpenHands/OpenHands
-latest_version: "1.35.0"
+latest_version: "1.46.0"
 version_tag: '^v?(\d+\.\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: development
 self_hostable: true

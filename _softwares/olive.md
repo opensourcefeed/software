@@ -9,7 +9,7 @@ website: https://www.olivevideoeditor.org
 developer: "Olive Team"
 repository: https://github.com/olive-editor/olive
 latest_version: "0.1.2"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: video-editing
 logo: /assets/images/software/olive.png

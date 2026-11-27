@@ -8,8 +8,8 @@ license: GPL-3.0
 website: https://haruna.kde.org/
 developer: "KDE"
 repository: https://invent.kde.org/multimedia/haruna
-latest_version: "1.9.0"
-version_checked_at: 2026-11-04
+latest_version: "1.9.1"
+version_checked_at: 2026-11-27
 platforms: [Linux]
 category: media-player
 logo: /assets/images/software/haruna.png

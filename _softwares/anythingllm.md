@@ -9,9 +9,9 @@ license: MIT
 website: https://anythingllm.com
 developer: "Mintplex Labs"
 repository: https://github.com/Mintplex-Labs/anything-llm
-latest_version: "1.19.0"
+latest_version: "1.20.0"
 version_tag: '^v(\d+\.\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Windows, macOS, Linux, Docker]
 category: ai-assistant
 self_hostable: true

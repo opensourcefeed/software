@@ -13,21 +13,25 @@ permalink: /
     <h1>Software Directory</h1>
     <p>Browse open source and proprietary software. Find free alternatives to popular commercial tools.</p>
 
-    {% assign category_count = site.softwares | map: "category" | uniq | size %}
-    <div class="hero__stats">
-      <div class="hero__stat">
-        <span class="hero__stat-value">{{ site.softwares.size }}+</span>
+    {% assign selfhosted_count = site.softwares | where: "self_hostable", true | size %}
+    <nav class="hero__stats" aria-label="Explore the directory">
+      <a class="hero__stat" href="#categories">
+        <span class="hero__stat-value">{{ site.softwares.size }}</span>
         <span class="hero__stat-label">Tools listed</span>
-      </div>
-      <div class="hero__stat">
-        <span class="hero__stat-value">{{ category_count }}</span>
-        <span class="hero__stat-label">Categories</span>
-      </div>
-      <div class="hero__stat">
+      </a>
+      <a class="hero__stat" href="{{ '/alternative-to/' | relative_url }}">
         <span class="hero__stat-value">{{ site.alternatives.size }}</span>
         <span class="hero__stat-label">Alternatives guides</span>
-      </div>
-    </div>
+      </a>
+      <a class="hero__stat" href="{{ '/best-open-source-software/' | relative_url }}">
+        <span class="hero__stat-value">{{ site.roundups.size }}</span>
+        <span class="hero__stat-label">Best-of lists</span>
+      </a>
+      <a class="hero__stat" href="{{ '/self-hosted/' | relative_url }}">
+        <span class="hero__stat-value">{{ selfhosted_count }}</span>
+        <span class="hero__stat-label">Self-hosted tools</span>
+      </a>
+    </nav>
   </div>
 
   <!-- Directory search & filter (progressively enhanced, client-side only) -->
@@ -78,6 +82,37 @@ permalink: /
 
   <p class="directory-empty" data-directory-empty hidden>No software matches your search. Try a different term or filter.</p>
 
+  <!-- Popular alternatives (curated list in _config.yml footer_alternatives);
+       hidden by directory-filter.js while a search or filter is active -->
+  <section class="section popular-alts" data-directory-extra aria-labelledby="popular-alts-title">
+    <div class="popular-alts__head">
+      <h2 class="section__title" id="popular-alts-title">Popular alternatives</h2>
+      <a class="popular-alts__all" href="{{ '/alternative-to/' | relative_url }}">All {{ site.alternatives.size }} guides &rarr;</a>
+    </div>
+    <ul class="popular-alts__list">
+      {% for slug in site.footer_alternatives limit: 8 %}
+        {% assign alt_page = site.alternatives | where: "slug", slug | first %}
+        {% if alt_page %}
+          {% assign prop = site.softwares | where: "slug", alt_page.proprietary_slug | first %}
+          {% assign alt_count = alt_page.alternatives | size %}
+          <li>
+            <a class="popular-alts__item" href="{{ alt_page.url | relative_url }}">
+              {% if prop.logo %}
+                <img class="popular-alts__logo" src="{{ prop.logo | relative_url }}" alt="" width="32" height="32" loading="lazy" decoding="async">
+              {% else %}
+                <span class="popular-alts__logo popular-alts__logo--placeholder" aria-hidden="true">{{ prop.title | default: slug | slice: 0 }}</span>
+              {% endif %}
+              <span class="popular-alts__text">
+                <span class="popular-alts__name">{{ prop.title | default: slug }}</span>
+                <span class="popular-alts__count">{{ alt_count }} {% if alt_count == 1 %}alternative{% else %}alternatives{% endif %}</span>
+              </span>
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+
   <!-- Software Directory (grouped by category) -->
   <section class="section" data-directory-list>
     <h2 class="section__title">Directory</h2>
@@ -113,6 +148,17 @@ permalink: /
             {% include software-card.html software=software %}
           {% endfor %}
         </div>
+        {% comment %}
+          Long groups are trimmed by directory-filter.js (3 cards on mobile,
+          4 on tablet, 6 on desktop); all cards stay in the HTML. The button
+          is hidden at breakpoints where every card already shows.
+        {% endcomment %}
+        {% if group.items.size > 3 %}
+          {% capture group_label %}{% if site.category_names[group.name] %}{{ site.category_names[group.name] }}{% else %}{{ group.name | capitalize }}{% endif %}{% endcapture %}
+          <button type="button" class="category-group__more{% if group.items.size <= 4 %} category-group__more--mobile-only{% elsif group.items.size <= 6 %} category-group__more--below-desktop{% endif %}" data-category-more aria-expanded="false" hidden>
+            Show all {{ group.items.size }} {{ group_label | strip }}
+          </button>
+        {% endif %}
         <a class="category-group__top" href="#categories">Back to categories <span aria-hidden="true">&uarr;</span></a>
       </div>
 

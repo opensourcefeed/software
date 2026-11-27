@@ -41,9 +41,6 @@ layout: default
     {{ content }}
   </div>
 
-  <!-- 5. Ad slot: mid-content -->
-  {% include ad.html slot="alternatives-mid-content" %}
-
   <!-- 6. Alternatives list (cards linking to software pages) -->
   {% comment %}
     Entries may be plain slugs or {slug, best_for, gains, trade_offs, migration}.
@@ -51,12 +48,24 @@ layout: default
   {% endcomment %}
   {% assign detailed = false %}
   {% for item in page.alternatives %}{% if item.slug %}{% assign detailed = true %}{% endif %}{% endfor %}
+  {% comment %}
+    The mid-content ad goes after the second ranked entry (so readers reach
+    the top picks before any second ad), or after the list when it has two
+    entries or fewer.
+  {% endcomment %}
+  {% assign mid_ad_in_list = false %}
+  {% if detailed and page.alternatives.size > 2 %}{% assign mid_ad_in_list = true %}{% endif %}
   <section class="alternatives-section">
     <h2 class="section__title">{% if page.alternatives.size == 1 %}The Open Source Alternative{% else %}{{ page.alternatives.size }} Open Source Alternatives{% endif %}{% if proprietary %} to {{ proprietary.title }}{% endif %}</h2>
     {% if detailed %}
       <ol class="alt-entries">
         {% for item in page.alternatives %}
           <li>{% include alternative-entry.html item=item rank=forloop.index proprietary=proprietary %}</li>
+          {% if mid_ad_in_list and forloop.index == 2 %}
+            </ol>
+            {% include ad.html slot="alternatives-mid-content" %}
+            <ol class="alt-entries" start="3">
+          {% endif %}
         {% endfor %}
       </ol>
     {% else %}
@@ -70,6 +79,11 @@ layout: default
       </div>
     {% endif %}
   </section>
+
+  <!-- 6b. Ad slot: mid-content, when not placed inside the list above -->
+  {% unless mid_ad_in_list %}
+    {% include ad.html slot="alternatives-mid-content" %}
+  {% endunless %}
 
   <!-- 7. Comparison table (optional — renders only if page.comparison exists) -->
   {% if page.comparison %}

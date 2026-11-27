@@ -35,18 +35,27 @@ layout: default
     {{ content }}
   </div>
 
-  <!-- 4. Ad slot: mid-content -->
-  {% include ad.html slot="roundup-mid-content" %}
-
-  <!-- 5. Ranked picks -->
+  <!-- 4. Ranked picks. The mid-content ad sits after pick #2 so readers reach
+       the top picks before a second ad; short lists get it after the list. -->
+  {% assign mid_ad_in_list = false %}
+  {% if pick_list.size > 2 %}{% assign mid_ad_in_list = true %}{% endif %}
   <section class="alternatives-section">
     <h2 class="section__title">Our {{ pick_list.size }} {% if pick_list.size == 1 %}Pick{% else %}Picks{% endif %}</h2>
     <ol class="alt-entries">
       {% for item in pick_list %}
         <li>{% include alternative-entry.html item=item rank=forloop.index %}</li>
+        {% if mid_ad_in_list and forloop.index == 2 %}
+          </ol>
+          {% include ad.html slot="roundup-mid-content" %}
+          <ol class="alt-entries" start="3">
+        {% endif %}
       {% endfor %}
     </ol>
   </section>
+
+  {% unless mid_ad_in_list %}
+    {% include ad.html slot="roundup-mid-content" %}
+  {% endunless %}
 
   <!-- 6. Comparison table, generated from each pick's front matter -->
   <section class="section">

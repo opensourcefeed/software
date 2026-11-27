@@ -8,14 +8,19 @@
   text-align: center;
   overflow: hidden;
 
-  // Responsive ad block
+  // Responsive ad block. No frame or tint: a filled ad sits on the page
+  // background like the content around it. min-height reserves space (CLS).
   .adsbygoogle {
     display: block;
     width: 100%;
     min-height: 280px;
-    background-color: var(--color-bg-alt);
-    border: 1px dashed var(--color-border);
-    border-radius: $radius-md;
+  }
+
+  // AdSense marks slots it could not fill with data-ad-status="unfilled".
+  // Collapse the whole container (label + reserved space) so readers never
+  // see an empty box.
+  &:has(.adsbygoogle[data-ad-status="unfilled"]) {
+    display: none;
   }
 }
 

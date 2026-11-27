@@ -9,9 +9,9 @@ license: AGPL-3.0
 website: https://element.io
 developer: "Element"
 repository: https://github.com/element-hq/element-web
-latest_version: "1.12.33"
+latest_version: "1.12.36"
 version_tag: '^v(\d+\.\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS, Android, iOS]
 category: communication
 self_hostable: true

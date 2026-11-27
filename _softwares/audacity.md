@@ -10,7 +10,7 @@ developer: "Muse Group and the Audacity team"
 repository: https://github.com/audacity/audacity
 latest_version: "4.0.2"
 version_tag: '^Audacity-(\d+\.\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: audio-editing
 logo: /assets/images/software/audacity.svg

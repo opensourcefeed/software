@@ -8,8 +8,8 @@ license: AGPL-3.0
 website: https://appflowy.com
 developer: "AppFlowy"
 repository: https://github.com/AppFlowy-IO/AppFlowy
-latest_version: "0.15.0"
-version_checked_at: 2026-11-04
+latest_version: "0.15.1"
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS, Android, iOS, Web]
 category: note-taking
 self_hostable: true

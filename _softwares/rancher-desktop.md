@@ -9,8 +9,8 @@ license: Apache-2.0
 website: https://rancherdesktop.io
 developer: "SUSE"
 repository: https://github.com/rancher-sandbox/rancher-desktop
-latest_version: "1.24.0"
-version_checked_at: 2026-11-04
+latest_version: "1.25.0"
+version_checked_at: 2026-11-27
 platforms: [Windows, macOS, Linux]
 category: containerization
 logo: /assets/images/software/rancher-desktop.svg

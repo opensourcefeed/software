@@ -8,8 +8,8 @@ license: Apache-2.0
 website: https://cline.bot
 developer: "Cline Bot Inc."
 repository: https://github.com/cline/cline
-latest_version: "4.1.26"
-version_checked_at: 2026-11-04
+latest_version: "4.1.28"
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: development
 logo: /assets/images/software/cline.png

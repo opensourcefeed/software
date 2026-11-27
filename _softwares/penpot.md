@@ -8,8 +8,8 @@ license: MPL-2.0
 website: https://penpot.app
 developer: "Kaleidos"
 repository: https://github.com/penpot/penpot
-latest_version: "2.18.6"
-version_checked_at: 2026-11-04
+latest_version: "2.19.5"
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: design
 self_hostable: true

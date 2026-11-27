@@ -8,8 +8,8 @@ license: Apache-2.0
 website: https://goose-docs.ai
 developer: "Agentic AI Foundation (originally Block)"
 repository: https://github.com/aaif-goose/goose
-latest_version: "1.57.0"
-version_checked_at: 2026-11-04
+latest_version: "1.61.1"
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: development
 logo: /assets/images/software/goose.svg

@@ -8,8 +8,8 @@ license: MPL-2.0
 website: https://brave.com
 developer: "Brave Software"
 repository: https://github.com/brave/brave-browser
-latest_version: "1.101.22"
-version_checked_at: 2026-11-04
+latest_version: "1.102.45"
+version_checked_at: 2026-11-27
 logo: /assets/images/software/brave.svg
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: web-browser

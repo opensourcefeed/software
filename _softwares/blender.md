@@ -8,8 +8,8 @@ license: GPL-2.0-or-later
 website: https://www.blender.org
 developer: "Blender Foundation"
 repository: https://projects.blender.org/blender/blender
-latest_version: "5.2.3"
-version_checked_at: 2026-11-04
+latest_version: "5.3.0"
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: 3d-modeling
 logo: /assets/images/software/blender.svg

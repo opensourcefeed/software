@@ -8,9 +8,9 @@ license: MPL-2.0
 website: https://www.mozilla.org/firefox/
 developer: "Mozilla"
 repository: https://github.com/mozilla-firefox/firefox
-latest_version: "159.0.1"
+latest_version: "161.0"
 version_tag: '^FIREFOX_(\d+_\d+(?:_\d+)?)_RELEASE$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS, Android, iOS]
 category: web-browser
 logo: /assets/images/software/firefox.svg

@@ -9,7 +9,7 @@ website: https://rafostar.github.io/clapper/
 developer: "Rafał Dzięgiel"
 repository: https://github.com/Rafostar/clapper
 latest_version: "0.10.0"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux]
 category: media-player
 logo: /assets/images/software/clapper.png

@@ -10,7 +10,7 @@ website: https://affine.pro
 developer: "Toeverything"
 repository: https://github.com/toeverything/AFFiNE
 latest_version: "0.27.4"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS, Android, iOS, Web]
 category: note-taking
 self_hostable: true

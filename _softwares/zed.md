@@ -8,9 +8,9 @@ license: GPL-3.0
 website: https://zed.dev
 developer: "Zed Industries"
 repository: https://github.com/zed-industries/zed
-latest_version: "1.26.2"
+latest_version: "1.30.2"
 version_tag: '^v(\d+\.\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, macOS]
 category: code-editor
 logo: /assets/images/software/zed.svg

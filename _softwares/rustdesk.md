@@ -8,8 +8,8 @@ license: AGPL-3.0
 website: https://rustdesk.com
 developer: "Purslane Ltd"
 repository: https://github.com/rustdesk/rustdesk
-latest_version: "1.5.1"
-version_checked_at: 2026-11-04
+latest_version: "1.5.3"
+version_checked_at: 2026-11-27
 platforms: [Windows, macOS, Linux, Android, iOS, Web]
 category: remote-desktop
 self_hostable: true

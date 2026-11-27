@@ -10,7 +10,7 @@ developer: "Godot Foundation and community"
 repository: https://github.com/godotengine/godot
 latest_version: "4.7.2"
 version_tag: '^(\d+\.\d+(?:\.\d+)?)-stable$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: game-development
 logo: /assets/images/software/godot.svg

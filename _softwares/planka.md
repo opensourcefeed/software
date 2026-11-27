@@ -9,8 +9,8 @@ license_note: "PLANKA Community License v1.1 (not OSI-approved); paid Pro and En
 website: https://planka.app
 developer: "PLANKA Software GmbH"
 repository: https://github.com/plankanban/planka
-latest_version: "2.2.1"
-version_checked_at: 2026-11-04
+latest_version: "2.3.1"
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS, Docker]
 category: project-management
 self_hostable: true

@@ -9,8 +9,8 @@ license_note: "Community Edition is MIT-licensed; Enterprise Edition uses a prop
 website: https://www.rocket.chat
 developer: "Rocket.Chat Technologies"
 repository: https://github.com/RocketChat/Rocket.Chat
-latest_version: "8.9.0"
-version_checked_at: 2026-11-04
+latest_version: "9.0.0"
+version_checked_at: 2026-11-27
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: communication
 self_hostable: true
@@ -19,14 +19,14 @@ alternative_to:
   - slack
   - microsoft-teams
 description: "Rocket.Chat is an open source, self-hosted team chat and customer service platform, with an MIT-licensed Community Edition and a paid Enterprise Edition."
-last_modified_at: 2026-08-01
+last_modified_at: 2026-11-27
 ---
 
 ## Overview
 
 Rocket.Chat started in 2015 in Porto Alegre, Brazil, as a side project by four developers — Gabriel Engel, Rodrigo Nascimento, Marcelo Schmidt, and Diego Sampaio — who wanted a self-hostable, extensible alternative to hosted chat tools. It grew from a community-driven GitHub project into a company (Rocket.Chat Technologies Corp.) that today serves both team-communication customers and, distinctively, customer-service organizations, with reported use across governments, financial institutions, and large enterprises seeking data-sovereign messaging.
 
-Like Mattermost, Rocket.Chat runs an open-core model rather than a single license: **Community Edition** is MIT-licensed and includes the full core chat server, mobile and desktop apps, and a large library of community-built integrations. **Enterprise Edition** shares the same codebase (the two were merged into a single repository so Enterprise features simply unlock with a license key) but is governed by Rocket.Chat's own proprietary Enterprise Edition license, which gates features like auditing, advanced LDAP/SSO, and, most notably, its Omnichannel suite. Built on Node.js and MongoDB, Rocket.Chat's architecture emphasizes extensibility — a marketplace of apps and a scripting engine let admins add bots, integrations, and custom workflows without forking the codebase.
+Like Mattermost, Rocket.Chat runs an open-core model rather than a single license: **Community Edition** is MIT-licensed and includes the full core chat server, mobile and desktop apps, and a large library of community-built integrations. **Enterprise Edition** shares the same codebase (the two were merged into a single repository so Enterprise features simply unlock with a license key) but is governed by Rocket.Chat's own proprietary Enterprise Edition license, which gates features like auditing and its Omnichannel suite. As of version 9.0.0 (November 2026), LDAP, SAML, and custom OAuth logins also moved behind a paid plan; Community Edition still includes local username/password login and OAuth with Google, GitHub, GitLab, Apple, and Nextcloud. Built on Node.js and MongoDB, Rocket.Chat's architecture emphasizes extensibility — a marketplace of apps and a scripting engine let admins add bots, integrations, and custom workflows without forking the codebase.
 
 Where Rocket.Chat differentiates most clearly from Mattermost and Element is its Omnichannel product: a unified inbox that lets support and sales teams handle live chat, WhatsApp, Facebook Messenger, SMS, and Telegram conversations from a single Rocket.Chat interface, alongside their regular internal team channels. That makes it as much a customer-facing contact-center tool as an internal Slack alternative, a positioning neither Mattermost (developer/enterprise-internal focus) nor Element (privacy/federation focus) shares.
 
@@ -50,4 +50,4 @@ Where Rocket.Chat differentiates most clearly from Mattermost and Element is its
 
 ## Who It's For
 
-Rocket.Chat is for organizations that need both internal team chat and customer-facing messaging in one platform, particularly businesses running support or sales operations across WhatsApp, social messengers, and live chat. It's a strong fit for self-hosters who want MIT-licensed core chat for free and are willing to pay for Enterprise Edition if they need Omnichannel, advanced auditing, or SSO. Teams that only need internal chat with no customer-service angle may find Mattermost's DevOps-oriented tooling (Playbooks, Focalboard) or Element's privacy-first federation a closer match to their needs.
+Rocket.Chat is for organizations that need both internal team chat and customer-facing messaging in one platform, particularly businesses running support or sales operations across WhatsApp, social messengers, and live chat. It's a strong fit for self-hosters who want MIT-licensed core chat for free and are willing to pay for Enterprise Edition if they need Omnichannel, auditing, or LDAP/SAML/custom OAuth login. Teams that only need internal chat with no customer-service angle may find Mattermost's DevOps-oriented tooling (Playbooks, Focalboard) or Element's privacy-first federation a closer match to their needs.

@@ -9,7 +9,7 @@ website: https://jellyfin.org
 developer: "Jellyfin Project"
 repository: https://github.com/jellyfin/jellyfin
 latest_version: "12.4"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS, Docker]
 category: music-streaming
 self_hostable: true

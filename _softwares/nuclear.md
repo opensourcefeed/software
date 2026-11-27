@@ -10,7 +10,7 @@ developer: "nukeop and contributors"
 repository: https://github.com/nukeop/nuclear
 latest_version: "0.6.48"
 version_tag: '^v(\d+\.\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: music-streaming
 logo: /assets/images/software/nuclear.svg

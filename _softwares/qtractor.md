@@ -8,8 +8,8 @@ license: GPL-2.0-or-later
 website: https://qtractor.org
 developer: "Rui Nuno Capela"
 repository: https://github.com/rncbc/qtractor
-latest_version: "1.6.5"
-version_checked_at: 2026-11-04
+latest_version: "1.7.0"
+version_checked_at: 2026-11-27
 platforms: [Linux]
 category: audio-editing
 logo: /assets/images/software/qtractor.svg

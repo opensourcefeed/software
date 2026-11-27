@@ -9,7 +9,7 @@ website: https://tenacityaudio.org
 developer: "Tenacity contributors"
 repository: https://codeberg.org/tenacityteam/tenacity
 latest_version: "1.3.5"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: audio-editing
 logo: /assets/images/software/tenacity.svg

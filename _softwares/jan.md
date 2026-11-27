@@ -11,7 +11,7 @@ developer: "Menlo Research"
 repository: https://github.com/janhq/jan
 latest_version: "0.8.8"
 version_tag: '^v(\d+\.\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Windows, macOS, Linux]
 category: ai-assistant
 logo: /assets/images/software/jan.png

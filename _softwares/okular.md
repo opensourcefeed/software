@@ -8,8 +8,8 @@ license: GPL-2.0-or-later
 website: https://okular.kde.org
 developer: "KDE"
 repository: https://invent.kde.org/graphics/okular
-latest_version: "26.08.2"
-version_checked_at: 2026-11-04
+latest_version: "26.11.80"
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS, "*BSD"]
 category: pdf-tools
 logo: /assets/images/software/okular.svg

@@ -8,8 +8,8 @@ license: GPL-2.0-or-later
 website: https://remmina.org
 developer: "Remmina team"
 repository: https://gitlab.com/Remmina/Remmina
-latest_version: "1.4.43"
-version_checked_at: 2026-11-04
+latest_version: "1.4.44"
+version_checked_at: 2026-11-27
 platforms: [Linux, BSD]
 category: remote-desktop
 logo: /assets/images/software/remmina.svg

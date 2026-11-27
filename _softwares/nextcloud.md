@@ -8,8 +8,8 @@ license: AGPL-3.0-or-later
 website: https://nextcloud.com
 developer: "Nextcloud GmbH"
 repository: https://github.com/nextcloud/server
-latest_version: "35.0.2"
-version_checked_at: 2026-11-04
+latest_version: "35.0.3"
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: cloud-storage
 self_hostable: true

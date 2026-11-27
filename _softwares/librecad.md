@@ -9,7 +9,7 @@ website: https://librecad.org
 developer: "LibreCAD community"
 repository: https://github.com/LibreCAD/LibreCAD
 latest_version: "2.2.1.6"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: cad
 logo: /assets/images/software/librecad.svg

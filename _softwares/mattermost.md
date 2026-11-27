@@ -9,8 +9,8 @@ license_note: "Team Edition is MIT-licensed; Enterprise Edition uses a proprieta
 website: https://mattermost.com
 developer: "Mattermost, Inc."
 repository: https://github.com/mattermost/mattermost
-latest_version: "12.0.2"
-version_checked_at: 2026-11-04
+latest_version: "12.1.0"
+version_checked_at: 2026-11-27
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: communication
 self_hostable: true

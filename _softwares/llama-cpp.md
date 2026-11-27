@@ -9,9 +9,9 @@ license: MIT
 website: https://github.com/ggml-org/llama.cpp
 developer: "The ggml authors (ggml-org)"
 repository: https://github.com/ggml-org/llama.cpp
-latest_version: "b12103"
+latest_version: "b12804"
 version_tag: '^(b\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS, Docker]
 category: ai-assistant
 self_hostable: true

@@ -10,7 +10,7 @@ developer: "Inkscape Project"
 repository: https://gitlab.com/inkscape/inkscape
 latest_version: "1.4.4"
 version_tag: '^INKSCAPE_(\d+_\d+(?:_\d+)?)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: image-editing
 logo: /assets/images/software/inkscape.svg

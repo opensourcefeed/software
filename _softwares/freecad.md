@@ -10,7 +10,7 @@ developer: "FreeCAD community"
 repository: https://github.com/FreeCAD/FreeCAD
 latest_version: "1.1.4"
 version_tag: '^(\d+\.\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: cad
 logo: /assets/images/software/freecad.svg

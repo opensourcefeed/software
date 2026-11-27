@@ -8,9 +8,9 @@ license: AGPL-3.0-or-later
 website: https://joplinapp.org
 developer: "Laurent Cozic"
 repository: https://github.com/laurent22/joplin
-latest_version: "3.7.22"
+latest_version: "3.8.4"
 version_tag: '^v(\d+\.\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS, Android, iOS]
 category: note-taking
 self_hostable: true

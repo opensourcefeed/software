@@ -9,7 +9,7 @@ website: https://www.rawtherapee.com
 developer: "RawTherapee team"
 repository: https://github.com/RawTherapee/RawTherapee
 latest_version: "5.13"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Windows, macOS, Linux]
 category: image-editing
 logo: /assets/images/software/rawtherapee.svg

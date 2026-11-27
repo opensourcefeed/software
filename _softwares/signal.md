@@ -8,9 +8,9 @@ license: AGPL-3.0
 website: https://signal.org
 developer: "Signal Technology Foundation"
 repository: https://github.com/signalapp/Signal-Desktop
-latest_version: "8.33.0"
+latest_version: "8.36.0"
 version_tag: '^v(\d+\.\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: communication
 logo: /assets/images/software/signal.svg

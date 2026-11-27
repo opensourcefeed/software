@@ -8,8 +8,8 @@ license: AGPL-3.0
 website: https://www.funkwhale.audio
 developer: "Funkwhale collective"
 repository: https://dev.funkwhale.audio/funkwhale/funkwhale
-latest_version: "2.0.13"
-version_checked_at: 2026-11-04
+latest_version: "2.0.18"
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS via web, Android]
 category: music-streaming
 self_hostable: true

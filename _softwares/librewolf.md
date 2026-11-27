@@ -8,9 +8,9 @@ license: MPL-2.0
 website: https://librewolf.net
 developer: "LibreWolf community"
 repository: https://codeberg.org/librewolf/source
-latest_version: "159.0.1"
+latest_version: "161.0"
 version_tag: '^(\d+\.\d+(?:\.\d+)?)-\d+$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 logo: /assets/images/software/librewolf.svg
 platforms: [Windows, macOS, Linux]
 category: web-browser

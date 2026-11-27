@@ -9,8 +9,8 @@ license_note: "A separate unRAR license restricts the RAR-decoding code."
 website: https://www.7-zip.org
 developer: "Igor Pavlov"
 repository: https://github.com/ip7z/7zip
-latest_version: "26.05"
-version_checked_at: 2026-11-04
+latest_version: "26.06"
+version_checked_at: 2026-11-27
 platforms: [Windows, Linux, macOS]
 category: file-compression
 logo: /assets/images/software/7-zip.svg

@@ -9,9 +9,9 @@ license: MIT
 website: https://ollama.com
 developer: "Ollama"
 repository: https://github.com/ollama/ollama
-latest_version: "0.40.14"
+latest_version: "0.40.18"
 version_tag: '^v(\d+\.\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS, Docker]
 category: ai-assistant
 self_hostable: true

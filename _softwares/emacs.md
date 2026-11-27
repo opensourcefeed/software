@@ -10,7 +10,7 @@ developer: "GNU Project"
 repository: https://git.savannah.gnu.org/git/emacs.git
 latest_version: "31.1"
 version_tag: '^emacs-(\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: code-editor
 logo: /assets/images/software/emacs.svg

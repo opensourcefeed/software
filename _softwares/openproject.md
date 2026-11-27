@@ -9,9 +9,9 @@ license_note: "Covers the Community edition."
 website: https://www.openproject.org
 developer: "OpenProject GmbH"
 repository: https://github.com/opf/openproject
-latest_version: "17.9.6"
+latest_version: "17.9.8"
 version_tag: '^v(\d+\.\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS via web]
 category: project-management
 self_hostable: true

@@ -1,8 +1,8 @@
 <header class="site-header">
   <div class="site-header__inner">
     <a href="{{ site.main_site_url }}" class="site-header__logo">
-      <img src="{{ site.main_site_url }}/assets/images/meta/icon.png" width="24" alt="OpenSourceFeed logo" />
-      <span>OpenSourceFeed</span>
+      <img src="{{ '/assets/images/meta/mark.svg' | relative_url }}" width="31" height="28" alt="" />
+      <span class="wordmark">OpenSource<span class="wordmark-accent">Feed</span></span>
     </a>
 
     <input type="checkbox" id="nav-toggle" class="site-header__nav-checkbox" />
@@ -36,7 +36,7 @@
             <li><a href="{{ site.main_site_url }}/insights/">Insights</a></li>
           </ul>
         </li>
-        <li><a href="{{ site.main_site_url }}/page-hit-rank/">Page Hit Rank</a></li>
+        <li><a href="{{ site.main_site_url }}/page-hit-rank/">Popularity Index</a></li>
         <li class="site-header__dropdown">
           <input type="checkbox" id="nav-software-toggle" class="site-header__submenu-checkbox" />
           <label for="nav-software-toggle" class="site-header__dropdown-toggle">
@@ -46,7 +46,7 @@
           <ul class="site-header__dropdown-menu">
             <li><a href="{{ '/' | relative_url }}">Software Directory</a></li>
             <li><a href="{{ '/alternative-to/' | relative_url }}">Open Source Alternatives</a></li>
-            <li><a href="{{ '/best-open-source-software/' | relative_url }}">Best Open Source Software</a></li>
+            <li><a href="{{ '/best-open-source-software/' | relative_url }}">Popular Open Source Software</a></li>
             <li><a href="{{ '/self-hosted/' | relative_url }}">Self-Hosted Software</a></li>
           </ul>
         </li>
@@ -64,46 +64,9 @@
       </ul>
 
       <ul class="site-header__social social-icons">
-        <li>
-          <a rel="nofollow" title="Follow us on Mastodon" target="_blank" href="https://floss.social/@opensourcefeed">
-            <img height="25" alt="Mastodon Link" src="{{ site.main_site_url }}/assets/images/meta/mastodon.png" />
-          </a>
-        </li>
-        <li>
-          <a rel="nofollow" title="Send us Email" target="_blank" href="mailto:contact.opensourcefeed@gmail.com">
-            <img height="25" alt="Email ID" src="{{ site.main_site_url }}/assets/images/meta/email.png" />
-          </a>
-        </li>
-        <li>
-          <a rel="nofollow" title="Like us on facebook" target="_blank" href="https://www.facebook.com/opensourcefeed/">
-            <img height="25" alt="FB Link" src="{{ site.main_site_url }}/assets/images/meta/facebook.png" />
-          </a>
-        </li>
-        <li>
-          <a rel="nofollow" title="Follow us on Twitter" target="_blank" href="https://x.com/opensourcefeed">
-            <img height="25" alt="Twitter Link" src="{{ site.main_site_url }}/assets/images/meta/twitter.png" />
-          </a>
-        </li>
-        <li>
-          <a rel="nofollow" title="Subscribe our YouTube channel" target="_blank" href="https://www.youtube.com/c/DistroScreens">
-            <img height="25" alt="YouTube Channel" src="{{ site.main_site_url }}/assets/images/meta/youtube.png" />
-          </a>
-        </li>
-        <li>
-          <a title="Subscribe for our RSS" target="_blank" href="{{ site.main_site_url }}/feed.xml">
-            <img height="25" alt="RSS Link" src="{{ site.main_site_url }}/assets/images/meta/rss.png" />
-          </a>
-        </li>
-        <li>
-          <a rel="nofollow" title="Subscribe us on Telegram" target="_blank" href="https://t.me/opensourcefeed_org">
-            <img height="25" alt="Telegram Link" src="{{ site.main_site_url }}/assets/images/meta/telegram.png" />
-          </a>
-        </li>
-        <li>
-          <a rel="nofollow" title="Follow us on Instagram" target="_blank" href="https://www.instagram.com/opensourcefeed/">
-            <img height="25" alt="Instagram Link" src="{{ site.main_site_url }}/assets/images/meta/instagram.png" />
-          </a>
-        </li>
+        {% for item in site.data.social %}{% if item.navbar %}
+        <li>{% include social-link.html item=item %}</li>
+        {% endif %}{% endfor %}
       </ul>
     </div>
 

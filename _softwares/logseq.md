@@ -9,7 +9,7 @@ website: https://logseq.com
 developer: "Logseq"
 repository: https://github.com/logseq/logseq
 latest_version: "2.0.2"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: note-taking
 logo: /assets/images/software/logseq.svg

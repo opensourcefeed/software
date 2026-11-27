@@ -9,7 +9,7 @@ website: https://lmms.io
 developer: "LMMS developers"
 repository: https://github.com/LMMS/lmms
 latest_version: "1.2.2"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: audio-editing
 logo: /assets/images/software/lmms.svg

@@ -8,8 +8,8 @@ license: LGPL-3.0
 website: https://bigbluebutton.org
 developer: "BigBlueButton Inc. and community"
 repository: https://github.com/bigbluebutton/bigbluebutton
-latest_version: "4.0.1"
-version_checked_at: 2026-11-04
+latest_version: "4.0.4"
+version_checked_at: 2026-11-27
 platforms: [Web, Linux (server)]
 category: video-conferencing
 self_hostable: true

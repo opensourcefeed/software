@@ -8,8 +8,25 @@
   var countEl = controls.querySelector('[data-directory-count]');
   var emptyEl = document.querySelector('[data-directory-empty]');
   var adEl = document.querySelector('[data-directory-ad]');
+  var extraEls = document.querySelectorAll('[data-directory-extra]');
+  var list = document.querySelector('[data-directory-list]');
   var groups = document.querySelectorAll('[data-category-group]');
-  var cards = document.querySelectorAll('[data-software-card]');
+  var cards = list ? list.querySelectorAll('[data-software-card]') : [];
+
+  // Long category groups start trimmed (CSS hides cards past the per-breakpoint
+  // limit while .is-collapsible is set). "Show all" expands one group; any
+  // active search or filter lifts the trim so every match is visible.
+  groups.forEach(function (group) {
+    var more = group.querySelector('[data-category-more]');
+    if (!more) return;
+    group.classList.add('is-collapsible');
+    more.hidden = false;
+    more.addEventListener('click', function () {
+      group.classList.remove('is-collapsible');
+      more.hidden = true;
+      more.setAttribute('aria-expanded', 'true');
+    });
+  });
 
   var state = { query: '', type: 'all', category: 'all', selfHosted: false };
   var selfHostedChip = controls.querySelector('[data-filter-selfhosted]');
@@ -53,10 +70,10 @@
     if (emptyEl) {
       emptyEl.hidden = visibleCount !== 0;
     }
-    if (adEl) {
-      var isFiltered = !!query || state.type !== 'all' || state.category !== 'all' || state.selfHosted;
-      adEl.hidden = isFiltered;
-    }
+    var isFiltered = !!query || state.type !== 'all' || state.category !== 'all' || state.selfHosted;
+    if (adEl) adEl.hidden = isFiltered;
+    extraEls.forEach(function (el) { el.hidden = isFiltered; });
+    if (list) list.classList.toggle('is-filtering', isFiltered);
   }
 
   if (selfHostedChip) {

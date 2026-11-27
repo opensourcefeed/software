@@ -9,7 +9,7 @@ website: https://www.navidrome.org
 developer: "Deluan Quintão and contributors"
 repository: https://github.com/navidrome/navidrome
 latest_version: "0.64.2"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS, Docker]
 category: music-streaming
 self_hostable: true

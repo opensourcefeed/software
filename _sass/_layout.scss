@@ -43,12 +43,121 @@
 
   img {
     display: block;
+    width: 31px;
+    height: 28px;
   }
 
   &:hover {
     text-decoration: none;
     color: $color-bg;
   }
+}
+
+// Compact header: header-compact.js adds .is-compact once the page is
+// scrolled and removes it back at the top. Only sizes and padding change.
+.site-header__inner,
+.site-header__logo,
+.site-header__logo img,
+.theme-toggle,
+.site-header__nav-label,
+.social-link {
+  transition:
+    padding $transition-base,
+    font-size $transition-base,
+    width $transition-base,
+    height $transition-base;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.site-header.is-compact {
+  box-shadow: $shadow-lg;
+
+  .site-header__inner {
+    padding-block: 0.125rem;
+  }
+
+  .site-header__logo {
+    font-size: $font-size-base;
+
+    img {
+      width: 24px;
+      height: 22px;
+    }
+  }
+
+  .theme-toggle,
+  .site-header__nav-label {
+    width: 34px;
+    height: 34px;
+  }
+
+  .social-link {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  @include respond-to(desktop) {
+    .site-header__nav a,
+    .site-header__dropdown-toggle {
+      padding-block: $spacing-xs;
+    }
+  }
+}
+
+// Wordmark: "Feed" in the brand-mark gradient (light stops for the dark header)
+.wordmark-accent {
+  color: #22d3ee;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .wordmark-accent {
+    background: linear-gradient(90deg, #22d3ee, #a78bfa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
+
+// Header social icons (monochrome SVG, entries with navbar: true in
+// _data/social.yml)
+.site-header__social {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-flex;
+    margin: 0;
+  }
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: $radius-full;
+  color: rgba($color-bg, 0.75);
+  transition: color $transition-fast, background-color $transition-fast;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-bg;
+    background-color: rgba($color-bg, 0.1);
+    text-decoration: none;
+  }
+}
+
+.social-icon {
+  display: block;
 }
 
 // Mobile toggle (CSS-only checkbox — no JS)
@@ -311,43 +420,9 @@
   display: block;
 }
 
-// Social icons
-.site-header__social {
-  @include flex-row($gap: $spacing-sm);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex-wrap: wrap;
-
-  li {
-    margin: 0;
-    display: flex;
-    align-items: center;
-  }
-
-  a {
-    display: inline-flex;
-    padding: $spacing-xs;
-    border-radius: $radius-sm;
-
-    &:hover {
-      background-color: rgba($color-bg, 0.1);
-    }
-  }
-
-  img {
-    display: block;
-  }
-}
-
-// Social icons image sizing
-.social-icons img {
-  height: 25px;
-}
-
 // Desktop (compact): inline nav with hover dropdowns — reduced spacing to fit
-// 1024px–1439px viewports on a single line. Social icons are hidden below xl
-// (they are repeated in the footer) so the nav fits at 1024px. Full spacing
+// 1024px–1439px viewports on a single line. Social links live in the footer
+// only, keeping the header to navigation and the theme toggle. Full spacing
 // restored at 2xl.
 @include respond-to(desktop) {
   .site-header__inner {
@@ -371,6 +446,11 @@
     max-height: none;
     overflow: visible;
     flex-grow: 1;
+  }
+
+  .site-header__social {
+    margin-left: auto;
+    padding-left: $spacing-sm;
   }
 
   .site-header__nav {
@@ -438,31 +518,6 @@
     visibility: visible;
     transform: translateY(0);
   }
-
-  .site-header__social {
-    margin-left: auto;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
-    gap: $spacing-xs;
-
-    a {
-      padding: 0;
-    }
-  }
-
-  .social-icons img {
-    height: 20px;
-  }
-
-  .site-header__social {
-    display: none;
-  }
-}
-
-@include respond-to(xl) {
-  .site-header__social {
-    display: flex;
-  }
 }
 
 // Desktop (full): restore standard spacing at 1440px+
@@ -483,18 +538,6 @@
   .site-header__dropdown-toggle {
     padding: $spacing-sm $spacing-sm;
     font-size: $font-size-sm;
-  }
-
-  .site-header__social {
-    gap: $spacing-xs;
-
-    a {
-      padding: 2px;
-    }
-  }
-
-  .social-icons img {
-    height: 22px;
   }
 }
 
@@ -572,17 +615,12 @@
   }
 }
 
-.site-footer__social {
-  margin-top: $spacing-xl;
-  padding-top: $spacing-lg;
+.site-footer__links {
+  @include flex-row($gap: $spacing-sm $spacing-md);
+  list-style: none;
+  margin: $spacing-xl 0 0;
+  padding: $spacing-lg 0 0;
   border-top: 1px solid rgba($color-bg, 0.12);
-
-  ul {
-    @include flex-row($gap: $spacing-sm $spacing-md);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
 
   li {
     margin: 0;
@@ -590,10 +628,39 @@
   }
 }
 
+// Copyright + social icons (all of _data/social.yml), as on opensourcefeed.org
+.site-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-sm $spacing-md;
+  margin-top: $spacing-md;
+}
+
 .site-footer__copyright {
-  margin: $spacing-md 0 0;
+  margin: 0;
   font-size: $font-size-xs;
   color: rgba($color-bg, 0.6);
+}
+
+.site-footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  list-style: none;
+  margin: 0 0 0 -0.6rem; // align the first glyph with the text edge
+  padding: 0;
+
+  @include respond-to(tablet) {
+    gap: $spacing-xs;
+    margin: 0 -0.6rem 0 0;
+  }
+
+  li {
+    display: inline-flex;
+    margin: 0;
+  }
 }
 
 // --- Main content area ---

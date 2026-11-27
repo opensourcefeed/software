@@ -9,7 +9,7 @@ website: https://syncthing.net
 developer: "Syncthing Foundation"
 repository: https://github.com/syncthing/syncthing
 latest_version: "2.1.7"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: cloud-storage
 logo: /assets/images/software/syncthing.svg

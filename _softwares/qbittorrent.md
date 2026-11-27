@@ -8,9 +8,9 @@ license: GPL-2.0-or-later
 website: https://www.qbittorrent.org
 developer: "qBittorrent project"
 repository: https://github.com/qbittorrent/qBittorrent
-latest_version: "5.3.0"
+latest_version: "5.3.1"
 version_tag: '^release-(\d+\.\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: torrent-client
 self_hostable: true

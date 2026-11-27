@@ -641,6 +641,12 @@
   display: grid;
   gap: $spacing-lg;
 
+  // The list is split around the mid-content ad; keep the card gap when the
+  // ad slot collapses (unfilled) or is absent.
+  & ~ & {
+    margin-top: $spacing-lg;
+  }
+
   > li {
     margin: 0;
   }

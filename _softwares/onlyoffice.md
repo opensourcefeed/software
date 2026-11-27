@@ -9,7 +9,7 @@ website: https://www.onlyoffice.com
 developer: "Ascensio System SIA"
 repository: https://github.com/ONLYOFFICE/DesktopEditors
 latest_version: "10.0.0"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: office-suite
 self_hostable: true

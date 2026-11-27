@@ -8,8 +8,8 @@ license: GPL-3.0
 website: https://getsession.org
 developer: "Session Technology Foundation"
 repository: https://github.com/session-foundation/session-desktop
-latest_version: "1.18.3"
-version_checked_at: 2026-11-04
+latest_version: "1.18.5"
+version_checked_at: 2026-11-27
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: communication
 logo: /assets/images/software/session.svg

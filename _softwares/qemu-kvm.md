@@ -10,7 +10,7 @@ website: https://www.qemu.org
 developer: "QEMU project"
 repository: https://gitlab.com/qemu-project/qemu
 latest_version: "11.1.3"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux]
 category: virtualization
 logo: /assets/images/software/qemu-kvm.svg

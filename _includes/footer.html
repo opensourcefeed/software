@@ -46,23 +46,21 @@
           <li><a href="{{ '/self-hosted/' | relative_url }}">Self-Hosted Software</a></li>
           <li><a href="{{ site.methodology_url | relative_url }}">How We Evaluate Software</a></li>
           <li><a href="{{ site.main_site_url }}/">OpenSourceFeed Home</a></li>
-          <li><a href="{{ site.main_site_url }}/privacy-policy/">Privacy Policy</a></li>
         </ul>
       </nav>
     </div>
 
-    <nav class="site-footer__social" aria-label="Follow OpenSourceFeed">
-      <ul>
-        <li><a rel="me" href="https://floss.social/@opensourcefeed">Mastodon</a></li>
-        <li><a rel="nofollow" href="https://x.com/opensourcefeed">X / Twitter</a></li>
-        <li><a rel="nofollow" href="https://www.facebook.com/opensourcefeed/">Facebook</a></li>
-        <li><a rel="nofollow" href="https://www.youtube.com/c/DistroScreens">YouTube</a></li>
-        <li><a rel="nofollow" href="https://t.me/opensourcefeed_org">Telegram</a></li>
-        <li><a rel="nofollow" href="https://www.instagram.com/opensourcefeed/">Instagram</a></li>
-        <li><a href="{{ site.main_site_url }}/feed.xml">RSS</a></li>
-      </ul>
-    </nav>
+    <ul class="site-footer__links">
+      <li><a href="{{ site.main_site_url }}/privacy-policy/">Privacy Policy</a></li>
+    </ul>
 
-    <p class="site-footer__copyright">&copy; Tahrik Studio 2015 - {{ site.time | date: '%Y' }}</p>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">&copy; Tahrik Studio 2015 - {{ site.time | date: '%Y' }}</p>
+      <ul class="site-footer__social" aria-label="Follow OpenSourceFeed">
+        {% for item in site.data.social %}
+        <li>{% include social-link.html item=item %}</li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </footer>

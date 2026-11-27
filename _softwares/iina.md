@@ -9,8 +9,8 @@ license: GPL-3.0-or-later
 website: https://iina.io
 developer: "IINA team"
 repository: https://github.com/iina/iina
-latest_version: "1.5.0"
-version_checked_at: 2026-11-04
+latest_version: "1.5.1"
+version_checked_at: 2026-11-27
 platforms: [macOS]
 category: media-player
 logo: /assets/images/software/iina.png

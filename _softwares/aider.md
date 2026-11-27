@@ -9,7 +9,7 @@ website: https://aider.chat
 developer: "Paul Gauthier"
 repository: https://github.com/Aider-AI/aider
 latest_version: "0.86.2"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: development
 logo: /assets/images/software/aider.svg

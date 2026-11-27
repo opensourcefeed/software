@@ -9,7 +9,7 @@ website: https://apps.gnome.org/Fragments/
 developer: "Felix Häcker"
 repository: https://gitlab.gnome.org/World/Fragments
 latest_version: "3.0.1"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux]
 category: torrent-client
 logo: /assets/images/software/fragments.svg

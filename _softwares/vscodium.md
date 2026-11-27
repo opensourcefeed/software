@@ -9,7 +9,7 @@ website: https://vscodium.com
 developer: "VSCodium community"
 repository: https://github.com/VSCodium/vscodium
 latest_version: "1.143.17232"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: code-editor
 logo: /assets/images/software/vscodium.svg

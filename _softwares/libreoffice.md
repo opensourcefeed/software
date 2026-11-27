@@ -8,9 +8,9 @@ license: MPL-2.0
 website: https://www.libreoffice.org
 developer: "The Document Foundation"
 repository: https://github.com/LibreOffice/core
-latest_version: "26.8.2.2"
+latest_version: "26.8.3.1"
 version_tag: '^libreoffice-(\d+\.\d+\.\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: office-suite
 logo: /assets/images/software/libreoffice.svg

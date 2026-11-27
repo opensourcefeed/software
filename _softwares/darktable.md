@@ -10,7 +10,7 @@ developer: "darktable community"
 repository: https://github.com/darktable-org/darktable
 latest_version: "5.7.0"
 version_tag: '^release-(\d+\.\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: image-editing
 logo: /assets/images/software/darktable.svg

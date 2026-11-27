@@ -9,7 +9,7 @@ website: https://xournalpp.github.io
 developer: "Xournal++ team"
 repository: https://github.com/xournalpp/xournalpp
 latest_version: "1.3.8"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: pdf-tools
 logo: /assets/images/software/xournal-plus-plus.svg

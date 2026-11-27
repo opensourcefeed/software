@@ -8,8 +8,8 @@ license: GPL-2.0-or-later
 website: https://ardour.org
 developer: "Paul Davis and the Ardour community"
 repository: https://github.com/Ardour/ardour
-latest_version: "9.8"
-version_checked_at: 2026-11-04
+latest_version: "9.10"
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: audio-editing
 logo: /assets/images/software/ardour.svg

@@ -10,7 +10,7 @@ developer: "Deluge Team"
 repository: https://github.com/deluge-torrent/deluge
 latest_version: "2.2.0"
 version_tag: '^deluge-(\d+\.\d+\.\d+)$'
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Linux, Windows, macOS]
 category: torrent-client
 self_hostable: true

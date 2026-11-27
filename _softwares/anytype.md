@@ -10,7 +10,7 @@ website: https://anytype.io
 developer: "Any Association"
 repository: https://github.com/anyproto/anytype-ts
 latest_version: "0.57.7"
-version_checked_at: 2026-11-04
+version_checked_at: 2026-11-27
 platforms: [Windows, macOS, Linux, Android, iOS]
 category: note-taking
 self_hostable: true
