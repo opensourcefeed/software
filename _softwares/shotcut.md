@@ -16,8 +16,9 @@ logo: /assets/images/software/shotcut.svg
 alternative_to:
   - premiere-pro
   - davinci-resolve
+  - camtasia
 description: "Shotcut is a free, open source, cross-platform video editor built on the MLT Framework, offering native timeline editing and wide format support via FFmpeg."
-last_modified_at: 2026-07-26
+last_modified_at: 2026-11-27
 ---
 
 ## Overview

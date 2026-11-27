@@ -129,6 +129,7 @@ category_order:
   - file-compression
   - 3d-modeling
   - cad
+  - screen-recording
 
 # Category display names (used in software/index.html)
 category_names:
@@ -160,6 +161,7 @@ category_names:
   remote-desktop: "Remote Desktop"
   file-compression: "File Compression"
   ai-assistant: "AI Assistants"
+  screen-recording: "Screen Recording & Streaming"
 
 # Category -> schema.org applicationCategory (used in json-ld-software.html).
 # Values must come from Google's supported list for software apps; a category
@@ -193,6 +195,7 @@ category_schema:
   remote-desktop: UtilitiesApplication
   file-compression: UtilitiesApplication
   ai-assistant: UtilitiesApplication
+  screen-recording: MultimediaApplication
 
 # License identifier -> canonical license text URL (used in json-ld-software.html
 # and the software page's "Is X open source?" answer). Keep `license` values in

@@ -6,7 +6,14 @@ category: development
 tagline: "Terminal agents, IDE extensions, and self-hostable coding assistants"
 description: "The most popular open source AI coding assistants for Linux, Windows, and macOS, including terminal-based agents, IDE extensions, and autonomous coding tools."
 verdict: "[OpenCode](/software/opencode/) and [Aider](/software/aider/) are the strongest open source terminal agents, and [Cline](/software/cline/) is the pick inside VS Code or JetBrains. All work with any model provider, including local models."
-last_modified_at: 2026-11-04
+last_modified_at: 2026-11-27
+faq:
+  - question: "What is the best open source AI coding assistant?"
+    answer: "[OpenCode](/software/opencode/) for a full-featured terminal agent, or [Aider](/software/aider/) for lightweight, git-first edits. Both work with any model provider, including local models."
+  - question: "Is there a self-hosted AI coding assistant?"
+    answer: "All of these run locally against your own codebase and can point at a self-hosted model. [Tabby](/software/tabby/) is specifically built as a self-hosted code completion server for teams."
+  - question: "What is the best open source AI coding agent for autonomous tasks?"
+    answer: "[OpenHands](/software/openhands/) targets autonomous, multi-step coding tasks in a sandbox. [goose](/software/goose/) is a more general-purpose agent with a desktop app and MCP support."
 picks:
   - slug: opencode
     best_for: "A full terminal agent that works with any model"

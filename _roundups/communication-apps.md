@@ -7,7 +7,14 @@ category: communication
 tagline: "Team chat and encrypted messaging you can self-host or audit"
 description: "The best open source messaging apps: Signal and Session for private chat, Element for Matrix, and Mattermost, Rocket.Chat, and Zulip for team chat."
 verdict: "For private messaging, [Signal](/software/signal/) is the best open source choice. For team chat you host yourself, use [Mattermost](/software/mattermost/), or [Element](/software/element/) if you want encryption and federation through Matrix."
-last_modified_at: 2026-11-04
+last_modified_at: 2026-11-27
+faq:
+  - question: "What is the best self-hosted chat software?"
+    answer: "For teams, [Mattermost](/software/mattermost/) or [Rocket.Chat](/software/rocket-chat/) (which adds customer-service channels). For encrypted, federated chat you run yourself, [Element](/software/element/) on Matrix."
+  - question: "Is there a self-hosted alternative to WhatsApp or Signal?"
+    answer: "[Element](/software/element/), built on the federated Matrix protocol, is the closest fully self-hostable personal messenger. Signal's apps are open source, but its official network isn't designed for self-hosting."
+  - question: "What is the best open source messenger?"
+    answer: "[Signal](/software/signal/) for private messaging with the widest adoption. [Session](/software/session/) is the pick if you'd rather not register with a phone number."
 picks:
   - slug: signal
     best_for: "Private, encrypted messaging and calls"
